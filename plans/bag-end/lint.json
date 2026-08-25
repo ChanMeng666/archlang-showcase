@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "strict": false,
+  "diagnostics": [
+    {
+      "code": "W_BEDROOM_NO_WINDOW",
+      "severity": "warning",
+      "message": "Bedroom \"Spare Bedroom\" has no window.",
+      "line": 105,
+      "col": 3,
+      "span": [
+        5855,
+        5936
+      ],
+      "fix": "Add a `window` on an exterior wall of the room.",
+      "hints": [
+        "Add a `window` on an exterior wall of this room."
+      ]
+    }
+  ]
+}

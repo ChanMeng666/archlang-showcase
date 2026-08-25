@@ -1,0 +1,3 @@
+W_BEDROOM_NO_WINDOW: Bedroom "Spare Bedroom" has no window.
+  window on w_hill at 39.375% width 1200
+    → A window on exterior wall "w_hill" gives "Spare Bedroom" natural light and egress.

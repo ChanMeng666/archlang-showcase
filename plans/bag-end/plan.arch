@@ -1,0 +1,237 @@
+# Bag End, Bagshot Row, Hobbiton — a hobbit-hole under The Hill.
+#
+# Fan art: an original drawing derived from the opening page of The Hobbit.
+# Not affiliated with the Tolkien Estate.
+#
+# The book's first page is a specification, so this file treats it as one:
+#
+#   "…a very comfortable tunnel without smoke… The tunnel wound on and on,
+#    going fairly but not quite straight into the side of the hill… and many
+#    little round doors opened out of it, first on one side and then on
+#    another. No going upstairs for the hobbit… all were on the same floor,
+#    and indeed on the same passage. The best rooms were all on the left-hand
+#    side (going in), for these were the only ones to have windows, deep-set
+#    round windows looking over his garden…"
+#
+# So: ONE passage (r_tunnel — a single polygon room with one real turn in it,
+# "not quite straight"), no stairs, doors off both sides of it, and every
+# `window` in the file sits on ONE wall — w_garden. You come in through the
+# round door in the east, so your left hand points south: south is the garden,
+# south gets the glass, and everything north of the passage is under the hill.
+#
+# The linter is not asked to approve of this. It is asked to read it, and the
+# warning it returns is the point — see lint.txt.
+plan "Bag End, Hobbiton" {
+  units mm
+  grid 50
+  paper A3 landscape
+  scale 1:100
+  north up
+  dims auto overall
+  site { street east hemisphere north }
+  schedule rooms
+  legend
+
+  accTitle "Bag End — a hobbit-hole under The Hill"
+  accDescr "A single-storey dwelling excavated into a hillside. One winding tunnel-hallway runs east to west from a round front door; rooms open off both sides of it. Every window is on the south (garden) wall, because the north, west and most of the east of the plan are buried in the hill."
+
+  # ---------------------------------------------------------------- the shell
+  # North, west and (mostly) east are earth: 600 mm of it. The hill is not a
+  # facade, it is a wall you cannot cut a hole in.
+  wall id=w_hill   exterior thickness 600 { (0,0) (24000,0) }
+  wall id=w_west   exterior thickness 600 { (0,0) (0,10200) }
+  wall id=w_garden exterior thickness 600 { (0,10200) (24000,10200) }
+  wall id=w_east_n exterior thickness 600 { (24000,0) (24000,5700) }
+  wall id=w_east_s exterior thickness 600 { (24000,9300) (24000,10200) }
+
+  # The round front door needs a round doorway to sit in. This is one `arc`
+  # clause: a true semicircle of R1800 struck on (24000,7500), walked north
+  # point -> south point, `cw` bulging the porch out toward the garden gate.
+  # It renders as a native SVG arc, so the doorway is round at any zoom.
+  wall id=w_porch  exterior thickness 600 { (24000,5700) arc (24000,9300) radius 1800 cw }
+
+  # -------------------------------------------------------------- the passage
+  # "going fairly but not quite straight." The tunnel is 1500 wide, and halfway
+  # along it steps 1800 mm north through a short north-south stretch, so you
+  # have to turn twice to walk its length. Each side is ONE wall — a polyline
+  # with the turn in it, not two walls meeting at a corner.
+  wall id=w_tun_n partition thickness 200 { (0,3000) (13500,3000) (13500,4800) (24000,4800) }
+  wall id=w_tun_s partition thickness 200 { (0,4500) (12000,4500) (12000,6300) (21000,6300) }
+
+  # The passage does not simply dissolve into the hall — it starts at a cased
+  # archway, which is what makes the hall a room and the tunnel a tunnel.
+  wall id=w_arch  partition thickness 200 { (21000,4800) (21000,6300) }
+
+  # ------------------------------------------------- partitions, buried side
+  wall partition thickness 200 { (2700,0)  (2700,3000) }
+  wall partition thickness 200 { (5400,0)  (5400,3000) }
+  wall partition thickness 200 { (8100,0)  (8100,3000) }
+  wall id=w_bathrm_w partition thickness 200 { (10800,0) (10800,3000) }
+  wall id=w_bathrm_e partition thickness 200 { (13500,0) (13500,3000) }
+  wall partition thickness 200 { (15400,0) (15400,4800) }
+  wall partition thickness 200 { (17300,0) (17300,4800) }
+  wall partition thickness 200 { (19200,0) (19200,4800) }
+  wall partition thickness 200 { (21000,0) (21000,4800) }
+
+  # ------------------------------------------------- partitions, garden side
+  wall id=w_bath_e partition thickness 200 { (2700,4500) (2700,10200) }
+  wall id=w_kit_w  partition thickness 200 { (6000,4500) (6000,10200) }
+  wall partition thickness 200 { (9000,4500)  (9000,10200) }
+  wall partition thickness 200 { (12000,6300) (12000,10200) }
+  wall partition thickness 200 { (16500,6300) (16500,10200) }
+  wall partition thickness 200 { (21000,6300) (21000,10200) }
+
+  # ------------------------------------------------------------------- rooms
+  # The passage itself: written as ONE polygon, so `describe --json` reports one
+  # hallway with one area — which is what the book describes, and what a plan
+  # drawn as two corridors meeting would not.
+  room id=r_tunnel polygon
+    (0,3000) (13500,3000) (13500,4800) (21000,4800)
+    (21000,6300) (12000,6300) (12000,4500) (0,4500)
+    label "The Tunnel" at (6000,3750) uses circulation hall
+
+  # The entrance hall, round at its east end where the front door is. The
+  # curved run is faceted here on purpose: a floor is a polygon, the WALL is
+  # the true arc, and the two agree to within a millimetre nobody can draw.
+  room id=r_hall polygon
+    (21000,4800) (24000,4800) (24000,5700) (25300,6250)
+    (25800,7500) (25300,8750) (24000,9300) (24000,10200) (21000,10200)
+    label "Entrance Hall" uses entry
+
+  # ---- right-hand side going in: buried in the hill. No windows. Ever. ----
+  room id=r_coal     at (0,0)     size 2700x3000 label "Coal Cellar"   uses storage
+  room id=r_wine     at (2700,0)  size 2700x3000 label "Wine Cellar"   uses storage
+  room id=r_lumber   at (5400,0)  size 2700x3000 label "Lumber Room"   uses storage
+  room id=r_spare    at (8100,0)  size 2700x3000 label "Spare Bedroom" uses bedroom
+  room id=r_bathroom at (10800,0) size 2700x3000 label "Bathroom"      uses bath
+  room id=r_wardrobe at (13500,0) size 1900x4800 label "Wardrobes"     uses storage
+  room id=r_pantry3  at (15400,0) size 1900x4800 label "Pantry III"    uses storage
+  room id=r_pantry2  at (17300,0) size 1900x4800 label "Pantry II"     uses storage
+  room id=r_pantry1  at (19200,0) size 1800x4800 label "Pantry I"      uses storage
+  room id=r_cellar   at (21000,0) size 3000x4800 label "Cellar"        uses storage
+
+  # ---- left-hand side going in: the garden, the Water, and all the glass ----
+  room id=r_bath    at (0,4500)     size 2700x5700 label "Bath"         uses bath
+  room id=r_bedbest at (2700,4500)  size 3300x5700 label "Best Bedroom" uses bedroom
+  room id=r_kitchen at (6000,4500)  size 3000x5700 label "Kitchen"      uses kitchen
+  room id=r_study   at (9000,4500)  size 3000x5700 label "Study"        uses office
+  room id=r_dining  at (12000,6300) size 4500x3900 label "Dining Room"  uses dining
+  room id=r_parlour at (16500,6300) size 4500x3900 label "Parlour"      uses living
+
+  # -------------------------------------------------------- the round doors
+  # Every door on this drawing is round in elevation. The plan cut is taken at
+  # waist height, so what a floor plan can show is the opening and the leaf;
+  # the circle is what a section would show. The front door is the famous one —
+  # shining yellow brass knob in the exact middle — and here that is 50% along
+  # an arc wall, which the compiler walks by ARC LENGTH, so "the exact middle"
+  # comes out at the true apex rather than at the middle of the chord.
+  door id=d_front on w_porch at 50% width 1200 swing into r_hall
+
+  # …and the archway the tunnel begins at — leafless, so it joins the two
+  # spaces in the access graph without a leaf to swing in a 1500 mm passage.
+  opening id=o_arch on w_arch at center width 1200
+
+  # off the passage, right-hand side (going in, so listed east to west)
+  door id=d_cellar   on w_tun_n at 24300 width 800 swing into r_cellar
+  door id=d_pantry1  on w_tun_n at 21900 width 800 swing into r_pantry1
+  door id=d_pantry2  on w_tun_n at 20050 width 800 swing into r_pantry2
+  door id=d_pantry3  on w_tun_n at 18150 width 800 swing into r_pantry3
+  door id=d_wardrobe on w_tun_n at 16250 width 800 swing into r_wardrobe
+  door id=d_bathroom on w_tun_n at 11700 width 800 swing into r_bathroom
+  door id=d_spare    on w_tun_n at 9000  width 800 swing into r_spare
+  door id=d_lumber   on w_tun_n at 6750  width 800 swing into r_lumber
+  door id=d_wine     on w_tun_n at 4050  width 800 swing into r_wine
+  door id=d_coal     on w_tun_n at 1350  width 800 swing into r_coal
+
+  # off the passage, left-hand side (going in)
+  door id=d_parlour  on w_tun_s at 19600 width 900 swing into r_parlour
+  door id=d_dining   on w_tun_s at 16050 width 900 swing into r_dining
+  door id=d_study    on w_tun_s at 10500 width 900 swing into r_study
+  door id=d_kitchen  on w_tun_s at 6700  width 900 swing into r_kitchen
+  door id=d_bedbest  on w_tun_s at 4350  width 900 swing into r_bedbest
+  door id=d_bath     on w_tun_s at 1350  width 800 swing into r_bath
+
+  # ------------------------------------------------------------- the windows
+  # Deep-set and round, looking over the garden and the meadows beyond, sloping
+  # down to the river. Note what is NOT here: there is no `window` statement on
+  # w_hill, w_west, w_east_n or w_east_s, because there is nothing on the far
+  # side of those walls but hill.
+  window id=win_bath    on w_garden at 1350  width 700
+  window id=win_bed_a   on w_garden at 3600  width 1000
+  window id=win_bed_b   on w_garden at 5100  width 1000
+  window id=win_kitchen on w_garden at 7500  width 1200
+  window id=win_study   on w_garden at 10500 width 1400
+  window id=win_dining  on w_garden at 14250 width 1600
+  window id=win_parlour on w_garden at 18750 width 1600
+
+  # ----------------------------------------------------------------- fitting
+  # Entrance hall — a polygon room, so these are placed absolutely.
+  furniture id=f_pegs  pegs  at (21400,9550) size 2200x300 label "Pegs"  in r_hall
+  furniture id=f_bench bench at (21200,6600) size 500x1800 label "Bench" in r_hall
+
+  # Parlour: the fireplace backs onto the hill side, away from the glass.
+  furniture id=f_hearth hearth in r_parlour anchor top-right   flush inset 300 size 1400x400 label "Fireplace"
+  furniture id=f_settle settle in r_parlour anchor bottom-left flush inset 200 size 600x1800 label "Settle"
+  furniture id=f_ptable table  in r_parlour centered size 900x900 label "Table"
+
+  # Dining room: a table for a party of thirteen dwarves, plus a wizard.
+  furniture id=f_dtable table at (13350,8300) size 1800x900 label "Table" in r_dining
+  for i in 0..3 {
+    furniture chair at (13500 + i * 550, 7700) size 450x450 in r_dining
+    furniture chair at (13500 + i * 550, 9300) size 450x450 in r_dining
+  }
+
+  # Study.
+  furniture id=f_desk   desk  in r_study centered size 1500x800 label "Desk"
+  furniture id=f_books1 shelf in r_study anchor left  flush size 400x2400 label "Books"
+  furniture id=f_books2 shelf in r_study anchor right flush size 400x2400 label "Books"
+
+  # Kitchen — the range and the sink go against the buried walls, so the one
+  # window stays a window. `against wall` derives both position AND rotation
+  # from the wall, which is why none of these fixtures ends up facing it.
+  furniture id=f_stove stove        against wall w_tun_s segment 0 offset 7800 in r_kitchen
+  furniture id=f_sink  kitchen_sink against wall w_tun_s segment 0 offset 8500 in r_kitchen
+  furniture id=f_dress counter      against wall w_kit_w offset 2600 size 1800x600 in r_kitchen
+  furniture id=f_ktable table in r_kitchen anchor right flush inset 300 size 1200x800 label "Table"
+
+  # Best bedroom.
+  furniture id=f_bed  bed  in r_bedbest anchor bottom flush size 1500x2000 label "Bed"
+  furniture id=f_robe robe in r_bedbest anchor right  flush size 600x1600  label "Wardrobe"
+
+  # Bath (garden side) and Bathroom (hill side).
+  furniture id=f_tub1   bathtub against wall w_west   offset 7500 size 1700x700 in r_bath
+  furniture id=f_wc1    wc      against wall w_bath_e offset 900  in r_bath
+  furniture id=f_basin1 basin   against wall w_garden offset 2100 in r_bath
+
+  furniture id=f_tub2   bathtub against wall w_hill     offset 12150 size 1700x700 in r_bathroom
+  furniture id=f_basin2 basin   against wall w_bathrm_w offset 1500  in r_bathroom
+  furniture id=f_wc2    wc      against wall w_bathrm_e offset 1500  in r_bathroom
+
+  # Spare bedroom: pushed into the far corner, because the only door is also
+  # the only thing in the room that lets any light in at all.
+  furniture id=f_bed2 bed in r_spare anchor top-right flush size 2000x1500 label "Bed"
+
+  # Pantries, wardrobe room, cellars. "Pantries (lots of these)."
+  furniture id=f_sh_p1 shelf in r_pantry1  anchor top-left flush size 300x2400 label "Shelves"
+  furniture id=f_sh_p2 shelf in r_pantry2  anchor top-left flush size 300x2400 label "Shelves"
+  furniture id=f_sh_p3 shelf in r_pantry3  anchor top-left flush size 300x2400 label "Shelves"
+  furniture id=f_press press in r_wardrobe anchor top-left flush size 500x2400 label "Presses"
+  furniture id=f_lumb  chest in r_lumber   anchor top      flush size 1600x600 label "Lumber"
+  furniture id=f_coal  bin   in r_coal     anchor top      flush size 1600x600 label "Coal"
+
+  for i in 0..3 {
+    furniture cask at (21300 + i * 800, 300) size 700x700 label "Cask" in r_cellar
+  }
+  for i in 0..2 {
+    furniture cask at (3000 + i * 800, 300) size 700x700 label "Cask" in r_wine
+  }
+
+  title {
+    # "Bag End, Bagshot Row, Hobbiton" overruns the PROJECT caption in the
+    # title block at 1:100 — the block is a fixed number of sheet millimetres —
+    # so the address is split between the plan name above and here.
+    project "Bag End, Bagshot Row"
+    drawn_by "ArchLang"
+    date "2026-08-25"
+  }
+}

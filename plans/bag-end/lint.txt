@@ -1,0 +1,9 @@
+warning[W_BEDROOM_NO_WINDOW]: Bedroom "Spare Bedroom" has no window.
+    --> 105:3
+    |
+105 |   room id=r_spare    at (8100,0)  size 2700x3000 label "Spare Bedroom" uses bedroom
+    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: Add a `window` on an exterior wall of this room.
+  = fix: Add a `window` on an exterior wall of the room.
+
+✓ ok (1 warning)
