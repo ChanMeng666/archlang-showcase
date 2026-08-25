@@ -1,0 +1,914 @@
+{
+  "ok": true,
+  "plan": "Railroad Walk-Up — Unit 3R",
+  "caption": "\"Railroad Walk-Up — Unit 3R\" — a 7-room floor plan, 61.2 m² total: Hall (19.8 m²), Living (10.58 m²), Bedroom 1 (6.44 m²), Kitchen (8.74 m²), Bedroom 2* (3.91 m²), Bath (4.83 m²), Bonus Room* (6.9 m²); 7 doors, 2 windows, entrance via d_front.",
+  "accTitle": "Railroad walk-up apartment, unit 3R",
+  "accDescr": "A 3.7 by 18.3 metre apartment on a shared urban lot, 3.1 metres wide inside. A 900 mm corridor runs the full depth from the street door to the rear wall; six rooms hang off its west side in a line — living, bedroom, kitchen, a second bedroom, the bathroom and a back room. Only the street and rear walls can hold windows; the two long sides are party walls shared with the neighbouring buildings.",
+  "units": "mm",
+  "scale": "1:50",
+  "sheet": {
+    "paper": "A2",
+    "orientation": "portrait",
+    "scale_denominator": 50,
+    "scale_auto": false,
+    "fits": true
+  },
+  "bbox": {
+    "w": 3400,
+    "h": 18000
+  },
+  "bbox_outer": {
+    "w": 3700,
+    "h": 18300
+  },
+  "site": {
+    "street": "N",
+    "back": "S",
+    "equator_side": "S",
+    "sunrise_side": "E",
+    "sunset_side": "W",
+    "hemisphere": "north"
+  },
+  "rooms": [
+    {
+      "id": "r_hall",
+      "label": "Hall",
+      "uses": [
+        "circulation",
+        "hall"
+      ],
+      "room_type": "Entrance",
+      "area_m2": 19.8,
+      "bbox": {
+        "x": 2300,
+        "y": 0,
+        "w": 1100,
+        "h": 18000
+      },
+      "floor_polygon": [
+        {
+          "x": 2300,
+          "y": 0
+        },
+        {
+          "x": 3400,
+          "y": 0
+        },
+        {
+          "x": 3400,
+          "y": 18000
+        },
+        {
+          "x": 2300,
+          "y": 18000
+        }
+      ],
+      "adjacent": [
+        "r_living",
+        "r_bed1",
+        "r_kitchen",
+        "r_bed2",
+        "r_bath",
+        "r_office"
+      ]
+    },
+    {
+      "id": "r_living",
+      "label": "Living",
+      "uses": [
+        "living"
+      ],
+      "room_type": "LivingRoom",
+      "area_m2": 10.58,
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 2300,
+        "h": 4600
+      },
+      "floor_polygon": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 2300,
+          "y": 0
+        },
+        {
+          "x": 2300,
+          "y": 4600
+        },
+        {
+          "x": 0,
+          "y": 4600
+        }
+      ],
+      "adjacent": [
+        "r_hall",
+        "r_bed1"
+      ]
+    },
+    {
+      "id": "r_bed1",
+      "label": "Bedroom 1",
+      "uses": [
+        "bedroom"
+      ],
+      "room_type": "MasterRoom",
+      "area_m2": 6.44,
+      "bbox": {
+        "x": 0,
+        "y": 4600,
+        "w": 2300,
+        "h": 2800
+      },
+      "floor_polygon": [
+        {
+          "x": 0,
+          "y": 4600
+        },
+        {
+          "x": 2300,
+          "y": 4600
+        },
+        {
+          "x": 2300,
+          "y": 7400
+        },
+        {
+          "x": 0,
+          "y": 7400
+        }
+      ],
+      "adjacent": [
+        "r_hall",
+        "r_living",
+        "r_kitchen"
+      ]
+    },
+    {
+      "id": "r_kitchen",
+      "label": "Kitchen",
+      "uses": [
+        "kitchen"
+      ],
+      "room_type": "Kitchen",
+      "area_m2": 8.74,
+      "bbox": {
+        "x": 0,
+        "y": 7400,
+        "w": 2300,
+        "h": 3800
+      },
+      "floor_polygon": [
+        {
+          "x": 0,
+          "y": 7400
+        },
+        {
+          "x": 2300,
+          "y": 7400
+        },
+        {
+          "x": 2300,
+          "y": 11200
+        },
+        {
+          "x": 0,
+          "y": 11200
+        }
+      ],
+      "adjacent": [
+        "r_hall",
+        "r_bed1",
+        "r_bed2"
+      ]
+    },
+    {
+      "id": "r_bed2",
+      "label": "Bedroom 2*",
+      "uses": [
+        "bedroom"
+      ],
+      "room_type": "MasterRoom",
+      "area_m2": 3.91,
+      "bbox": {
+        "x": 0,
+        "y": 11200,
+        "w": 2300,
+        "h": 1700
+      },
+      "floor_polygon": [
+        {
+          "x": 0,
+          "y": 11200
+        },
+        {
+          "x": 2300,
+          "y": 11200
+        },
+        {
+          "x": 2300,
+          "y": 12900
+        },
+        {
+          "x": 0,
+          "y": 12900
+        }
+      ],
+      "adjacent": [
+        "r_hall",
+        "r_kitchen",
+        "r_bath"
+      ]
+    },
+    {
+      "id": "r_bath",
+      "label": "Bath",
+      "uses": [
+        "bath"
+      ],
+      "room_type": "Bathroom",
+      "area_m2": 4.83,
+      "bbox": {
+        "x": 0,
+        "y": 12900,
+        "w": 2300,
+        "h": 2100
+      },
+      "floor_polygon": [
+        {
+          "x": 0,
+          "y": 12900
+        },
+        {
+          "x": 2300,
+          "y": 12900
+        },
+        {
+          "x": 2300,
+          "y": 15000
+        },
+        {
+          "x": 0,
+          "y": 15000
+        }
+      ],
+      "adjacent": [
+        "r_hall",
+        "r_bed2",
+        "r_office"
+      ]
+    },
+    {
+      "id": "r_office",
+      "label": "Bonus Room*",
+      "uses": [
+        "office"
+      ],
+      "room_type": "StudyRoom",
+      "area_m2": 6.9,
+      "bbox": {
+        "x": 0,
+        "y": 15000,
+        "w": 2300,
+        "h": 3000
+      },
+      "floor_polygon": [
+        {
+          "x": 0,
+          "y": 15000
+        },
+        {
+          "x": 2300,
+          "y": 15000
+        },
+        {
+          "x": 2300,
+          "y": 18000
+        },
+        {
+          "x": 0,
+          "y": 18000
+        }
+      ],
+      "adjacent": [
+        "r_hall",
+        "r_bath"
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "id": "d_front",
+      "between": [
+        "exterior",
+        "r_hall"
+      ],
+      "width": 900
+    },
+    {
+      "id": "d_living",
+      "between": [
+        "r_hall",
+        "r_living"
+      ],
+      "width": 800
+    },
+    {
+      "id": "d_bed1",
+      "between": [
+        "r_hall",
+        "r_bed1"
+      ],
+      "width": 700
+    },
+    {
+      "id": "d_kitchen",
+      "between": [
+        "r_hall",
+        "r_kitchen"
+      ],
+      "width": 800
+    },
+    {
+      "id": "d_bed2",
+      "between": [
+        "r_hall",
+        "r_bed2"
+      ],
+      "width": 700
+    },
+    {
+      "id": "d_office",
+      "between": [
+        "r_hall",
+        "r_office"
+      ],
+      "width": 800
+    },
+    {
+      "id": "d_bath",
+      "between": [
+        "r_bed2",
+        "r_bath"
+      ],
+      "width": 600
+    }
+  ],
+  "windows": [
+    {
+      "id": "win_living",
+      "room": "r_living",
+      "width": 1500,
+      "facing": "N"
+    },
+    {
+      "id": "win_office",
+      "room": "r_office",
+      "width": 900,
+      "facing": "S"
+    }
+  ],
+  "openings": [],
+  "furniture": [
+    {
+      "id": "f_bike",
+      "category": "bike",
+      "label": "Bike",
+      "room": "r_hall"
+    },
+    {
+      "id": "f_sofa",
+      "category": "sofa",
+      "label": "Sofa",
+      "room": "r_living"
+    },
+    {
+      "id": "f_tv",
+      "category": "tv",
+      "label": "TV",
+      "room": "r_living"
+    },
+    {
+      "id": "f_bed1",
+      "category": "bed",
+      "label": "Bed",
+      "room": "r_bed1"
+    },
+    {
+      "id": "f_robe1",
+      "category": "robe",
+      "label": "Wardrobe",
+      "room": "r_bed1"
+    },
+    {
+      "id": "f_counter",
+      "category": "counter",
+      "room": "r_kitchen",
+      "rotate": 270
+    },
+    {
+      "id": "f_sink",
+      "category": "kitchen_sink",
+      "room": "r_kitchen",
+      "rotate": 270
+    },
+    {
+      "id": "f_stove",
+      "category": "stove",
+      "room": "r_kitchen",
+      "rotate": 270
+    },
+    {
+      "id": "f_fridge",
+      "category": "fridge",
+      "room": "r_kitchen",
+      "rotate": 90
+    },
+    {
+      "id": "f_ktable",
+      "category": "table",
+      "label": "Table",
+      "room": "r_kitchen"
+    },
+    {
+      "id": "f_bed2",
+      "category": "bed",
+      "label": "Bed (twin)",
+      "room": "r_bed2"
+    },
+    {
+      "id": "f_wc",
+      "category": "wc",
+      "room": "r_bath",
+      "rotate": 270
+    },
+    {
+      "id": "f_basin",
+      "category": "basin",
+      "room": "r_bath",
+      "rotate": 270
+    },
+    {
+      "id": "f_shower",
+      "category": "shower",
+      "room": "r_bath",
+      "rotate": 90
+    },
+    {
+      "id": "f_desk",
+      "category": "desk",
+      "label": "Desk",
+      "room": "r_office"
+    },
+    {
+      "id": "f_chair",
+      "category": "chair",
+      "room": "r_office"
+    }
+  ],
+  "access": {
+    "entrances": [
+      "d_front"
+    ],
+    "hasEntrance": true,
+    "edges": [
+      {
+        "doorId": "d_front",
+        "kind": "door",
+        "between": [
+          "exterior",
+          "r_hall"
+        ],
+        "nominalWidth": 900,
+        "estimatedClearWidth": 840,
+        "hostCategory": "exterior",
+        "hostWallId": "w_street",
+        "exterior": true,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_living",
+        "kind": "door",
+        "between": [
+          "r_hall",
+          "r_living"
+        ],
+        "nominalWidth": 800,
+        "estimatedClearWidth": 740,
+        "hostCategory": "partition",
+        "hostWallId": "w_hall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_bed1",
+        "kind": "door",
+        "between": [
+          "r_hall",
+          "r_bed1"
+        ],
+        "nominalWidth": 700,
+        "estimatedClearWidth": 640,
+        "hostCategory": "partition",
+        "hostWallId": "w_hall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_kitchen",
+        "kind": "door",
+        "between": [
+          "r_hall",
+          "r_kitchen"
+        ],
+        "nominalWidth": 800,
+        "estimatedClearWidth": 740,
+        "hostCategory": "partition",
+        "hostWallId": "w_hall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_bed2",
+        "kind": "door",
+        "between": [
+          "r_hall",
+          "r_bed2"
+        ],
+        "nominalWidth": 700,
+        "estimatedClearWidth": 640,
+        "hostCategory": "partition",
+        "hostWallId": "w_hall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_office",
+        "kind": "door",
+        "between": [
+          "r_hall",
+          "r_office"
+        ],
+        "nominalWidth": 800,
+        "estimatedClearWidth": 740,
+        "hostCategory": "partition",
+        "hostWallId": "w_hall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_bath",
+        "kind": "door",
+        "between": [
+          "r_bed2",
+          "r_bath"
+        ],
+        "nominalWidth": 600,
+        "estimatedClearWidth": 540,
+        "hostCategory": "partition",
+        "hostWallId": "p_bed2_bath",
+        "exterior": false,
+        "ambiguous": false
+      }
+    ],
+    "rooms": [
+      {
+        "id": "r_hall",
+        "depthFromEntrance": 1,
+        "reachable": true,
+        "bottleneckClearWidth": 840
+      },
+      {
+        "id": "r_living",
+        "depthFromEntrance": 2,
+        "reachable": true,
+        "bottleneckClearWidth": 740
+      },
+      {
+        "id": "r_bed1",
+        "depthFromEntrance": 2,
+        "reachable": true,
+        "bottleneckClearWidth": 640
+      },
+      {
+        "id": "r_kitchen",
+        "depthFromEntrance": 2,
+        "reachable": true,
+        "bottleneckClearWidth": 740
+      },
+      {
+        "id": "r_bed2",
+        "depthFromEntrance": 2,
+        "reachable": true,
+        "bottleneckClearWidth": 640
+      },
+      {
+        "id": "r_bath",
+        "depthFromEntrance": 3,
+        "reachable": true,
+        "bottleneckClearWidth": 540
+      },
+      {
+        "id": "r_office",
+        "depthFromEntrance": 2,
+        "reachable": true,
+        "bottleneckClearWidth": 740
+      }
+    ]
+  },
+  "circulation": {
+    "entranceId": "d_front",
+    "cellSizeMm": 100,
+    "bodyRadiusMm": 300,
+    "rooms": [
+      {
+        "roomId": "r_hall",
+        "walkDistanceMm": 8700,
+        "bottleneckClearWidthMm": 840,
+        "detourRatio": 1
+      },
+      {
+        "roomId": "r_living",
+        "walkDistanceMm": 6900,
+        "bottleneckClearWidthMm": 740,
+        "detourRatio": 2.76
+      },
+      {
+        "roomId": "r_bed1",
+        "walkDistanceMm": 6800,
+        "bottleneckClearWidthMm": 300,
+        "detourRatio": 1.18
+      },
+      {
+        "roomId": "r_office",
+        "walkDistanceMm": 17900,
+        "bottleneckClearWidthMm": 740,
+        "detourRatio": 1.12
+      }
+    ],
+    "routes": []
+  },
+  "totals": {
+    "rooms": 7,
+    "doors": 7,
+    "windows": 2,
+    "floor_area_m2": 61.2
+  },
+  "input_graph": {
+    "r_hall": [
+      "r_living",
+      "r_bed1",
+      "r_kitchen",
+      "r_bed2",
+      "r_office"
+    ],
+    "r_living": [
+      "r_hall"
+    ],
+    "r_bed1": [
+      "r_hall"
+    ],
+    "r_kitchen": [
+      "r_hall"
+    ],
+    "r_bed2": [
+      "r_hall",
+      "r_bath"
+    ],
+    "r_bath": [
+      "r_bed2"
+    ],
+    "r_office": [
+      "r_hall"
+    ]
+  },
+  "freedom": {
+    "rooms": {
+      "total": 7,
+      "absolute": 7,
+      "relational": 0,
+      "strip": 0
+    },
+    "openings": {
+      "total": 9,
+      "attached": 9,
+      "absolute": 0
+    },
+    "furniture": {
+      "total": 16,
+      "anchored": 3,
+      "againstWall": 7,
+      "absolute": 6
+    },
+    "elements": [
+      {
+        "id": "r_hall",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_living",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_bed1",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_kitchen",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_bed2",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_bath",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_office",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "d_front",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_living",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_bed1",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_kitchen",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_bed2",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_office",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_bath",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "win_living",
+        "kind": "window",
+        "placement": "attached"
+      },
+      {
+        "id": "win_office",
+        "kind": "window",
+        "placement": "attached"
+      },
+      {
+        "id": "f_bike",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_sofa",
+        "kind": "furniture",
+        "placement": "anchored"
+      },
+      {
+        "id": "f_tv",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_bed1",
+        "kind": "furniture",
+        "placement": "anchored"
+      },
+      {
+        "id": "f_robe1",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_counter",
+        "kind": "furniture",
+        "placement": "against-wall"
+      },
+      {
+        "id": "f_sink",
+        "kind": "furniture",
+        "placement": "against-wall"
+      },
+      {
+        "id": "f_stove",
+        "kind": "furniture",
+        "placement": "against-wall"
+      },
+      {
+        "id": "f_fridge",
+        "kind": "furniture",
+        "placement": "against-wall"
+      },
+      {
+        "id": "f_ktable",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_bed2",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_wc",
+        "kind": "furniture",
+        "placement": "against-wall"
+      },
+      {
+        "id": "f_basin",
+        "kind": "furniture",
+        "placement": "against-wall"
+      },
+      {
+        "id": "f_shower",
+        "kind": "furniture",
+        "placement": "against-wall"
+      },
+      {
+        "id": "f_desk",
+        "kind": "furniture",
+        "placement": "anchored"
+      },
+      {
+        "id": "f_chair",
+        "kind": "furniture",
+        "placement": "absolute"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "no": "01",
+      "id": "r_hall",
+      "name": "Hall",
+      "area_m2": 19.8
+    },
+    {
+      "no": "02",
+      "id": "r_living",
+      "name": "Living",
+      "area_m2": 10.58
+    },
+    {
+      "no": "03",
+      "id": "r_bed1",
+      "name": "Bedroom 1",
+      "area_m2": 6.44
+    },
+    {
+      "no": "04",
+      "id": "r_kitchen",
+      "name": "Kitchen",
+      "area_m2": 8.74
+    },
+    {
+      "no": "05",
+      "id": "r_bed2",
+      "name": "Bedroom 2*",
+      "area_m2": 3.91
+    },
+    {
+      "no": "06",
+      "id": "r_bath",
+      "name": "Bath",
+      "area_m2": 4.83
+    },
+    {
+      "no": "07",
+      "id": "r_office",
+      "name": "Bonus Room*",
+      "area_m2": 6.9
+    }
+  ],
+  "diagnostics": []
+}

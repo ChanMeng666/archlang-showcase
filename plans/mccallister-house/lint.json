@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "strict": false,
+  "diagnostics": [
+    {
+      "code": "W_SWING_OBSTRUCTED",
+      "severity": "warning",
+      "message": "Door swing is obstructed — the swing needs 1200 mm of clear radius but \"Micro Machines, loose fill\" is 400 mm from the hinge (800 mm short).",
+      "line": 85,
+      "col": 3,
+      "span": [
+        5576,
+        5656
+      ],
+      "fix": "Hang the leaf on the other jamb (`hinge left|right`) — a machine-applicable fix when the flipped swing is proved clear; or open it the other way (`swing in|out`), move the door along its wall, move the obstruction (`arch repair`), narrow the leaf to the width the warning quotes (never below the minimum passable width — that relocates the problem into `W_DOOR_CLEARANCE`), hang no swinging leaf at all (a `sliding`, `pocket` or `barn` door sweeps nothing, so this rule cannot apply to it), or make it a leafless `opening`.",
+      "hints": [
+        "Hang the leaf on the other jamb — `hinge right`.",
+        "Open it to the other side of the wall — `swing in`.",
+        "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `arch repair` computes the smallest clearing shift.",
+        "Narrowing the door is not a fix here — the leaf would have to drop to 400 mm, under the 700 mm minimum passable width.",
+        "Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps nothing, so this warning cannot apply to it (`door pocket on <wall> at <pos> width <mm>`).",
+        "If no leaf is wanted here, make it a leafless `opening` instead."
+      ]
+    },
+    {
+      "code": "W_ROOM_NOT_EQUATOR_FACING",
+      "severity": "warning",
+      "message": "Room \"Sun Room\" has 2 window(s), none facing S (the equator side in the northern hemisphere) — they face W, N.",
+      "line": 70,
+      "col": 3,
+      "span": [
+        4448,
+        4532
+      ],
+      "fix": "Move a window onto the room's equator-facing facade, or accept the aspect — an urban plot often has no equator-facing wall to spare. There is deliberately NO machine fix: the remedy is a geometric decision (which facade, which wall, what else it displaces) and the compiler does not make those (ADR 0005).",
+      "hints": [
+        "A drafting heuristic, not a daylight measurement: it reports the aspect, not the light. Move a window onto the S facade, or accept it."
+      ]
+    }
+  ]
+}

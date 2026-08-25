@@ -1,0 +1,13 @@
+--- a/plans/railroad-apartment/plan.arch
++++ b/plans/railroad-apartment/plan.arch
+@@ -71,7 +71,7 @@
+   # The bathroom has NO door onto the corridor. Its only door is off Bedroom 2 —
+   # so the second bedroom is also the hallway to the only toilet in the unit.
+   # It is 600 mm wide, which is what was left over.
+-  door id=d_bath on p_bed2_bath at 1150 width 600 swing into r_bath
++  door id=d_bath on p_bed2_bath at 1150 width 600 hinge right swing into r_bath
+ 
+   # ----------------------------------------------------------------- windows
+   # Two. In an 18-metre-deep apartment.
+  applied [W_SWING_OBSTRUCTED] hang the leaf on the other jamb (`hinge right`) — the flipped swing is clear
+  (dry run — nothing written)

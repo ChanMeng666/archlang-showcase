@@ -1,0 +1,224 @@
+{
+  "ok": true,
+  "strict": false,
+  "diagnostics": [
+    {
+      "code": "W_BEDROOM_NO_WINDOW",
+      "severity": "warning",
+      "message": "Bedroom \"Bedroom 1\" has no window.",
+      "line": 55,
+      "col": 3,
+      "span": [
+        3083,
+        3165
+      ],
+      "fix": "Add a `window` on an exterior wall of the room.",
+      "hints": [
+        "Add a `window` on an exterior wall of this room."
+      ]
+    },
+    {
+      "code": "W_ROOM_TOO_SMALL",
+      "severity": "warning",
+      "message": "Room \"Bedroom 2*\" is only 3.91 m² (under 4 m²).",
+      "line": 57,
+      "col": 3,
+      "span": [
+        3253,
+        3335
+      ],
+      "fix": "Increase its `size`, or merge it into an adjacent space.",
+      "hints": [
+        "Increase its `size`, or merge it into an adjacent space."
+      ]
+    },
+    {
+      "code": "W_BEDROOM_NO_WINDOW",
+      "severity": "warning",
+      "message": "Bedroom \"Bedroom 2*\" has no window.",
+      "line": 57,
+      "col": 3,
+      "span": [
+        3253,
+        3335
+      ],
+      "fix": "Add a `window` on an exterior wall of the room.",
+      "hints": [
+        "Add a `window` on an exterior wall of this room."
+      ]
+    },
+    {
+      "code": "W_FURN_CLEARANCE",
+      "severity": "warning",
+      "message": "Fixture \"stove\" needs 550 mm of clear space in front but \"Table\" leaves 150 mm (400 mm short).",
+      "line": 102,
+      "col": 3,
+      "span": [
+        5980,
+        6061
+      ],
+      "fix": "Move or shrink the obstructing furniture by the shortfall the warning quotes, turn the fixture so its front faces clear floor (its back must stay on a wall), or move the fixture to a wall run with the clearance free in front of it.",
+      "hints": [
+        "Move \"Table\" 400 mm further from the front of \"stove\".",
+        "Or shrink \"Table\" by 400 mm on the axis facing \"stove\".",
+        "Or turn \"stove\" (`rotate 0|90|180|270`) so its front faces clear floor — its back must stay on a wall.",
+        "Or move \"stove\" to a wall run with 550 mm of free floor in front of it."
+      ]
+    },
+    {
+      "code": "W_BATH_VIA_BEDROOM",
+      "severity": "warning",
+      "message": "Bathroom \"Bath\" is reachable only through a bedroom.",
+      "line": 58,
+      "col": 3,
+      "span": [
+        3338,
+        3417
+      ],
+      "fix": "Add a door connecting the bathroom to a hall/living space, or route circulation so it is not reached only via a bedroom.",
+      "hints": [
+        "Connect it to a hall or living space — or, if it is an en-suite, add a second bathroom off circulation."
+      ]
+    },
+    {
+      "code": "W_SWING_OBSTRUCTED",
+      "severity": "warning",
+      "message": "Door swing is obstructed — the swing needs 800 mm of clear radius but \"fridge\" is 602 mm from the hinge (198 mm short).",
+      "line": 67,
+      "col": 3,
+      "span": [
+        3870,
+        3937
+      ],
+      "fix": "Hang the leaf on the other jamb (`hinge left|right`) — a machine-applicable fix when the flipped swing is proved clear; or open it the other way (`swing in|out`), move the door along its wall, move the obstruction (`arch repair`), narrow the leaf to the width the warning quotes (never below the minimum passable width — that relocates the problem into `W_DOOR_CLEARANCE`), hang no swinging leaf at all (a `sliding`, `pocket` or `barn` door sweeps nothing, so this rule cannot apply to it), or make it a leafless `opening`.",
+      "hints": [
+        "Hang the leaf on the other jamb — `hinge right`.",
+        "Open it to the other side of the wall — `swing out`.",
+        "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `arch repair` computes the smallest clearing shift.",
+        "Narrowing the door is not a fix here — the leaf would have to drop to 602 mm, under the 700 mm minimum passable width.",
+        "Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps nothing, so this warning cannot apply to it (`door pocket on <wall> at <pos> width <mm>`).",
+        "If no leaf is wanted here, make it a leafless `opening` instead."
+      ]
+    },
+    {
+      "code": "W_SWING_OBSTRUCTED",
+      "severity": "warning",
+      "message": "Door swing is obstructed — the swing needs 700 mm of clear radius but \"Bed (twin)\" is 350 mm from the hinge (350 mm short).",
+      "line": 68,
+      "col": 3,
+      "span": [
+        3940,
+        4004
+      ],
+      "fix": "Hang the leaf on the other jamb (`hinge left|right`) — a machine-applicable fix when the flipped swing is proved clear; or open it the other way (`swing in|out`), move the door along its wall, move the obstruction (`arch repair`), narrow the leaf to the width the warning quotes (never below the minimum passable width — that relocates the problem into `W_DOOR_CLEARANCE`), hang no swinging leaf at all (a `sliding`, `pocket` or `barn` door sweeps nothing, so this rule cannot apply to it), or make it a leafless `opening`.",
+      "hints": [
+        "Hang the leaf on the other jamb — `hinge right`.",
+        "Open it to the other side of the wall — `swing out`.",
+        "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `arch repair` computes the smallest clearing shift.",
+        "Narrowing the door is not a fix here — the leaf would have to drop to 350 mm, under the 700 mm minimum passable width.",
+        "Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps nothing, so this warning cannot apply to it (`door pocket on <wall> at <pos> width <mm>`).",
+        "If no leaf is wanted here, make it a leafless `opening` instead."
+      ]
+    },
+    {
+      "code": "W_SWING_OBSTRUCTED",
+      "severity": "warning",
+      "message": "Door swing is obstructed — the swing needs 600 mm of clear radius but \"wc\" is 400 mm from the hinge (200 mm short).",
+      "line": 74,
+      "col": 3,
+      "span": [
+        4288,
+        4353
+      ],
+      "fix": "Hang the leaf on the other jamb (`hinge left|right`) — a machine-applicable fix when the flipped swing is proved clear; or open it the other way (`swing in|out`), move the door along its wall, move the obstruction (`arch repair`), narrow the leaf to the width the warning quotes (never below the minimum passable width — that relocates the problem into `W_DOOR_CLEARANCE`), hang no swinging leaf at all (a `sliding`, `pocket` or `barn` door sweeps nothing, so this rule cannot apply to it), or make it a leafless `opening`.",
+      "hints": [
+        "Hang the leaf on the other jamb — `hinge right` (this clears it).",
+        "Open it to the other side of the wall — `swing out`.",
+        "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `arch repair` computes the smallest clearing shift.",
+        "Narrowing the door is not a fix here — the leaf would have to drop to 400 mm, under the 700 mm minimum passable width.",
+        "Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps nothing, so this warning cannot apply to it (`door pocket on <wall> at <pos> width <mm>`).",
+        "If no leaf is wanted here, make it a leafless `opening` instead."
+      ],
+      "fixes": [
+        {
+          "title": "hang the leaf on the other jamb (`hinge right`) — the flipped swing is clear",
+          "applicability": "machine-applicable",
+          "edits": [
+            {
+              "span": [
+                4288,
+                4353
+              ],
+              "newText": "door id=d_bath on p_bed2_bath at 1150 width 600 hinge right swing into r_bath"
+            }
+          ],
+          "fixId": "door-swing-obstructed"
+        }
+      ]
+    },
+    {
+      "code": "W_DOORWAY_BLOCKED",
+      "severity": "warning",
+      "message": "Doorway is blocked — the approach needs 300 mm clear on each side but \"fridge\" leaves 50 mm (250 mm short).",
+      "line": 67,
+      "col": 3,
+      "span": [
+        3870,
+        3937
+      ],
+      "fix": "Move the obstruction clear of the opening by the shortfall the warning quotes (`arch repair` computes the smallest clearing shift), shrink it by that much on the axis facing the door, or move the door along its wall so its landing misses it.",
+      "hints": [
+        "Move \"fridge\" 250 mm clear of the opening — `arch repair` computes the smallest clearing shift.",
+        "Or shrink it by 250 mm on the axis facing the door, so it stops 300 mm short of the opening.",
+        "Or move the door along its wall (`on <wall> at <pos>`) so its landing misses \"fridge\"."
+      ]
+    },
+    {
+      "code": "W_DOOR_CLEARANCE",
+      "severity": "warning",
+      "message": "Door is 600 mm wide (under the 700 mm minimum nominal width).",
+      "line": 74,
+      "col": 3,
+      "span": [
+        4288,
+        4353
+      ],
+      "fix": "Widen the door to at least the minimum clear width.",
+      "hints": [
+        "Widen it to at least 700 mm."
+      ]
+    },
+    {
+      "code": "W_PATH_TOO_NARROW",
+      "severity": "warning",
+      "message": "The walk from the entrance to \"Bedroom 1\" squeezes to 300 mm (400 mm below the 700 mm minimum).",
+      "line": 55,
+      "col": 3,
+      "span": [
+        3083,
+        3165
+      ],
+      "fix": "Widen the tightest door/opening on the route to at least the minimum, move the furniture pinching it, or add a second way in so the pinch is avoidable. There is no machine-applicable fix: the bottleneck is a nav-grid cell, not a named element, so nothing can be rewritten for you.",
+      "hints": [
+        "Widen the tightest door/opening on the way to at least 700 mm.",
+        "Or move the furniture pinching the route so 700 mm of clear width survives.",
+        "Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable."
+      ]
+    },
+    {
+      "code": "W_ROOM_NOT_EQUATOR_FACING",
+      "severity": "warning",
+      "message": "Room \"Living\" has 1 window(s), none facing S (the equator side in the northern hemisphere) — they face N.",
+      "line": 54,
+      "col": 3,
+      "span": [
+        2999,
+        3080
+      ],
+      "fix": "Move a window onto the room's equator-facing facade, or accept the aspect — an urban plot often has no equator-facing wall to spare. There is deliberately NO machine fix: the remedy is a geometric decision (which facade, which wall, what else it displaces) and the compiler does not make those (ADR 0005).",
+      "hints": [
+        "A drafting heuristic, not a daylight measurement: it reports the aspect, not the light. Move a window onto the S facade, or accept it."
+      ]
+    }
+  ]
+}

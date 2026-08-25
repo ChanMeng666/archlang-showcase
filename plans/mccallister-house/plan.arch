@@ -1,0 +1,243 @@
+# 671 Lincoln Avenue — ground floor, Sheet A-101.
+#
+# Fan art: an original architectural drawing of a house best known from a 1990 film.
+# Not affiliated with the film or its rights holders; no marks, logos or character
+# names appear here. The traps are drawn the way a set decorator's prop inventory
+# would appear on a construction document — as scheduled items with positions.
+#
+# The building is a 1920s Georgian: a symmetrical 18 x 13 m block, three rooms wide
+# across the front, with the entrance hall dead centre and the main flight facing the
+# front door. Service rooms fill the back half — kitchen, mudroom, rear hall with the
+# cellar flight, laundry, butler's pantry.
+#
+# Nothing is positioned twice. Every opening is pinned to a named wall by run distance,
+# every fixture resolves `against wall` or `in <room> anchor …`, so the drawing still
+# holds together if a partition moves. The one exception is deliberate and is the whole
+# joke — see the note above `f_micro`.
+plan "671 Lincoln Avenue — Defense of the Realm" {
+  units mm
+  grid 50            # exterior 300, partitions 100 — every inner face lands on a …50
+  paper A2 landscape
+  scale 1:50
+  north up
+  # The footprint is a clean rectangle with no notch in it, so the automatic chains
+  # are the right tool: `all` draws the GB/T openings + axis + overall tiers outside
+  # every facade, staggered, with none of the same-tier collisions a hand-written
+  # run of adjacent `dim` statements produces (`W_DIM_OVERLAP` — ten of them, on the
+  # first draft of this sheet).
+  dims auto all
+
+  # The house fronts the street on the south, in the northern hemisphere. `site` draws
+  # nothing; it only names the five directions `arch describe --json --select site`
+  # reports — which is how the drawing can say "the back door" and mean north.
+  site { street south hemisphere north }
+
+  accTitle "671 Lincoln Avenue, ground floor, Sheet A-101"
+  accDescr "The ground floor of a large Georgian house drawn as a construction document. A central entrance hall holds the main staircase and is flanked by a living room and a dining room across the front. Behind them are a study, a sun room, a rear hall with the cellar flight, a mudroom with the back door, a large kitchen, a laundry, a store, a powder room and a butler's pantry. Several fixtures are labelled as defensive props rather than furniture."
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # SHELL
+  # Four straight exterior walls rather than one closed path: each one is then a
+  # clean start-to-end run that an opening can be pinned to by distance.
+  # ───────────────────────────────────────────────────────────────────────────
+  wall id=w_front exterior thickness 300 { (0,13000) (18000,13000) }
+  wall id=w_rear  exterior thickness 300 { (0,0) (18000,0) }
+  wall id=w_west  exterior thickness 300 { (0,0) (0,13000) }
+  wall id=w_east  exterior thickness 300 { (18000,0) (18000,13000) }
+
+  # Partitions. `p_spine` is the single wall that separates the three front rooms
+  # from the entire service half, so four different rooms hang openings off it.
+  wall id=p_spine    partition thickness 100 { (0,8000) (18000,8000) }
+  wall id=p_livhall  partition thickness 100 { (6800,8000) (6800,13000) }
+  wall id=p_halldin  partition thickness 100 { (11200,8000) (11200,13000) }
+  wall id=p_sunstudy partition thickness 100 { (0,4000) (4200,4000) }
+  wall id=p_westcol  partition thickness 100 { (4200,0) (4200,8000) }
+  wall id=p_mudhall  partition thickness 100 { (4200,2600) (8000,2600) }
+  wall id=p_kitchen  partition thickness 100 { (8000,0) (8000,8000) }
+  wall id=p_eastcol  partition thickness 100 { (13000,0) (13000,8000) }
+  wall id=p_laundry  partition thickness 100 { (13000,2600) (18000,2600) }
+  wall id=p_powder   partition thickness 100 { (15400,2600) (15400,5400) }
+  wall id=p_pantry   partition thickness 100 { (13000,5400) (18000,5400) }
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # ROOMS
+  # Front band first, west to east: the symmetry of the facade is the plan's.
+  # ───────────────────────────────────────────────────────────────────────────
+  room id=r_living  at (0,8000)     size 6800x5000 label "Living Room"     uses living
+  room id=r_hall    at (6800,8000)  size 4400x5000 label "Entrance Hall"   uses hall entry circulation
+  room id=r_dining  at (11200,8000) size 6800x5000 label "Dining Room"     uses dining
+
+  room id=r_sun     at (0,0)        size 4200x4000 label "Sun Room"        uses living
+  room id=r_study   at (0,4000)     size 4200x4000 label "Study"           uses office
+  room id=r_mud     at (4200,0)     size 3800x2600 label "Mudroom"         uses entry
+  room id=r_rear    at (4200,2600)  size 3800x5400 label "Rear Hall"       uses hall circulation
+  room id=r_kitchen at (8000,0)     size 5000x8000 label "Kitchen"         uses kitchen
+  room id=r_laundry at (13000,0)    size 5000x2600 label "Laundry"         uses utility
+  room id=r_store   at (13000,2600) size 2400x2800 label "Store"           uses storage
+  room id=r_powder  at (15400,2600) size 2600x2800 label "Powder Room"     uses wc
+  room id=r_pantry  at (13000,5400) size 5000x2600 label "Butler's Pantry" uses storage
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # THE FRONT
+  # A Georgian facade is a symmetry argument: two windows, the door, two windows,
+  # about the centreline at x = 9000. The door opens straight onto the flight.
+  # ───────────────────────────────────────────────────────────────────────────
+  door id=d_front on w_front at 9000 width 1200 hinge near start swing into r_hall
+
+  window id=win_liv_s1 on w_front at 1700  width 1400
+  window id=win_liv_s2 on w_front at 5100  width 1400
+  window id=win_din_s1 on w_front at 12900 width 1400
+  window id=win_din_s2 on w_front at 16300 width 1400
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # THE BACK DOOR
+  # The one every account of this house mentions. It is a plain hinged leaf on the
+  # rear wall of the mudroom; what makes it notable is scheduled below, not here.
+  # ───────────────────────────────────────────────────────────────────────────
+  door id=d_back on w_rear at 6100 width 1000 hinge near start swing into r_mud
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # INTERIOR OPENINGS
+  # The two flanking rooms take leafless cased openings — this is a house with
+  # double doors between the hall and the reception rooms, and a cased opening is
+  # what a plan draws when there is no single leaf to swing.
+  # ───────────────────────────────────────────────────────────────────────────
+  opening id=o_liv_hall on p_livhall at 3400 width 1600
+  opening id=o_hall_din on p_halldin at 3400 width 1600
+
+  # Off the spine: the study behind the living room, the rear hall behind the
+  # entrance hall, the butler's pantry behind the dining room. Three rooms, three
+  # different reasons to be there.
+  door    id=d_study    on p_spine at 2100  width 900 swing into r_study
+  opening id=o_hall_rear on p_spine at 7400  width 1000
+  door    id=d_butler   on p_spine at 14200 width 900 swing into r_pantry
+
+  opening id=o_sun      on p_sunstudy at 2100 width 1400
+  opening id=o_mud_rear on p_mudhall  at 2400 width 1100
+  opening id=o_mud_kit  on p_kitchen  at 1300 width 1000
+  opening id=o_rear_kit on p_kitchen  at 6200 width 1100
+
+  # A bifold on the laundry: a hinged leaf here opens either over the machines or
+  # across the kitchen's working side, and a bifold sweeps neither.
+  door id=d_laundry bifold on p_eastcol at 1300 width 800
+  door id=d_store   on p_eastcol at 3500 width 800 swing into r_store
+  opening id=o_pantry on p_eastcol at 6700 width 1000
+
+  # The powder room takes a pocket. `p_pantry` is walked west to east, so `slide
+  # left` drives the panel back into the 3500 mm of solid wall between this jamb and
+  # the corner; `slide right` would aim it at the 700 mm to the east wall, against
+  # the 840 mm an 800 mm panel needs, and `W_POCKET_RUN` would say so.
+  door id=d_powder pocket on p_pantry at 3900 width 800 slide left
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # WINDOWS
+  # ───────────────────────────────────────────────────────────────────────────
+  window id=win_sun_w   on w_west at 2000  width 2000   # the sun room takes two walls
+  window id=win_study_w on w_west at 5800  width 1400
+
+  window id=win_sun_n   on w_rear at 2100  width 2400
+  window id=win_kit_n1  on w_rear at 9200  width 1400   # over the sink
+  window id=win_kit_n2  on w_rear at 11700 width 1400
+  window id=win_laun_n  on w_rear at 16400 width 1200
+
+  window id=win_laun_e  on w_east at 1300  width 900
+  window id=win_powd_e  on w_east at 4000  width 600
+  window id=win_pant_e  on w_east at 6700  width 900
+  window id=win_din_e   on w_east at 11200 width 1400
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # STAIRS
+  # The main flight is centred on the hall and on the front door, running back to
+  # front: `dir up` is entered from the larger-y end, so you come through the door
+  # and the flight is facing you. That is the composition the house is known for.
+  #
+  # The cellar flight is in the rear hall, entered from the mudroom end.
+  # ───────────────────────────────────────────────────────────────────────────
+  # 1200 wide and centred on x = 9000, which is exactly the width and the centreline
+  # of the front door: the flight and the opening you see it through are the same
+  # rectangle. It also leaves 1550 mm of clear hall on each side of the flight, which
+  # is what keeps both flanking openings approachable.
+  stair id=s_main   at (8400,8200) size 1200x3400 dir up
+  stair id=s_cellar at (4600,4200) size 1200x3400 dir down
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FIXTURES — the house
+  # ───────────────────────────────────────────────────────────────────────────
+  furniture id=f_fire  fireplace against wall w_west offset 9800 size 1800x400 label "Fireplace" in r_living
+  furniture id=f_sofa  sofa  at (1400,9200)  size 2400x900  label "Sofa"         in r_living
+  furniture id=f_ctab  table at (2050,10400) size 1100x600  label "Coffee Table" in r_living
+  furniture id=f_tree  tree  in r_living anchor bottom-left flush inset 300 size 1200x1200 label "Tree"
+
+  furniture id=f_dtab  table   at (13400,9800) size 2400x1200 label "Dining Table" in r_dining
+  furniture id=f_sbd   counter against wall w_east offset 9200 size 1800x500 label "Sideboard" in r_dining
+
+  furniture id=f_sink   kitchen_sink against wall w_rear offset 9200  in r_kitchen
+  furniture id=f_stove  stove        against wall w_rear offset 10500 in r_kitchen
+  furniture id=f_fridge fridge       against wall w_rear offset 12400 in r_kitchen
+  furniture id=f_cntr   counter against wall p_eastcol offset 5000 size 1800x600 label "Counter" in r_kitchen
+  # `table`, not `counter`: an island is free-standing by definition, and `counter`
+  # is a catalogued PLUMBING fixture, so lint would rightly report it floating.
+  furniture id=f_island table at (9400,2200) size 2200x900 label "Island"          in r_kitchen
+  furniture id=f_ktab   table   at (9200,5600) size 1600x1000 label "Breakfast Table" in r_kitchen
+
+  furniture id=f_desk  table   at (1200,5600) size 1600x800 label "Desk" in r_study
+  furniture id=f_book  counter against wall p_westcol offset 6000 size 1600x400 label "Bookcase" in r_study
+
+  furniture id=f_stab  table in r_sun centered size 1200x800 label "Table"
+
+  furniture id=f_wash  counter against wall w_rear offset 14300 size 1800x600 label "Washer / Dryer" in r_laundry
+  furniture id=f_shelf counter in r_store anchor right flush size 400x1800 label "Shelving"
+
+  furniture id=f_basin basin in r_powder anchor top-left    flush size 600x450
+  furniture id=f_wc    wc    in r_powder anchor bottom-left flush size 400x700
+
+  # `offset` is a run distance along the named wall from ITS first point — p_pantry
+  # starts at (13000,5400), so 2200 is x = 15200 on the plan, not 2200.
+  furniture id=f_srvy counter against wall p_pantry offset 2200 size 2000x600 label "Servery" in r_pantry
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # FIXTURES — the defensive works
+  #
+  # Scheduled as props, positioned like fixtures. Every one of these is a labelled
+  # rectangle: `furniture` draws a symbol only for a category it holds a glyph for,
+  # and the catalogue does not run to any of these.
+  # ───────────────────────────────────────────────────────────────────────────
+  # Beside the head of the main flight, on the landing side.
+  furniture id=f_paint paint_cans at (9600,8200) size 1500x600 label "Paint cans (2), swing radius 1.2 m" in r_hall
+  furniture id=f_tara  vivarium   at (9600,9000) size 1450x700 label "Tarantula (live) — see A-201"       in r_hall
+
+  # And the floor of the entrance hall itself. This is the one piece on the sheet
+  # placed at a hand-written coordinate rather than derived from a room or a wall,
+  # and it is placed there on purpose: it lies square in the front door's swing.
+  # `arch lint` has an opinion about that, quoted verbatim in this plan's README.
+  furniture id=f_micro loose_fill at (8300,11900) size 1400x700 label "Micro Machines, loose fill" in r_hall
+
+  # The back door, both sides of it.
+  # `f_knob` sits clear of the leaf's own quarter-disc rather than beside the jamb —
+  # a schedule item inside the swing is an obstruction, and lint counts it as one.
+  furniture id=f_knob  hardware  at (4300,1500) size 1500x500 label "Doorknob, heated — see detail 7" in r_mud
+  furniture id=f_torch equipment at (6800,200)  size 1000x400 label "Blowtorch station"               in r_mud
+
+  # The cellar flight, alongside it rather than on it — a schedule shows where a
+  # thing is applied, not where you would like to stand.
+  furniture id=f_tar coating at (6000,4400) size 1400x900 label "Tar, applied — cellar flight" in r_rear
+
+  # The laundry chute head. What goes down it is scheduled with it, because on this
+  # sheet the chute and its contents are one assembly.
+  furniture id=f_chute chute at (16200,1600) size 1600x700 label "Laundry chute — iron, suspended" in r_laundry
+
+  # Dimensions come from `dims auto all` at the head of the plan — there is not a
+  # single hand-written `dim` on this sheet.
+
+  schedule rooms
+  legend
+
+  # The title block's value column is a fixed width on the sheet, so these three are
+  # written to fit it. The full sheet name — "671 Lincoln — Defense of the Realm,
+  # Sheet A-101" — is the plan's own title above, which is what `describe` reports.
+  title {
+    project "671 Lincoln Ave — A-101"
+    drawn_by "Kevin (age 8) / ArchLang"
+    date "December"
+  }
+}

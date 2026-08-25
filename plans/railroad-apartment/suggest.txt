@@ -1,0 +1,9 @@
+W_BEDROOM_NO_WINDOW: Bedroom "Bedroom 1" has no window.
+  window on w_west at 33.333% width 1200
+    → A window on exterior wall "w_west" gives "Bedroom 1" natural light and egress.
+W_BEDROOM_NO_WINDOW: Bedroom "Bedroom 2*" has no window.
+  window on w_west at 66.944% width 1200
+    → A window on exterior wall "w_west" gives "Bedroom 2*" natural light and egress.
+W_BATH_VIA_BEDROOM: Bathroom "Bath" is reachable only through a bedroom.
+  door on w_hall at 74.583% width 900
+    → A door on wall "w_hall" links "Bath" to "r_hall", giving it a route that avoids the bedroom.
