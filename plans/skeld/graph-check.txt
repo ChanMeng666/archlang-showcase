@@ -1,0 +1,50 @@
+$ arch validate plans/skeld/plan.arch --graph plans/skeld/intended-graph.json
+
+warning[W_NO_ENTRANCE]: The plan has no exterior door or opening — there is no way into the building.
+  = help: Add a `door` (or a cased `opening`) on an `exterior` wall.
+  = fix: Add a `door` on an `exterior` wall.
+
+  graph: missing connection r_cafeteria — r_electrical
+  graph: missing connection r_electrical — r_storage
+  graph: unexpected connection r_east_hall — r_shields
+✗ 1 warning, graph mismatch
+
+exit code: 2
+
+$ arch validate plans/skeld/plan.arch --graph plans/skeld/intended-graph.json --json
+
+{
+  "ok": false,
+  "strict": false,
+  "diagnostics": [
+    {
+      "code": "W_NO_ENTRANCE",
+      "severity": "warning",
+      "message": "The plan has no exterior door or opening — there is no way into the building.",
+      "fix": "Add a `door` on an `exterior` wall.",
+      "hints": [
+        "Add a `door` (or a cased `opening`) on an `exterior` wall."
+      ]
+    }
+  ],
+  "graph": {
+    "ok": false,
+    "missing_rooms": [],
+    "missing_connections": [
+      [
+        "r_cafeteria",
+        "r_electrical"
+      ],
+      [
+        "r_electrical",
+        "r_storage"
+      ]
+    ],
+    "extra_connections": [
+      [
+        "r_east_hall",
+        "r_shields"
+      ]
+    ]
+  }
+}

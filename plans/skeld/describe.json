@@ -1,0 +1,2707 @@
+{
+  "ok": true,
+  "plan": "The Skeld",
+  "caption": "\"The Skeld\" — a 22-room floor plan, 2546 m² total: Reactor (139 m²), Upper Engine (143 m²), Lower Engine (182 m²), Reactor Hall (84 m²), Security (56 m²), Upper Hall (120 m²), MedBay (91 m²), Cafeteria (360 m²), and 14 more; 21 doors, 3 windows.",
+  "accTitle": "The Skeld — deck plan",
+  "accDescr": "A single-deck spaceship plan, 90 by 40 metres. Reactor at the bow on the left, Navigation at the pointed stern on the right, engine rooms top-left and bottom-left, and a large Cafeteria across the top of midship.",
+  "units": "mm",
+  "scale": "1:200",
+  "sheet": {
+    "paper": "A2",
+    "orientation": "landscape",
+    "scale_denominator": 200,
+    "scale_auto": false,
+    "fits": true
+  },
+  "bbox": {
+    "w": 90000,
+    "h": 40000
+  },
+  "bbox_outer": {
+    "w": 90696.55056087828,
+    "h": 40500
+  },
+  "rooms": [
+    {
+      "id": "r_reactor",
+      "label": "Reactor",
+      "uses": [
+        "utility"
+      ],
+      "room_type": "Storage",
+      "area_m2": 139,
+      "bbox": {
+        "x": 2000,
+        "y": 17000,
+        "w": 14000,
+        "h": 11000
+      },
+      "floor_polygon": [
+        {
+          "x": 7000,
+          "y": 17000
+        },
+        {
+          "x": 16000,
+          "y": 17000
+        },
+        {
+          "x": 16000,
+          "y": 28000
+        },
+        {
+          "x": 7000,
+          "y": 28000
+        },
+        {
+          "x": 2000,
+          "y": 25000
+        },
+        {
+          "x": 2000,
+          "y": 20000
+        }
+      ],
+      "adjacent": [
+        "r_lower_eng",
+        "r_reactor_hall"
+      ]
+    },
+    {
+      "id": "r_upper_eng",
+      "label": "Upper Engine",
+      "uses": [
+        "utility"
+      ],
+      "room_type": "Storage",
+      "area_m2": 143,
+      "bbox": {
+        "x": 9000,
+        "y": 3000,
+        "w": 13000,
+        "h": 11000
+      },
+      "floor_polygon": [
+        {
+          "x": 9000,
+          "y": 3000
+        },
+        {
+          "x": 22000,
+          "y": 3000
+        },
+        {
+          "x": 22000,
+          "y": 14000
+        },
+        {
+          "x": 9000,
+          "y": 14000
+        }
+      ],
+      "adjacent": [
+        "r_reactor_hall",
+        "r_upper_hall"
+      ]
+    },
+    {
+      "id": "r_lower_eng",
+      "label": "Lower Engine",
+      "uses": [
+        "utility"
+      ],
+      "room_type": "Storage",
+      "area_m2": 182,
+      "bbox": {
+        "x": 9000,
+        "y": 28000,
+        "w": 13000,
+        "h": 14000
+      },
+      "floor_polygon": [
+        {
+          "x": 9000,
+          "y": 28000
+        },
+        {
+          "x": 22000,
+          "y": 28000
+        },
+        {
+          "x": 22000,
+          "y": 42000
+        },
+        {
+          "x": 9000,
+          "y": 42000
+        }
+      ],
+      "adjacent": [
+        "r_reactor",
+        "r_reactor_hall",
+        "r_lower_hall"
+      ]
+    },
+    {
+      "id": "r_reactor_hall",
+      "label": "Reactor Hall",
+      "uses": [
+        "circulation"
+      ],
+      "room_type": "Entrance",
+      "area_m2": 84,
+      "bbox": {
+        "x": 16000,
+        "y": 14000,
+        "w": 6000,
+        "h": 14000
+      },
+      "floor_polygon": [
+        {
+          "x": 16000,
+          "y": 14000
+        },
+        {
+          "x": 22000,
+          "y": 14000
+        },
+        {
+          "x": 22000,
+          "y": 28000
+        },
+        {
+          "x": 16000,
+          "y": 28000
+        }
+      ],
+      "adjacent": [
+        "r_reactor",
+        "r_upper_eng",
+        "r_lower_eng",
+        "r_security"
+      ]
+    },
+    {
+      "id": "r_security",
+      "label": "Security",
+      "uses": [
+        "office"
+      ],
+      "room_type": "StudyRoom",
+      "area_m2": 56,
+      "bbox": {
+        "x": 22000,
+        "y": 18000,
+        "w": 8000,
+        "h": 7000
+      },
+      "floor_polygon": [
+        {
+          "x": 22000,
+          "y": 18000
+        },
+        {
+          "x": 30000,
+          "y": 18000
+        },
+        {
+          "x": 30000,
+          "y": 25000
+        },
+        {
+          "x": 22000,
+          "y": 25000
+        }
+      ],
+      "adjacent": [
+        "r_reactor_hall"
+      ]
+    },
+    {
+      "id": "r_upper_hall",
+      "label": "Upper Hall",
+      "uses": [
+        "circulation"
+      ],
+      "room_type": "Entrance",
+      "area_m2": 120,
+      "bbox": {
+        "x": 22000,
+        "y": 3000,
+        "w": 20000,
+        "h": 6000
+      },
+      "floor_polygon": [
+        {
+          "x": 22000,
+          "y": 3000
+        },
+        {
+          "x": 42000,
+          "y": 3000
+        },
+        {
+          "x": 42000,
+          "y": 9000
+        },
+        {
+          "x": 22000,
+          "y": 9000
+        }
+      ],
+      "adjacent": [
+        "r_upper_eng",
+        "r_medbay",
+        "r_cafeteria"
+      ]
+    },
+    {
+      "id": "r_medbay",
+      "label": "MedBay",
+      "uses": [],
+      "room_type": "Room",
+      "area_m2": 91,
+      "bbox": {
+        "x": 27000,
+        "y": 9000,
+        "w": 13000,
+        "h": 7000
+      },
+      "floor_polygon": [
+        {
+          "x": 27000,
+          "y": 9000
+        },
+        {
+          "x": 40000,
+          "y": 9000
+        },
+        {
+          "x": 40000,
+          "y": 16000
+        },
+        {
+          "x": 27000,
+          "y": 16000
+        }
+      ],
+      "adjacent": [
+        "r_upper_hall"
+      ]
+    },
+    {
+      "id": "r_cafeteria",
+      "label": "Cafeteria",
+      "uses": [
+        "dining"
+      ],
+      "room_type": "DiningRoom",
+      "area_m2": 360,
+      "bbox": {
+        "x": 42000,
+        "y": 3000,
+        "w": 20000,
+        "h": 18000
+      },
+      "floor_polygon": [
+        {
+          "x": 42000,
+          "y": 3000
+        },
+        {
+          "x": 62000,
+          "y": 3000
+        },
+        {
+          "x": 62000,
+          "y": 21000
+        },
+        {
+          "x": 42000,
+          "y": 21000
+        }
+      ],
+      "adjacent": [
+        "r_upper_hall",
+        "r_caf_hall",
+        "r_admin_hall",
+        "r_weap_hall"
+      ]
+    },
+    {
+      "id": "r_caf_hall",
+      "label": "Cafeteria Hall",
+      "uses": [
+        "circulation"
+      ],
+      "room_type": "Entrance",
+      "area_m2": 42,
+      "bbox": {
+        "x": 48000,
+        "y": 21000,
+        "w": 6000,
+        "h": 7000
+      },
+      "floor_polygon": [
+        {
+          "x": 48000,
+          "y": 21000
+        },
+        {
+          "x": 54000,
+          "y": 21000
+        },
+        {
+          "x": 54000,
+          "y": 28000
+        },
+        {
+          "x": 48000,
+          "y": 28000
+        }
+      ],
+      "adjacent": [
+        "r_cafeteria",
+        "r_storage"
+      ]
+    },
+    {
+      "id": "r_admin_hall",
+      "label": "Admin Hall",
+      "uses": [
+        "circulation"
+      ],
+      "room_type": "Entrance",
+      "area_m2": 36,
+      "bbox": {
+        "x": 56000,
+        "y": 21000,
+        "w": 6000,
+        "h": 6000
+      },
+      "floor_polygon": [
+        {
+          "x": 56000,
+          "y": 21000
+        },
+        {
+          "x": 62000,
+          "y": 21000
+        },
+        {
+          "x": 62000,
+          "y": 27000
+        },
+        {
+          "x": 56000,
+          "y": 27000
+        }
+      ],
+      "adjacent": [
+        "r_cafeteria",
+        "r_admin"
+      ]
+    },
+    {
+      "id": "r_admin",
+      "label": "Admin",
+      "uses": [
+        "office"
+      ],
+      "room_type": "StudyRoom",
+      "area_m2": 80,
+      "bbox": {
+        "x": 62000,
+        "y": 21000,
+        "w": 10000,
+        "h": 8000
+      },
+      "floor_polygon": [
+        {
+          "x": 62000,
+          "y": 21000
+        },
+        {
+          "x": 72000,
+          "y": 21000
+        },
+        {
+          "x": 72000,
+          "y": 29000
+        },
+        {
+          "x": 62000,
+          "y": 29000
+        }
+      ],
+      "adjacent": [
+        "r_admin_hall",
+        "r_o2",
+        "r_south_hall"
+      ]
+    },
+    {
+      "id": "r_lower_hall",
+      "label": "Lower Hall",
+      "uses": [
+        "circulation"
+      ],
+      "room_type": "Entrance",
+      "area_m2": 132,
+      "bbox": {
+        "x": 22000,
+        "y": 28000,
+        "w": 22000,
+        "h": 6000
+      },
+      "floor_polygon": [
+        {
+          "x": 22000,
+          "y": 28000
+        },
+        {
+          "x": 44000,
+          "y": 28000
+        },
+        {
+          "x": 44000,
+          "y": 34000
+        },
+        {
+          "x": 22000,
+          "y": 34000
+        }
+      ],
+      "adjacent": [
+        "r_lower_eng",
+        "r_electrical",
+        "r_storage"
+      ]
+    },
+    {
+      "id": "r_electrical",
+      "label": "Electrical",
+      "uses": [
+        "utility"
+      ],
+      "room_type": "Storage",
+      "area_m2": 126,
+      "bbox": {
+        "x": 30000,
+        "y": 34000,
+        "w": 14000,
+        "h": 9000
+      },
+      "floor_polygon": [
+        {
+          "x": 30000,
+          "y": 34000
+        },
+        {
+          "x": 44000,
+          "y": 34000
+        },
+        {
+          "x": 44000,
+          "y": 43000
+        },
+        {
+          "x": 30000,
+          "y": 43000
+        }
+      ],
+      "adjacent": [
+        "r_lower_hall",
+        "r_storage"
+      ]
+    },
+    {
+      "id": "r_storage",
+      "label": "Storage",
+      "uses": [
+        "storage"
+      ],
+      "room_type": "Storage",
+      "area_m2": 224,
+      "bbox": {
+        "x": 44000,
+        "y": 28000,
+        "w": 16000,
+        "h": 14000
+      },
+      "floor_polygon": [
+        {
+          "x": 44000,
+          "y": 28000
+        },
+        {
+          "x": 60000,
+          "y": 28000
+        },
+        {
+          "x": 60000,
+          "y": 42000
+        },
+        {
+          "x": 44000,
+          "y": 42000
+        }
+      ],
+      "adjacent": [
+        "r_caf_hall",
+        "r_lower_hall",
+        "r_electrical",
+        "r_south_hall"
+      ]
+    },
+    {
+      "id": "r_weap_hall",
+      "label": "Weapons Hall",
+      "uses": [
+        "circulation"
+      ],
+      "room_type": "Entrance",
+      "area_m2": 48,
+      "bbox": {
+        "x": 62000,
+        "y": 5000,
+        "w": 8000,
+        "h": 6000
+      },
+      "floor_polygon": [
+        {
+          "x": 62000,
+          "y": 5000
+        },
+        {
+          "x": 70000,
+          "y": 5000
+        },
+        {
+          "x": 70000,
+          "y": 11000
+        },
+        {
+          "x": 62000,
+          "y": 11000
+        }
+      ],
+      "adjacent": [
+        "r_cafeteria",
+        "r_weapons"
+      ]
+    },
+    {
+      "id": "r_weapons",
+      "label": "Weapons",
+      "uses": [],
+      "room_type": "Room",
+      "area_m2": 120,
+      "bbox": {
+        "x": 70000,
+        "y": 3000,
+        "w": 12000,
+        "h": 10000
+      },
+      "floor_polygon": [
+        {
+          "x": 70000,
+          "y": 3000
+        },
+        {
+          "x": 82000,
+          "y": 3000
+        },
+        {
+          "x": 82000,
+          "y": 13000
+        },
+        {
+          "x": 70000,
+          "y": 13000
+        }
+      ],
+      "adjacent": [
+        "r_weap_hall",
+        "r_east_hall"
+      ]
+    },
+    {
+      "id": "r_o2",
+      "label": "O2",
+      "uses": [],
+      "room_type": "Room",
+      "area_m2": 60,
+      "bbox": {
+        "x": 66000,
+        "y": 15000,
+        "w": 10000,
+        "h": 6000
+      },
+      "floor_polygon": [
+        {
+          "x": 66000,
+          "y": 15000
+        },
+        {
+          "x": 76000,
+          "y": 15000
+        },
+        {
+          "x": 76000,
+          "y": 21000
+        },
+        {
+          "x": 66000,
+          "y": 21000
+        }
+      ],
+      "adjacent": [
+        "r_admin",
+        "r_east_hall"
+      ]
+    },
+    {
+      "id": "r_east_hall",
+      "label": "East Hall",
+      "uses": [
+        "circulation"
+      ],
+      "room_type": "Entrance",
+      "area_m2": 132,
+      "bbox": {
+        "x": 76000,
+        "y": 13000,
+        "w": 6000,
+        "h": 22000
+      },
+      "floor_polygon": [
+        {
+          "x": 76000,
+          "y": 13000
+        },
+        {
+          "x": 82000,
+          "y": 13000
+        },
+        {
+          "x": 82000,
+          "y": 35000
+        },
+        {
+          "x": 76000,
+          "y": 35000
+        }
+      ],
+      "adjacent": [
+        "r_weapons",
+        "r_o2",
+        "r_nav",
+        "r_south_hall",
+        "r_shields"
+      ]
+    },
+    {
+      "id": "r_nav",
+      "label": "Navigation",
+      "uses": [],
+      "room_type": "Room",
+      "area_m2": 115,
+      "bbox": {
+        "x": 82000,
+        "y": 15000,
+        "w": 10000,
+        "h": 14000
+      },
+      "floor_polygon": [
+        {
+          "x": 82000,
+          "y": 15000
+        },
+        {
+          "x": 87000,
+          "y": 15000
+        },
+        {
+          "x": 92000,
+          "y": 20000
+        },
+        {
+          "x": 92000,
+          "y": 24000
+        },
+        {
+          "x": 87000,
+          "y": 29000
+        },
+        {
+          "x": 82000,
+          "y": 29000
+        }
+      ],
+      "adjacent": [
+        "r_east_hall"
+      ]
+    },
+    {
+      "id": "r_south_hall",
+      "label": "South Hall",
+      "uses": [
+        "circulation"
+      ],
+      "room_type": "Entrance",
+      "area_m2": 96,
+      "bbox": {
+        "x": 60000,
+        "y": 29000,
+        "w": 16000,
+        "h": 6000
+      },
+      "floor_polygon": [
+        {
+          "x": 60000,
+          "y": 29000
+        },
+        {
+          "x": 76000,
+          "y": 29000
+        },
+        {
+          "x": 76000,
+          "y": 35000
+        },
+        {
+          "x": 60000,
+          "y": 35000
+        }
+      ],
+      "adjacent": [
+        "r_admin",
+        "r_storage",
+        "r_east_hall",
+        "r_comms",
+        "r_shields"
+      ]
+    },
+    {
+      "id": "r_comms",
+      "label": "Communications",
+      "uses": [],
+      "room_type": "Room",
+      "area_m2": 80,
+      "bbox": {
+        "x": 62000,
+        "y": 35000,
+        "w": 10000,
+        "h": 8000
+      },
+      "floor_polygon": [
+        {
+          "x": 62000,
+          "y": 35000
+        },
+        {
+          "x": 72000,
+          "y": 35000
+        },
+        {
+          "x": 72000,
+          "y": 43000
+        },
+        {
+          "x": 62000,
+          "y": 43000
+        }
+      ],
+      "adjacent": [
+        "r_south_hall"
+      ]
+    },
+    {
+      "id": "r_shields",
+      "label": "Shields",
+      "uses": [],
+      "room_type": "Room",
+      "area_m2": 80,
+      "bbox": {
+        "x": 74000,
+        "y": 35000,
+        "w": 10000,
+        "h": 8000
+      },
+      "floor_polygon": [
+        {
+          "x": 74000,
+          "y": 35000
+        },
+        {
+          "x": 84000,
+          "y": 35000
+        },
+        {
+          "x": 84000,
+          "y": 43000
+        },
+        {
+          "x": 74000,
+          "y": 43000
+        }
+      ],
+      "adjacent": [
+        "r_east_hall",
+        "r_south_hall"
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "id": "d_ueng",
+      "between": [
+        "r_upper_eng",
+        "r_reactor_hall"
+      ],
+      "width": 2000,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_leng",
+      "between": [
+        "r_lower_eng",
+        "r_reactor_hall"
+      ],
+      "width": 2000,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_sec",
+      "between": [
+        "r_reactor_hall",
+        "r_security"
+      ],
+      "width": 1800,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_ueng_e",
+      "between": [
+        "r_upper_eng",
+        "r_upper_hall"
+      ],
+      "width": 2000,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_medbay",
+      "between": [
+        "r_upper_hall",
+        "r_medbay"
+      ],
+      "width": 2000,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_caf_w",
+      "between": [
+        "r_upper_hall",
+        "r_cafeteria"
+      ],
+      "width": 2400,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_caf_s",
+      "between": [
+        "r_cafeteria",
+        "r_caf_hall"
+      ],
+      "width": 2400,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_stor_n",
+      "between": [
+        "r_caf_hall",
+        "r_storage"
+      ],
+      "width": 2400,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_caf_se",
+      "between": [
+        "r_cafeteria",
+        "r_admin_hall"
+      ],
+      "width": 2400,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_leng_e",
+      "between": [
+        "r_lower_eng",
+        "r_lower_hall"
+      ],
+      "width": 2000,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_elec",
+      "between": [
+        "r_lower_hall",
+        "r_electrical"
+      ],
+      "width": 2000,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_stor_w",
+      "between": [
+        "r_lower_hall",
+        "r_storage"
+      ],
+      "width": 2400,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_caf_e",
+      "between": [
+        "r_cafeteria",
+        "r_weap_hall"
+      ],
+      "width": 2400,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_weapons",
+      "between": [
+        "r_weapons",
+        "r_east_hall"
+      ],
+      "width": 2000,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_o2_n",
+      "between": [
+        "r_o2",
+        "r_east_hall"
+      ],
+      "width": 1800,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_o2_s",
+      "between": [
+        "r_o2",
+        "r_east_hall"
+      ],
+      "width": 1800,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_nav_n",
+      "between": [
+        "r_east_hall",
+        "r_nav"
+      ],
+      "width": 1800,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_nav_s",
+      "between": [
+        "r_east_hall",
+        "r_nav"
+      ],
+      "width": 1800,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_shield_n",
+      "between": [
+        "r_east_hall",
+        "r_shields"
+      ],
+      "width": 2000,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_comms",
+      "between": [
+        "r_south_hall",
+        "r_comms"
+      ],
+      "width": 2000,
+      "kind": "sliding"
+    },
+    {
+      "id": "d_stor_e",
+      "between": [
+        "r_storage",
+        "r_south_hall"
+      ],
+      "width": 2400,
+      "kind": "sliding"
+    }
+  ],
+  "windows": [
+    {
+      "id": "win_nav_n",
+      "room": "r_nav",
+      "width": 4000,
+      "facing": "N"
+    },
+    {
+      "id": "win_nav_s",
+      "room": "r_nav",
+      "width": 4000,
+      "facing": "S"
+    },
+    {
+      "id": "win_weap",
+      "room": "r_weapons",
+      "width": 6000,
+      "facing": "N"
+    }
+  ],
+  "openings": [
+    {
+      "id": "o_reactor_n",
+      "between": [
+        "r_reactor",
+        "r_reactor_hall"
+      ],
+      "width": 2400
+    },
+    {
+      "id": "o_reactor_s",
+      "between": [
+        "r_reactor",
+        "r_reactor_hall"
+      ],
+      "width": 2400
+    },
+    {
+      "id": "o_admin_w",
+      "between": [
+        "r_admin_hall",
+        "r_admin"
+      ],
+      "width": 2200
+    },
+    {
+      "id": "o_admin_s",
+      "between": [
+        "r_admin",
+        "r_south_hall"
+      ],
+      "width": 2200
+    },
+    {
+      "id": "o_weapons_w",
+      "between": [
+        "r_weap_hall",
+        "r_weapons"
+      ],
+      "width": 2200
+    },
+    {
+      "id": "o_ehall_s",
+      "between": [
+        "r_east_hall",
+        "r_south_hall"
+      ],
+      "width": 2400
+    },
+    {
+      "id": "o_shield_w",
+      "between": [
+        "r_south_hall",
+        "r_shields"
+      ],
+      "width": 1800
+    }
+  ],
+  "furniture": [
+    {
+      "id": "f_tbl_nw",
+      "category": "table",
+      "label": "Table",
+      "room": "r_cafeteria"
+    },
+    {
+      "id": "f_tbl_ne",
+      "category": "table",
+      "label": "Table",
+      "room": "r_cafeteria"
+    },
+    {
+      "id": "f_tbl_sw",
+      "category": "table",
+      "label": "Table",
+      "room": "r_cafeteria"
+    },
+    {
+      "id": "f_tbl_se",
+      "category": "table",
+      "label": "Table",
+      "room": "r_cafeteria"
+    },
+    {
+      "id": "f_button",
+      "category": "button",
+      "label": "Emergency Button",
+      "room": "r_cafeteria"
+    },
+    {
+      "id": "f_crate1",
+      "category": "crate",
+      "label": "Crate",
+      "room": "r_storage"
+    },
+    {
+      "id": "f_crate2",
+      "category": "crate",
+      "label": "Crate",
+      "room": "r_storage"
+    },
+    {
+      "id": "f_crate3",
+      "category": "crate",
+      "label": "Crate",
+      "room": "r_storage"
+    },
+    {
+      "id": "f_crate4",
+      "category": "crate",
+      "label": "Crate",
+      "room": "r_storage"
+    },
+    {
+      "id": "f_crate5",
+      "category": "crate",
+      "label": "Crate",
+      "room": "r_storage"
+    },
+    {
+      "id": "f_fuel",
+      "category": "tank",
+      "label": "Fuel",
+      "room": "r_storage"
+    },
+    {
+      "id": "f_core",
+      "category": "reactor",
+      "label": "Reactor Core",
+      "room": "r_reactor"
+    },
+    {
+      "id": "f_eng_u",
+      "category": "engine",
+      "label": "Engine",
+      "room": "r_upper_eng"
+    },
+    {
+      "id": "f_eng_l",
+      "category": "engine",
+      "label": "Engine",
+      "room": "r_lower_eng"
+    },
+    {
+      "id": "f_cams",
+      "category": "console",
+      "label": "Camera Console",
+      "room": "r_security"
+    },
+    {
+      "id": "f_scan",
+      "category": "scanner",
+      "label": "MedScan",
+      "room": "r_medbay"
+    },
+    {
+      "id": "f_bed1",
+      "category": "bed",
+      "label": "Bed",
+      "room": "r_medbay"
+    },
+    {
+      "id": "f_bed2",
+      "category": "bed",
+      "label": "Bed",
+      "room": "r_medbay"
+    },
+    {
+      "id": "f_bed3",
+      "category": "bed",
+      "label": "Bed",
+      "room": "r_medbay"
+    },
+    {
+      "id": "f_wires1",
+      "category": "panel",
+      "label": "Wiring",
+      "room": "r_electrical"
+    },
+    {
+      "id": "f_wires2",
+      "category": "panel",
+      "label": "Wiring",
+      "room": "r_electrical"
+    },
+    {
+      "id": "f_power",
+      "category": "panel",
+      "label": "Power Distribution",
+      "room": "r_electrical"
+    },
+    {
+      "id": "f_gun",
+      "category": "console",
+      "label": "Gun Console",
+      "room": "r_weapons"
+    },
+    {
+      "id": "f_o2a",
+      "category": "planter",
+      "label": "O2 Tree",
+      "room": "r_o2"
+    },
+    {
+      "id": "f_o2b",
+      "category": "planter",
+      "label": "O2 Tree",
+      "room": "r_o2"
+    },
+    {
+      "id": "f_nav",
+      "category": "console",
+      "label": "Nav Console",
+      "room": "r_nav"
+    },
+    {
+      "id": "f_comms",
+      "category": "console",
+      "label": "Comms Console",
+      "room": "r_comms"
+    },
+    {
+      "id": "f_shield",
+      "category": "console",
+      "label": "Shield Array",
+      "room": "r_shields"
+    },
+    {
+      "id": "f_admin",
+      "category": "table",
+      "label": "Admin Table",
+      "room": "r_admin"
+    },
+    {
+      "id": "v_reactor_n",
+      "category": "vent",
+      "label": "Vent",
+      "room": "r_reactor"
+    },
+    {
+      "id": "v_reactor_s",
+      "category": "vent",
+      "label": "Vent",
+      "room": "r_reactor"
+    },
+    {
+      "id": "v_ueng",
+      "category": "vent",
+      "label": "Vent",
+      "room": "r_upper_eng"
+    },
+    {
+      "id": "v_leng",
+      "category": "vent",
+      "label": "Vent",
+      "room": "r_lower_eng"
+    },
+    {
+      "id": "v_security",
+      "category": "vent",
+      "label": "Vent",
+      "room": "r_security"
+    },
+    {
+      "id": "v_medbay",
+      "category": "vent",
+      "label": "Vent",
+      "room": "r_medbay"
+    },
+    {
+      "id": "v_electric",
+      "category": "vent",
+      "label": "Vent",
+      "room": "r_electrical"
+    },
+    {
+      "id": "v_cafeteria",
+      "category": "vent",
+      "label": "Vent",
+      "room": "r_cafeteria"
+    },
+    {
+      "id": "v_admin",
+      "category": "vent",
+      "label": "Vent",
+      "room": "r_admin"
+    },
+    {
+      "id": "v_weapons",
+      "category": "vent",
+      "label": "Vent",
+      "room": "r_weapons"
+    },
+    {
+      "id": "v_nav",
+      "category": "vent",
+      "label": "Vent",
+      "room": "r_nav"
+    },
+    {
+      "id": "v_shields",
+      "category": "vent",
+      "label": "Vent",
+      "room": "r_shields"
+    }
+  ],
+  "access": {
+    "entrances": [],
+    "hasEntrance": false,
+    "edges": [
+      {
+        "doorId": "d_ueng",
+        "kind": "door",
+        "between": [
+          "r_upper_eng",
+          "r_reactor_hall"
+        ],
+        "nominalWidth": 2000,
+        "estimatedClearWidth": 1940,
+        "hostCategory": "partition",
+        "hostWallId": "p_ueng",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_leng",
+        "kind": "door",
+        "between": [
+          "r_lower_eng",
+          "r_reactor_hall"
+        ],
+        "nominalWidth": 2000,
+        "estimatedClearWidth": 1940,
+        "hostCategory": "partition",
+        "hostWallId": "p_leng",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_sec",
+        "kind": "door",
+        "between": [
+          "r_reactor_hall",
+          "r_security"
+        ],
+        "nominalWidth": 1800,
+        "estimatedClearWidth": 1740,
+        "hostCategory": "partition",
+        "hostWallId": "p_sec",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_ueng_e",
+        "kind": "door",
+        "between": [
+          "r_upper_eng",
+          "r_upper_hall"
+        ],
+        "nominalWidth": 2000,
+        "estimatedClearWidth": 1940,
+        "hostCategory": "partition",
+        "hostWallId": "p_ueng_uhall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_medbay",
+        "kind": "door",
+        "between": [
+          "r_upper_hall",
+          "r_medbay"
+        ],
+        "nominalWidth": 2000,
+        "estimatedClearWidth": 1940,
+        "hostCategory": "partition",
+        "hostWallId": "p_medbay",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_caf_w",
+        "kind": "door",
+        "between": [
+          "r_upper_hall",
+          "r_cafeteria"
+        ],
+        "nominalWidth": 2400,
+        "estimatedClearWidth": 2340,
+        "hostCategory": "partition",
+        "hostWallId": "p_caf_w",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_caf_s",
+        "kind": "door",
+        "between": [
+          "r_cafeteria",
+          "r_caf_hall"
+        ],
+        "nominalWidth": 2400,
+        "estimatedClearWidth": 2340,
+        "hostCategory": "partition",
+        "hostWallId": "p_caf_chall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_stor_n",
+        "kind": "door",
+        "between": [
+          "r_caf_hall",
+          "r_storage"
+        ],
+        "nominalWidth": 2400,
+        "estimatedClearWidth": 2340,
+        "hostCategory": "partition",
+        "hostWallId": "p_chall_stor",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_caf_se",
+        "kind": "door",
+        "between": [
+          "r_cafeteria",
+          "r_admin_hall"
+        ],
+        "nominalWidth": 2400,
+        "estimatedClearWidth": 2340,
+        "hostCategory": "partition",
+        "hostWallId": "p_caf_ahall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_leng_e",
+        "kind": "door",
+        "between": [
+          "r_lower_eng",
+          "r_lower_hall"
+        ],
+        "nominalWidth": 2000,
+        "estimatedClearWidth": 1940,
+        "hostCategory": "partition",
+        "hostWallId": "p_leng_lhall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_elec",
+        "kind": "door",
+        "between": [
+          "r_lower_hall",
+          "r_electrical"
+        ],
+        "nominalWidth": 2000,
+        "estimatedClearWidth": 1940,
+        "hostCategory": "partition",
+        "hostWallId": "p_elec",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_stor_w",
+        "kind": "door",
+        "between": [
+          "r_lower_hall",
+          "r_storage"
+        ],
+        "nominalWidth": 2400,
+        "estimatedClearWidth": 2340,
+        "hostCategory": "partition",
+        "hostWallId": "p_lhall_stor",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_caf_e",
+        "kind": "door",
+        "between": [
+          "r_cafeteria",
+          "r_weap_hall"
+        ],
+        "nominalWidth": 2400,
+        "estimatedClearWidth": 2340,
+        "hostCategory": "partition",
+        "hostWallId": "p_caf_nehall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_weapons",
+        "kind": "door",
+        "between": [
+          "r_weapons",
+          "r_east_hall"
+        ],
+        "nominalWidth": 2000,
+        "estimatedClearWidth": 1940,
+        "hostCategory": "partition",
+        "hostWallId": "p_weapons",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_o2_n",
+        "kind": "door",
+        "between": [
+          "r_o2",
+          "r_east_hall"
+        ],
+        "nominalWidth": 1800,
+        "estimatedClearWidth": 1740,
+        "hostCategory": "partition",
+        "hostWallId": "p_o2",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_o2_s",
+        "kind": "door",
+        "between": [
+          "r_o2",
+          "r_east_hall"
+        ],
+        "nominalWidth": 1800,
+        "estimatedClearWidth": 1740,
+        "hostCategory": "partition",
+        "hostWallId": "p_o2",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_nav_n",
+        "kind": "door",
+        "between": [
+          "r_east_hall",
+          "r_nav"
+        ],
+        "nominalWidth": 1800,
+        "estimatedClearWidth": 1740,
+        "hostCategory": "partition",
+        "hostWallId": "p_nav",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_nav_s",
+        "kind": "door",
+        "between": [
+          "r_east_hall",
+          "r_nav"
+        ],
+        "nominalWidth": 1800,
+        "estimatedClearWidth": 1740,
+        "hostCategory": "partition",
+        "hostWallId": "p_nav",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_shield_n",
+        "kind": "door",
+        "between": [
+          "r_east_hall",
+          "r_shields"
+        ],
+        "nominalWidth": 2000,
+        "estimatedClearWidth": 1940,
+        "hostCategory": "partition",
+        "hostWallId": "p_ehall_shield",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_comms",
+        "kind": "door",
+        "between": [
+          "r_south_hall",
+          "r_comms"
+        ],
+        "nominalWidth": 2000,
+        "estimatedClearWidth": 1940,
+        "hostCategory": "partition",
+        "hostWallId": "p_comms",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "d_stor_e",
+        "kind": "door",
+        "between": [
+          "r_storage",
+          "r_south_hall"
+        ],
+        "nominalWidth": 2400,
+        "estimatedClearWidth": 2340,
+        "hostCategory": "partition",
+        "hostWallId": "p_stor_shall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "o_reactor_n",
+        "kind": "opening",
+        "between": [
+          "r_reactor",
+          "r_reactor_hall"
+        ],
+        "nominalWidth": 2400,
+        "estimatedClearWidth": 2400,
+        "hostCategory": "partition",
+        "hostWallId": "p_reactor",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "o_reactor_s",
+        "kind": "opening",
+        "between": [
+          "r_reactor",
+          "r_reactor_hall"
+        ],
+        "nominalWidth": 2400,
+        "estimatedClearWidth": 2400,
+        "hostCategory": "partition",
+        "hostWallId": "p_reactor",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "o_admin_w",
+        "kind": "opening",
+        "between": [
+          "r_admin_hall",
+          "r_admin"
+        ],
+        "nominalWidth": 2200,
+        "estimatedClearWidth": 2200,
+        "hostCategory": "partition",
+        "hostWallId": "p_ahall_admin",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "o_admin_s",
+        "kind": "opening",
+        "between": [
+          "r_admin",
+          "r_south_hall"
+        ],
+        "nominalWidth": 2200,
+        "estimatedClearWidth": 2200,
+        "hostCategory": "partition",
+        "hostWallId": "p_admin_shall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "o_weapons_w",
+        "kind": "opening",
+        "between": [
+          "r_weap_hall",
+          "r_weapons"
+        ],
+        "nominalWidth": 2200,
+        "estimatedClearWidth": 2200,
+        "hostCategory": "partition",
+        "hostWallId": "p_nehall_weap",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "o_ehall_s",
+        "kind": "opening",
+        "between": [
+          "r_east_hall",
+          "r_south_hall"
+        ],
+        "nominalWidth": 2400,
+        "estimatedClearWidth": 2400,
+        "hostCategory": "partition",
+        "hostWallId": "p_shall_ehall",
+        "exterior": false,
+        "ambiguous": false
+      },
+      {
+        "doorId": "o_shield_w",
+        "kind": "opening",
+        "between": [
+          "r_south_hall",
+          "r_shields"
+        ],
+        "nominalWidth": 1800,
+        "estimatedClearWidth": 1800,
+        "hostCategory": "partition",
+        "hostWallId": "p_shall_shield",
+        "exterior": false,
+        "ambiguous": false
+      }
+    ],
+    "rooms": [
+      {
+        "id": "r_reactor",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_upper_eng",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_lower_eng",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_reactor_hall",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_security",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_upper_hall",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_medbay",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_cafeteria",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_caf_hall",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_admin_hall",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_admin",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_lower_hall",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_electrical",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_storage",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_weap_hall",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_weapons",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_o2",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_east_hall",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_nav",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_south_hall",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_comms",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      },
+      {
+        "id": "r_shields",
+        "depthFromEntrance": null,
+        "reachable": false,
+        "bottleneckClearWidth": null
+      }
+    ]
+  },
+  "circulation": null,
+  "totals": {
+    "rooms": 22,
+    "doors": 21,
+    "windows": 3,
+    "floor_area_m2": 2546
+  },
+  "input_graph": {
+    "r_reactor": [
+      "r_reactor_hall"
+    ],
+    "r_upper_eng": [
+      "r_reactor_hall",
+      "r_upper_hall"
+    ],
+    "r_lower_eng": [
+      "r_reactor_hall",
+      "r_lower_hall"
+    ],
+    "r_reactor_hall": [
+      "r_reactor",
+      "r_upper_eng",
+      "r_lower_eng",
+      "r_security"
+    ],
+    "r_security": [
+      "r_reactor_hall"
+    ],
+    "r_upper_hall": [
+      "r_upper_eng",
+      "r_medbay",
+      "r_cafeteria"
+    ],
+    "r_medbay": [
+      "r_upper_hall"
+    ],
+    "r_cafeteria": [
+      "r_upper_hall",
+      "r_caf_hall",
+      "r_admin_hall",
+      "r_weap_hall"
+    ],
+    "r_caf_hall": [
+      "r_cafeteria",
+      "r_storage"
+    ],
+    "r_admin_hall": [
+      "r_cafeteria",
+      "r_admin"
+    ],
+    "r_admin": [
+      "r_admin_hall",
+      "r_south_hall"
+    ],
+    "r_lower_hall": [
+      "r_lower_eng",
+      "r_electrical",
+      "r_storage"
+    ],
+    "r_electrical": [
+      "r_lower_hall"
+    ],
+    "r_storage": [
+      "r_caf_hall",
+      "r_lower_hall",
+      "r_south_hall"
+    ],
+    "r_weap_hall": [
+      "r_cafeteria",
+      "r_weapons"
+    ],
+    "r_weapons": [
+      "r_weap_hall",
+      "r_east_hall"
+    ],
+    "r_o2": [
+      "r_east_hall"
+    ],
+    "r_east_hall": [
+      "r_weapons",
+      "r_o2",
+      "r_nav",
+      "r_south_hall",
+      "r_shields"
+    ],
+    "r_nav": [
+      "r_east_hall"
+    ],
+    "r_south_hall": [
+      "r_admin",
+      "r_storage",
+      "r_east_hall",
+      "r_comms",
+      "r_shields"
+    ],
+    "r_comms": [
+      "r_south_hall"
+    ],
+    "r_shields": [
+      "r_east_hall",
+      "r_south_hall"
+    ]
+  },
+  "freedom": {
+    "rooms": {
+      "total": 22,
+      "absolute": 22,
+      "relational": 0,
+      "strip": 0
+    },
+    "openings": {
+      "total": 31,
+      "attached": 31,
+      "absolute": 0
+    },
+    "furniture": {
+      "total": 41,
+      "anchored": 0,
+      "againstWall": 0,
+      "absolute": 41
+    },
+    "elements": [
+      {
+        "id": "r_reactor",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_upper_eng",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_lower_eng",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_reactor_hall",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_security",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_upper_hall",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_medbay",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_cafeteria",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_caf_hall",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_admin_hall",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_admin",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_lower_hall",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_electrical",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_storage",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_weap_hall",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_weapons",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_o2",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_east_hall",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_nav",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_south_hall",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_comms",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "r_shields",
+        "kind": "room",
+        "placement": "absolute"
+      },
+      {
+        "id": "d_ueng",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_leng",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_sec",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_ueng_e",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_medbay",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_caf_w",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_caf_s",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_stor_n",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_caf_se",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_leng_e",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_elec",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_stor_w",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_caf_e",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_weapons",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_o2_n",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_o2_s",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_nav_n",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_nav_s",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_shield_n",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_comms",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "d_stor_e",
+        "kind": "door",
+        "placement": "attached"
+      },
+      {
+        "id": "win_nav_n",
+        "kind": "window",
+        "placement": "attached"
+      },
+      {
+        "id": "win_nav_s",
+        "kind": "window",
+        "placement": "attached"
+      },
+      {
+        "id": "win_weap",
+        "kind": "window",
+        "placement": "attached"
+      },
+      {
+        "id": "o_reactor_n",
+        "kind": "opening",
+        "placement": "attached"
+      },
+      {
+        "id": "o_reactor_s",
+        "kind": "opening",
+        "placement": "attached"
+      },
+      {
+        "id": "o_admin_w",
+        "kind": "opening",
+        "placement": "attached"
+      },
+      {
+        "id": "o_admin_s",
+        "kind": "opening",
+        "placement": "attached"
+      },
+      {
+        "id": "o_weapons_w",
+        "kind": "opening",
+        "placement": "attached"
+      },
+      {
+        "id": "o_ehall_s",
+        "kind": "opening",
+        "placement": "attached"
+      },
+      {
+        "id": "o_shield_w",
+        "kind": "opening",
+        "placement": "attached"
+      },
+      {
+        "id": "f_tbl_nw",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_tbl_ne",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_tbl_sw",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_tbl_se",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_button",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_crate1",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_crate2",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_crate3",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_crate4",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_crate5",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_fuel",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_core",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_eng_u",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_eng_l",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_cams",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_scan",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_bed1",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_bed2",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_bed3",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_wires1",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_wires2",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_power",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_gun",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_o2a",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_o2b",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_nav",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_comms",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_shield",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "f_admin",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "v_reactor_n",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "v_reactor_s",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "v_ueng",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "v_leng",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "v_security",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "v_medbay",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "v_electric",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "v_cafeteria",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "v_admin",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "v_weapons",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "v_nav",
+        "kind": "furniture",
+        "placement": "absolute"
+      },
+      {
+        "id": "v_shields",
+        "kind": "furniture",
+        "placement": "absolute"
+      }
+    ]
+  },
+  "schedule": [
+    {
+      "no": "01",
+      "id": "r_reactor",
+      "name": "Reactor",
+      "area_m2": 139,
+      "zone": "bow"
+    },
+    {
+      "no": "02",
+      "id": "r_upper_eng",
+      "name": "Upper Engine",
+      "area_m2": 143,
+      "zone": "bow"
+    },
+    {
+      "no": "03",
+      "id": "r_lower_eng",
+      "name": "Lower Engine",
+      "area_m2": 182,
+      "zone": "bow"
+    },
+    {
+      "no": "04",
+      "id": "r_reactor_hall",
+      "name": "Reactor Hall",
+      "area_m2": 84,
+      "zone": "bow"
+    },
+    {
+      "no": "05",
+      "id": "r_security",
+      "name": "Security",
+      "area_m2": 56,
+      "zone": "bow"
+    },
+    {
+      "no": "06",
+      "id": "r_upper_hall",
+      "name": "Upper Hall",
+      "area_m2": 120,
+      "zone": "midship"
+    },
+    {
+      "no": "07",
+      "id": "r_medbay",
+      "name": "MedBay",
+      "area_m2": 91,
+      "zone": "midship"
+    },
+    {
+      "no": "08",
+      "id": "r_cafeteria",
+      "name": "Cafeteria",
+      "area_m2": 360,
+      "zone": "midship"
+    },
+    {
+      "no": "09",
+      "id": "r_caf_hall",
+      "name": "Cafeteria Hall",
+      "area_m2": 42,
+      "zone": "midship"
+    },
+    {
+      "no": "10",
+      "id": "r_admin_hall",
+      "name": "Admin Hall",
+      "area_m2": 36,
+      "zone": "midship"
+    },
+    {
+      "no": "11",
+      "id": "r_admin",
+      "name": "Admin",
+      "area_m2": 80,
+      "zone": "midship"
+    },
+    {
+      "no": "12",
+      "id": "r_lower_hall",
+      "name": "Lower Hall",
+      "area_m2": 132,
+      "zone": "midship"
+    },
+    {
+      "no": "13",
+      "id": "r_electrical",
+      "name": "Electrical",
+      "area_m2": 126,
+      "zone": "midship"
+    },
+    {
+      "no": "14",
+      "id": "r_storage",
+      "name": "Storage",
+      "area_m2": 224,
+      "zone": "midship"
+    },
+    {
+      "no": "15",
+      "id": "r_weap_hall",
+      "name": "Weapons Hall",
+      "area_m2": 48,
+      "zone": "stern"
+    },
+    {
+      "no": "16",
+      "id": "r_weapons",
+      "name": "Weapons",
+      "area_m2": 120,
+      "zone": "stern"
+    },
+    {
+      "no": "17",
+      "id": "r_o2",
+      "name": "O2",
+      "area_m2": 60,
+      "zone": "stern"
+    },
+    {
+      "no": "18",
+      "id": "r_east_hall",
+      "name": "East Hall",
+      "area_m2": 132,
+      "zone": "stern"
+    },
+    {
+      "no": "19",
+      "id": "r_nav",
+      "name": "Navigation",
+      "area_m2": 115,
+      "zone": "stern"
+    },
+    {
+      "no": "20",
+      "id": "r_south_hall",
+      "name": "South Hall",
+      "area_m2": 96,
+      "zone": "stern"
+    },
+    {
+      "no": "21",
+      "id": "r_comms",
+      "name": "Communications",
+      "area_m2": 80,
+      "zone": "stern"
+    },
+    {
+      "no": "22",
+      "id": "r_shields",
+      "name": "Shields",
+      "area_m2": 80,
+      "zone": "stern"
+    }
+  ],
+  "zones": [
+    {
+      "id": "bow",
+      "label": "Bow — Engineering",
+      "path": "bow",
+      "rooms": [
+        "r_reactor",
+        "r_upper_eng",
+        "r_lower_eng",
+        "r_reactor_hall",
+        "r_security"
+      ],
+      "room_count": 5,
+      "floor_area_m2": 604
+    },
+    {
+      "id": "midship",
+      "label": "Midship",
+      "path": "midship",
+      "rooms": [
+        "r_upper_hall",
+        "r_medbay",
+        "r_cafeteria",
+        "r_caf_hall",
+        "r_admin_hall",
+        "r_admin",
+        "r_lower_hall",
+        "r_electrical",
+        "r_storage"
+      ],
+      "room_count": 9,
+      "floor_area_m2": 1211
+    },
+    {
+      "id": "stern",
+      "label": "Stern",
+      "path": "stern",
+      "rooms": [
+        "r_weap_hall",
+        "r_weapons",
+        "r_o2",
+        "r_east_hall",
+        "r_nav",
+        "r_south_hall",
+        "r_comms",
+        "r_shields"
+      ],
+      "room_count": 8,
+      "floor_area_m2": 731
+    }
+  ],
+  "diagnostics": []
+}

@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "strict": false,
+  "diagnostics": [
+    {
+      "code": "W_NO_ENTRANCE",
+      "severity": "warning",
+      "message": "The plan has no exterior door or opening — there is no way into the building.",
+      "fix": "Add a `door` on an `exterior` wall.",
+      "hints": [
+        "Add a `door` (or a cased `opening`) on an `exterior` wall."
+      ]
+    }
+  ]
+}

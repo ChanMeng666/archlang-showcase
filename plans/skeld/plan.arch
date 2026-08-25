@@ -1,0 +1,285 @@
+# The Skeld, drawn as a ship and handed to a compiler.
+#
+# The canonical Among Us map, set out at a plausible 90 x 40 m and treated as an
+# ordinary single-storey structure: Reactor at the bow (left), Navigation at the
+# pointed stern (right), the two engine nacelles top-left and bottom-left, and the
+# Cafeteria filling the top of midship.
+#
+# The point of the drawing is not the drawing. It is what falls out of it:
+# `arch describe --json` reports every room, its area, what it is adjacent to and
+# what its doors actually connect — so the crew's movement graph stops being a
+# thing you argue about in chat and becomes a thing you can query.
+#
+# Three deliberate modelling choices, each of which the analysis then depends on:
+#
+#   · The doors an impostor can seal are `door sliding`. The thresholds nobody can
+#     close — Reactor's two mouths, Admin's, the corridor junctions — are leaf-less
+#     `opening`s. Both count as connections in the access graph; only one of them
+#     is a door.
+#   · Corridors are ROOMS, not gaps. That is what makes the graph honest: you do
+#     not walk from Cafeteria to Storage, you walk from Cafeteria into a hallway
+#     that somebody else may be standing in.
+#   · The VENTS are furniture. Twelve labelled squares, and nothing more. The vent
+#     network is exactly the thing the adjacency graph does not contain, which is
+#     the whole joke: `describe` gives you the crew's map, never the impostor's.
+#
+# Fan art. An original drawing of a game map's layout; not affiliated with Innersloth.
+plan "The Skeld" {
+  units mm
+  grid 100
+  paper A2 landscape
+  scale 1:200
+  north up
+  dims auto overall
+  schedule rooms
+  legend
+  accTitle "The Skeld — deck plan"
+  accDescr "A single-deck spaceship plan, 90 by 40 metres. Reactor at the bow on the left, Navigation at the pointed stern on the right, engine rooms top-left and bottom-left, and a large Cafeteria across the top of midship."
+
+  # =========================================================================
+  # HULL — the exterior envelope, in four runs
+  # =========================================================================
+
+  # The bow: Reactor's angled nose.
+  wall id=w_hull_bow exterior thickness 500 material concrete {
+    (7000,28000) (2000,25000) (2000,20000) (7000,17000)
+  }
+
+  # Bow to stern along the top: Reactor's roof, the Upper Engine nacelle, the
+  # spine over Upper Hall and Cafeteria, the Weapons Hall recess, Weapons.
+  wall id=w_hull_n exterior thickness 500 material concrete {
+    (7000,17000) (16000,17000) (16000,14000) (9000,14000) (9000,3000)
+    (62000,3000) (62000,5000) (70000,5000) (70000,3000) (82000,3000) (82000,15000)
+  }
+
+  # The stern: Navigation's pointed cockpit.
+  wall id=w_hull_nav exterior thickness 500 material concrete {
+    (82000,15000) (87000,15000) (92000,20000) (92000,24000) (87000,29000) (82000,29000)
+  }
+
+  # Stern back to bow along the bottom: Shields, Communications, Storage,
+  # Electrical, the Lower Engine nacelle.
+  wall id=w_hull_s exterior thickness 500 material concrete {
+    (82000,29000) (82000,35000) (84000,35000) (84000,43000) (74000,43000) (74000,35000)
+    (72000,35000) (72000,43000) (62000,43000) (62000,35000) (60000,35000) (60000,42000)
+    (44000,42000) (44000,43000) (30000,43000) (30000,34000) (22000,34000) (22000,42000)
+    (9000,42000) (9000,28000) (7000,28000)
+  }
+
+  # =========================================================================
+  # INTERNAL VOIDS — sealed plant spaces between the rooms. On the map these
+  # are the black gaps you cannot walk through; here they are walled cavities,
+  # which is why so much of this ship's "exterior" wall faces inward.
+  # =========================================================================
+
+  # The big midship void, wrapping MedBay above and Security's peninsula below.
+  wall id=w_void_mid exterior thickness 500 material concrete {
+    (22000,9000) (27000,9000) (27000,16000) (40000,16000) (40000,9000) (42000,9000)
+    (42000,21000) (48000,21000) (48000,28000) (22000,28000) (22000,25000)
+    (30000,25000) (30000,18000) (22000,18000) close
+  }
+
+  # The void behind the Cafeteria's two south hallways.
+  wall id=w_void_admin exterior thickness 500 material concrete {
+    (54000,21000) (56000,21000) (56000,27000) (62000,27000) (62000,29000)
+    (60000,29000) (60000,28000) (54000,28000) close
+  }
+
+  # The void between the Cafeteria, Weapons and O2.
+  wall id=w_void_weap exterior thickness 500 material concrete {
+    (62000,11000) (70000,11000) (70000,13000) (76000,13000) (76000,15000)
+    (66000,15000) (66000,21000) (62000,21000) close
+  }
+
+  # The void east of Admin.
+  wall id=w_void_admin_e exterior thickness 500 material concrete {
+    (72000,21000) (76000,21000) (76000,29000) (72000,29000) close
+  }
+
+  # =========================================================================
+  # PARTITIONS — every one of these is a doorway or a bulkhead, and the
+  # difference between the two is the entire access graph.
+  # =========================================================================
+
+  wall id=p_reactor       partition thickness 300 { (16000,17000) (16000,28000) }
+  wall id=p_ueng          partition thickness 300 { (16000,14000) (22000,14000) }
+  wall id=p_leng          partition thickness 300 { (16000,28000) (22000,28000) }
+  wall id=p_sec           partition thickness 300 { (22000,18000) (22000,25000) }
+  wall id=p_ueng_uhall    partition thickness 300 { (22000,3000) (22000,9000) }
+  wall id=p_medbay        partition thickness 300 { (27000,9000) (40000,9000) }
+  wall id=p_caf_w         partition thickness 300 { (42000,3000) (42000,9000) }
+  wall id=p_caf_chall     partition thickness 300 { (48000,21000) (54000,21000) }
+  wall id=p_chall_stor    partition thickness 300 { (48000,28000) (54000,28000) }
+  wall id=p_caf_ahall     partition thickness 300 { (56000,21000) (62000,21000) }
+  wall id=p_ahall_admin   partition thickness 300 { (62000,21000) (62000,27000) }
+  wall id=p_admin_shall   partition thickness 300 { (62000,29000) (72000,29000) }
+  wall id=p_stor_shall    partition thickness 300 { (60000,29000) (60000,35000) }
+  wall id=p_comms         partition thickness 300 { (62000,35000) (72000,35000) }
+  wall id=p_shall_shield  partition thickness 300 { (74000,35000) (76000,35000) }
+  wall id=p_shall_ehall   partition thickness 300 { (76000,29000) (76000,35000) }
+  wall id=p_ehall_shield  partition thickness 300 { (76000,35000) (82000,35000) }
+  wall id=p_o2            partition thickness 300 { (76000,15000) (76000,21000) }
+  wall id=p_weapons       partition thickness 300 { (76000,13000) (82000,13000) }
+  wall id=p_nav           partition thickness 300 { (82000,15000) (82000,29000) }
+  wall id=p_caf_nehall    partition thickness 300 { (62000,5000) (62000,11000) }
+  wall id=p_nehall_weap   partition thickness 300 { (70000,5000) (70000,11000) }
+  wall id=p_leng_lhall    partition thickness 300 { (22000,28000) (22000,34000) }
+  wall id=p_elec          partition thickness 300 { (30000,34000) (44000,34000) }
+  wall id=p_lhall_stor    partition thickness 300 { (44000,28000) (44000,34000) }
+
+  # The two bulkheads with no way through, both of them canon: Electrical shares
+  # 8 m of wall with Storage and you still have to walk round through the lower
+  # hallway, and Reactor backs onto the Lower Engine with no door at all.
+  wall id=p_elec_stor     partition thickness 300 { (44000,34000) (44000,42000) }
+  wall id=p_reactor_leng  partition thickness 300 { (9000,28000) (16000,28000) }
+  wall id=p_o2_admin      partition thickness 300 { (66000,21000) (72000,21000) }
+
+  # =========================================================================
+  # ROOMS, grouped fore-to-aft. `zone` draws nothing — it groups the schedule
+  # and gives `describe --json` a `zones[]` roll-up.
+  # =========================================================================
+
+  zone bow "Bow — Engineering" {
+    room id=r_reactor polygon (7000,17000) (16000,17000) (16000,28000) (7000,28000) (2000,25000) (2000,20000)
+      label "Reactor" uses utility
+    room id=r_upper_eng  at (9000,3000)   size 13000x11000 label "Upper Engine" uses utility
+    room id=r_lower_eng  at (9000,28000)  size 13000x14000 label "Lower Engine" uses utility
+    room id=r_reactor_hall at (16000,14000) size 6000x14000 label "Reactor Hall" uses circulation
+    room id=r_security   at (22000,18000) size 8000x7000   label "Security" uses office
+  }
+
+  zone midship "Midship" {
+    room id=r_upper_hall at (22000,3000)  size 20000x6000  label "Upper Hall" uses circulation
+    room id=r_medbay     at (27000,9000)  size 13000x7000  label "MedBay"
+    room id=r_cafeteria  at (42000,3000)  size 20000x18000 label "Cafeteria" uses dining
+    room id=r_caf_hall   at (48000,21000) size 6000x7000   label "Cafeteria Hall" uses circulation
+    room id=r_admin_hall at (56000,21000) size 6000x6000   label "Admin Hall" uses circulation
+    room id=r_admin      at (62000,21000) size 10000x8000  label "Admin" uses office
+    room id=r_lower_hall at (22000,28000) size 22000x6000  label "Lower Hall" uses circulation
+    room id=r_electrical at (30000,34000) size 14000x9000  label "Electrical" uses utility
+    room id=r_storage    at (44000,28000) size 16000x14000 label "Storage" uses storage
+  }
+
+  zone stern "Stern" {
+    room id=r_weap_hall  at (62000,5000)  size 8000x6000   label "Weapons Hall" uses circulation
+    room id=r_weapons    at (70000,3000)  size 12000x10000 label "Weapons"
+    room id=r_o2         at (66000,15000) size 10000x6000  label "O2"
+    room id=r_east_hall  at (76000,13000) size 6000x22000  label "East Hall" uses circulation
+    room id=r_nav polygon (82000,15000) (87000,15000) (92000,20000) (92000,24000) (87000,29000) (82000,29000)
+      label "Navigation"
+    room id=r_south_hall at (60000,29000) size 16000x6000  label "South Hall" uses circulation
+    room id=r_comms      at (62000,35000) size 10000x8000  label "Communications"
+    room id=r_shields    at (74000,35000) size 10000x8000  label "Shields"
+  }
+
+  # =========================================================================
+  # DOORS — `sliding` where the impostor's sabotage menu can seal it,
+  # `opening` where it cannot.
+  # =========================================================================
+
+  # Bow. Reactor has two mouths onto the corridor and no leaf on either.
+  opening id=o_reactor_n on p_reactor at 25% width 2400
+  opening id=o_reactor_s on p_reactor at 75% width 2400
+  door id=d_ueng    sliding on p_ueng       at 50% width 2000
+  door id=d_leng    sliding on p_leng       at 50% width 2000
+  door id=d_sec     sliding on p_sec        at 50% width 1800
+
+  # Midship.
+  door id=d_ueng_e  sliding on p_ueng_uhall at 50% width 2000
+  door id=d_medbay  sliding on p_medbay     at 30% width 2000
+  door id=d_caf_w   sliding on p_caf_w      at 50% width 2400
+  door id=d_caf_s   sliding on p_caf_chall  at 50% width 2400
+  door id=d_stor_n  sliding on p_chall_stor at 50% width 2400
+  door id=d_caf_se  sliding on p_caf_ahall  at 50% width 2400
+  opening id=o_admin_w   on p_ahall_admin  at 50% width 2200
+  opening id=o_admin_s   on p_admin_shall  at 30% width 2200
+  door id=d_leng_e  sliding on p_leng_lhall at 50% width 2000
+  door id=d_elec    sliding on p_elec       at 85% width 2000
+  door id=d_stor_w  sliding on p_lhall_stor at 50% width 2400
+
+  # Stern, the right-hand loop.
+  door id=d_caf_e   sliding on p_caf_nehall at 50% width 2400
+  opening id=o_weapons_w on p_nehall_weap  at 50% width 2200
+  door id=d_weapons sliding on p_weapons    at 50% width 2000
+  door id=d_o2_n    sliding on p_o2         at 25% width 1800
+  door id=d_o2_s    sliding on p_o2         at 75% width 1800
+  door id=d_nav_n   sliding on p_nav        at 20% width 1800
+  door id=d_nav_s   sliding on p_nav        at 80% width 1800
+  opening id=o_ehall_s   on p_shall_ehall  at 50% width 2400
+  door id=d_shield_n sliding on p_ehall_shield at 50% width 2000
+  opening id=o_shield_w  on p_shall_shield at 50% width 1800
+  door id=d_comms   sliding on p_comms      at 50% width 2000
+  door id=d_stor_e  sliding on p_stor_shall at 50% width 2400
+
+  # =========================================================================
+  # GLAZING — the only two rooms on this ship where anybody looks out.
+  # =========================================================================
+  # Centred on the two angled cockpit faces and on Weapons' north wall. `on <wall>
+  # at <pos>` walks the whole run, so each position is the midpoint of the segment
+  # it belongs to — a window that ran past a corner would fold round it.
+  window id=win_nav_n on w_hull_nav at 30% width 4000
+  window id=win_nav_s on w_hull_nav at 70% width 4000
+  window id=win_weap  on w_hull_n   at 85% width 6000
+
+  # =========================================================================
+  # FIT-OUT
+  # =========================================================================
+
+  # Cafeteria: four tables around the one button that stops the round.
+  furniture id=f_tbl_nw table at (46000,7000)  size 3000x3000 label "Table" in r_cafeteria
+  furniture id=f_tbl_ne table at (55000,7000)  size 3000x3000 label "Table" in r_cafeteria
+  furniture id=f_tbl_sw table at (46000,15000) size 3000x3000 label "Table" in r_cafeteria
+  furniture id=f_tbl_se table at (55000,15000) size 3000x3000 label "Table" in r_cafeteria
+  furniture id=f_button button at (51000,11000) size 2000x2000 label "Emergency Button" in r_cafeteria
+
+  # Storage: crates, and the ship's only fuel.
+  furniture id=f_crate1 crate at (46000,30000) size 2000x2000 label "Crate" in r_storage
+  furniture id=f_crate2 crate at (49000,30000) size 2000x2000 label "Crate" in r_storage
+  furniture id=f_crate3 crate at (46000,33000) size 2000x2000 label "Crate" in r_storage
+  furniture id=f_crate4 crate at (56000,30000) size 2000x2000 label "Crate" in r_storage
+  furniture id=f_crate5 crate at (56000,38000) size 2000x2000 label "Crate" in r_storage
+  furniture id=f_fuel   tank  at (46000,38000) size 2400x2400 label "Fuel" in r_storage
+
+  # Plant and consoles.
+  furniture id=f_core   reactor at (7500,20000)  size 5000x5000 label "Reactor Core" in r_reactor
+  furniture id=f_eng_u  engine  at (12000,6000)  size 7000x5000 label "Engine" in r_upper_eng
+  furniture id=f_eng_l  engine  at (12000,32000) size 7000x5000 label "Engine" in r_lower_eng
+  furniture id=f_cams   console at (23000,19000) size 5000x1500 label "Camera Console" in r_security
+  furniture id=f_scan   scanner at (28000,10000) size 2500x2500 label "MedScan" in r_medbay
+  furniture id=f_bed1   bed at (32000,10000) size 1500x2400 label "Bed" in r_medbay
+  furniture id=f_bed2   bed at (34500,10000) size 1500x2400 label "Bed" in r_medbay
+  furniture id=f_bed3   bed at (37000,10000) size 1500x2400 label "Bed" in r_medbay
+  furniture id=f_wires1 panel at (31000,35000) size 1500x900 label "Wiring" in r_electrical
+  furniture id=f_wires2 panel at (31000,41000) size 1500x900 label "Wiring" in r_electrical
+  furniture id=f_power  panel at (35000,35000) size 6000x1200 label "Power Distribution" in r_electrical
+  furniture id=f_gun    console at (73000,5000) size 5000x2000 label "Gun Console" in r_weapons
+  furniture id=f_o2a    planter at (67000,16000) size 3000x3000 label "O2 Tree" in r_o2
+  furniture id=f_o2b    planter at (72000,16000) size 3000x3000 label "O2 Tree" in r_o2
+  furniture id=f_nav    console at (84000,17000) size 4000x2000 label "Nav Console" in r_nav
+  furniture id=f_comms  console at (63000,36000) size 5000x1500 label "Comms Console" in r_comms
+  furniture id=f_shield console at (76000,37000) size 5000x5000 label "Shield Array" in r_shields
+  furniture id=f_admin  table   at (65000,23000) size 4000x3000 label "Admin Table" in r_admin
+
+  # =========================================================================
+  # VENTS — twelve squares. The compiler sees twelve boxes; it has no idea
+  # they are joined to one another, which is precisely the point.
+  # =========================================================================
+  furniture id=v_reactor_n vent at (13000,18500) size 1200x1200 label "Vent" in r_reactor
+  furniture id=v_reactor_s vent at (13000,25000) size 1200x1200 label "Vent" in r_reactor
+  furniture id=v_ueng      vent at (20000,4000)  size 1200x1200 label "Vent" in r_upper_eng
+  furniture id=v_leng      vent at (20000,39000) size 1200x1200 label "Vent" in r_lower_eng
+  furniture id=v_security  vent at (28200,23200) size 1200x1200 label "Vent" in r_security
+  furniture id=v_medbay    vent at (38000,14000) size 1200x1200 label "Vent" in r_medbay
+  furniture id=v_electric  vent at (42000,41000) size 1200x1200 label "Vent" in r_electrical
+  furniture id=v_cafeteria vent at (43000,4000)  size 1200x1200 label "Vent" in r_cafeteria
+  furniture id=v_admin     vent at (70000,27000) size 1200x1200 label "Vent" in r_admin
+  furniture id=v_weapons   vent at (80000,11000) size 1200x1200 label "Vent" in r_weapons
+  furniture id=v_nav       vent at (83000,26000) size 1200x1200 label "Vent" in r_nav
+  furniture id=v_shields   vent at (82000,41000) size 1200x1200 label "Vent" in r_shields
+
+  title {
+    project "The Skeld — deck plan"
+    drawn_by "ArchLang"
+    date "compiled, not drawn"
+  }
+}

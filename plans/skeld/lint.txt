@@ -1,0 +1,5 @@
+warning[W_NO_ENTRANCE]: The plan has no exterior door or opening — there is no way into the building.
+  = help: Add a `door` (or a cased `opening`) on an `exterior` wall.
+  = fix: Add a `door` on an `exterior` wall.
+
+✓ ok (1 warning)
