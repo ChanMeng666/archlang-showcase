@@ -95,7 +95,7 @@ From `arch describe --json`, which reports semantics rather than pixels:
 
 | Fact | Value |
 | ---- | ----- |
-| Sheet | A1 landscape at 1:250, 106 × 94 m over the outer faces |
+| Sheet | A1 landscape at 1:250, 106 × 94 m on the room grid |
 | Rooms | 17, in 5 zones (T side, mid, A side, B side, CT side) |
 | Floor area | 5,756 m² — T side 2,044 · A side 1,268 · B side 1,040 · mid 708 · CT side 696 |
 | Doors | 6 — three pairs of double doors: mid, long and B |

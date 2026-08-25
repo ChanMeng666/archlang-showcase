@@ -43,8 +43,8 @@ warning[W_BEDROOM_NO_WINDOW]: Bedroom "Bedroom 2*" has no window.
 ```
 
 Not an oversight — a consequence. Both bedrooms are in the middle of an 18-metre-deep unit whose
-only two exterior facades are 8 and 6 metres away respectively, at the two ends. There is nowhere
-for a window to go.
+only two exterior facades are 4.6 and 5.1 metres away respectively, at the two ends. There is
+nowhere for a window to go.
 
 **The only toilet is behind someone's bed.**
 
@@ -91,16 +91,16 @@ about sunlight — it just names the compass so the checker can read the aspect.
 window faces the street, which is north. The south-facing wall belongs to the back room.
 
 The remaining three warnings — a stove with a table 400 mm too close to it, a walk into Bedroom 1
-that squeezes to 300 mm between the bed and the wardrobe, and a wardrobe-shaped reason not to open
-that door too fast — are in `lint.txt` too.
+that squeezes to 300 mm between the bed and the wardrobe, and a twin bed sitting 350 mm inside the
+swing of Bedroom 2's own door — are in `lint.txt` too.
 
 ## Three numbers the drawing does not tell you
 
 `arch describe --json` reports facts rather than opinions. Three of them:
 
 **You are renting a hallway for $954 a month.** The corridor is a room, and at 19.8 m² it is the
-second-largest room in the apartment — 32% of the floor area. At $2,950/mo that is $954 of rent for
-the space whose entire function is getting to the other spaces.
+largest room in the apartment — larger than the living room, and 32% of the floor area. At
+$2,950/mo that is $954 of rent for the space whose entire function is getting to the other spaces.
 
 **The living room is 2.5 m from the front door and a 6.9 m walk.** Its `detourRatio` is **2.76**:
 you pass the room, keep going down the corridor, and come back into it through a door at the far

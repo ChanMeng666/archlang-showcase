@@ -633,14 +633,14 @@
 <line x1="18892.43" y1="13107.57" x2="18807.57" y2="13192.43" stroke="#0E5484" stroke-width="9"/>
 <line x1="18892.43" y1="-192.43" x2="18807.57" y2="-107.57" stroke="#0E5484" stroke-width="9"/>
 <text x="18937.5" y="6500" font-size="125" fill="#0E5484" text-anchor="middle" dominant-baseline="central" transform="rotate(-90 18937.5 6500)">13300</text>
-<line x1="9000" y1="8050" x2="9000" y2="7950" stroke="#0E5484" stroke-width="9"/>
-<line x1="9042.43" y1="8007.57" x2="8957.57" y2="8092.43" stroke="#0E5484" stroke-width="9"/>
-<line x1="9042.43" y1="7907.57" x2="8957.57" y2="7992.43" stroke="#0E5484" stroke-width="9"/>
-<text x="9087.5" y="8000" font-size="125" fill="#0E5484" text-anchor="middle" dominant-baseline="central" transform="rotate(-90 9087.5 8000)">100</text>
-<line x1="9000" y1="13150" x2="9000" y2="12850" stroke="#0E5484" stroke-width="9"/>
-<line x1="9042.43" y1="13107.57" x2="8957.57" y2="13192.43" stroke="#0E5484" stroke-width="9"/>
-<line x1="9042.43" y1="12807.57" x2="8957.57" y2="12892.43" stroke="#0E5484" stroke-width="9"/>
-<text x="9087.5" y="13000" font-size="125" fill="#0E5484" text-anchor="middle" dominant-baseline="central" transform="rotate(-90 9087.5 13000)">300</text>
+<line x1="15450" y1="8050" x2="15450" y2="7950" stroke="#0E5484" stroke-width="9"/>
+<line x1="15492.43" y1="8007.57" x2="15407.57" y2="8092.43" stroke="#0E5484" stroke-width="9"/>
+<line x1="15492.43" y1="7907.57" x2="15407.57" y2="7992.43" stroke="#0E5484" stroke-width="9"/>
+<text x="15450" y="7771.25" font-size="125" fill="#0E5484" text-anchor="middle" dominant-baseline="central" transform="rotate(-90 15450 7771.25)">100</text>
+<line x1="3450" y1="13150" x2="3450" y2="12850" stroke="#0E5484" stroke-width="9"/>
+<line x1="3492.43" y1="13107.57" x2="3407.57" y2="13192.43" stroke="#0E5484" stroke-width="9"/>
+<line x1="3492.43" y1="12807.57" x2="3407.57" y2="12892.43" stroke="#0E5484" stroke-width="9"/>
+<text x="3450" y="12671.25" font-size="125" fill="#0E5484" text-anchor="middle" dominant-baseline="central" transform="rotate(-90 3450 12671.25)">300</text>
 </g>
 <g id="A-ANNO" inkscape:groupmode="layer" inkscape:label="A-ANNO">
 <polygon points="-150,15482.5 1650,15482.5 1650,18032.5 -150,18032.5" fill="none" stroke="#333333" stroke-width="9"/>

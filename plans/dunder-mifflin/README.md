@@ -57,19 +57,36 @@ catalogue rather than by a coordinate, the two restrooms and the supply closet o
 corridor, and then the annex — one door, three desks, and the back stair down toward the
 warehouse, drawn with its DN arrow.
 
-The plan passes the ship gate clean:
+Every architectural check passes:
 
 ```bash
-npx arch validate plans/dunder-mifflin/plan.arch --strict --json   # ok: true, zero diagnostics
+npx arch lint     plans/dunder-mifflin/plan.arch --json          # zero warnings
+npx arch validate plans/dunder-mifflin/plan.arch --strict --json # exit 2 — see below
 ```
 
-`--strict` fails on warnings as well as errors, so there is nothing here to justify: no door
-swinging into a wall, no fixture stranded off its room, no room you cannot walk to from the front
-door, and no route too narrow to walk. Getting there needed one honest architectural admission —
-the reception screen and the accounting divider had to become *real* short partitions with cased
+`arch lint` reports nothing, so there is nothing here to justify: no door swinging into a wall, no
+fixture stranded off its room, no room you cannot walk to from the front door, and no route too
+narrow to walk. Getting there needed one honest architectural admission — the reception screen and
+the accounting divider had to become *real* short partitions with cased
 openings punched through them, because "you can obviously walk from reception into the bullpen" is
 not a connection a compiler is allowed to assume. Two `opening` statements, and the access graph
 agrees with your eyes.
+
+### The sheet does not fit, and as of core 1.27.0 the compiler says so
+
+<!-- TODO(1.27.0): decide whether to re-sheet this plan or keep the warning. -->
+
+The one thing `--strict` now fails on is not architecture, it is paper. Core 1.27.0 raises
+`W_SCALE_OVERFLOW` here: at 1:100 the building is 30300 × 18300 mm on its outer faces, and A3
+landscape leaves 35350 × 11550 mm of drawing area once the margins, dimension bands, title block
+and the five-group room schedule are taken out. It is 6.75 m too tall for its own sheet. Nothing is
+clipped — the sheet margin gives way first and the page grows past the paper — which is exactly why
+nobody noticed: the drawing looks right, and only the declared paper size is a lie.
+
+Core 1.26.1 did not raise it, so this README used to say the plan passed `--strict` clean. It did
+not; the compiler simply was not looking. The honest fix is a larger sheet, a coarser scale or one
+fewer margin table, and that is a drawing decision rather than a text edit, so the warning stands
+for now.
 
 One deliberate deviation from the brief: the title block reads **Dunder Mifflin Paper Co.** rather
 than the full "Dunder Mifflin Paper Company — Scranton Branch". The project cell is a fixed 34 mm
@@ -94,9 +111,9 @@ node scripts/render.mjs dunder-mifflin     # → plan.svg + plan.png
 To check it rather than look at it:
 
 ```bash
-npx arch compile  plans/dunder-mifflin/plan.arch --json
+npx arch compile  plans/dunder-mifflin/plan.arch --json          # renders; W_SCALE_OVERFLOW as data
 npx arch lint     plans/dunder-mifflin/plan.arch --json          # zero warnings
-npx arch validate plans/dunder-mifflin/plan.arch --strict --json # the ship gate
+npx arch validate plans/dunder-mifflin/plan.arch --strict --json # exit 2 on W_SCALE_OVERFLOW
 npx arch describe plans/dunder-mifflin/plan.arch --json --select zones
 npx arch describe plans/dunder-mifflin/plan.arch --json --room r_annex
 node scripts/permalink.mjs dunder-mifflin

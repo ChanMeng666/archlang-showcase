@@ -77,7 +77,7 @@ Measured, by compiling the same building three more ways:
 | --- | --- | --- |
 | **This file** | **280** | — |
 | Shell and partition as two separate `wall` statements | 312 | **+32** |
-| Raw millimetres instead of the `4m` / `.3m` suffixes | 320 | **+40** |
+| Raw millimetres instead of the `4m` / `1.4m` suffixes | 320 | **+40** |
 | Fully idiomatic: indented, ids named, settings and `uses` spelled out | 434 | **+154** |
 
 Either of the first two squeezes alone is the difference between fitting in a tweet and not.
@@ -106,29 +106,33 @@ entered", and `W_NO_ENTRANCE`, "there is no way into the building"). Shrink the 
 
 Rules, so the number means something:
 
-1. `npx @chanmeng666/archlang@1.26.1 validate <file> --strict --json` must report
+1. `npx @chanmeng666/archlang@1.27.0 validate <file> --strict --json` must report
    `"ok": true` with an empty `diagnostics` array. Zero errors *and* zero warnings.
-2. `npx @chanmeng666/archlang@1.26.1 describe <file> --json` must report at least **one room, one
+2. `npx @chanmeng666/archlang@1.27.0 describe <file> --json` must report at least **one room, one
    door and one window**, and `access.hasEntrance` must be `true`.
 3. One file, no `import`. Byte count is `wc -c` on that file.
 4. No zero-width or invisible characters. If it changes what the plan *means*, it does not count.
 
 Rule 2's `hasEntrance` clause is there for a reason — see below.
 
-## One trick I did not use
+## One trick I did not use — and the gap that has since closed
 
-Shortening the wall category from `exterior` to `ext` saves five bytes and **still passes
-`validate --strict`**. It also quietly guts the plan: `describe` then reports the front door as
-`between: ["room_1"]` with `"entrances": []` and `"hasEntrance": false`. The building no longer
-knows it has a way in.
+Shortening the wall category from `exterior` to `ext` saves five bytes. It also quietly guts the
+plan: `describe` then reports the front door as `between: ["room_1"]` with `"entrances": []` and
+`"hasEntrance": false`. The building no longer knows it has a way in.
 
-That is not lint being lenient by design so much as a gap in it: `W_NO_ENTRANCE` is guarded by
-`ir.walls.some((wl) => wl.category === "exterior")`, so a plan with **no** exterior wall is never
-asked whether you can get into it. A plan with an exterior wall and no door is caught immediately.
+Until core 1.26.1 that 140-byte cheat **still passed `validate --strict`**, which is why the golf
+rules above pin `hasEntrance` rather than trusting `--strict` alone. The rule was guarded on the
+plan having an exterior wall at all, so a plan with **no** exterior wall was never asked whether
+you could get into it — while a plan with an exterior wall and no door was caught immediately.
+
+**Core 1.27.0 closed it.** The same 140 bytes now come back `"ok": false` with `W_NO_ENTRANCE` and
+exit 2, and the rule no longer asks whether an exterior wall exists — it asks whether any threshold
+actually reaches unroomed outdoors. The golf rules keep their `hasEntrance` clause anyway: it costs
+nothing, and it says what is meant rather than relying on a linter to agree.
 
 Five bytes is five bytes, but a house you cannot enter is not a smaller house, it is a different
-one — so the shipped plans both spell `exterior` out, and the golf rules above pin `hasEntrance`
-rather than trusting `--strict` alone.
+one — so the shipped plans both spell `exterior` out.
 
 ## Reproduce
 

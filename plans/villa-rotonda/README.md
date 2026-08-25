@@ -144,14 +144,41 @@ node scripts/render.mjs villa-rotonda     # → plan.svg + plan.png
 To check it rather than look at it:
 
 ```bash
-npx arch validate plans/villa-rotonda/plan.arch --strict --json   # ok: true, zero diagnostics
+npx arch validate plans/villa-rotonda/plan.arch --strict --json   # exit 2 — W_NO_ENTRANCE, see below
 npx arch describe plans/villa-rotonda/plan.arch --json --room rotonda
 npx arch describe plans/villa-rotonda/plan.arch --json --select instances,schedule
 ```
 
-`validate --strict` is the ship gate — it fails on warnings as well as errors. This plan passes it
-clean, with nothing to justify: every room reachable, every door swinging into space it has, every
-opening on the wall it names.
+`validate --strict` is the ship gate — it fails on warnings as well as errors. Everything this
+drawing is *about* passes it: every room reachable, every door swinging into space it has, every
+opening on the wall it names, and all four quarters congruent to the millimetre.
+
+### The one warning is about porticos, and it is worth arguing with
+
+<!-- TODO(1.27.0): decide whether a portico should be a room, an unroomed slab, or a cased opening. -->
+
+Core 1.27.0 raises `W_NO_ENTRANCE` here — "there is no way into the building" — on a house with
+four front doors. Both versions of the compiler agree on the underlying fact:
+`describe().access.hasEntrance` is `false` in 1.26.1 and 1.27.0 alike, byte for byte. What changed
+is what the rule does about it. 1.26.1 was satisfied by any door *hosted on* an exterior wall;
+1.27.0 asks whether a door actually reaches unroomed outdoors. Five lines reproduce the difference:
+
+```arch
+wall id=shell exterior thickness 300 { (0,0) (8000,0) (8000,6000) (0,6000) (0,0) }
+room id=inside at (0,0) size 8000x6000 label "Inside" uses living
+room id=porch at (0,-3000) size 8000x3000 label "Porch" uses entry
+door id=d_main on shell at 4000 width 1200 swing into inside
+```
+
+Silent under 1.26.1; one warning under 1.27.0.
+
+That is this villa exactly. Each `d_main` sits on the exterior shell, but it opens onto the
+`loggia` — and a loggia is a declared room here, because it has a floor, an area and a schedule
+row. A portico is open air behind a colonnade, and the columns are drawn as round wall stubs rather
+than as a wall with an opening punched through it, so nothing in the file says where the outdoors
+stops and the porch begins. The new rule is right that no threshold in this plan crosses from
+unroomed ground into the house; whether a Palladian portico ought to be a room at all is a
+modelling question, not a bug, and it is left open rather than silenced.
 
 ## Open it in the playground
 

@@ -86,11 +86,13 @@ Then it offers six ways out, and this is the part worth reading twice:
 ```
    = help: Hang the leaf on the other jamb — `hinge right`.
    = help: Open it to the other side of the wall — `swing in`.
-   = help: Move the door along its wall (`on <wall> at <pos>`), or the obstruction.
+   = help: Move the door along its wall (`on <wall> at <pos>`), or the obstruction —
+           `arch repair` computes the smallest clearing shift.
    = help: Narrowing the door is not a fix here — the leaf would have to drop to 400 mm,
            under the 700 mm minimum passable width.
    = help: Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps
-           nothing, so this warning cannot apply to it.
+           nothing, so this warning cannot apply to it
+           (`door pocket on <wall> at <pos> width <mm>`).
    = help: If no leaf is wanted here, make it a leafless `opening` instead.
 ```
 

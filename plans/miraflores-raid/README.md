@@ -88,14 +88,23 @@ laid on top of the drawing — it is not derived, checked, or validated by the c
 
 ## Verification
 
-`plan.arch` passes the ship gate with nothing to justify:
+`plan.arch` has nothing architectural to justify — `arch lint` reports not one warning:
 
 ```console
 $ npx arch validate plans/miraflores-raid/plan.arch --strict --json
-ok true   total 0
+ok false  total 1   W_SCALE_OVERFLOW
 ```
 
-`--strict` fails on warnings as well as errors, so this is zero errors *and* zero lint warnings.
+<!-- TODO(1.27.0): decide whether to re-sheet this plan or keep the warning. -->
+
+That one diagnostic is about paper, not architecture, and it is new in core 1.27.0: at 1:200 the
+palace is 70600 × 55600 mm on its outer faces, against 105500 × 41580 mm of drawing area once A2's
+margins, dimension bands, title block and four-group schedule are taken out. It is 14 m too tall
+for its own sheet. Nothing is clipped — the page grows past the paper instead — which is why the
+drawing looks right and only the declared sheet is wrong. Core 1.26.1 did not check this, so this
+section used to claim a clean `--strict`; it was clean only because nothing was measuring. Re-sheeting
+is a drawing decision, so the warning stands for now.
+
 `arch describe` confirms the plan says what the infographic claims: 22 rooms, 3270 m² of floor,
 16 doors, 24 windows, two entrances (`d_main`, `d_service`), and **no unreachable room**. The four
 `zone` blocks roll up as Ceremonial range 1775 m², Courtyard arcades 392 m², Executive wing 459 m²,

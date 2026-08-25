@@ -13,8 +13,9 @@ centreline:
 wall id=w_oval exterior thickness 300 { (47000,31000) arc (36000,31000) radius 7300 cw }
 ```
 
-Grep the rendered `plan.svg` for arc commands and you will find exactly two: `A 7450` and
-`A 7150`, the outer and inner faces of that wall at R ± half its thickness. They are native SVG
+Grep the rendered `plan.svg` for arc commands and you get 28: one door swing for each of the 26
+doors, and then `A 7450` and `A 7150`, the outer and inner faces of that wall at R ± half its
+thickness. Those two are the only curve in the building itself. They are native SVG
 arcs (and native `ARC` entities in DXF), so the bow never goes faceted no matter how far you
 zoom. Only the poché hatch inside the wall tessellates, because a fill has to.
 
