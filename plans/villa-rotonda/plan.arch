@@ -1,0 +1,300 @@
+# Villa Almerico Capra, called "La Rotonda" — Andrea Palladio, begun 1567 — the piano nobile.
+#
+# Palladio built this one to be indifferent to which way you look at it: a square block,
+# a domed circular hall dead centre, and FOUR identical temple fronts, one per face. Turn
+# the drawing a quarter turn and it is the same drawing. So the source is written the same
+# way — ONE quarter, authored once, placed four times:
+#
+#   place quarter() as north at (ORG, 0)
+#   place quarter() as east  at (EXT, ORG)       rotate 90
+#   place quarter() as south at (EXT - ORG, EXT) rotate 180
+#   place quarter() as west  at (0, EXT - ORG)   rotate 270
+#
+# Everything below the `component` line is written once and drawn four times. The symmetry
+# is not asserted, checked or eyeballed — it is the only thing that CAN come out, because
+# `place`'s quarter-turn is an exact signed-permutation matrix (entries -1|0|1, |det| = 1),
+# so the four porticos are congruent to the millimetre by construction.
+#
+# WHY THE QUARTER IS A PINWHEEL AND NOT A QUARTER-SQUARE. The obvious cut — slice the
+# square along both centre lines and place the top-left corner four times — severs the
+# axial corridor down the middle, so every corridor would have to be authored as two
+# halves in two different instances, with the entrance door on the seam. Cut the ring of
+# rooms into four congruent STRIPS instead, each running the full block width on one side
+# and stopping short on the other:
+#
+#     +---------------------------+          the north strip runs x 0..18000
+#     |   north strip        |    |          the east strip is that strip, turned 90 deg,
+#     |----------------+     |    |          and so on round the square: a pinwheel.
+#     |   |            |     |    |          Four strips tile the ring exactly, and not
+#     |   |   (the centre     ) e |          one room, wall or door is cut in half.
+#     | w |    band, with     | a |
+#     |   |   the rotonda     ) s |
+#     |   |                   | t |
+#     |    -----+-------------+---|
+#     |         |    south strip  |
+#     +---------------------------+
+#
+# The consequence worth reading twice is that each strip declares only the walls it owns,
+# and the FOUR COPIES INTERLOCK. The block's north face, for instance, is the north
+# strip's own shell run; the wall closing the north side of the centre band is three
+# different statements — the west strip's trailing wall, the north strip's band wall, and
+# the east strip's corner wall — each landing on y = 19000 after its own rotation. Nothing
+# in the source says so. The pinwheel does.
+#
+# THE IDEAL SQUARE. 25 x 25 m centreline to centreline, in bands of 7 | 11 | 7. The middle
+# band is 11 m square and the rotonda is inscribed in it, so the drum is TANGENT to all
+# four centre-band walls and every tangent point is a threshold — which is why each of the
+# four thresholds is cut twice, once through the straight wall and once through the arc
+# (`o_band` and `o_drum`, both in the component). Miss the second cut and the poche of the
+# other wall still stands in the doorway. The four corners the circle leaves inside the
+# square belong to no room and carry no schedule row: they are the masonry the dome stands
+# on, which is exactly what they are in Vicenza.
+#
+# EVEN THE DRUM IS QUARTERED. The rotonda is not an exception to the pinwheel: each
+# quarter carries 90 degrees of it, as two arcs, and four of those close one circle. Only
+# the FLOOR is authored at the centre. Doing it that way makes the circle's segmentation
+# four-fold as well as its shape — see the note on `drum` below for why the obvious
+# construction cannot be, and why two arcs per quarter rather than one (an analysis grid
+# rasterises a wall between its VERTICES, so a long chord lays a phantom wall across the
+# hall). The drawing is identical either way: every face is a true SVG/DXF arc at any zoom.
+#
+# ONLY WALLS, ROOMS AND OPENINGS SURVIVE A QUARTER TURN EXACTLY, which is why the columns
+# here are round wall stubs and the steps are their own tread lines rather than the
+# `column` and `stair` elements. Both element notes are at their use sites, and the reason
+# is in README.md.
+#
+# LIBERTIES, stated plainly. The four service stairs are idealised to one per quarter (the
+# building has two, and they spiral); the interior is drawn at a tidy 25 m square where the
+# real block is nearer 26.4 m; and the real villa is turned 45 degrees on its hill so that
+# every facade takes sun, which a plan drawn square to the page cannot show. See README.md.
+plan "Villa La Rotonda — Piano Nobile" {
+  units mm
+  grid 50
+  paper A1 portrait
+  scale 1:100
+  north up
+  schedule rooms
+  legend
+
+  # Sepia ink on laid paper — one hex value becomes the whole palette.
+  theme from "#5b4636"
+
+  # ---- the ideal square ------------------------------------------------------
+  let A     = 7000              # corner band
+  let B     = 11000             # centre band — and the rotonda's diameter
+  let SIDE  = 2 * A + B         # 25000, the block, centreline to centreline
+  let STRIP = A + B             # 18000, how far one pinwheel strip reaches
+  let R     = B / 2             # 5500, the drum's centreline radius
+
+  let PORT  = 5000              # portico platform, front columns to shell
+  let STEPS = 7000              # the flight in front of it
+  let PROJ  = PORT + STEPS      # 12000, how far a portico reaches past the block
+
+  let ORG   = PROJ              # the block's top-left corner, in plan coordinates
+  let EXT   = SIDE + 2 * PROJ   # 49000 overall, both ways — the drawing is square
+  let CX    = EXT / 2           # 24500, the centre of the hall, of the block, of everything
+
+  # The nine-square, as structural datum lines.
+  axes {
+    x at ORG, ORG + A, ORG + A + B, ORG + SIDE
+    y at ORG, ORG + A, ORG + A + B, ORG + SIDE
+  }
+
+  # ---- ONE QUARTER -----------------------------------------------------------
+  # Authored in its own coordinates, from (0,0) at the outer corner of the steps. Local y
+  # runs INWARD: 0 is the bottom step, FACE is the outer wall, BACK is the centre band.
+  # A `place` carries all of it — walls, arcs, room boxes, hinges and door swings — through
+  # one rigid transform, so nothing in here knows or cares which of the four it becomes.
+  component quarter() {
+    let AXIS = SIDE / 2         # 12500, the portico's centre line in local x
+    let FACE = PROJ             # 12000, local y of the block's outer wall
+    let BACK = PROJ + A         # 19000, local y of the centre band
+    let SALA = 5000             # depth of the corner room; the camerino takes the rest
+    let CORR = 4000             # the corridor's clear width
+    let CW   = AXIS - CORR / 2  # 10500, corridor west face
+    let CE   = AXIS + CORR / 2  # 14500, corridor east face
+
+    # The shell run this strip owns: up the side, then along the whole face. Four of
+    # these, turned, close the square. Openings are positioned along the RUN, which
+    # crosses the corner without a break — the face starts at run = A.
+    wall id=shell exterior thickness 500 material brick {
+      (0, BACK) (0, FACE) (STRIP, FACE)
+    }
+
+    # The centre band's edge, from the corner square across to the strip's end. Its
+    # midpoint is the tangent point where the drum touches — hence the 50% below.
+    wall id=w_band partition thickness 300 { (A, BACK) (STRIP, BACK) }
+
+    # THIS QUARTER'S 90 DEGREES OF THE DRUM. The rotonda is not an exception to the
+    # pinwheel; it is quartered like everything else, and four of these close the circle.
+    #
+    # Writing it here rather than once at the centre is what makes the circle's
+    # SEGMENTATION four-fold too. The obvious construction — four walls each symmetric
+    # about its own tangent point — needs split points at 45 degrees, and 5500/sqrt(2) is
+    # not a number any grid can hold; snap it and the drum stops being one circle. Split
+    # instead on the 3-4-5 triple (3300, 4400), which is exactly on R, and let `place`
+    # supply the symmetry: this wall spans 36.87 degrees before its tangent point and
+    # 53.13 after, and the next quarter's is the same wall turned, so the eight arcs come
+    # out in the same order whichever way you turn the page.
+    #
+    # OY is the centre of the rotonda in this quarter's own coordinates. BACK = OY - R is
+    # the tangent point, which is why the centre band's edge is tangent by construction
+    # and not by arithmetic.
+    # The run goes EAST TO WEST across the top of the circle, not west to east, and the
+    # direction is load-bearing: an `arc` bulges to the LEFT of travel, so walking it the
+    # other way puts the centre on the wrong side and the compiler draws the other circle
+    # through the same two points — four petals instead of a drum. Walked this way the
+    # default needs no `cw`.
+    let OY = BACK + R
+    wall id=drum partition thickness 600 material brick {
+      (AXIS + 3300, OY - 4400) arc (AXIS, BACK) radius R arc (AXIS - 4400, OY - 3300) radius R
+    }
+
+    wall id=w_corner partition thickness 300 { (A, FACE)     (A, BACK) }
+    wall id=w_cw     partition thickness 300 { (CW, FACE)    (CW, BACK) }
+    wall id=w_ce     partition thickness 300 { (CE, FACE)    (CE, BACK) }
+    # The trailing wall: this strip's far end, which after the quarter-turn becomes the
+    # NEXT quarter's party wall. The one door through it closes the circuit of rooms.
+    wall id=w_trail  partition thickness 300 { (STRIP, FACE) (STRIP, BACK) }
+    wall id=w_cam    partition thickness 200 { (0, FACE + SALA) (A, FACE + SALA) }
+
+    # ---- rooms ---------------------------------------------------------------
+    room id=loggia    at (A, STEPS)       size B x PORT           label "Loggia"    uses entry
+    room id=corridoio at (CW, FACE)       size CORR x A           label "Corridoio" uses hall circulation
+    room id=sala      at (0, FACE)        size A x SALA           label "Sala"      uses living
+    room id=camerino  at (0, FACE + SALA) size A x (A - SALA)     label "Camerino"  uses storage
+    room id=scaletta  at (A, FACE)        size (CW - A) x A       label "Scaletta"  uses circulation
+    room id=camera    at (CE, FACE)       size (STRIP - CE) x A   label "Camera"    uses bedroom
+
+    # ---- the temple front ----------------------------------------------------
+    # Hexastyle: six columns across, on 1800 bays with the middle one widened to 2500 so
+    # the door keeps its own axis, and one more returning down each flank — which is what
+    # makes it a portico and not a screen.
+    #
+    # A column here is a WALL, not the `column` element, and the reason is the whole point
+    # of this drawing: only walls, rooms and openings survive a quarter-turn exactly. See
+    # README.md — the instance transform reads a column's `at` as a centre where the
+    # element defines it as a top-left, so a placed colonnade walks 800 mm off its own
+    # axis on two of the four faces. Symmetry you can SEE is worth an element you cannot
+    # use.
+    #
+    # And a wall makes a ROUND column, which a square element could not. A closed run of
+    # two arcs is a circle on the wall's CENTRELINE, and its faces land at that radius
+    # PLUS AND MINUS half the thickness — so a centreline of COL_R / 2 carrying a
+    # thickness of COL_R has an outer face at COL_R and an inner face at nothing at all.
+    # The annulus closes into a solid disc, filled with the same poche a plan-cut column
+    # carries anyway.
+    let COL_R = 400                 # the column as drawn: 800 diameter
+    let CL    = COL_R / 2           # the centreline circle it is built from
+    let CY    = STEPS + COL_R       # the front row stands on the platform's outer edge
+    let colx = [AXIS - 4850, AXIS - 3050, AXIS - 1250, AXIS + 1250, AXIS + 3050, AXIS + 4850]
+    for i in 0..6 {
+      wall partition thickness COL_R {
+        (colx[i] + CL, CY) arc (colx[i] - CL, CY) radius CL arc (colx[i] + CL, CY) radius CL
+      }
+    }
+    wall partition thickness COL_R {
+      (colx[0] + CL, CY + 1800) arc (colx[0] - CL, CY + 1800) radius CL arc (colx[0] + CL, CY + 1800) radius CL
+    }
+    wall partition thickness COL_R {
+      (colx[5] + CL, CY + 1800) arc (colx[5] - CL, CY + 1800) radius CL arc (colx[5] + CL, CY + 1800) radius CL
+    }
+
+    # The flight down to the garden, drawn the way a treatise draws it: the tread lines
+    # themselves, between two thin edges, and no UP/DN arrow — a plate has none, and the
+    # `stair` element's arrow is the other thing that does not turn with its quarter. The
+    # top tread is the loggia's own floor edge, so the treads stop one riser short: that
+    # keeps the flight out of the building's measured extents and the overall chain on a
+    # round 35000.
+    let TREAD = 700
+    for i in 0..10 {
+      wall partition thickness 50 { (AXIS - 3000, i * TREAD) (AXIS + 3000, i * TREAD) }
+    }
+    wall partition thickness 50 { (AXIS - 3000, 0) (AXIS - 3000, STEPS - TREAD) }
+    wall partition thickness 50 { (AXIS + 3000, 0) (AXIS + 3000, STEPS - TREAD) }
+
+    # ---- thresholds ----------------------------------------------------------
+    # The front door, on the axis. `on <wall> at <pos>` takes a literal run position, not
+    # an expression, so every number below is written out: the run starts at the strip's
+    # inner corner, climbs the side wall for A = 7000, turns, and then measures local x
+    # along the face. The axis is therefore 7000 + 12500 = 19500.
+    door id=d_main on shell at 19500 width 2200 swing into corridoio
+
+    # Into the rotonda. A tangent point lies on TWO walls at once, so it has to be cut
+    # twice or the poche of the other one still stands in the doorway: once through the
+    # straight centre-band edge, at its midpoint, and once through the arc.
+    #
+    # 40.9666% is not a fudge — it is 36.87 / 90, the fraction of this wall's run that
+    # falls before the tangent point, and `on <wall> at <pos>` walks an arc by its ARC
+    # LENGTH R*theta rather than its chord. Both figures come from the same 3-4-5 triangle
+    # the drum is split on. All four quarters carry the identical number, so the four
+    # thresholds are congruent exactly, whatever the rounding.
+    opening id=o_band on w_band at 50% width 2400
+    opening id=o_drum on drum   at 40.9666% width 2400
+
+    # The circuit: corridor -> scaletta -> sala -> camerino, corridor -> camera, and
+    # camera -> the NEXT quarter's camerino through the trailing wall. Four of those and
+    # the rooms close a ring around the hall.
+    door id=d_scaletta on w_cw     at 1800 width 1000 swing into scaletta
+    door id=d_camera   on w_ce     at 1800 width 1000 swing into camera
+    door id=d_sala     on w_corner at 1800 width 1200 swing into sala
+    door id=d_camerino on w_cam    at 5500 width 900  swing into camerino
+    door id=d_ring     on w_trail  at 3500 width 1000 swing into camera
+
+    # ---- glazing -------------------------------------------------------------
+    # Run positions again, all measured from the strip's inner corner. Below 7000 is the
+    # side wall (run 7000 - t is t millimetres in from the face); above it is the face
+    # (run 7000 + x is local x).
+    window id=win_sala_n1 on shell at 9350  width 1400   # face, x = 2350
+    window id=win_sala_n2 on shell at 11650 width 1400   # face, x = 4650
+    window id=win_sala_w  on shell at 4500  width 1400   # side, 2500 in
+    window id=win_cam_w   on shell at 1000  width 900    # side, 6000 in
+    # The two that look out under the portico, flanking the front door.
+    window id=win_scal    on shell at 15750 width 1400   # face, x = 8750
+    window id=win_camera  on shell at 23250 width 1400   # face, x = 16250
+
+    # The service stair, drawn as treads for the same reason as the entrance flight, and
+    # kept at the far end of its chamber so that no leaf sweeps one and the walk from the
+    # corridor through to the sala stays clear.
+    for i in 0..12 {
+      wall partition thickness 50 { (A + 750, FACE + 3200 + i * 300) (A + 2750, FACE + 3200 + i * 300) }
+    }
+    wall partition thickness 50 { (A + 750, FACE + 3200)  (A + 750, FACE + 6500) }
+    wall partition thickness 50 { (A + 2750, FACE + 3200) (A + 2750, FACE + 6500) }
+  }
+
+  # ---- the four quarters -----------------------------------------------------
+  # The whole building. Each origin is a corner of the pinwheel; each quarter-turn is
+  # exact, so the four are congruent to the millimetre.
+  place quarter() as north at (ORG, 0)
+  place quarter() as east  at (EXT, ORG)       rotate 90
+  place quarter() as south at (EXT - ORG, EXT) rotate 180
+  place quarter() as west  at (0, EXT - ORG)   rotate 270
+
+  # ---- the rotonda -----------------------------------------------------------
+  # The drum itself came in with the quarters, four arc-pairs closing one circle. What is
+  # left is the FLOOR: one room, at the centre the quarters turn about. Its area is exact
+  # pi*R^2 in closed form, never the tessellation the analysis grid uses. The name is
+  # nudged off centre because the diameter call-out is drawn on the diameter.
+  room id=rotonda circle at (CX, CX) radius R label "Sala Centrale" at (CX, CX + 1500) uses hall
+
+  # ---- what a plate measures -------------------------------------------------
+  # `dims auto` is deliberately OFF. Every one of the 32 columns is a circular arc, so
+  # auto mode reasonably hands each of them its own R400 leader — thirty-two of them,
+  # across the drawing. Palladio's own plates carry no dimensions at all; these three are
+  # the ones a reader cannot get from the axes bubbles and the schedule.
+  #
+  # A dim's offset runs along the LEFT normal of from->to, so the endpoint ORDER is what
+  # puts each line outside the building. Both chains measure the OVERALL square, corner
+  # to corner of the outermost step, which is the one pair of witness lines that lands in
+  # empty paper instead of crossing a portico.
+  dim (0, EXT)->(EXT, EXT) offset 2500
+  dim (0, 0)->(0, EXT)     offset 2500
+  dim diameter rotonda
+
+  title {
+    project "Villa Almerico Capra — La Rotonda"
+    drawn_by "ArchLang"
+    date "2026-08-25"
+  }
+}
