@@ -1,0 +1,309 @@
+# ILLUSTRATIVE RECONSTRUCTION — interior layout is schematic, based on public
+# reporting (CNN, USNI News, PBS). Not an actual building record.
+#
+# Miraflores Palace, Caracas — the seat of the Venezuelan presidency, and the
+# building at the centre of the 3 January 2026 operation in which U.S. special
+# operations forces captured President Nicolás Maduro and Cilia Flores.
+#
+# WHAT IS PUBLIC AND WHAT IS INVENTED. The palace's exterior character is
+# documented: a late-19th-century neo-baroque QUADRANGLE wrapped around an
+# arcaded central courtyard, with a set of named ceremonial halls — Salón
+# Ayacucho (the ~250-seat auditorium), Salón Sol del Perú, Salón Joaquín
+# Crespo, the Ambassadors' Hall, Salón Boyacá and a chapel. Those names, the
+# quadrangle, and the courtyard are drawn from public sources. EVERYTHING ELSE
+# — every dimension, every wall position, the working wing's subdivision, and
+# the safe room in particular — is a plausible schematic invention. Do not read
+# this drawing as a survey of the building.
+#
+# THE COURTYARD IS NOT A ROOM. Nothing is declared inside
+# (20500,17500)-(49500,37500): it is the hole the quadrangle is wrapped around,
+# open to the sky. Declaring it a `room` would put 580 m² of weather into the
+# floor schedule and into `describe().totals`. What encloses it is one
+# four-segment wall, `w_court`, pierced by twelve arcade arches; the peristyle
+# columns and the fountain stand in the open air, belonging to no room at all.
+#
+# THE ARCADE IS FOUR ROOMS, NOT ONE. A rectangular annulus is not a simple
+# polygon, so it cannot be one `room … polygon`. The ring is cut into four
+# corridor rooms instead — the west and east arms run full height and own the
+# corners, the north and south arms span between them — with no wall between
+# the arms, so the arcade reads and floods as one continuous circulation loop.
+plan "Miraflores Palace — Illustrative Reconstruction" {
+  units mm
+  grid 50
+  paper A2 landscape
+  scale 1:200
+  north up
+  dims auto overall
+  schedule rooms
+  legend
+
+  accTitle "Miraflores Palace, Caracas — illustrative reconstruction"
+  accDescr "A single-storey plan of a 70 by 55 metre neo-baroque quadrangle wrapped around an arcaded central courtyard. Ceremonial halls occupy the north and west ranges, a working wing with the presidential office occupies the east range, and the entrance vestibule with flanking guard posts faces the street on the south. ILLUSTRATIVE RECONSTRUCTION — interior layout is schematic, based on public reporting (CNN, USNI News, PBS). Not an actual building record."
+
+  # The palace fronts its ceremonial forecourt on the SOUTH; Caracas is at
+  # about 10.5 degrees north. `site` draws nothing — it names five directions
+  # on `describe --json --select site`.
+  site { street south hemisphere north }
+
+  # ---- shell, ranges and the courtyard --------------------------------------
+  wall id=shell exterior thickness 600 { (0,0) (70000,0) (70000,55000) (0,55000) close }
+
+  # Two full-width partitions do most of the work: one behind the north range
+  # of halls, one in front of the south range. Each is a single wall because
+  # the line is continuous even though what it separates changes along it.
+  wall id=w_band_n partition thickness 300 { (0,14000) (70000,14000) }
+  wall id=w_band_s partition thickness 300 { (0,41000) (70000,41000) }
+
+  # The two long ranges, west and east, against the arcade.
+  wall id=w_rank_w partition thickness 300 { (17000,14000) (17000,41000) }
+  wall id=w_rank_e partition thickness 300 { (53000,14000) (53000,41000) }
+
+  # The courtyard itself: one wall, four segments, closed.
+  wall id=w_court partition thickness 300 { (20500,17500) (49500,17500) (49500,37500) (20500,37500) close }
+
+  # North range cross walls.
+  wall id=w_n1 partition thickness 300 { (28000,0) (28000,14000) }
+  wall id=w_n2 partition thickness 300 { (46000,0) (46000,14000) }
+
+  # West range cross wall.
+  wall id=w_w1 partition thickness 300 { (0,28000) (17000,28000) }
+
+  # East range — the working wing.
+  wall id=w_e1 partition thickness 300 { (53000,21000) (70000,21000) }
+  wall id=w_e2 partition thickness 300 { (53000,31000) (70000,31000) }
+  wall id=w_e3 partition thickness 300 { (53000,34500) (70000,34500) }
+  wall id=w_e4 partition thickness 200 { (58500,34500) (58500,41000) }
+  # 500 thick: the one wall in the plan that is drawn heavier than its
+  # neighbours, and the only place the reconstruction says anything at all
+  # about the safe room.
+  wall id=w_safe partition thickness 500 { (64000,34500) (64000,41000) }
+
+  # South range cross walls.
+  wall id=w_s1 partition thickness 300 { (14000,41000) (14000,55000) }
+  wall id=w_s2 partition thickness 300 { (26000,41000) (26000,55000) }
+  wall id=w_s3 partition thickness 300 { (33000,41000) (33000,55000) }
+  wall id=w_s4 partition thickness 300 { (43000,41000) (43000,55000) }
+  wall id=w_s5 partition thickness 300 { (50000,41000) (50000,55000) }
+  wall id=w_s6 partition thickness 300 { (60000,41000) (60000,55000) }
+
+  # ---- rooms, grouped into wings by `zone` ----------------------------------
+  # A zone has ZERO geometry: every statement inside resolves exactly as if the
+  # wrapper were deleted. Membership is DECLARED, which is why the schedule can
+  # carry a subtotal per wing that no amount of looking at the drawing could
+  # have derived.
+  zone ceremonial "Ceremonial range" {
+    room id=r_ayacucho    at (0,0)     size 28000x14000 label "Salón Ayacucho"     uses hall
+    room id=r_solperu     at (28000,0) size 18000x14000 label "Salón Sol del Perú" uses hall
+    room id=r_crespo      at (46000,0) size 24000x14000 label "Salón Joaquín Crespo" uses hall
+    room id=r_ambassadors at (0,14000) size 17000x14000 label "Ambassadors' Hall"  uses hall
+    room id=r_boyaca      at (0,28000) size 17000x13000 label "Salón Boyacá"       uses hall
+    room id=r_chapel      at (0,41000) size 14000x14000 label "Chapel"             uses hall
+    room id=r_vestibule   at (33000,41000) size 10000x14000 label "Entrance Vestibule" uses entry hall
+  }
+
+  zone arcades "Courtyard arcades" {
+    room id=r_arc_w at (17000,14000) size 3500x27000 label "West Arcade"  uses circulation hall
+    room id=r_arc_e at (49500,14000) size 3500x27000 label "East Arcade"  uses circulation hall
+    room id=r_arc_n at (20500,14000) size 29000x3500 label "North Arcade" uses circulation hall
+    room id=r_arc_s at (20500,37500) size 29000x3500 label "South Arcade" uses circulation hall
+  }
+
+  zone executive "Executive wing" {
+    room id=r_ante      at (53000,14000) size 17000x7000  label "Antechamber"     uses hall
+    room id=r_despacho  at (53000,21000) size 17000x10000 label "Despacho Presidencial" uses office
+    room id=r_exec_corr at (53000,31000) size 17000x3500  label "Executive Corridor" uses circulation
+    room id=r_office_a  at (53000,34500) size 5500x6500   label "Staff Office"    uses office
+    room id=r_office_b  at (58500,34500) size 5500x6500   label "Aides' Office"   uses office
+    room id=r_safe      at (64000,34500) size 6000x6500   label "Safe Room"        uses storage
+  }
+
+  zone service "Service range" {
+    room id=r_household at (14000,41000) size 12000x14000 label "Household Service" uses utility
+    room id=r_guard_w   at (26000,41000) size 7000x14000  label "Guard Post West"   uses office
+    room id=r_guard_e   at (43000,41000) size 7000x14000  label "Guard Post East"   uses office
+    room id=r_press     at (50000,41000) size 10000x14000 label "Press Room"        uses office
+    room id=r_kitchen   at (60000,41000) size 10000x14000 label "Service Kitchen"   uses kitchen
+  }
+
+  # ---- the street front ------------------------------------------------------
+  # Main entrance on the south facade, into the vestibule, flanked by the two
+  # guard posts.
+  door id=d_main at (38000,55000) width 2400 wall shell swing in
+  door id=d_service at (70000,50000) width 1200 wall shell swing out
+
+  door id=d_guard_w on w_s3 at 7000 width 900 swing into r_guard_w
+  door id=d_guard_e on w_s4 at 7000 width 900 swing into r_guard_e
+  door id=d_household on w_s2 at 7000 width 1000 swing into r_household
+  door id=d_chapel on w_s1 at 7000 width 1200 swing into r_chapel
+  door id=d_press on w_s5 at 7000 width 1000 swing into r_press
+  door id=d_kitchen on w_s6 at 7000 width 1000 swing into r_kitchen
+
+  # Vestibule to the south arcade: the ceremonial threshold, no leaf at all.
+  opening id=o_vest at (38000,41000) width 4000 wall w_band_s
+  opening id=o_chapel at (7000,41000) width 1600 wall w_band_s
+  opening id=o_press at (51500,41000) width 2000 wall w_band_s
+
+  # ---- the ceremonial halls read off the arcade ------------------------------
+  opening id=o_ayac at (18750,14000) width 3000 wall w_band_n
+  opening id=o_sol  at (37000,14000) width 4000 wall w_band_n
+  opening id=o_cres at (48000,14000) width 3000 wall w_band_n
+  opening id=o_ayac_sol at (28000,7000) width 3000 wall w_n1
+  opening id=o_sol_cres at (46000,7000) width 3000 wall w_n2
+  opening id=o_amb  at (17000,21000) width 3000 wall w_rank_w
+  opening id=o_boy  at (17000,34500) width 3000 wall w_rank_w
+  door id=d_amb_boy at (8500,28000) width 1500 wall w_w1 swing into r_ambassadors
+
+  # ---- the working wing ------------------------------------------------------
+  # The route the reconstruction follows: arcade to antechamber, antechamber to
+  # the presidential office, office to the corridor that serves the safe room.
+  door id=d_ante on w_rank_e at 3500 width 1500 swing into r_ante
+  door id=d_despacho at (58000,21000) width 1200 wall w_e1 swing into r_ante
+  door id=d_corr at (58000,31000) width 1000 wall w_e2 swing into r_despacho
+  door id=d_corr_arc on w_rank_e at 18750 width 1000 swing into r_exec_corr
+  door id=d_office_a at (55750,34500) width 900 wall w_e3 swing into r_office_a
+  door id=d_office_b at (61250,34500) width 900 wall w_e3 swing into r_office_b
+  # The safe-room door: the last threshold on the route, and the one that was
+  # not reached.
+  door id=d_safe at (67000,34500) width 900 wall w_e3 swing into r_exec_corr
+
+  # ---- the arcade arches onto the courtyard ----------------------------------
+  # Twelve cased openings in `w_court`, three to a side. `on w_court at <pos>`
+  # walks the wall's own run — 29 m, 20 m, 29 m, 20 m — so the arches are
+  # positioned by construction and can never drift off the wall.
+  opening id=a_n1 on w_court at 7250  width 3000
+  opening id=a_n2 on w_court at 14500 width 3000
+  opening id=a_n3 on w_court at 21750 width 3000
+  opening id=a_e1 on w_court at 34000 width 3000
+  opening id=a_e2 on w_court at 39000 width 3000
+  opening id=a_e3 on w_court at 44000 width 3000
+  opening id=a_s1 on w_court at 56250 width 3000
+  opening id=a_s2 on w_court at 63500 width 3000
+  opening id=a_s3 on w_court at 70750 width 3000
+  opening id=a_w1 on w_court at 83000 width 3000
+  opening id=a_w2 on w_court at 88000 width 3000
+  opening id=a_w3 on w_court at 93000 width 3000
+
+  # ---- glazing ---------------------------------------------------------------
+  window id=n_ayac_w at (8000,0)  width 2400 wall shell
+  window id=n_ayac_e at (18000,0) width 2400 wall shell
+  window id=n_sol_w  at (32000,0) width 2400 wall shell
+  window id=n_sol_e  at (40000,0) width 2400 wall shell
+  window id=n_cres_w at (50000,0) width 2400 wall shell
+  window id=n_cres_c at (58000,0) width 2400 wall shell
+  window id=n_cres_e at (66000,0) width 2400 wall shell
+
+  window id=e_cres  at (70000,6000)  width 2000 wall shell
+  window id=e_ante  at (70000,17500) width 2000 wall shell
+  window id=e_desp_n at (70000,24000) width 2000 wall shell
+  window id=e_desp_s at (70000,28000) width 2000 wall shell
+  window id=e_kitch at (70000,45000) width 1600 wall shell
+
+  window id=s_chapel  at (7000,55000)  width 2000 wall shell
+  window id=s_house   at (20000,55000) width 2000 wall shell
+  window id=s_guard_w at (28500,55000) width 1400 wall shell
+  window id=s_vest_w  at (33500,55000) width 2000 wall shell
+  window id=s_vest_e  at (42500,55000) width 2000 wall shell
+  window id=s_guard_e at (47500,55000) width 1400 wall shell
+  window id=s_press   at (55000,55000) width 2400 wall shell
+  window id=s_kitch   at (65000,55000) width 2000 wall shell
+
+  window id=w_ayac at (0,7000)  width 2400 wall shell
+  window id=w_amb  at (0,21000) width 2400 wall shell
+  window id=w_boy  at (0,34500) width 2400 wall shell
+  window id=w_chap at (0,48000) width 2000 wall shell
+
+  # ---- the courtyard ---------------------------------------------------------
+  # A peristyle standing in the open air — 28 columns just inside the arcade
+  # wall, and a fountain on the cross axis. None of these is in a room, and
+  # every rule that would ask which room they belong to simply does not apply.
+  for i in 0..9 {
+    column at (21500 + i * 3300, 18200) size 700x700
+    column at (21500 + i * 3300, 36000) size 700x700
+  }
+  for i in 0..5 {
+    column at (21500, 21500 + i * 3300) size 700x700
+    column at (47900, 21500 + i * 3300) size 700x700
+  }
+  furniture fountain at (33000,25500) size 4000x4000 label "Fountain"
+
+  # ---- Salón Ayacucho: the ~250-seat auditorium ------------------------------
+  # Twelve rows of twenty, split by a 1750 mm centre aisle, with a rear cross
+  # aisle onto the arcade threshold. The seat count is schematic.
+  let SEAT = 450
+  for r in 0..12 {
+    let sy = 3800 + r * 750
+    for c in 0..10 {
+      furniture chair at (2000 + c * 1200, sy) size SEAT x SEAT in r_ayacucho
+      furniture chair at (15000 + c * 1200, sy) size SEAT x SEAT in r_ayacucho
+    }
+  }
+  furniture dais at (11000,1200) size 6000x1400 label "Dais" in r_ayacucho
+
+  # ---- the other ceremonial halls --------------------------------------------
+  furniture table in r_solperu centered size 8000x1800 label "Ceremonial table"
+  furniture table in r_crespo centered size 6000x1800 label "Reception table"
+  furniture table in r_ambassadors centered size 9000x1800 label "Ambassadors' table"
+  furniture table in r_boyaca centered size 6000x1800 label "Council table"
+
+  # Chapel: six pews and an altar against the south wall.
+  furniture altar in r_chapel anchor bottom flush size 2400x900 label "Altar"
+  for p in 0..6 {
+    furniture pew at (3500, 44000 + p * 1400) size 7000x500 in r_chapel
+  }
+
+  furniture counter in r_vestibule anchor top-left flush size 3000x800 label "Reception"
+  furniture bench in r_vestibule anchor left inset 1200 size 800x3000
+
+  # ---- the working wing fit-out ----------------------------------------------
+  furniture desk in r_despacho anchor top inset 2200 size 3000x1600 label "Presidential desk"
+  furniture table in r_despacho centered size 4500x1600 label "Conference table"
+  furniture sofa in r_despacho anchor bottom-left inset 1200 size 2400x900
+  furniture bookcase in r_despacho anchor left inset 400 size 500x4000
+
+  furniture desk in r_ante anchor top-left inset 1200 size 1800x900
+  furniture bench in r_ante anchor right inset 1200 size 800x3000
+
+  # Left/right anchors, not top: the offices' doors are on their north wall and
+  # a desk parked under one costs 900 mm of swing (W_SWING_OBSTRUCTED).
+  furniture desk in r_office_a anchor left  inset 700 size 1600x800
+  furniture desk in r_office_a anchor right inset 700 size 1600x800
+  furniture desk in r_office_b anchor left  inset 700 size 1600x800
+  furniture desk in r_office_b anchor right inset 700 size 1600x800
+
+  furniture bench in r_safe anchor left inset 800 size 800x2400
+  furniture cabinet in r_safe anchor top-right inset 800 size 1600x600
+
+  # ---- the service range -----------------------------------------------------
+  furniture desk in r_guard_w anchor top inset 1200 size 1800x900 label "Guard desk"
+  furniture bench in r_guard_w anchor bottom inset 1200 size 2400x600
+  furniture desk in r_guard_e anchor top inset 1200 size 1800x900 label "Guard desk"
+  furniture bench in r_guard_e anchor bottom inset 1200 size 2400x600
+
+  furniture table in r_press anchor top inset 1500 size 4000x1200 label "Lectern table"
+  for r in 0..5 {
+    for c in 0..4 {
+      furniture chair at (52000 + c * 1600, 46000 + r * 1400) size SEAT x SEAT in r_press
+    }
+  }
+
+  furniture kitchen_sink against wall w_s6 offset 4000 in r_kitchen
+  furniture stove        against wall w_s6 offset 6000 in r_kitchen
+  furniture counter      against wall w_s6 offset 8000 in r_kitchen
+  furniture fridge       against wall w_s6 offset 10000 in r_kitchen
+  furniture table in r_kitchen centered size 3000x1200 label "Prep table"
+
+  furniture table in r_household centered size 3000x1200 label "Work table"
+  furniture counter in r_household anchor top flush size 4000x700
+
+  # The title block's value column is about 30 characters wide — it is a fixed
+  # 34 mm ON THE SHEET at a fixed 1.9 mm type size, so its capacity does not
+  # change with `paper` or `scale`, and a longer string does not wrap: it runs
+  # left out of the box and overprints its own row label. The disclaimer is
+  # therefore carried here in the three lines that fit, and in full in the
+  # caption strip of `plan-annotated.svg`, in `accDescr`, and in the README.
+  title {
+    project "Miraflores Palace, Caracas"
+    drawn_by "Illustrative reconstruction"
+    date "3 January 2026 — schematic"
+  }
+}

@@ -1,0 +1,276 @@
+# The White House — West Wing, First Floor
+#
+# The most famous office in the world is an oval. Most floor-plan languages can only
+# draw boxes, so the Oval Office comes out as a rectangle with an apologetic label.
+# ArchLang has real circular geometry, so here it is drawn the way it is built: three
+# straight walls and a bowed south end, struck as a TRUE arc on a R7300 centreline.
+# Grep the rendered SVG for `A ` and you get exactly two: `A 7450` and `A 7150`, the
+# outer and inner faces at R +/- half the wall thickness. Native SVG arcs, native DXF
+# `ARC` entities — never faceted, at any zoom. (Only the poche FILL tessellates.)
+#
+# The two curve forms this plan leans on:
+#
+#   arc (x,y) radius R [cw|ccw]   a CURVED WALL EDGE from the previous vertex. `cw`
+#                                 puts the centre on the RIGHT of travel, so a wall
+#                                 walked east-to-west bows SOUTH — the Rose Garden bow.
+#   room polygon (x,y) …          the matching floor. The bow's chord is 11 m and its
+#                                 rise 2.5 m; the ring follows the same centreline the
+#                                 wall does, so the floor and the arc agree.
+#
+# Openings walk the curve by ARC LENGTH, not by chord: the bow's run is 12457 mm, so
+# `window on w_oval at 25%` really is a quarter of the way round it. That is how the
+# three south windows behind the desk land evenly on the curve with no trigonometry
+# in the source.
+#
+# Issued on A1 at 1:100 — the conventional presentation for a public building of this
+# size: an overall dimension chain, a GB/T positioning-axis grid on the structure, and
+# an R leader on the one thing a chain cannot measure.
+plan "The West Wing — First Floor" {
+  units mm
+  grid 50
+  paper A1 landscape
+  scale 1:100
+  north up
+  site { street north }
+  dims auto overall
+
+  # ---- shell -----------------------------------------------------------------
+  # Split into named runs rather than one `close`d loop, so every opening below can
+  # be hosted BY CONSTRUCTION (`on <wall> at <pos>`) and can never drift off its wall.
+  wall id=w_north   exterior thickness 300 { (0,0) (50000,0) }
+  wall id=w_east    exterior thickness 300 { (50000,0) (50000,31000) }
+  wall id=w_south_e exterior thickness 300 { (47000,31000) (50000,31000) }
+
+  # THE BOW. Walked east -> west, so `cw` places the centre at (41500,26200) — north
+  # of the chord, inside the building — and the facade bulges out into the Rose
+  # Garden. Swap `cw` for the default `ccw` and the same two endpoints give a room
+  # that caves inward instead.
+  wall id=w_oval    exterior thickness 300 { (47000,31000) arc (36000,31000) radius 7300 cw }
+
+  wall id=w_south_w exterior thickness 300 { (0,31000) (36000,31000) }
+  wall id=w_west    exterior thickness 300 { (0,0) (0,31000) }
+
+  # ---- structure: two east-west corridors and the colonnade spine -------------
+  wall id=wA_n  partition thickness 150 { (0,9500) (47000,9500) }
+  wall id=wA_s  partition thickness 150 { (0,12000) (47000,12000) }
+  wall id=wB_n  partition thickness 150 { (0,22000) (47000,22000) }
+  wall id=wB_s  partition thickness 150 { (0,24500) (47000,24500) }
+
+  # The colonnade's inner wall is broken at both corridors, so the three circulation
+  # spaces read as one loop with no doors to open.
+  wall id=vCol_n partition thickness 150 { (47000,0) (47000,9500) }
+  wall id=vCol_m partition thickness 150 { (47000,12000) (47000,22000) }
+  wall id=vCol_s partition thickness 150 { (47000,24500) (47000,31000) }
+
+  # North range dividers.
+  wall id=vN9   partition thickness 150 { (9000,0) (9000,9500) }
+  wall id=vN18  partition thickness 150 { (18000,0) (18000,9500) }
+  wall id=vN255 partition thickness 150 { (25500,0) (25500,9500) }
+  wall id=vN345 partition thickness 150 { (34500,0) (34500,9500) }
+
+  # Middle range dividers (x 9000..11500 is the north-south link corridor).
+  wall id=vM9   partition thickness 150 { (9000,12000) (9000,22000) }
+  wall id=vM115 partition thickness 150 { (11500,12000) (11500,22000) }
+  wall id=vM18  partition thickness 150 { (18000,12000) (18000,22000) }
+  wall id=vM255 partition thickness 150 { (25500,12000) (25500,22000) }
+  wall id=vM345 partition thickness 150 { (34500,12000) (34500,22000) }
+  wall id=vM41  partition thickness 150 { (41000,12000) (41000,22000) }
+  wall id=wM_w  partition thickness 150 { (0,17000) (9000,17000) }
+  wall id=wM_c  partition thickness 150 { (11500,17000) (25500,17000) }
+
+  # South range dividers.
+  wall id=vS10  partition thickness 150 { (10000,24500) (10000,31000) }
+  wall id=vS18  partition thickness 150 { (18000,24500) (18000,31000) }
+  wall id=vS25  partition thickness 150 { (25000,24500) (25000,31000) }
+  wall id=vS295 partition thickness 150 { (29500,24500) (29500,31000) }
+  wall id=vS36  partition thickness 150 { (36000,24500) (36000,31000) }
+
+  # ---- north range: the public front on Pennsylvania Avenue ------------------
+  room id=r_cos        at (0,0)     size 9000x9500  label "Chief of Staff"      uses office
+  room id=r_lobby      at (9000,0)  size 9000x9500  label "Lobby"               uses entry hall
+  room id=r_press_sec  at (18000,0) size 7500x9500  label "Press Secretary"     uses office
+  room id=r_upper      at (25500,0) size 9000x9500  label "Upper Press Office"  uses office
+  room id=r_brief      at (34500,0) size 12500x9500 label "Press Briefing Room" uses hall
+
+  # ---- circulation -----------------------------------------------------------
+  room id=r_corr_a  at (0,9500)     size 47000x2500 label "Corridor"        uses circulation
+  room id=r_corr_c  at (9000,12000) size 2500x10000 label "Corridor"        uses circulation
+  room id=r_corr_b  at (0,22000)    size 47000x2500 label "Corridor"        uses circulation
+  room id=r_colonnade at (47000,0)  size 3000x31000 label "West Colonnade"  uses circulation
+
+  # ---- middle range ----------------------------------------------------------
+  room id=r_vp        at (0,12000)     size 9000x5000   label "Vice President"        uses office
+  room id=r_nsa       at (0,17000)     size 9000x5000   label "National Security Advisor" uses office
+  room id=r_advisor   at (11500,12000) size 6500x5000   label "Senior Advisor"        uses office
+  room id=r_counsel   at (11500,17000) size 6500x5000   label "Counsel to the President" uses office
+  room id=r_dcos      at (18000,12000) size 7500x5000   label "Deputy Chief of Staff" uses office
+  room id=r_comms     at (18000,17000) size 7500x5000   label "Communications"        uses office
+  room id=r_roosevelt at (25500,12000) size 9000x10000  label "Roosevelt Room"        uses office
+  room id=r_presswork at (34500,12000) size 6500x10000  label "Press Corps Workspace" uses office
+  room id=r_cabinet   at (41000,12000) size 6000x10000  label "Cabinet Room"          uses office
+
+  # ---- south range -----------------------------------------------------------
+  room id=r_staffsec  at (0,24500)     size 10000x6500 label "Staff Secretary"        uses office
+  room id=r_leg       at (10000,24500) size 8000x6500  label "Legislative Affairs"    uses office
+  room id=r_dining    at (18000,24500) size 7000x6500  label "President's Dining Room" uses dining
+  room id=r_study     at (25000,24500) size 4500x6500  label "Private Study"          uses office
+  room id=r_secretary at (29500,24500) size 6500x6500  label "President's Secretary"  uses office
+
+  # ---- THE OVAL OFFICE -------------------------------------------------------
+  # Three straight sides and a bow. The ring's eleven southern vertices sit on the same
+  # R7300 circle the wall is struck on, sampled at 8.1-degree steps (max departure from
+  # the true arc: 18 mm, or 0.18 mm on a 1:100 sheet, and hidden under the wall anyway).
+  # So the shoelace area `describe --json` reports is the room you would actually walk,
+  # and the label sits at its true centroid, not at the corner of some bounding box.
+  room id=r_oval polygon
+    (36000,24500) (47000,24500) (47000,31000)
+    (46250,31750) (45450,32350) (44500,32850) (43550,33200) (42550,33450)
+    (41500,33500)
+    (40450,33450) (39450,33200) (38500,32850) (37550,32350) (36750,31750)
+    (36000,31000)
+    label "Oval Office" uses office
+
+  # ---- entrances -------------------------------------------------------------
+  door id=d_main on w_north at 13500 width 2000 swing out
+  door id=d_rose on w_east  at 20000 width 1800 swing out
+
+  # ---- doors off the north corridor ------------------------------------------
+  door    id=d_cos    on wA_n at 4500  width 1000 swing into r_cos
+  opening id=o_lobby  on wA_n at 13500 width 2400
+  door    id=d_psec   on wA_n at 21750 width 1000 swing into r_press_sec
+  door    id=d_upper  on wA_n at 30000 width 1000 swing into r_upper
+  door    id=d_brief  on wA_n at 40000 width 1800 swing into r_brief
+  door    id=d_brief2 on vCol_n at 5000 width 1200 swing into r_brief
+
+  door    id=d_vp     on wA_s at 4500  width 1000 swing into r_vp
+  opening id=o_link_n on wA_s at 10250 width 2000
+  door    id=d_adv    on wA_s at 14750 width 1000 swing into r_advisor
+  door    id=d_dcos   on wA_s at 21750 width 1000 swing into r_dcos
+  door    id=d_roos_n on wA_s at 30000 width 1000 swing into r_roosevelt
+  door    id=d_pwork  on wA_s at 37750 width 1000 swing into r_presswork
+
+  # ---- doors off the south corridor ------------------------------------------
+  door    id=d_nsa     on wB_n at 4500  width 1000 swing into r_nsa
+  opening id=o_link_s  on wB_n at 10250 width 2000
+  door    id=d_counsel on wB_n at 14750 width 1000 swing into r_counsel
+  door    id=d_comms   on wB_n at 21750 width 1000 swing into r_comms
+  door    id=d_roos_s  on wB_n at 30000 width 1000 swing into r_roosevelt
+  door    id=d_cab_s   on wB_n at 44000 width 1000 swing into r_cabinet
+  door    id=d_cab_e   on vCol_m at 1000 width 1000 swing into r_cabinet
+
+  door id=d_staffsec on wB_s at 5000  width 1000 swing into r_staffsec
+  door id=d_leg      on wB_s at 14000 width 1000 swing into r_leg
+  door id=d_dining   on wB_s at 21500 width 1000 swing into r_dining
+  door id=d_study    on wB_s at 27250 width 900  swing into r_study
+  door id=d_secr     on wB_s at 32750 width 1000 swing into r_secretary
+
+  # ---- the Oval's three doors ------------------------------------------------
+  # West to the President's secretary, east to the colonnade, north to the corridor.
+  door id=d_oval_w on vS36   at 1500  width 1000 swing into r_oval
+  door id=d_oval_e on vCol_s at 1500  width 1000 swing into r_oval
+  door id=d_oval_n on wB_s   at 44500 width 1000 swing into r_oval
+
+  # ---- glazing ---------------------------------------------------------------
+  window on w_north at 4500  width 2400
+  window on w_north at 10500 width 1600
+  window on w_north at 16500 width 1600
+  window on w_north at 21750 width 2400
+  window on w_north at 30000 width 2400
+  window on w_north at 38000 width 2400
+  window on w_north at 43500 width 2400
+  window on w_north at 48500 width 1400
+
+  window on w_west at 4750  width 2000
+  window on w_west at 14500 width 1600
+  window on w_west at 19500 width 1600
+  window on w_west at 27750 width 2000
+
+  window on w_south_w at 5000  width 2000
+  window on w_south_w at 14000 width 2000
+  window on w_south_w at 21500 width 2000
+  window on w_south_w at 27250 width 1400
+  window on w_south_w at 32750 width 2000
+
+  window on w_east at 3000  width 1600
+  window on w_east at 7000  width 1600
+  window on w_east at 15000 width 1600
+  window on w_east at 26000 width 1600
+  window on w_east at 29000 width 1600
+
+  # The three south windows of the Oval Office, walked round the bow by ARC LENGTH.
+  window id=w_oval1 on w_oval at 25% width 1400
+  window id=w_oval2 on w_oval at 50% width 1400
+  window id=w_oval3 on w_oval at 75% width 1400
+
+  # ---- the Oval Office, furnished --------------------------------------------
+  # A polygonal room refuses the rectangle-only `anchor` sugar (E_PLACE_POLY), which
+  # is the honest answer for a shape with no corners to anchor to — so these are
+  # absolute, and `in r_oval` declares the membership the geometry cannot infer.
+  furniture id=f_desk  desk  at (40600,31200) size 1800x900  label "Resolute Desk" in r_oval
+  furniture id=f_dch1  chair at (40100,30100) size 600x600 in r_oval
+  furniture id=f_dch2  chair at (42000,30100) size 600x600 in r_oval
+  furniture id=f_sofa1 sofa  at (39000,26000) size 3000x900 in r_oval
+  furniture id=f_sofa2 sofa  at (39000,28600) size 3000x900 in r_oval
+  furniture id=f_coff  table at (40200,27200) size 1600x900 in r_oval
+  furniture id=f_arm1  chair at (37800,27400) size 900x900 in r_oval
+  furniture id=f_arm2  chair at (42400,27400) size 900x900 in r_oval
+  furniture id=f_fire  counter at (40700,24700) size 1600x400 label "Fireplace" in r_oval
+
+  # ---- the Cabinet Room ------------------------------------------------------
+  furniture id=f_cabtable table in r_cabinet centered size 3000x5000 label "Cabinet Table"
+  for i in 0..6 {
+    furniture chair at (41700, 15000 + i * 800) size 600x600 in r_cabinet
+    furniture chair at (45700, 15000 + i * 800) size 600x600 in r_cabinet
+  }
+
+  # ---- the Roosevelt Room ----------------------------------------------------
+  furniture id=f_roostable table in r_roosevelt centered size 4800x1800 label "Conference Table"
+  for i in 0..6 {
+    furniture chair at (27700 + i * 800, 15250) size 600x600 in r_roosevelt
+    furniture chair at (27700 + i * 800, 18150) size 600x600 in r_roosevelt
+  }
+  furniture chair at (26750,16700) size 600x600 in r_roosevelt
+  furniture chair at (32650,16700) size 600x600 in r_roosevelt
+
+  # ---- the Press Briefing Room -----------------------------------------------
+  furniture id=f_lectern lectern at (39800,900) size 1400x600 label "Lectern" in r_brief
+  for r in 0..5 {
+    for c in 0..6 {
+      furniture seat at (36200 + c * 1400, 2800 + r * 1000) size 600x500 in r_brief
+    }
+  }
+
+  # ---- the rest, fitted out --------------------------------------------------
+  furniture desk  in r_cos       centered            size 1800x900
+  furniture sofa  in r_cos       anchor left  inset 600 size 900x2200
+  furniture sofa  in r_lobby     anchor left  inset 700 size 900x2400
+  furniture sofa  in r_lobby     anchor right inset 700 size 900x2400
+  furniture table in r_lobby     centered            size 1200x1200
+  furniture desk  in r_press_sec anchor top   inset 1400 size 1800x900
+  furniture desk  in r_upper     anchor top   inset 1400 size 1800x900
+  furniture desk  in r_presswork anchor top   inset 1400 size 1800x900
+  furniture desk  in r_presswork anchor bottom inset 1400 size 1800x900
+  furniture desk  in r_vp        anchor top   inset 1200 size 1800x900
+  furniture desk  in r_nsa       anchor bottom inset 1200 size 1800x900
+  furniture desk  in r_advisor   anchor top   inset 1200 size 1600x800
+  furniture desk  in r_counsel   anchor bottom inset 1200 size 1600x800
+  furniture desk  in r_dcos      anchor top   inset 1200 size 1600x800
+  furniture desk  in r_comms     anchor bottom inset 1200 size 1600x800
+  furniture desk  in r_staffsec  anchor bottom inset 1400 size 1800x900
+  furniture desk  in r_leg       anchor bottom inset 1400 size 1800x900
+  furniture desk  in r_secretary anchor bottom inset 1400 size 1600x800
+  furniture desk  in r_study     anchor bottom inset 1200 size 1400x700
+  furniture table in r_dining    anchor bottom inset 1000 size 2400x1200 label "Dining Table"
+
+  # ---- positioning axes ------------------------------------------------------
+  # GB/T 50001 datum lines on the structural grid: verticals numbered west to east,
+  # horizontals lettered south to north. The labels are DERIVED from sorted position
+  # — you never write "3" or "C", so a moved wall renumbers the whole grid for you.
+  # The bow carries none: a curve has no datum line, its radius is its dimension.
+  axes {
+    x at 0, 9000, 18000, 25500, 34500, 47000, 50000
+    y at 0, 9500, 12000, 22000, 24500, 31000
+  }
+
+  title { project "The White House — West Wing" drawn_by "ArchLang" date "2026-08-25" }
+}

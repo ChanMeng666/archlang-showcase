@@ -1,0 +1,27 @@
+{
+  "paths": [
+    {
+      "points": [[-13000, 6000], [-7000, 8500], [-1500, 12000], [1800, 13300]],
+      "arrow": true
+    },
+    {
+      "points": [[1800, 13300], [8000, 13300], [15000, 13300], [18750, 14200], [18750, 16400]],
+      "arrow": true
+    },
+    {
+      "points": [[18750, 16400], [21500, 16700], [34000, 16700], [45000, 16700], [51250, 16700], [51250, 17500], [55500, 17500]],
+      "arrow": true
+    },
+    {
+      "points": [[55500, 17500], [58000, 18800], [58000, 21000], [58000, 27000], [58000, 31000], [58000, 31800], [61500, 31800], [65100, 31800]],
+      "arrow": true
+    }
+  ],
+  "markers": [
+    { "at": [-13000, 6000], "n": 1, "text": "~01:00" },
+    { "at": [25500, 22500], "n": 2 },
+    { "at": [55500, 24000], "n": 3 },
+    { "at": [67600, 31800], "n": 4, "text": "~02:00" }
+  ],
+  "note": "ILLUSTRATIVE RECONSTRUCTION — interior layout is schematic, based on public reporting (CNN, USNI News, PBS). Not an actual building record. 1 — ~01:00 local, special-operations forces inserted by helicopter outside the palace walls. 2 — entry route through the arcades around the central courtyard; a firefight with palace guards was reported. 3 — corridor route toward the presidential office wing. 4 — ~02:00 — Maduro and Flores captured before reaching the safe room."
+}

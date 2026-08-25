@@ -1,0 +1,196 @@
+# Apartment 20, Apartment 19, and the hallway between them.
+#
+# Fan art: an original architectural drawing of a layout every viewer already knows
+# by heart. Not affiliated with the show or its rights holders.
+#
+# The whole floor is one drawing. Three `zone` blocks — two apartments and the
+# common hall — carry no geometry at all; they only group the rooms, which is why
+# the schedule at the right of the sheet closes each apartment with its own
+# subtotal. Nothing is positioned by hand twice: every opening is pinned to a run
+# distance along a named wall (`on <wall> at <pos>`) and every plumbing/kitchen
+# fixture resolves `against wall`, so moving a partition moves what hangs off it.
+plan "Apartments 19 & 20" {
+  units mm
+  grid 50
+  paper A2 landscape
+  scale 1:50
+  north up
+  # Two overall dimensions, taken face to face. Hand-placed rather than
+  # `dims auto` so the vertical chain lands on the east facade instead of
+  # running through the balcony.
+
+  accTitle "Two facing apartments on one floor"
+  accDescr "A single floor plate: a large five-room apartment to the west, a common hallway with a stairwell down the middle, and a smaller five-room apartment to the east. The two front doors face each other across the hallway."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # APARTMENT 20 — the big one. 9 x 12 m.
+  # You come in off the hallway straight into the living room. The kitchen is
+  # open to it through a 2.6 m cased opening; the bathroom door is beside it.
+  # The glazed west wall (two windows either side of a sliding door onto the
+  # balcony) is the wall opposite the entry. Both bedrooms are along the south.
+  # ────────────────────────────────────────────────────────────────────────────
+  zone apt20 "Apartment 20" {
+
+    wall id=w20_north exterior  thickness 250 { (0,0) (9000,0) }
+    wall id=w20_west  exterior  thickness 250 { (0,0) (0,12000) }
+    wall id=w20_south exterior  thickness 250 { (0,12000) (9000,12000) }
+
+    # The kitchen/bath band across the north, and the bedroom band across the south.
+    wall id=w20_kit_s  partition thickness 100 { (0,3600) (6800,3600) }
+    wall id=w20_kit_e  partition thickness 100 { (4600,0) (4600,3600) }
+    wall id=w20_bath_e partition thickness 100 { (6800,0) (6800,3600) }
+    wall id=w20_bed_n  partition thickness 100 { (0,8400) (9000,8400) }
+    wall id=w20_bed_m  partition thickness 100 { (4400,8400) (4400,12000) }
+
+    # The balcony: a railing, not a room — the sliding door opens onto open air.
+    wall id=w20_railing railing thickness 100 { (0,4800) (-1600,4800) (-1600,7200) (0,7200) }
+
+    room id=r20_kitchen at (0,0)       size 4600x3600 label "Kitchen"        uses kitchen
+    room id=r20_bath    at (4600,0)    size 2200x3600 label "Bathroom"       uses bath
+    room id=r20_bed_m   at (0,8400)    size 4400x3600 label "Bedroom 1"        uses bedroom
+    room id=r20_bed_r   at (4400,8400) size 4600x3600 label "Bedroom 2"        uses bedroom
+
+    # The living room wraps the kitchen/bath band — an L, measured by its own ring.
+    room id=r20_living polygon (6800,0) (9000,0) (9000,8400) (0,8400) (0,3600) (6800,3600)
+      label "Apt 20 — Living / Dining" uses living dining
+
+    # The kitchen is open to the living room; the bathroom is not.
+    opening id=o20_kitchen on w20_kit_s  at 1600 width 2600
+    door    id=d20_bath    on w20_bath_e at 1800 width 800 swing into r20_bath
+    door    id=d20_bed_m   on w20_bed_n  at 2200 width 800 swing into r20_bed_m
+    door    id=d20_bed_r   on w20_bed_n  at 6600 width 800 swing into r20_bed_r
+
+    # The glazed west wall: window — sliding door to the balcony — window.
+    door   id=d20_balcony sliding on w20_west at 6000 width 1800 slide left
+    window on w20_west  at 1800  width 1200
+    window on w20_west  at 4200  width 1000
+    window on w20_west  at 7800  width 1000
+    window on w20_west  at 10200 width 1000
+    window on w20_north at 7900  width 1400
+    window on w20_south at 2200  width 1400
+    window on w20_south at 6600  width 1400
+
+    # Kitchen run along the north wall. `offset` is the distance from the wall's
+    # start to the piece's CENTRE, and the footprints come from the fixture
+    # catalog — so the run reads 600, 600, 600, 800 wide, nose to tail.
+    furniture fridge       against wall w20_north offset 600  in r20_kitchen
+    furniture stove        against wall w20_north offset 1400 in r20_kitchen
+    furniture counter      against wall w20_north offset 2200 in r20_kitchen
+    furniture kitchen_sink against wall w20_north offset 3200 in r20_kitchen
+
+    furniture bathtub against wall w20_north offset 5700 in r20_bath
+    furniture basin   against wall w20_kit_e offset 1900 in r20_bath
+    furniture wc      against wall w20_kit_e offset 2600 in r20_bath
+
+    # The living room is a polygon, so its loose furniture is placed absolutely
+    # (`in <room> anchor …` is a rectangle-only clause and refuses a ring).
+    furniture table at (1200,4800) size 1800x1000 label "Table"        in r20_living
+    furniture sofa  at (4200,4400) size 2400x900  label "Sofa"         in r20_living
+    furniture table at (4800,5900) size 1200x700  label "Coffee Table" in r20_living
+    furniture chair at (3400,5800) size 800x800   label "Armchair"     in r20_living
+    furniture chair at (7000,5800) size 800x800   label "Armchair"     in r20_living
+    furniture tv    at (4600,7900) size 1400x400  label "TV"           in r20_living
+
+    furniture bed  in r20_bed_m anchor bottom-left flush inset 200 size 1500x2000 label "Bed"
+    furniture robe in r20_bed_m anchor top-right   flush inset 200 size 1400x600  label "Wardrobe"
+    furniture bed  in r20_bed_r anchor bottom-right flush inset 300 size 1500x2000 label "Bed"
+    furniture robe in r20_bed_r anchor top-left     flush inset 200 size 1400x600  label "Wardrobe"
+  }
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # THE HALLWAY — 2.6 m of common corridor, and the stair at the north end.
+  # The two front doors sit on it 1 m out of line with each other.
+  # ────────────────────────────────────────────────────────────────────────────
+  zone common "Common Hallway" {
+
+    wall id=w_corr_west   party     thickness 250 material poche { (9000,0) (9000,12000) }
+    wall id=w_corr_east   party     thickness 250 material poche { (11600,0) (11600,12000) }
+    wall id=w_common_n    exterior  thickness 250 { (9000,0) (11600,0) }
+    wall id=w_common_s    exterior  thickness 250 { (9000,12000) (11600,12000) }
+    wall id=w_hall_stair  partition thickness 100 { (9000,3200) (11600,3200) }
+
+    room id=r_stair at (9000,0)    size 2600x3200 label "Stairwell" uses circulation
+    room id=r_hall  at (9000,3200) size 2600x8800 label "Hallway"   uses hall
+
+    # The flight is entered at its larger-y end (`dir up`), which is the end the
+    # hallway door faces. Kept 2 m long so the room label has somewhere to sit.
+    stair id=s_main at (9200,400) size 1200x2000 dir up
+
+    # The way in and out of the floor, and the fire door off the landing.
+    door id=d_exit  on w_common_n   at 2000 width 1000 swing into r_stair
+    door id=d_stair on w_hall_stair at 1800 width 1000 swing into r_hall
+
+    # The two front doors, facing each other across the hall.
+    door id=d20_front on w_corr_west at 5200 width 1000 hinge near start swing into r20_living
+    door id=d19_front on w_corr_east at 4200 width 1000 hinge near start swing into r19_living
+  }
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # APARTMENT 19 — across the hall, 6.6 x 12 m. One open room with the
+  # kitchenette along the north wall, the two recliners aimed at the TV, and the
+  # foosball table where a dining table would otherwise go. Bedrooms and the
+  # bathroom sit off a cross-hall at the back.
+  # ────────────────────────────────────────────────────────────────────────────
+  zone apt19 "Apartment 19" {
+
+    wall id=w19_north exterior  thickness 250 { (11600,0) (18200,0) }
+    wall id=w19_east  exterior  thickness 250 { (18200,0) (18200,12000) }
+    wall id=w19_south exterior  thickness 250 { (11600,12000) (18200,12000) }
+
+    wall id=w19_hall_n partition thickness 100 { (11600,6400) (18200,6400) }
+    wall id=w19_hall_s partition thickness 100 { (11600,7800) (18200,7800) }
+    wall id=w19_bath_w partition thickness 100 { (14000,7800) (14000,12000) }
+    wall id=w19_bath_e partition thickness 100 { (15800,7800) (15800,12000) }
+
+    room id=r19_living       at (11600,0)    size 6600x6400 label "Apt 19 — Living / Kitchen" uses living kitchen
+    room id=r19_hall         at (11600,6400) size 6600x1400 label "Hall"             uses hall
+    room id=r19_bed_joey     at (11600,7800) size 2400x4200 label "Bedroom 1"          uses bedroom
+    room id=r19_bath         at (14000,7800) size 1800x4200 label "Bathroom"         uses bath
+    room id=r19_bed_chandler at (15800,7800) size 2400x4200 label "Bedroom 2"          uses bedroom
+
+    opening id=o19_hall     on w19_hall_n at 3300 width 1200
+    door    id=d19_joey     on w19_hall_s at 800  width 800 swing into r19_bed_joey
+    door    id=d19_bath     on w19_hall_s at 3300 width 800 swing into r19_bath
+    door    id=d19_chandler on w19_hall_s at 5600 width 800 swing into r19_bed_chandler
+
+    window on w19_north at 4400 width 1400
+    window on w19_north at 5800 width 1000
+    window on w19_east  at 2600 width 1600
+    window on w19_south at 1200 width 1200
+    window on w19_south at 5400 width 1200
+
+    furniture fridge       against wall w19_north offset 600  in r19_living
+    furniture stove        against wall w19_north offset 1400 in r19_living
+    furniture kitchen_sink against wall w19_north offset 2300 in r19_living
+    furniture counter      against wall w19_north offset 3100 in r19_living
+
+    furniture tv    at (11800,5000) size 400x1200  label "TV"       in r19_living
+    furniture chair at (13000,4400) size 900x900   label "Recliner" in r19_living
+    furniture chair at (13000,5400) size 900x900   label "Recliner" in r19_living
+    furniture table at (15200,3800) size 1400x800  label "Foosball" in r19_living
+
+    # 1.7 m between the partitions leaves room for fixtures on ONE long wall only:
+    # both wall-hung pieces go east, the tub across the end, and the walk down the
+    # west side stays a metre wide.
+    furniture wc      against wall w19_bath_e offset 1400 in r19_bath
+    furniture basin   against wall w19_bath_e offset 2200 in r19_bath
+    furniture bathtub against wall w19_south  offset 3300 in r19_bath
+
+    furniture bed  in r19_bed_joey     anchor bottom-left  flush inset 200 size 1400x1900 label "Bed"
+    furniture robe in r19_bed_joey     anchor top-right    flush inset 200 size 600x550   label "Wardrobe"
+    furniture bed  in r19_bed_chandler anchor bottom-right flush inset 200 size 1400x1900 label "Bed"
+    furniture robe in r19_bed_chandler anchor top-left     flush inset 50  size 600x550   label "Wardrobe"
+  }
+
+  dim faces (0,12000)->(18200,12000) offset 900
+  dim faces (18200,12000)->(18200,0) offset 900
+
+  schedule rooms
+  legend
+
+  title {
+    project "The One With the Floor Plan"
+    drawn_by "ArchLang"
+    date "2026-08-25"
+  }
+}
