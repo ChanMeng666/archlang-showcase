@@ -1,0 +1,33 @@
+{
+  "highlights": [
+    {
+      "rect": [41700, 2700, 20600, 18600],
+      "n": 1,
+      "label": "4 doors out. all sealable.",
+      "side": "above",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [1700, 16700, 14600, 11600],
+      "n": 2,
+      "label": "a dead end with 2 vents",
+      "side": "above",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [41400, 40400, 2400, 2400],
+      "n": 3,
+      "label": "1 door. 1 vent. only one counts.",
+      "side": "below",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [81700, 14700, 10600, 14600],
+      "n": 4,
+      "label": "320 m of hull, no airlock",
+      "side": "below",
+      "color": "#8052ff"
+    }
+  ],
+  "note": "1 — the Cafeteria's four ways out are all `door sliding`, the set an impostor can seal. 2 — Reactor's only way out is Reactor Hall, and it holds 2 of the 12 vents. 3 — Electrical has one door, and a vent that is furniture: `describe` returns the crew's map, never the impostor's. 4 — 320 m of hull, no airlock: the one warning. We claimed a Cafeteria–Electrical shortcut; `validate --graph` returned `missing connection r_cafeteria — r_electrical`."
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Miraflores Palace",
+  "hook": "A neo-baroque quadrangle wrapped around an arcaded courtyard, drawn to scale.",
+  "headline": ["A palace raid,", "drawn to scale."],
+  "features": "{rooms} · arcaded quadrangle · illustrative reconstruction",
+  "url": "archlang.uk/showcase",
+  "codeLines": [61, 62],
+  "planCrop": {
+    "x": 0.35543,
+    "y": 0.13769,
+    "w": 0.30303,
+    "h": 0.39878
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Apartments 19 & 20",
+  "hook": "Two apartments, one common hallway, and the two front doors that face each other across it.",
+  "headline": [
+    "Two apartments.",
+    "One hallway."
+  ],
+  "features": "{rooms} · 108.0 + 79.2 m² · one 2.6 m hall · {lint}",
+  "url": "archlang.uk/showcase",
+  "codeLines": [124, 125],
+  "planCrop": {
+    "x": 0.443393,
+    "y": 0.064821,
+    "w": 0.356902,
+    "h": 0.404762
+  }
+}

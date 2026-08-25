@@ -1,0 +1,33 @@
+{
+  "highlights": [
+    {
+      "rect": [19000, 19000, 11000, 11000],
+      "n": 1,
+      "label": "true arcs, exact πR²",
+      "side": "above",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [12000, 0, 18000, 19000],
+      "n": 2,
+      "label": "written once; turned three times",
+      "side": "above",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [37000, 18900, 12000, 11200],
+      "n": 3,
+      "label": "hexastyle: 6 across, 2 returning",
+      "side": "right",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [19000, 30000, 18000, 19000],
+      "n": 4,
+      "label": "181.00 m², like all four",
+      "side": "below",
+      "color": "#8052ff"
+    }
+  ],
+  "note": "Palladio began it outside Vicenza in 1567. 1 — the hall is a `room circle`: its faces never go faceted and its area is exact πR². 2 — everything below the `component` line is written once and placed four times: unturned, 90, 180, 270. 3 — a column is a round wall stub, because only walls, rooms and openings survive a quarter turn exactly. 4 — the four subtotals agree because the geometry does, not because anyone typed them. 25 rooms, 819.03 m²."
+}

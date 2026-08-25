@@ -1,0 +1,33 @@
+{
+  "highlights": [
+    {
+      "rect": [37700, 96600, 52600, 2800],
+      "n": 1,
+      "label": "793 m of wall. no way in",
+      "side": "above",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [88000, 75600, 4200, 10800],
+      "n": 2,
+      "label": "1 of only 3 real doors",
+      "side": "left",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [93600, 29600, 5800, 5800],
+      "n": 3,
+      "label": "two crates, one place",
+      "side": "right",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [46800, 30000, 2400, 4000],
+      "n": 4,
+      "label": "1 window in the whole map",
+      "side": "left",
+      "color": "#8052ff"
+    }
+  ],
+  "note": "1 — 793 m of exterior wall with not one opening in it, which `arch lint` reports as W_NO_ENTRANCE: both teams start the round already inside. 2 — Mid, Long and B Doors are the only doors; the other 18 thresholds are cased openings. 3 — a stacked crate is two crates in one place on a horizontal cut, and the machine fix would delete the boost. Zones: T 2,044 m² · A 1,268 · B 1,040 · mid 708 · CT 696. `arch suggest` offers to fit the map with a front door."
+}

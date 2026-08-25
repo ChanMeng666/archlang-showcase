@@ -1,0 +1,14 @@
+{
+  "title": "Dunder Mifflin, Scranton",
+  "hook": "Nine seasons called it \"the annex\". It is 46.75 square metres.",
+  "headline": ["The Annex is", "46.75 m²."],
+  "features": "{rooms} · {area} · 5 zones · named desks",
+  "url": "archlang.uk/showcase",
+  "codeLines": [206, 207],
+  "planCrop": {
+    "x": 0.45238,
+    "y": 0.11708,
+    "w": 0.21429,
+    "h": 0.25588
+  }
+}

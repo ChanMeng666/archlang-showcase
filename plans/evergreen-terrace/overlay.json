@@ -1,0 +1,37 @@
+{
+  "highlights": [
+    {
+      "rect": [1100, 10900, 3200, 950],
+      "n": 1,
+      "label": "a bay is a wall that leaves the line",
+      "side": "below",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [8700, 10900, 3200, 950],
+      "color": "#8052ff"
+    },
+    {
+      "rect": [4300, 9800, 1800, 1500],
+      "n": 2,
+      "label": "no entry hall at all",
+      "side": "left",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [11000, 4300, 2000, 1400],
+      "n": 3,
+      "label": "car to kitchen without the hall",
+      "side": "right",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [11900, -100, 4200, 4200],
+      "n": 4,
+      "label": "2 windows, N and E: the one warning",
+      "side": "right",
+      "color": "#8052ff"
+    }
+  ],
+  "note": "Fan art: an original drawing of a fictional house as documented by fans; no marks or character names appear. A bay is not an element here — it is a wall that leaves the line and comes back, which is why both front rooms are `room polygon` and their areas are exact. The Rumpus Room is landlocked behind the garage, so its two windows face N and E and none faces the equator side: the one thing `arch lint` says about this house, and it is true. 9 rooms, 143.22 m², 92 lines."
+}

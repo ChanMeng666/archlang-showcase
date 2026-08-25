@@ -1,0 +1,9 @@
+{
+  "title": "The Skeld",
+  "hook": "The Skeld, compiled — and the vents are furniture, so the access graph never sees them.",
+  "headline": ["The Skeld, compiled.", "Vents not included."],
+  "features": "{rooms} · {area} · adjacency as data · {lint}",
+  "url": "archlang.uk/showcase",
+  "codeLines": [271, 274],
+  "planCrop": { "x": 0.296074, "y": 0.082381, "w": 0.345118, "h": 0.381024 }
+}

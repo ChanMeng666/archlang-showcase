@@ -1,0 +1,33 @@
+{
+  "highlights": [
+    {
+      "rect": [-1725, 3700, 10600, 4825],
+      "n": 1,
+      "label": "the balcony has no floor area",
+      "side": "left",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [8875, 3600, 2850, 2200],
+      "n": 2,
+      "label": "1 m out of line, on purpose",
+      "side": "above",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [12800, 3600, 3800, 2800],
+      "n": 3,
+      "label": "no dining table: foosball",
+      "side": "right",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [-125, -150, 7000, 3750],
+      "n": 4,
+      "label": "one wall: kitchen run, then bath",
+      "side": "above",
+      "color": "#8052ff"
+    }
+  ],
+  "note": "Fan art: an original drawing of a fictional set's layout as documented by fans; no marks or character names appear. 1 — the balcony is a railing, so Apartment 20's 108.00 m² is all interior floor. 2 — the two front doors are 1 m out of line, and the only route between the apartments is out one, across the hall and in the other. 12 rooms, 218.40 m², and `arch lint` reports nothing."
+}

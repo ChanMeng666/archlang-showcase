@@ -1,0 +1,41 @@
+{
+  "paths": [
+    {
+      "points": [[25800, 7500], [22500, 7500], [21000, 5550], [13500, 5550], [12000, 3750], [300, 3750]],
+      "color": "#c1121f",
+      "arrow": true,
+      "label": "one passage, no stairs"
+    }
+  ],
+  "highlights": [
+    {
+      "rect": [23700, 5400, 2400, 4200],
+      "n": 1,
+      "label": "50% of an arc, not a chord",
+      "side": "above",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [-300, 9900, 24600, 900],
+      "n": 2,
+      "label": "all 7 windows, one wall",
+      "side": "below",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [15300, -300, 5800, 5400],
+      "n": 3,
+      "label": "3 pantries — 26.9 m²",
+      "side": "above",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [7950, -300, 3000, 3600],
+      "n": 4,
+      "label": "the one warning: no window",
+      "side": "above",
+      "color": "#8052ff"
+    }
+  ],
+  "note": "Tolkien: \"The best rooms were all on the left-hand side (going in), for these were the only ones to have windows.\" Every `window` in the file names the same wall. 1 — the doorway is one `arc` clause, and the door sits at 50% of its ARC LENGTH, so the knob lands on the true apex. 2 — seven windows, one wall, none opposite. 3 — 26.9 m² of pantry. 4 — one warning, W_BEDROOM_NO_WINDOW on the Spare Bedroom; `arch suggest` offers to cut a window into the hill."
+}

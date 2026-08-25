@@ -1,0 +1,9 @@
+{
+  "title": "Bag End",
+  "hook": "Every window in the file sits on one wall, because the rest of the house is under a hill.",
+  "headline": ["Windows on one side.", "The roof is a hill."],
+  "features": "{rooms} · {area} · 3 pantries · {lint}",
+  "url": "archlang.uk/showcase",
+  "codeLines": [159, 165],
+  "planCrop": { "x": 0.524107, "y": 0.119444, "w": 0.348476, "h": 0.407407 }
+}

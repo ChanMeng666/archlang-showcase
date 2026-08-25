@@ -1,0 +1,17 @@
+{
+  "title": "742 Evergreen Terrace",
+  "hook": "Thirty-five years of establishing shots, resolved into one set of dimensions that has to close.",
+  "headline": [
+    "35 years on air.",
+    "It finally compiles."
+  ],
+  "features": "{rooms} · {area} · two bay windows · {lint}",
+  "url": "archlang.uk/showcase",
+  "codeLines": [41, 44],
+  "planCrop": {
+    "x": 0.200337,
+    "y": 0.191429,
+    "w": 0.43771,
+    "h": 0.540476
+  }
+}

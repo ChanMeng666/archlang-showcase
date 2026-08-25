@@ -1,0 +1,17 @@
+{
+  "title": "Villa La Rotonda",
+  "hook": "Palladio built a house a quarter turn leaves unchanged. So the source is one quarter, placed four times.",
+  "headline": [
+    "A quarter turn",
+    "changes nothing."
+  ],
+  "features": "{rooms} · {area} · 1 component × 4 · a true circle",
+  "url": "archlang.uk/showcase",
+  "codeLines": [269, 272],
+  "planCrop": {
+    "x": 0.244949,
+    "y": 0.09893,
+    "w": 0.555556,
+    "h": 0.39239
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": "671 Lincoln Avenue, Sheet A-101",
+  "hook": "The traps are scheduled items with positions, and the sheet is issued for December.",
+  "headline": ["Kevin's battle plan,", "stamped and issued."],
+  "features": "{rooms} · {area} · sheet A-101 · December",
+  "url": "archlang.uk/showcase",
+  "codeLines": [206, 207],
+  "planCrop": {
+    "x": 0.40145,
+    "y": 0.45786,
+    "w": 0.19707,
+    "h": 0.26905
+  }
+}

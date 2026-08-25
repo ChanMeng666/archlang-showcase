@@ -1,0 +1,40 @@
+{
+  "highlights": [
+    {
+      "rect": [16000, 7200, 1600, 1500],
+      "n": 1,
+      "label": "one shared edge",
+      "side": "right",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [22000, 0, 8000, 6000],
+      "n": 2,
+      "label": "no door: a 2 m gap, a 3 m opening",
+      "side": "below",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [21500, 12500, 8500, 5500],
+      "n": 3,
+      "label": "its own subtotal line: 46.75 m²",
+      "side": "above",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [-1100, 22600, 4700, 8500],
+      "n": 4,
+      "label": "every fictional square metre, subtotalled",
+      "side": "right",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [27200, 14500, 1800, 3000],
+      "n": 5,
+      "label": "down to the warehouse",
+      "side": "above",
+      "color": "#8052ff"
+    }
+  ],
+  "note": "1 — Jim's desk is at (16000,7200), Dwight's at (16000,7950): one desk-depth apart, sharing an edge. 2 — accounting has no door; its screen stops 2 m short and a 3 m cased opening does the rest. 3 — the Annex is 46.75 m². 4 — five `zone` blocks group every room, and their subtotals partition the total exactly: 87.00 + 240.00 + 48.00 + 118.25 + 46.75 = 540.00. 5 — the back stair drops to the warehouse."
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Railroad Walk-Up, Unit 3R",
+  "hook": "The listing says cozy, full of character. The linter says twelve warnings.",
+  "headline": ["\"Cozy.\"", "12 warnings."],
+  "features": "listed as 2BR* · {area} · corridor 19.8 m² · {lint}",
+  "url": "archlang.uk/showcase",
+  "codeLines": [52, 52],
+  "planCrop": {
+    "x": 0.35268,
+    "y": 0.42707,
+    "w": 0.30119,
+    "h": 0.22559
+  }
+}

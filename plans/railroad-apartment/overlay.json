@@ -1,0 +1,40 @@
+{
+  "highlights": [
+    {
+      "rect": [2300, 0, 1100, 18000],
+      "n": 1,
+      "label": "a third of the rent walks you to the far end",
+      "side": "right",
+      "color": "#c1121f"
+    },
+    {
+      "rect": [0, 11200, 2300, 1700],
+      "n": 2,
+      "label": "the asterisk is doing the work",
+      "side": "left",
+      "color": "#c1121f"
+    },
+    {
+      "rect": [0, 4600, 2300, 2800],
+      "n": 3,
+      "label": "no window, and no facade to put one in",
+      "side": "left",
+      "color": "#c1121f"
+    },
+    {
+      "rect": [0, 12900, 2300, 2100],
+      "n": 4,
+      "label": "the only way in is through Bedroom 2*",
+      "side": "left",
+      "color": "#c1121f"
+    },
+    {
+      "rect": [2350, 17450, 900, 400],
+      "n": 5,
+      "label": "the only place a bicycle fits",
+      "side": "right",
+      "color": "#c1121f"
+    }
+  ],
+  "note": "A fictional composite of a familiar genre — not a real listing and not a real address. Every dimension is drawn honestly; the joke is the lint output. W_BATH_VIA_BEDROOM: \"Bathroom 'Bath' is reachable only through a bedroom.\" W_PATH_TOO_NARROW: \"The walk from the entrance to 'Bedroom 1' squeezes to 300 mm (400 mm below the 700 mm minimum).\" Twelve warnings, nine codes, and 19.8 of the unit's 61.2 m² is corridor."
+}

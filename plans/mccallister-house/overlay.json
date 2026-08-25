@@ -1,0 +1,59 @@
+{
+  "paths": [
+    {
+      "points": [
+        [6100, 300],
+        [6100, 1400],
+        [7900, 1400],
+        [8700, 1400],
+        [8700, 6200],
+        [7600, 6200],
+        [7000, 7200],
+        [7400, 8000],
+        [7400, 11200],
+        [8600, 11700]
+      ],
+      "color": "#c1121f",
+      "dash": true,
+      "arrow": true
+    }
+  ],
+  "highlights": [
+    {
+      "rect": [8400, 8200, 2700, 3400],
+      "n": 1,
+      "label": "same width as the front door",
+      "side": "above",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [4200, 0, 2900, 2000],
+      "n": 2,
+      "label": "clear of the swing, on purpose",
+      "side": "left",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [4600, 4200, 2800, 3400],
+      "n": 3,
+      "label": "scheduled beside the flight it coats",
+      "side": "above",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [8250, 11800, 1500, 900],
+      "n": 4,
+      "label": "square in the front door's swing",
+      "side": "right",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [450, 11350, 1200, 1200],
+      "n": 5,
+      "label": "the one fixture with an alibi",
+      "side": "right",
+      "color": "#8052ff"
+    }
+  ],
+  "note": "Fan art — an original drawing of a house from a 1990 film, not affiliated with it. The crayon battle plan in the film was drawn by Macaulay Culkin himself; this one is issued instead: sheet A-101, dated December, 12 rooms, 234.00 m². Red is the way in — back door, kitchen, the foot of the flight. 4 is the ONE hand-written coordinate on the sheet, which is why `arch lint` reports W_SWING_OBSTRUCTED against the front door."
+}
