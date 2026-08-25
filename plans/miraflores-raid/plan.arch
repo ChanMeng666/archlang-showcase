@@ -30,7 +30,12 @@
 plan "Miraflores Palace — Illustrative Reconstruction" {
   units mm
   grid 50
-  paper A2 landscape
+  # PORTRAIT, on a landscape building. The quadrangle is 70600 x 55600 on its outer
+  # faces, which sits happily across an A2; what does not fit is the 22-row schedule
+  # under it. Those tables cost 212 mm of sheet height whatever the scale, leaving an
+  # A2 landscape 14 m short of the palace (`W_SCALE_OVERFLOW`). Turning the same sheet
+  # buys the height back, so the paper stays A2 and the scale stays 1:200.
+  paper A2 portrait
   scale 1:200
   north up
   dims auto overall

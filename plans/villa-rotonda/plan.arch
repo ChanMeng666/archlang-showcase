@@ -200,6 +200,20 @@ plan "Villa La Rotonda — Piano Nobile" {
       (colx[5] + CL, CY + 1800) arc (colx[5] - CL, CY + 1800) radius CL arc (colx[5] + CL, CY + 1800) radius CL
     }
 
+    # WHERE THE OUTDOORS STARTS. `d_main` below pierces the shell, but the shell has the
+    # loggia on its far side, and a loggia is a room — so on the access graph every front
+    # door of this building opened from one room into another and the plan had no way in
+    # at all. Which is true: you do not enter La Rotonda at the shell. You enter it between
+    # the columns, and the colonnade is the line you cross.
+    #
+    # So the line is declared: a wall on the loggia's own floor edge — which is exactly the
+    # front row's outer face, CY - COL_R = STEPS — running the widened middle bay, and cut
+    # by a cased opening for its whole length. It is 100 thin because it is a threshold, not
+    # masonry, and nothing of it survives the cut except the two jambs, which land on the
+    # two middle columns. That is what those columns are: the door case of a temple front.
+    wall id=w_colonnade exterior thickness 100 { (colx[2], STEPS) (colx[3], STEPS) }
+    opening id=o_portico on w_colonnade at 50% width 2500
+
     # The flight down to the garden, drawn the way a treatise draws it: the tread lines
     # themselves, between two thin edges, and no UP/DN arrow — a plate has none, and the
     # `stair` element's arrow is the other thing that does not turn with its quarter. The

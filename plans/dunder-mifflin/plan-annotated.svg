@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="-2665.78 -2649.3 35331.55 40978.8" font-family="Helvetica, Arial, sans-serif"><rect x="-2665.78" y="-2649.3" width="35331.55" height="40978.8" fill="#ffffff"/>
 <defs><pattern id="hatch-concrete" patternUnits="userSpaceOnUse" width="192" height="192"><rect width="192" height="192" fill="#e9e4db"/><circle cx="48" cy="57.6" r="16.2" fill="#b9b1a4"/><circle cx="134.4" cy="119.04" r="10.8" fill="#b9b1a4"/><circle cx="86.4" cy="163.2" r="13.5" fill="#b9b1a4"/></pattern><pattern id="hatch-none" patternUnits="userSpaceOnUse" width="120" height="120"><rect width="120" height="120" fill="#e9e4db"/></pattern><pattern id="poche" patternUnits="userSpaceOnUse" width="120" height="120" patternTransform="rotate(45)"><rect width="120" height="120" fill="#e9e4db"/><line x1="0" y1="0" x2="0" y2="120" stroke="#b9b1a4" stroke-width="12.6"/></pattern></defs>
-<rect x="-6000" y="-2475" width="42000" height="33950" fill="#ffffff"/>
+<rect x="-14700" y="-6500" width="59400" height="42000" fill="#ffffff"/>
 <g id="A-FLOR" inkscape:groupmode="layer" inkscape:label="A-FLOR">
 <polygon points="0,0 7000,0 7000,6000 0,6000" fill="#fbfaf7"/>
 <polygon points="7000,0 14500,0 14500,6000 7000,6000" fill="#fbfaf7"/>

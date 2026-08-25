@@ -28,7 +28,11 @@ plan "Dunder Mifflin — Scranton Branch" {
   # `grid 50`: the partitions are 200 thick and the glass walls 100, so a fixture backed
   # onto a face lands on a …50 coordinate that a 100 grid could not express.
   grid 50
-  paper A3 landscape
+  # A2, not A3. At 1:100 the drawing needs 18300 of height on its outer faces, and the
+  # five-group schedule plus the legend take 181.5 mm of sheet before the building gets
+  # any — so an A3 was 6.75 m short and said so (`W_SCALE_OVERFLOW`). The table is the
+  # punchline of this drawing, so the sheet moved rather than the table.
+  paper A2 landscape
   scale 1:100
   north up
   dims auto all

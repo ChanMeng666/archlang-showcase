@@ -4,8 +4,8 @@
 # draw boxes, so the Oval Office comes out as a rectangle with an apologetic label.
 # ArchLang has real circular geometry, so here it is drawn the way it is built: three
 # straight walls and a bowed south end, struck as a TRUE arc on a R7300 centreline.
-# Grep the rendered SVG for `A ` and you get exactly two: `A 7450` and `A 7150`, the
-# outer and inner faces at R +/- half the wall thickness. Native SVG arcs, native DXF
+# The oval wall contributes exactly two arc commands to the rendered SVG — `A 7450` and
+# `A 7150`, the outer and inner faces at R +/- half the wall thickness. Native SVG arcs, native DXF
 # `ARC` entities — never faceted, at any zoom. (Only the poche FILL tessellates.)
 #
 # The two curve forms this plan leans on:

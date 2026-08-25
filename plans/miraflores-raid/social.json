@@ -4,11 +4,11 @@
   "headline": ["A palace raid,", "drawn to scale."],
   "features": "{rooms} · arcaded quadrangle · illustrative reconstruction",
   "url": "archlang.uk/showcase",
-  "codeLines": [61, 62],
+  "codeLines": [66, 67],
   "planCrop": {
-    "x": 0.35543,
-    "y": 0.13769,
-    "w": 0.30303,
-    "h": 0.39878
+    "x": 0.29554,
+    "y": 0.22134,
+    "w": 0.42857,
+    "h": 0.3067
   }
 }
