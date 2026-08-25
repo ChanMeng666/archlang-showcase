@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"  viewBox="-1154 -1154 8308 6308" font-family="Helvetica, Arial, sans-serif">
+<defs><pattern id="poche" patternUnits="userSpaceOnUse" width="80.6" height="80.6" patternTransform="rotate(45)"><rect width="80.6" height="80.6" fill="#e9e4db"/><line x1="0" y1="0" x2="0" y2="80.6" stroke="#b9b1a4" stroke-width="6.94"/></pattern></defs>
+<rect x="-1154" y="-1154" width="8308" height="6308" fill="#ffffff"/>
+<g id="A-FLOR" inkscape:groupmode="layer" inkscape:label="A-FLOR">
+<polygon points="0,0 4000,0 4000,4000 0,4000" fill="#fbfaf7"/>
+<polygon points="4000,0 6000,0 6000,4000 4000,4000" fill="#fbfaf7"/>
+</g>
+<g id="A-FURN" inkscape:groupmode="layer" inkscape:label="A-FURN">
+<polygon points="4400,1000 5800,1000 5800,3000 4400,3000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="9.92"/>
+</g>
+<g id="A-WALL" inkscape:groupmode="layer" inkscape:label="A-WALL">
+<path d="M -100,-100 L -100,4100 L 1500,4100 L 1500,3900 L 100,3900 L 100,100 L 3900,100 L 3900,1600 L 4100,1600 L 4100,100 L 5900,100 L 5900,1500 L 6100,1500 L 6100,-100 Z M 3900,3900 L 2500,3900 L 2500,4100 L 6100,4100 L 6100,2500 L 5900,2500 L 5900,3900 L 4100,3900 L 4100,2400 L 3900,2400 Z" fill="url(#poche)" fill-rule="nonzero"/>
+<path d="M -100,-100 L -100,4100 L 1500,4100 L 1500,3900 L 100,3900 L 100,100 L 3900,100 L 3900,1600 L 4100,1600 L 4100,100 L 5900,100 L 5900,1500 L 6100,1500 L 6100,-100 Z M 3900,3900 L 2500,3900 L 2500,4100 L 6100,4100 L 6100,2500 L 5900,2500 L 5900,3900 L 4100,3900 L 4100,2400 L 3900,2400 Z" fill="none" stroke="#1b1b1b" stroke-width="17.36" stroke-linejoin="miter" stroke-miterlimit="4"/>
+</g>
+<g id="A-DOOR" inkscape:groupmode="layer" inkscape:label="A-DOOR">
+<polygon points="1500,4100 2500,4100 2500,3900 1500,3900" fill="none"/>
+<line x1="1500" y1="4000" x2="1500" y2="5000" stroke="#555555" stroke-width="12.9"/>
+<path d="M 1500,5000 A 1000 1000 0 0 0 2500,4000" fill="none" stroke="#555555" stroke-width="9.92" stroke-dasharray="39.68 29.76"/>
+<polygon points="3900,1600 3900,2400 4100,2400 4100,1600" fill="none"/>
+<line x1="4000" y1="1600" x2="3200" y2="1600" stroke="#555555" stroke-width="12.9"/>
+<path d="M 3200,1600 A 800 800 0 0 0 4000,2400" fill="none" stroke="#555555" stroke-width="9.92" stroke-dasharray="39.68 29.76"/>
+</g>
+<g id="A-GLAZ" inkscape:groupmode="layer" inkscape:label="A-GLAZ">
+<polygon points="6117.36,2500 6117.36,1500 5882.64,1500 5882.64,2500" fill="#ffffff"/>
+<line x1="6100" y1="2500" x2="6100" y2="1500" stroke="#1b1b1b" stroke-width="9.92"/>
+<line x1="5900" y1="2500" x2="5900" y2="1500" stroke="#1b1b1b" stroke-width="9.92"/>
+<line x1="6000" y1="2500" x2="6000" y2="1500" stroke="#3a6ea5" stroke-width="9.92"/>
+</g>
+<g id="A-ANNO-TEXT" inkscape:groupmode="layer" inkscape:label="A-ANNO-TEXT">
+<text x="2000" y="1962.8" font-size="186" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Living</text>
+<text x="2000" y="2167.4" font-size="136.4" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">16.0 m²</text>
+<text x="5000" y="3162.8" font-size="186" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Bed</text>
+<text x="5000" y="3367.4" font-size="136.4" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">8.0 m²</text>
+</g>
+<g><polygon points="5821,-958.7 5681.5,-512.3 5821,-609.95 5960.5,-512.3" fill="#333333" transform="rotate(0 5821 -679.7)"/><text x="5821" y="-1087.66" font-size="161.2" fill="#333333" text-anchor="middle" dominant-baseline="central">N</text></g>
+<g><rect x="-100" y="4410" width="500" height="86.8" fill="#333333"/><rect x="400" y="4410" width="500" height="86.8" fill="none" stroke="#333333" stroke-width="9.92"/><text x="-100" y="4620.8" font-size="124" fill="#333333" text-anchor="start" dominant-baseline="central">0</text><text x="900" y="4620.8" font-size="124" fill="#333333" text-anchor="middle" dominant-baseline="central">1 m</text></g>
+</svg>

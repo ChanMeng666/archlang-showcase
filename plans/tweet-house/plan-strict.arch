@@ -1,0 +1,1 @@
+plan""{wall id=w exterior thickness 200{(0,0)(3m,0)(3m,3m)(0,3m)close}room at(0,0)size 3mx3m door on w at 1m width 1m window on w at 4m width 1m}

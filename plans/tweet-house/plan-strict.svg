@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"  viewBox="-644 -644 4288 4288" font-family="Helvetica, Arial, sans-serif">
+<defs><pattern id="poche" patternUnits="userSpaceOnUse" width="41.6" height="41.6" patternTransform="rotate(45)"><rect width="41.6" height="41.6" fill="#e9e4db"/><line x1="0" y1="0" x2="0" y2="41.6" stroke="#b9b1a4" stroke-width="3.58"/></pattern></defs>
+<rect x="-644" y="-644" width="4288" height="4288" fill="#ffffff"/>
+<g id="A-FLOR" inkscape:groupmode="layer" inkscape:label="A-FLOR">
+<polygon points="0,0 3000,0 3000,3000 0,3000" fill="#fbfaf7"/>
+</g>
+<g id="A-WALL" inkscape:groupmode="layer" inkscape:label="A-WALL">
+<path d="M -100,-100 L -100,3100 L 3100,3100 L 3100,1500 L 2900,1500 L 2900,2900 L 100,2900 L 100,100 L 500,100 L 500,-100 Z M 1500,-100 L 1500,100 L 2900,100 L 2900,500 L 3100,500 L 3100,-100 Z" fill="url(#poche)" fill-rule="nonzero"/>
+<path d="M -100,-100 L -100,3100 L 3100,3100 L 3100,1500 L 2900,1500 L 2900,2900 L 100,2900 L 100,100 L 500,100 L 500,-100 Z M 1500,-100 L 1500,100 L 2900,100 L 2900,500 L 3100,500 L 3100,-100 Z" fill="none" stroke="#1b1b1b" stroke-width="8.96" stroke-linejoin="miter" stroke-miterlimit="4"/>
+</g>
+<g id="A-DOOR" inkscape:groupmode="layer" inkscape:label="A-DOOR">
+<polygon points="500,100 1500,100 1500,-100 500,-100" fill="none"/>
+<line x1="500" y1="0" x2="500" y2="1000" stroke="#555555" stroke-width="6.66"/>
+<path d="M 500,1000 A 1000 1000 0 0 0 1500,0" fill="none" stroke="#555555" stroke-width="5.12" stroke-dasharray="20.48 15.36"/>
+</g>
+<g id="A-GLAZ" inkscape:groupmode="layer" inkscape:label="A-GLAZ">
+<polygon points="2891.04,500 2891.04,1500 3108.96,1500 3108.96,500" fill="#ffffff"/>
+<line x1="2900" y1="500" x2="2900" y2="1500" stroke="#1b1b1b" stroke-width="5.12"/>
+<line x1="3100" y1="500" x2="3100" y2="1500" stroke="#1b1b1b" stroke-width="5.12"/>
+<line x1="3000" y1="500" x2="3000" y2="1500" stroke="#3a6ea5" stroke-width="5.12"/>
+</g>
+<g id="A-ANNO-TEXT" inkscape:groupmode="layer" inkscape:label="A-ANNO-TEXT">
+<text x="1500" y="1500" font-size="70.4" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">9.0 m²</text>
+</g>
+<g><polygon points="2956,-543.2 2884,-312.8 2956,-363.2 3028,-312.8" fill="#333333" transform="rotate(0 2956 -399.2)"/><text x="2956" y="-609.76" font-size="83.2" fill="#333333" text-anchor="middle" dominant-baseline="central">N</text></g>
+<g><rect x="-100" y="3260" width="250" height="44.8" fill="#333333"/><rect x="150" y="3260" width="250" height="44.8" fill="none" stroke="#333333" stroke-width="5.12"/><text x="-100" y="3368.8" font-size="64" fill="#333333" text-anchor="start" dominant-baseline="central">0</text><text x="400" y="3368.8" font-size="64" fill="#333333" text-anchor="middle" dominant-baseline="central">0.5 m</text></g>
+</svg>

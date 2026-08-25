@@ -1,0 +1,7 @@
+plan"Home"{wall id=w exterior thickness 200{(4m,0)(0,0)(0,4m)(6m,4m)(6m,0)(4m,0)(4m,4m)}
+room at(0,0)size 4mx4m label"Living"
+room at(4m,0)size 2mx4m label"Bed"
+door on w at 10m width 1m
+door on w at 22m width 800
+window on w at 16m width 1m
+furniture bed at(4.4m,1m)size 1.4mx2m}
