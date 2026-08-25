@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="594mm" height="456.85mm" viewBox="-25225 -3300 118800 112860.92" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="-16982.5 -2677.1 94380.7 108427.49" font-family="Helvetica, Arial, sans-serif"><rect x="-16982.5" y="-2677.1" width="94380.7" height="108427.49" fill="#ffffff"/>
 <defs><pattern id="poche" patternUnits="userSpaceOnUse" width="240" height="240" patternTransform="rotate(45)"><rect width="240" height="240" fill="#e9e4db"/><line x1="0" y1="0" x2="0" y2="240" stroke="#b9b1a4" stroke-width="25.2"/></pattern></defs>
 <rect x="-25225" y="-3300" width="118800" height="91370" fill="#ffffff"/>
 <g id="A-FLOR" inkscape:groupmode="layer" inkscape:label="A-FLOR">
@@ -815,30 +815,30 @@
 <g><rect x="-300" y="59950" width="2500" height="280" fill="#333333"/><rect x="2200" y="59950" width="2500" height="280" fill="none" stroke="#333333" stroke-width="36"/><text x="-300" y="60630" font-size="400" fill="#333333" text-anchor="start" dominant-baseline="central">0</text><text x="4700" y="60630" font-size="400" fill="#333333" text-anchor="middle" dominant-baseline="central">5 m</text></g>
 <g><rect x="63500" y="59950" width="6800" height="3680" fill="none" stroke="#333333" stroke-width="36"/><text x="63840" y="60410" font-size="304" fill="#888888" dominant-baseline="central">PROJECT</text><text x="69960" y="60410" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">Miraflores Palace, Caracas</text><text x="63840" y="61330" font-size="304" fill="#888888" dominant-baseline="central">DRAWN BY</text><text x="69960" y="61330" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">Illustrative reconstruction</text><line x1="63500" y1="60870" x2="70300" y2="60870" stroke="#333333" stroke-width="18"/><text x="63840" y="62250" font-size="304" fill="#888888" dominant-baseline="central">DATE</text><text x="69960" y="62250" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">3 January 2026 — schematic</text><line x1="63500" y1="61790" x2="70300" y2="61790" stroke="#333333" stroke-width="18"/><text x="63840" y="63170" font-size="304" fill="#888888" dominant-baseline="central">SCALE</text><text x="69960" y="63170" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">1:200</text><line x1="63500" y1="62710" x2="70300" y2="62710" stroke="#333333" stroke-width="18"/></g>
 <g id="overlay">
-<polyline points="-13000,6000 -7000,8500 -1500,12000 1800,13300" fill="none" stroke="#c1121f" stroke-width="415.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" stroke-dasharray="1663.2 1247.4"/>
-<polygon points="1800,13300 -454.36,13350.41 185.72,11725.58" fill="#c1121f"/>
-<polyline points="1800,13300 8000,13300 15000,13300 18750,14200 18750,16400" fill="none" stroke="#c1121f" stroke-width="415.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" stroke-dasharray="1663.2 1247.4"/>
-<polygon points="18750,16400 17876.82,14321 19623.18,14321" fill="#c1121f"/>
-<polyline points="18750,16400 21500,16700 34000,16700 45000,16700 51250,16700 51250,17500 55500,17500" fill="none" stroke="#c1121f" stroke-width="415.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" stroke-dasharray="1663.2 1247.4"/>
-<polygon points="55500,17500 53421,18373.18 53421,16626.82" fill="#c1121f"/>
-<polyline points="55500,17500 58000,18800 58000,21000 58000,27000 58000,31000 58000,31800 61500,31800 65100,31800" fill="none" stroke="#c1121f" stroke-width="415.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" stroke-dasharray="1663.2 1247.4"/>
-<polygon points="65100,31800 63021,32673.18 63021,30926.82" fill="#c1121f"/>
-<circle cx="-13000" cy="6000" r="2245.32" fill="#c1121f" stroke="#ffffff" stroke-width="374.22"/>
-<text x="-13000" y="6000" font-size="2031.48" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">1</text>
-<text x="-9632.02" y="6000" font-size="2138.4" font-weight="600" fill="#1b1b1f" text-anchor="start" dominant-baseline="central" stroke="#ffffff" stroke-width="598.75" stroke-linejoin="round" paint-order="stroke fill">~01:00</text>
-<circle cx="25500" cy="22500" r="2245.32" fill="#c1121f" stroke="#ffffff" stroke-width="374.22"/>
-<text x="25500" y="22500" font-size="2031.48" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">2</text>
-<circle cx="55500" cy="24000" r="2245.32" fill="#c1121f" stroke="#ffffff" stroke-width="374.22"/>
-<text x="55500" y="24000" font-size="2031.48" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">3</text>
-<circle cx="67600" cy="31800" r="2245.32" fill="#c1121f" stroke="#ffffff" stroke-width="374.22"/>
-<text x="67600" y="31800" font-size="2031.48" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">4</text>
-<text x="70967.98" y="31800" font-size="2138.4" font-weight="600" fill="#1b1b1f" text-anchor="start" dominant-baseline="central" stroke="#ffffff" stroke-width="598.75" stroke-linejoin="round" paint-order="stroke fill">~02:00</text>
-<rect x="-25225" y="88070" width="118800" height="21490.92" fill="#ffffff"/>
-<rect x="-22849" y="89566.88" width="114048" height="18497.16" rx="748.44" fill="#ffffff" stroke="#c1121f" stroke-width="291.06"/>
-<text x="-21352.12" y="92614.1" font-size="1710.72" fill="#1b1b1f" dominant-baseline="central">ILLUSTRATIVE RECONSTRUCTION — interior layout is schematic, based on public reporting (CNN, USNI</text>
-<text x="-21352.12" y="95714.78" font-size="1710.72" fill="#1b1b1f" dominant-baseline="central">News, PBS). Not an actual building record. 1 — ~01:00 local, special-operations forces inserted</text>
-<text x="-21352.12" y="98815.46" font-size="1710.72" fill="#1b1b1f" dominant-baseline="central">by helicopter outside the palace walls. 2 — entry route through the arcades around the central</text>
-<text x="-21352.12" y="101916.14" font-size="1710.72" fill="#1b1b1f" dominant-baseline="central">courtyard; a firefight with palace guards was reported. 3 — corridor route toward the</text>
-<text x="-21352.12" y="105016.82" font-size="1710.72" fill="#1b1b1f" dominant-baseline="central">presidential office wing. 4 — ~02:00 — Maduro and Flores captured before reaching the safe room.</text>
+<polyline points="-13000,6000 -7000,8500 -1500,12000 1800,13300" fill="none" stroke="#c1121f" stroke-width="306.51" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" stroke-dasharray="1226.06 919.54"/>
+<polygon points="1800,13300 138.15,13337.16 610,12139.39" fill="#c1121f"/>
+<polyline points="1800,13300 8000,13300 15000,13300 18750,14200 18750,16400" fill="none" stroke="#c1121f" stroke-width="306.51" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" stroke-dasharray="1226.06 919.54"/>
+<polygon points="18750,16400 18106.32,14867.43 19393.68,14867.43" fill="#c1121f"/>
+<polyline points="18750,16400 21500,16700 34000,16700 45000,16700 51250,16700 51250,17500 55500,17500" fill="none" stroke="#c1121f" stroke-width="306.51" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" stroke-dasharray="1226.06 919.54"/>
+<polygon points="55500,17500 53967.43,18143.68 53967.43,16856.32" fill="#c1121f"/>
+<polyline points="55500,17500 58000,18800 58000,21000 58000,27000 58000,31000 58000,31800 61500,31800 65100,31800" fill="none" stroke="#c1121f" stroke-width="306.51" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" stroke-dasharray="1226.06 919.54"/>
+<polygon points="65100,31800 63567.43,32443.68 63567.43,31156.32" fill="#c1121f"/>
+<circle cx="-13000" cy="6000" r="1655.18" fill="#c1121f" stroke="#ffffff" stroke-width="275.86"/>
+<text x="-13000" y="6000" font-size="1497.54" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">1</text>
+<text x="-10517.23" y="6000" font-size="1576.36" font-weight="600" fill="#1b1b1f" text-anchor="start" dominant-baseline="central" stroke="#ffffff" stroke-width="441.38" stroke-linejoin="round" paint-order="stroke fill">~01:00</text>
+<circle cx="25500" cy="22500" r="1655.18" fill="#c1121f" stroke="#ffffff" stroke-width="275.86"/>
+<text x="25500" y="22500" font-size="1497.54" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">2</text>
+<circle cx="55500" cy="24000" r="1655.18" fill="#c1121f" stroke="#ffffff" stroke-width="275.86"/>
+<text x="55500" y="24000" font-size="1497.54" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">3</text>
+<circle cx="67600" cy="31800" r="1655.18" fill="#c1121f" stroke="#ffffff" stroke-width="275.86"/>
+<text x="67600" y="31800" font-size="1497.54" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">4</text>
+<text x="70082.77" y="31800" font-size="1576.36" font-weight="600" fill="#1b1b1f" text-anchor="start" dominant-baseline="central" stroke="#ffffff" stroke-width="441.38" stroke-linejoin="round" paint-order="stroke fill">~02:00</text>
+<rect x="-16982.5" y="89277.39" width="94380.7" height="16472.99" fill="#ffffff"/>
+<rect x="-15849.93" y="90696.12" width="92115.56" height="13635.54" rx="551.73" fill="#ffffff" stroke="#c1121f" stroke-width="214.56"/>
+<text x="-14746.48" y="92942.44" font-size="1261.09" fill="#1b1b1f" dominant-baseline="central">ILLUSTRATIVE RECONSTRUCTION — interior layout is schematic, based on public reporting (CNN, USNI</text>
+<text x="-14746.48" y="95228.16" font-size="1261.09" fill="#1b1b1f" dominant-baseline="central">News, PBS). Not an actual building record. 1 — ~01:00 local, special-operations forces inserted</text>
+<text x="-14746.48" y="97513.89" font-size="1261.09" fill="#1b1b1f" dominant-baseline="central">by helicopter outside the palace walls. 2 — entry route through the arcades around the central</text>
+<text x="-14746.48" y="99799.62" font-size="1261.09" fill="#1b1b1f" dominant-baseline="central">courtyard; a firefight with palace guards was reported. 3 — corridor route toward the</text>
+<text x="-14746.48" y="102085.34" font-size="1261.09" fill="#1b1b1f" dominant-baseline="central">presidential office wing. 4 — ~02:00 — Maduro and Flores captured before reaching the safe room.</text>
 </g>
 </svg>

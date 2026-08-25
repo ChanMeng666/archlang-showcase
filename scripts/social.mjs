@@ -283,6 +283,75 @@ function tokenize(line) {
   return out;
 }
 
+/**
+ * Wrap one tokenized line to a character budget, breaking BETWEEN tokens.
+ *
+ * A real ArchLang statement is ninety characters wide, and the chip is a small
+ * tile in the corner of a card, so the two only meet if the line can wrap. It
+ * wraps here rather than in the text because a break inside a string literal or
+ * a number would hand the highlighter half a token and colour it wrongly — the
+ * line is tokenized once, and the rows are filled with whole tokens.
+ *
+ * Original spacing is preserved WITHIN a row (`base`/`off` carry the mapping
+ * from source column to output column), so an aligned statement stays aligned;
+ * continuation rows start at a hanging indent instead.
+ *
+ * @param {string} line
+ * @param {number} budget characters per row
+ * @param {number} [indent] hanging indent on continuation rows
+ * @returns {{ col: number, text: string, role: string }[][]}
+ */
+function wrapTokens(line, budget, indent = 2) {
+  const tokens = tokenize(line);
+  if (tokens.length === 0) return [[]];
+
+  const rows = [];
+  let row = [];
+  // The first row starts at the source's own column 0, so a line's leading
+  // indent survives — inside `plan { … }` that indent is what makes a block read
+  // as a block. Only continuation rows are re-based, onto the hanging indent.
+  let base = 0;
+  let off = 0;
+
+  for (const token of tokens) {
+    let col = token.col - base + off;
+    if (col + token.text.length > budget && row.length > 0) {
+      rows.push(row);
+      row = [];
+      base = token.col;
+      off = indent;
+      col = indent;
+    }
+    if (col + token.text.length > budget) {
+      // One token wider than the whole budget — an id or a coordinate list with
+      // nowhere to break. Split it rather than let it run off the tile.
+      let rest = token.text;
+      let c = col;
+      while (rest.length > 0) {
+        const take = Math.max(1, budget - c);
+        const chunk = rest.slice(0, take);
+        row.push({ col: c, text: chunk, role: token.role });
+        rest = rest.slice(take);
+        if (rest.length > 0) {
+          rows.push(row);
+          row = [];
+          c = indent;
+        } else {
+          c += chunk.length;
+        }
+      }
+      base = token.col + token.text.length;
+      off = c;
+      continue;
+    }
+    row.push({ col, text: token.text, role: token.role });
+    base = token.col + token.text.length;
+    off = col + token.text.length;
+  }
+  if (row.length > 0) rows.push(row);
+  return rows;
+}
+
 /* ── SVG helpers ─────────────────────────────────────────────────────────── */
 
 const xml = (s) =>
@@ -521,30 +590,39 @@ function leftColumn({ headline, features, url }) {
  * The dark source chip.
  *
  * Its width is derived from the excerpt rather than fixed, because a fixed tile
- * would either crop real code or sit half empty: at 14px mono a character costs
- * 8.4px, so the chip is exactly as wide as its widest line needs and no wider.
- * It is capped at the white card's inner width, and an excerpt that would need
- * to drop below 12px is refused with the character budget that does fit — the
- * chip is a teaser, and a plan whose statements run 90 characters belongs on the
- * code card instead.
+ * would either crop real code or sit half empty: the chip is exactly as wide as
+ * its widest ROW needs and no wider, capped at the white card's inner width. A
+ * source line longer than that cap wraps ({@link wrapTokens}) rather than being
+ * refused, so the chip can carry the statement a plan is actually about — a
+ * `wall … arc … radius … cw` clause is ninety characters and no shorter form of
+ * it exists.
+ *
+ * What it will not do is grow without bound: past a dozen rows this stops being
+ * a chip in the corner of a card and becomes the card, which is what the code
+ * mode is for.
  */
 function sourceChip({ right, bottom, maxWidth, lines }) {
   const pad = 18;
-  const longest = Math.max(...lines.map((l) => l.length), 1);
+  const size = 15;
+  const advance = size * 0.6;
+  const budget = Math.floor((maxWidth - pad * 2) / advance);
 
-  const size = Math.min(15, (maxWidth - pad * 2) / (0.6 * longest));
-  if (size < 12) {
-    const budget = Math.floor((maxWidth - pad * 2) / (0.6 * 12));
+  const rows = lines.flatMap((line) => wrapTokens(line, budget));
+  if (rows.length > 12) {
     throw new Error(
-      `The chip excerpt is too wide: its longest line is ${longest} characters, and ${budget} is what ` +
-        `fits at the 12px floor. Pick a shorter range — the chip is a teaser, not the whole source.`,
+      `The chip excerpt comes to ${rows.length} rows once wrapped to ${budget} characters; twelve is the ` +
+        `most it holds. Pick a shorter range — the chip is a teaser, not the whole source.`,
     );
   }
 
-  const advance = size * 0.6;
+  const widest = Math.max(
+    ...rows.map((row) => (row.length === 0 ? 0 : row[row.length - 1].col + row[row.length - 1].text.length)),
+    1,
+  );
+
   const leading = size * 1.62;
-  const w = Math.max(280, pad * 2 + advance * longest);
-  const h = pad * 2 + (lines.length - 1) * leading + size;
+  const w = Math.max(280, pad * 2 + advance * widest);
+  const h = pad * 2 + (rows.length - 1) * leading + size;
   const x = right - w;
   const y = bottom - h;
 
@@ -552,9 +630,9 @@ function sourceChip({ right, bottom, maxWidth, lines }) {
     `<rect x="${n(x)}" y="${n(y)}" width="${n(w)}" height="${n(h)}" rx="14" fill="${COLORS.carbon2}"` +
       ` filter="url(#chipShadow)"/>`,
   ];
-  lines.forEach((line, i) => {
+  rows.forEach((row, i) => {
     const baseline = y + pad + size * 0.78 + leading * i;
-    for (const token of tokenize(line)) {
+    for (const token of row) {
       const { dark, weight } = SYNTAX[token.role];
       parts.push(
         text(token.text, x + pad + advance * token.col, baseline, {

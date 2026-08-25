@@ -153,7 +153,7 @@ m-687 -344 c0 -33 -4 -60 -10 -60 -6 0 -10 27 -10 60 0 33 4 60 10 60 6 0 10
 <text x="96" y="771" font-family="Public Sans" font-size="26" font-weight="400" fill="#6b3ae0" text-anchor="start">archlang.uk/showcase</text>
 <rect x="872" y="101" width="636" height="696" rx="26" fill="#ffffff" filter="url(#cardShadow)"/>
 <rect x="872" y="101" width="636" height="696" rx="26" fill="none" stroke="#cfc9bb" stroke-width="1" stroke-opacity="0.6"/>
-<svg x="928" y="157" width="524" height="530.4" viewBox="35000.24 19999.94 16000.03 15999.98" preserveAspectRatio="xMidYMid meet" fill="none" overflow="hidden" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+<svg x="928" y="157" width="524" height="554.7" viewBox="35000.24 19999.94 16000.03 15999.98" preserveAspectRatio="xMidYMid meet" fill="none" overflow="hidden" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
 <defs><pattern id="poche" patternUnits="userSpaceOnUse" width="120" height="120" patternTransform="rotate(45)"><rect width="120" height="120" fill="#e9e4db"/><line x1="0" y1="0" x2="0" y2="120" stroke="#b9b1a4" stroke-width="12.6"/></pattern></defs>
 <rect x="-17862.5" y="-11042.5" width="84100" height="59400" fill="#ffffff"/>
 <g id="A-FLOR" inkscape:groupmode="layer" inkscape:label="A-FLOR">
@@ -589,38 +589,28 @@ m-687 -344 c0 -33 -4 -60 -10 -60 -6 0 -10 27 -10 60 0 33 4 60 10 60 6 0 10
 <g><rect x="-16362.5" y="45017.5" width="1000" height="140" fill="#333333"/><rect x="-15362.5" y="45017.5" width="1000" height="140" fill="none" stroke="#333333" stroke-width="18"/><text x="-16362.5" y="45357.5" font-size="200" fill="#333333" text-anchor="start" dominant-baseline="central">0</text><text x="-14362.5" y="45357.5" font-size="200" fill="#333333" text-anchor="middle" dominant-baseline="central">2 m</text></g>
 <g><rect x="61337.5" y="45017.5" width="3400" height="1840" fill="none" stroke="#333333" stroke-width="18"/><text x="61507.5" y="45247.5" font-size="152" fill="#888888" dominant-baseline="central">PROJECT</text><text x="64567.5" y="45247.5" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">The White House — West Wing</text><text x="61507.5" y="45707.5" font-size="152" fill="#888888" dominant-baseline="central">DRAWN BY</text><text x="64567.5" y="45707.5" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">ArchLang</text><line x1="61337.5" y1="45477.5" x2="64737.5" y2="45477.5" stroke="#333333" stroke-width="9"/><text x="61507.5" y="46167.5" font-size="152" fill="#888888" dominant-baseline="central">DATE</text><text x="64567.5" y="46167.5" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">2026-08-25</text><line x1="61337.5" y1="45937.5" x2="64737.5" y2="45937.5" stroke="#333333" stroke-width="9"/><text x="61507.5" y="46627.5" font-size="152" fill="#888888" dominant-baseline="central">SCALE</text><text x="64567.5" y="46627.5" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">1:100</text><line x1="61337.5" y1="46397.5" x2="64737.5" y2="46397.5" stroke="#333333" stroke-width="9"/></g>
 </svg>
-<rect x="1041" y="671.4" width="441" height="99.6" rx="14" fill="#171b23" filter="url(#chipShadow)"/>
-<text x="1059" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">window</text>
-<text x="1122" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">id</text>
-<text x="1140" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">=</text>
-<text x="1149" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w_oval1</text>
-<text x="1221" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">on</text>
-<text x="1248" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w_oval</text>
-<text x="1311" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
-<text x="1338" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">25</text>
-<text x="1356" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">%</text>
-<text x="1374" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">width</text>
-<text x="1428" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">1400</text>
-<text x="1059" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">window</text>
-<text x="1122" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">id</text>
-<text x="1140" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">=</text>
-<text x="1149" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w_oval2</text>
-<text x="1221" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">on</text>
-<text x="1248" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w_oval</text>
-<text x="1311" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
-<text x="1338" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">50</text>
-<text x="1356" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">%</text>
-<text x="1374" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">width</text>
-<text x="1428" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">1400</text>
-<text x="1059" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">window</text>
-<text x="1122" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">id</text>
-<text x="1140" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">=</text>
-<text x="1149" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w_oval3</text>
-<text x="1221" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">on</text>
-<text x="1248" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w_oval</text>
-<text x="1311" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
-<text x="1338" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">75</text>
-<text x="1356" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">%</text>
-<text x="1374" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">width</text>
-<text x="1428" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">1400</text>
+<rect x="906" y="695.7" width="576" height="75.3" rx="14" fill="#171b23" filter="url(#chipShadow)"/>
+<text x="924" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">wall</text>
+<text x="969" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">id</text>
+<text x="987" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">=</text>
+<text x="996" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w_oval</text>
+<text x="1086" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">exterior</text>
+<text x="1167" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">thickness</text>
+<text x="1257" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">300</text>
+<text x="1293" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">{</text>
+<text x="1311" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">(</text>
+<text x="1320" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">47000</text>
+<text x="1365" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">,</text>
+<text x="1374" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">31000</text>
+<text x="1419" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">)</text>
+<text x="1437" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">arc</text>
+<text x="942" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">(</text>
+<text x="951" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">36000</text>
+<text x="996" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">,</text>
+<text x="1005" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">31000</text>
+<text x="1050" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">)</text>
+<text x="1068" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">radius</text>
+<text x="1131" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">7300</text>
+<text x="1176" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#7fb0ff" text-anchor="start">cw</text>
+<text x="1203" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">}</text>
 </svg>

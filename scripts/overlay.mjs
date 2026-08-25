@@ -57,7 +57,7 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { dirname, join, resolve as resolvePath } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { svgToPng } from "./raster.mjs";
+import { inkBox, svgToPng } from "./raster.mjs";
 
 const ROOT = resolvePath(dirname(fileURLToPath(import.meta.url)), "..");
 const PLANS = join(ROOT, "plans");
@@ -138,15 +138,110 @@ function wrap(text, max) {
   return lines;
 }
 
-function buildOverlay(svg, spec) {
-  const vb = readViewBox(svg);
-  const span = Math.max(vb.w, vb.h);
+/**
+ * The top-level `<g>` elements of an SVG, sliced with their tags.
+ *
+ * Depth-counted rather than regex-matched: a layer can contain nested groups,
+ * and a non-greedy match to the first `</g>` would silently return half of one.
+ */
+function topLevelGroups(svg) {
+  const groups = [];
+  const open = /<g\b[^>]*>/g;
+  let m;
+  while ((m = open.exec(svg))) {
+    let depth = 1;
+    let i = open.lastIndex;
+    while (depth > 0) {
+      const nextOpen = svg.indexOf("<g", i);
+      const nextClose = svg.indexOf("</g>", i);
+      if (nextClose === -1) return groups; // malformed; take what we have
+      if (nextOpen !== -1 && nextOpen < nextClose) {
+        depth += 1;
+        i = nextOpen + 2;
+      } else {
+        depth -= 1;
+        i = nextClose + 4;
+      }
+    }
+    groups.push(svg.slice(m.index, i));
+    open.lastIndex = i;
+  }
+  return groups;
+}
+
+/**
+ * What the DRAWING occupies, as distinct from what the sheet does.
+ *
+ * ArchLang puts the building on named layers — `A-WALL`, `A-FLOR`,
+ * `A-ANNO-DIMS` and the rest — and emits the page's own furniture (the north
+ * arrow, the scale bar, the title block) as UNNAMED top-level groups beside
+ * them. On `examples/west-wing` the layers stop at y=36134 while the title block
+ * sits at 45009, nine thousand units further down the A1 sheet's bottom margin,
+ * so measuring the page reports a box with a band of nothing through it and a
+ * caption composed under that box floats.
+ *
+ * So the crop is measured against the `A-*` layers alone. Note that this only
+ * moves the viewBox — nothing is deleted — so page furniture that happens to sit
+ * INSIDE the drawing's extent still draws (the north arrow does), and only what
+ * lies out in the margin is cropped away. The full sheet, title block included,
+ * is what `plan.png` is for.
+ */
+async function drawingBox(svg) {
+  const groups = topLevelGroups(svg);
+  const layers = groups.filter((g) => /^<g id="A-/.test(g));
+  const measured = layers.length > 0 ? layers : groups;
+  if (measured.length === 0) return inkBox(svg);
+  const open = svg.match(/<svg\b[^>]*>/)[0];
+  const defs = (svg.match(/<defs>[\s\S]*?<\/defs>/) ?? [""])[0];
+  return inkBox(`${open}${defs}${measured.join("\n")}</svg>`);
+}
+
+/** The smallest box containing both. */
+function unionBox(a, b) {
+  const x = Math.min(a.x, b.x);
+  const y = Math.min(a.y, b.y);
+  return { x, y, w: Math.max(a.x + a.w, b.x + b.w) - x, h: Math.max(a.y + a.h, b.y + b.h) - y };
+}
+
+/**
+ * The tour's dominant accent — whichever colour most of its elements carry.
+ *
+ * The caption is the tour's own voice, so it has to be in the tour's own colour:
+ * a plum set of highlights under a red caption box reads as two annotations by
+ * two people. Ties fall back to the markup red, which is what an unstated colour
+ * means everywhere else here.
+ */
+function dominantAccent(spec) {
+  const tally = new Map();
+  for (const element of [...(spec.paths ?? []), ...(spec.markers ?? []), ...(spec.highlights ?? [])]) {
+    const color = element.color ?? ACCENT;
+    tally.set(color, (tally.get(color) ?? 0) + 1);
+  }
+  let best = ACCENT;
+  let bestCount = 0;
+  for (const [color, count] of tally) {
+    if (count > bestCount) {
+      best = color;
+      bestCount = count;
+    }
+  }
+  return best;
+}
+
+/**
+ * Draw the annotations. `frame` is the box everything is SIZED against — the
+ * drawing's ink, not the sheet — so a 50-metre plan issued on an A1 gets
+ * annotations scaled to the building rather than to a page that is mostly
+ * margin.
+ */
+function buildAnnotations(spec, frame) {
+  const span = Math.max(frame.w, frame.h);
 
   const stroke = span * 0.0035;
   const size = span * 0.018; // body type
   const radius = size * 1.05; // numbered marker circle
 
-  const out = [`<g id="overlay">`];
+  const out = [];
 
   for (const path of spec.paths ?? []) {
     const points = path.points ?? [];
@@ -213,42 +308,48 @@ function buildOverlay(svg, spec) {
     }
   }
 
-  // The note gets its own strip BELOW the drawing rather than a box on top of it:
-  // an ArchLang sheet already uses its bottom edge for the scale bar and title
-  // block, and a caption laid over those hides real information. We grow the
-  // viewBox instead — the drawing is untouched, the caption always legible.
-  let viewBox = vb;
-  if (spec.note) {
-    const pad = size * 0.7;
-    const lines = wrap(spec.note, 96);
-    const lineHeight = size * 1.45;
-    const boxH = lines.length * lineHeight + pad * 2;
-    const stripH = boxH + size * 1.4;
-    viewBox = { ...vb, h: vb.h + stripH };
+  return { markup: out.join("\n"), span, stroke, size };
+}
 
-    const boxW = vb.w * 0.96;
-    const boxX = vb.x + (vb.w - boxW) / 2;
-    const boxY = vb.y + vb.h + size * 0.7;
+/**
+ * The caption, in a strip directly BELOW the composed drawing rather than a box
+ * on top of it: an ArchLang sheet already uses its bottom edge for the scale bar
+ * and title block, and a caption laid over those hides real information.
+ *
+ * `content` is the box the drawing and its annotations actually occupy, so the
+ * caption sits against the ink and not against the bottom of a sheet whose last
+ * third is empty paper.
+ */
+function buildNote(note, content, { span, stroke, size, accent }) {
+  const pad = size * 0.7;
+  const lines = wrap(note, 96);
+  const lineHeight = size * 1.45;
+  const boxH = lines.length * lineHeight + pad * 2;
+  const gap = size * 0.9;
+  const stripH = boxH + gap * 2;
 
-    // Opaque ground for the new strip — the plan's own background rect only
-    // covers the original box, so without this the strip is transparent.
+  // The box is inset from the composed edge; the white ground under it is not,
+  // so anything the crop left hanging in this band is painted over.
+  const inset = content.w * 0.012;
+  const boxW = content.w - inset * 2;
+  const boxX = content.x + inset;
+  const boxY = content.y + content.h + gap;
+
+  const out = [
+    // Opaque ground for the new strip — the sheet's own background rect stops at
+    // the page edge, so without this the strip is transparent.
+    `<rect x="${n(content.x)}" y="${n(content.y + content.h)}" width="${n(content.w)}" height="${n(stripH)}"` +
+      ` fill="${HALO}"/>`,
+    `<rect x="${n(boxX)}" y="${n(boxY)}" width="${n(boxW)}" height="${n(boxH)}" rx="${n(size * 0.35)}"` +
+      ` fill="${HALO}" stroke="${accent}" stroke-width="${n(stroke * 0.7)}"/>`,
+  ];
+  lines.forEach((line, i) => {
     out.push(
-      `<rect x="${n(vb.x)}" y="${n(vb.y + vb.h)}" width="${n(vb.w)}" height="${n(stripH)}" fill="${HALO}"/>`,
+      `<text x="${n(boxX + pad)}" y="${n(boxY + pad + lineHeight * (i + 0.5))}" font-size="${n(size * 0.8)}"` +
+        ` fill="${INK}" dominant-baseline="central">${xml(line)}</text>`,
     );
-    out.push(
-      `<rect x="${n(boxX)}" y="${n(boxY)}" width="${n(boxW)}" height="${n(boxH)}" rx="${n(size * 0.35)}"` +
-        ` fill="${HALO}" stroke="${ACCENT}" stroke-width="${n(stroke * 0.7)}"/>`,
-    );
-    lines.forEach((line, i) => {
-      out.push(
-        `<text x="${n(boxX + pad)}" y="${n(boxY + pad + lineHeight * (i + 0.5))}" font-size="${n(size * 0.8)}"` +
-          ` fill="${INK}" dominant-baseline="central">${xml(line)}</text>`,
-      );
-    });
-  }
-
-  out.push(`</g>`);
-  return { overlay: out.join("\n"), viewBox };
+  });
+  return { markup: out.join("\n"), stripH };
 }
 
 const slug = process.argv[2];
@@ -271,22 +372,81 @@ for (const p of [svgPath, specPath]) {
 const svg = readFileSync(svgPath, "utf8");
 const spec = JSON.parse(readFileSync(specPath, "utf8"));
 
-const close = svg.lastIndexOf("</svg>");
-if (close === -1) {
+if (svg.lastIndexOf("</svg>") === -1) {
   console.error(`${svgPath} has no closing </svg> tag.`);
   process.exit(1);
 }
 
-const { overlay, viewBox } = buildOverlay(svg, spec);
+/**
+ * Splice a group in just before `</svg>`, and re-state the root viewBox.
+ *
+ * The root's `width`/`height` go with it. An ArchLang drawing declares its PAPER
+ * size there — `width="841mm" height="594mm"` — and those win over the viewBox
+ * when a renderer picks an aspect ratio, so a composed canvas that changed the
+ * viewBox and left them alone gets fitted into the old sheet's proportions and
+ * letterboxed. Dropping them makes the viewBox the only statement of shape,
+ * which is what a composed image wants: it is no longer a sheet of paper.
+ */
+function compose(document, markup, viewBox) {
+  const openTag = document.match(/<svg\b[^>]*>/)[0];
+  const rebased = document.replace(
+    openTag,
+    openTag
+      .replace(/\s(width|height)="[^"]*"/g, "")
+      .replace(
+        /viewBox="[-\d.eE\s]+"/,
+        `viewBox="${n(viewBox.x)} ${n(viewBox.y)} ${n(viewBox.w)} ${n(viewBox.h)}"`,
+      ),
+  );
+  const at = rebased.lastIndexOf("</svg>");
+  return `${rebased.slice(0, at)}<g id="overlay">\n${markup}\n</g>\n${rebased.slice(at)}`;
+}
 
-// A note grows the canvas, so the root viewBox has to grow with it.
-const withBox = svg.replace(
-  /viewBox="[-\d.eE\s]+"/,
-  `viewBox="${n(viewBox.x)} ${n(viewBox.y)} ${n(viewBox.w)} ${n(viewBox.h)}"`,
+/* Composition runs in two measured passes rather than against the sheet.
+   1. What the DRAWING occupies, which sets the scale every annotation is
+      derived from — a page that is two-thirds margin must not shrink the type.
+   2. What the ANNOTATIONS occupy, unioned with it: a label or a highlight can
+      legitimately sit outside the building, and cropping to the drawing alone
+      would slice it off.
+   The caption is composed last, against that union, so it lands under the ink
+   instead of under the bottom of the page. */
+const vb = readViewBox(svg);
+const drawing = await drawingBox(svg);
+const annotations = buildAnnotations(spec, drawing);
+
+let union = drawing;
+if (annotations.markup.trim() !== "") {
+  const openTagOnly = svg.match(/<svg\b[^>]*>/)[0];
+  union = unionBox(drawing, await inkBox(`${openTagOnly}${annotations.markup}</svg>`));
+}
+
+const margin = annotations.span * 0.025;
+const content = {
+  x: union.x - margin,
+  y: union.y - margin,
+  w: union.w + margin * 2,
+  h: union.h + margin * 2,
+};
+
+let markup = annotations.markup;
+let viewBox = content;
+if (spec.note) {
+  const note = buildNote(spec.note, content, { ...annotations, accent: dominantAccent(spec) });
+  markup = `${markup}\n${note.markup}`;
+  viewBox = { ...content, h: content.h + note.stripH };
+}
+
+// The sheet's own background rect covers the page, which no longer covers the
+// composed canvas — the caption strip hangs below it, and the crop may reach
+// past a page edge. One opaque ground under everything, spliced in right after
+// the root tag so it stays beneath the drawing rather than over it.
+const openTag = svg.match(/<svg\b[^>]*>/)[0];
+const grounded = svg.replace(
+  openTag,
+  `${openTag}<rect x="${n(viewBox.x)}" y="${n(viewBox.y)}" width="${n(viewBox.w)}" height="${n(viewBox.h)}" fill="${HALO}"/>`,
 );
 
-const at = withBox.lastIndexOf("</svg>");
-const annotated = `${withBox.slice(0, at)}${overlay}\n${withBox.slice(at)}`;
+const annotated = compose(grounded, markup, viewBox);
 
 writeFileSync(join(dir, "plan-annotated.svg"), annotated, "utf8");
 writeFileSync(join(dir, "plan-annotated.png"), await svgToPng(annotated));

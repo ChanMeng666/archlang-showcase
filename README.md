@@ -156,10 +156,11 @@ drawing above it was compiled from the text inside it.
 - **`features`** — the middot line. It interpolates `{rooms}` `{area}` `{doors}` `{windows}` `{lint}`
   from `describe()` and `lint()`, so the editorial half can be written by hand while the numbers stay
   derived and can never go stale. Absent, it defaults to `{rooms} · {area} · {lint}`.
-- **`codeLines`** — a 1-based inclusive range of `plan.arch` for the chip. It is a *teaser*, so keep
-  it to three to nine short lines: the chip fits about sixty characters at 15px and refuses anything
-  that would need to drop below 12px, naming the budget that does fit. A plan whose statements run
-  ninety characters belongs on the code card instead.
+- **`codeLines`** — a 1-based inclusive range of `plan.arch` for the chip. A line longer than the
+  chip's ~60-character measure **wraps** (between tokens, with a hanging indent, so the highlighting
+  survives), which is what lets the chip carry a statement like the West Wing's ninety-character
+  `arc` clause. It is still a *teaser*: past twelve wrapped rows it stops being a chip in the corner
+  of a card, and the script says so rather than growing.
 - **`planCrop`** — the region of the drawing to fit on the sheet, as fractions of `plan.svg`'s own
   `viewBox`. Fractions rather than millimetres, so the framing survives the plan being re-issued at
   another paper size. `null` (or absent) fits the whole sheet. The region is always *fitted*, never
@@ -188,7 +189,15 @@ SVG's own user units — the millimetres you wrote in the `.arch` source.
 Two accents, and they mean different things: **red** (`#c1121f`, the default) is the architect's
 markup red and reads as *what happened here* — a route, a breach, a movement. **Plum** (`#8052ff`)
 is the brand accent and reads as *look at this* — a place the drawing itself is pointing out. A tour
-that uses one colour for both is a tour where the reader cannot tell a path from a place.
+that uses one colour for both is a tour where the reader cannot tell a path from a place. The
+caption box takes whichever accent most of the tour's elements carry, so it never argues with them.
+
+The annotated image is **composed, not just annotated**: it crops to the drawing's own layers plus a
+small margin, then puts the caption directly beneath. An ArchLang sheet is real paper — an A1 at
+1:100 is 84100 × 59400 units whatever the building measures — so an uncropped annotation floats
+under a band of nothing. Cropping moves the viewBox only, nothing is deleted, so page furniture
+inside the drawing's extent (the north arrow) still draws while the title block out in the margin
+does not. The full sheet is what `plan.png` is for.
 
 ### Brand and type
 

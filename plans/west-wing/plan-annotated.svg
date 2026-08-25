@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="841mm" height="594mm" viewBox="-17862.5 -11042.5 84100 79003.71" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="-4148.89 -3376.59 59948.44 53994.83" font-family="Helvetica, Arial, sans-serif"><rect x="-4148.89" y="-3376.59" width="59948.44" height="53994.83" fill="#ffffff"/>
 <defs><pattern id="poche" patternUnits="userSpaceOnUse" width="120" height="120" patternTransform="rotate(45)"><rect width="120" height="120" fill="#e9e4db"/><line x1="0" y1="0" x2="0" y2="120" stroke="#b9b1a4" stroke-width="12.6"/></pattern></defs>
 <rect x="-17862.5" y="-11042.5" width="84100" height="59400" fill="#ffffff"/>
 <g id="A-FLOR" inkscape:groupmode="layer" inkscape:label="A-FLOR">
@@ -434,26 +434,26 @@
 <g><rect x="-16362.5" y="45017.5" width="1000" height="140" fill="#333333"/><rect x="-15362.5" y="45017.5" width="1000" height="140" fill="none" stroke="#333333" stroke-width="18"/><text x="-16362.5" y="45357.5" font-size="200" fill="#333333" text-anchor="start" dominant-baseline="central">0</text><text x="-14362.5" y="45357.5" font-size="200" fill="#333333" text-anchor="middle" dominant-baseline="central">2 m</text></g>
 <g><rect x="61337.5" y="45017.5" width="3400" height="1840" fill="none" stroke="#333333" stroke-width="18"/><text x="61507.5" y="45247.5" font-size="152" fill="#888888" dominant-baseline="central">PROJECT</text><text x="64567.5" y="45247.5" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">The White House — West Wing</text><text x="61507.5" y="45707.5" font-size="152" fill="#888888" dominant-baseline="central">DRAWN BY</text><text x="64567.5" y="45707.5" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">ArchLang</text><line x1="61337.5" y1="45477.5" x2="64737.5" y2="45477.5" stroke="#333333" stroke-width="9"/><text x="61507.5" y="46167.5" font-size="152" fill="#888888" dominant-baseline="central">DATE</text><text x="64567.5" y="46167.5" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">2026-08-25</text><line x1="61337.5" y1="45937.5" x2="64737.5" y2="45937.5" stroke="#333333" stroke-width="9"/><text x="61507.5" y="46627.5" font-size="152" fill="#888888" dominant-baseline="central">SCALE</text><text x="64567.5" y="46627.5" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">1:100</text><line x1="61337.5" y1="46397.5" x2="64737.5" y2="46397.5" stroke="#333333" stroke-width="9"/></g>
 <g id="overlay">
-<rect x="35650" y="24150" width="11700" height="9900" rx="594" fill="#8052ff" fill-opacity="0.07" stroke="#8052ff" stroke-width="294.35" stroke-dasharray="1177.4 883.05" stroke-linejoin="round"/>
-<circle cx="35650" cy="24150" r="1589.49" fill="#8052ff" stroke="#ffffff" stroke-width="264.92"/>
-<text x="35650" y="24150" font-size="1438.11" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">1</text>
-<text x="41500" y="35336.73" font-size="1513.8" font-weight="600" fill="#8052ff" text-anchor="middle" dominant-baseline="central" stroke="#ffffff" stroke-width="423.86" stroke-linejoin="round" paint-order="stroke fill">the bow: one arc clause</text>
-<rect x="40650" y="11650" width="6700" height="10700" rx="402" fill="#8052ff" fill-opacity="0.07" stroke="#8052ff" stroke-width="294.35" stroke-dasharray="1177.4 883.05" stroke-linejoin="round"/>
-<circle cx="40650" cy="11650" r="1589.49" fill="#8052ff" stroke="#ffffff" stroke-width="264.92"/>
-<text x="40650" y="11650" font-size="1438.11" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">2</text>
-<text x="48636.73" y="17000" font-size="1513.8" font-weight="600" fill="#8052ff" text-anchor="start" dominant-baseline="central" stroke="#ffffff" stroke-width="423.86" stroke-linejoin="round" paint-order="stroke fill">Cabinet Room</text>
-<rect x="25150" y="11650" width="9700" height="10700" rx="582" fill="#8052ff" fill-opacity="0.07" stroke="#8052ff" stroke-width="294.35" stroke-dasharray="1177.4 883.05" stroke-linejoin="round"/>
-<circle cx="25150" cy="11650" r="1589.49" fill="#8052ff" stroke="#ffffff" stroke-width="264.92"/>
-<text x="25150" y="11650" font-size="1438.11" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">3</text>
-<text x="30000" y="8773.78" font-size="1513.8" font-weight="600" fill="#8052ff" text-anchor="middle" dominant-baseline="central" stroke="#ffffff" stroke-width="423.86" stroke-linejoin="round" paint-order="stroke fill">no windows, dead centre</text>
-<rect x="-17862.5" y="48357.5" width="84100" height="19603.71" fill="#ffffff"/>
-<rect x="-16180.5" y="49417.16" width="80736" height="17484.39" rx="529.83" fill="#ffffff" stroke="#c1121f" stroke-width="206.05"/>
-<text x="-15120.84" y="51574.33" font-size="1211.04" fill="#1b1b1f" dominant-baseline="central">1 — the Oval Office's south end is a TRUE arc, not a many-sided polygon: `wall id=w_oval</text>
-<text x="-15120.84" y="53769.34" font-size="1211.04" fill="#1b1b1f" dominant-baseline="central">exterior thickness 300 { (47000,31000) arc (36000,31000) radius 7300 cw }`. Its three south</text>
-<text x="-15120.84" y="55964.35" font-size="1211.04" fill="#1b1b1f" dominant-baseline="central">windows sit at 25%, 50% and 75% and walk the curve by ARC LENGTH, so they land evenly with no</text>
-<text x="-15120.84" y="58159.36" font-size="1211.04" fill="#1b1b1f" dominant-baseline="central">trigonometry in the source. 2 — the Cabinet Room's table and its fourteen chairs are one `for`</text>
-<text x="-15120.84" y="60354.37" font-size="1211.04" fill="#1b1b1f" dominant-baseline="central">loop. 3 — the Roosevelt Room sits at the centre of the plan with no exterior wall to put a</text>
-<text x="-15120.84" y="62549.38" font-size="1211.04" fill="#1b1b1f" dominant-baseline="central">window in, which is true of the real one. The whole drawing: 24 rooms, 1,568.98 m², 26 doors, 25</text>
-<text x="-15120.84" y="64744.39" font-size="1211.04" fill="#1b1b1f" dominant-baseline="central">windows — and `arch lint` reports nothing.</text>
+<rect x="35650" y="24150" width="11700" height="9900" rx="594" fill="#8052ff" fill-opacity="0.07" stroke="#8052ff" stroke-width="191.08" stroke-dasharray="764.34 573.25" stroke-linejoin="round"/>
+<circle cx="35650" cy="24150" r="1031.86" fill="#8052ff" stroke="#ffffff" stroke-width="171.98"/>
+<text x="35650" y="24150" font-size="933.59" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">1</text>
+<text x="41500" y="34885.31" font-size="982.72" font-weight="600" fill="#8052ff" text-anchor="middle" dominant-baseline="central" stroke="#ffffff" stroke-width="275.16" stroke-linejoin="round" paint-order="stroke fill">the bow: one arc clause</text>
+<rect x="40650" y="11650" width="6700" height="10700" rx="402" fill="#8052ff" fill-opacity="0.07" stroke="#8052ff" stroke-width="191.08" stroke-dasharray="764.34 573.25" stroke-linejoin="round"/>
+<circle cx="40650" cy="11650" r="1031.86" fill="#8052ff" stroke="#ffffff" stroke-width="171.98"/>
+<text x="40650" y="11650" font-size="933.59" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">2</text>
+<text x="48185.31" y="17000" font-size="982.72" font-weight="600" fill="#8052ff" text-anchor="start" dominant-baseline="central" stroke="#ffffff" stroke-width="275.16" stroke-linejoin="round" paint-order="stroke fill">Cabinet Room</text>
+<rect x="25150" y="11650" width="9700" height="10700" rx="582" fill="#8052ff" fill-opacity="0.07" stroke="#8052ff" stroke-width="191.08" stroke-dasharray="764.34 573.25" stroke-linejoin="round"/>
+<circle cx="25150" cy="11650" r="1031.86" fill="#8052ff" stroke="#ffffff" stroke-width="171.98"/>
+<text x="25150" y="11650" font-size="933.59" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">3</text>
+<text x="30000" y="9782.83" font-size="982.72" font-weight="600" fill="#8052ff" text-anchor="middle" dominant-baseline="central" stroke="#ffffff" stroke-width="275.16" stroke-linejoin="round" paint-order="stroke fill">no windows, dead centre</text>
+<rect x="-4148.89" y="37498.89" width="59948.44" height="13119.35" fill="#ffffff"/>
+<rect x="-3429.51" y="38383.34" width="58509.68" height="11350.45" rx="343.95" fill="#ffffff" stroke="#8052ff" stroke-width="133.76"/>
+<text x="-2741.61" y="39783.72" font-size="786.18" fill="#1b1b1f" dominant-baseline="central">1 — the Oval Office's south end is a TRUE arc, not a many-sided polygon: `wall id=w_oval</text>
+<text x="-2741.61" y="41208.67" font-size="786.18" fill="#1b1b1f" dominant-baseline="central">exterior thickness 300 { (47000,31000) arc (36000,31000) radius 7300 cw }`. Its three south</text>
+<text x="-2741.61" y="42633.62" font-size="786.18" fill="#1b1b1f" dominant-baseline="central">windows sit at 25%, 50% and 75% and walk the curve by ARC LENGTH, so they land evenly with no</text>
+<text x="-2741.61" y="44058.57" font-size="786.18" fill="#1b1b1f" dominant-baseline="central">trigonometry in the source. 2 — the Cabinet Room's table and its fourteen chairs are one `for`</text>
+<text x="-2741.61" y="45483.51" font-size="786.18" fill="#1b1b1f" dominant-baseline="central">loop. 3 — the Roosevelt Room sits at the centre of the plan with no exterior wall to put a</text>
+<text x="-2741.61" y="46908.46" font-size="786.18" fill="#1b1b1f" dominant-baseline="central">window in, which is true of the real one. The whole drawing: 24 rooms, 1,568.98 m², 26 doors, 25</text>
+<text x="-2741.61" y="48333.41" font-size="786.18" fill="#1b1b1f" dominant-baseline="central">windows — and `arch lint` reports nothing.</text>
 </g>
 </svg>
