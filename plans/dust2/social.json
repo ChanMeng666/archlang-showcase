@@ -1,0 +1,9 @@
+{
+  "title": "de_dust2",
+  "hook": "We ran a floor-plan linter on de_dust2. Its first complaint: there is no way in.",
+  "headline": ["We linted de_dust2.", "It has no way in."],
+  "features": "{rooms} · {area} · A1 at 1:250 · {lint}",
+  "url": "archlang.uk/showcase",
+  "codeLines": [18, 26],
+  "planCrop": { "x": 0.23309, "y": 0.05332, "w": 0.27586, "h": 0.28283 }
+}

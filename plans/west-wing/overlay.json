@@ -1,0 +1,26 @@
+{
+  "highlights": [
+    {
+      "rect": [35650, 24150, 11700, 9900],
+      "n": 1,
+      "label": "the bow: one arc clause",
+      "side": "below",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [40650, 11650, 6700, 10700],
+      "n": 2,
+      "label": "Cabinet Room",
+      "side": "right",
+      "color": "#8052ff"
+    },
+    {
+      "rect": [25150, 11650, 9700, 10700],
+      "n": 3,
+      "label": "no windows, dead centre",
+      "side": "above",
+      "color": "#8052ff"
+    }
+  ],
+  "note": "1 — the Oval Office's south end is a TRUE arc, not a many-sided polygon: `wall id=w_oval exterior thickness 300 { (47000,31000) arc (36000,31000) radius 7300 cw }`. Its three south windows sit at 25%, 50% and 75% and walk the curve by ARC LENGTH, so they land evenly with no trigonometry in the source. 2 — the Cabinet Room's table and its fourteen chairs are one `for` loop. 3 — the Roosevelt Room sits at the centre of the plan with no exterior wall to put a window in, which is true of the real one. The whole drawing: 24 rooms, 1,568.98 m², 26 doors, 25 windows — and `arch lint` reports nothing."
+}

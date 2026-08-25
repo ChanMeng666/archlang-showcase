@@ -1,0 +1,9 @@
+{
+  "title": "The West Wing",
+  "hook": "The most famous office in the world is an arc, not a polygon.",
+  "headline": ["The Oval Office", "is an arc."],
+  "features": "{rooms} · {area} · one arc clause · {lint}",
+  "url": "archlang.uk/showcase",
+  "codeLines": [201, 203],
+  "planCrop": { "x": 0.62857, "y": 0.5226, "w": 0.19025, "h": 0.26936 }
+}

@@ -2,3 +2,7 @@ node_modules/
 out/
 *.log
 .DS_Store
+
+# Brand faces, rebuilt from the @fontsource/* WOFFs by scripts/fonts.mjs on
+# first use. Derived from node_modules, so `npm install` restores them exactly.
+assets/fonts/

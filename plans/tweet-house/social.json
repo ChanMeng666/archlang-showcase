@@ -1,0 +1,10 @@
+{
+  "title": "The Tweet House",
+  "hook": "This tweet is a house. 280 bytes, zero warnings.",
+  "headline": ["This tweet", "is a house."],
+  "features": "{rooms} · {area} · 280 bytes · {lint}",
+  "url": "archlang.uk/showcase",
+  "codeLines": [2, 7],
+  "planCrop": null,
+  "code": { "full": true }
+}

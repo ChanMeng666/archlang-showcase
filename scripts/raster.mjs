@@ -16,6 +16,8 @@ import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { brandFontFiles } from "./fonts.mjs";
+
 /** Pixel width every showcase PNG is rendered at. */
 export const PNG_WIDTH = 1600;
 
@@ -63,6 +65,33 @@ export async function svgToPng(svg, opts = {}) {
     fitTo: { mode: "width", value: opts.width ?? PNG_WIDTH },
     font: {
       fontFiles: [fontPath()],
+      loadSystemFonts: false,
+      defaultFontFamily: BUNDLED_FONT_FAMILY,
+    },
+  });
+  return resvg.render().asPng();
+}
+
+/**
+ * Rasterize a social card — a plan drawing wrapped in brand chrome.
+ *
+ * Same rules as {@link svgToPng}, with the three brand faces added and a
+ * transparent ground: a card paints every pixel of its own background, and
+ * asking resvg for white underneath would only hide a hole rather than prevent
+ * one. Roboto stays the DEFAULT family, so the nested plan's own labels
+ * rasterize exactly as they do in `plan.png`; the chrome names its faces
+ * explicitly.
+ *
+ * @param {string} svg
+ * @param {{ width?: number }} [opts]
+ * @returns {Promise<Buffer>}
+ */
+export async function renderCard(svg, opts = {}) {
+  const { Resvg } = await import("@resvg/resvg-js");
+  const resvg = new Resvg(svg, {
+    fitTo: { mode: "width", value: opts.width ?? PNG_WIDTH },
+    font: {
+      fontFiles: [fontPath(), ...brandFontFiles()],
       loadSystemFonts: false,
       defaultFontFamily: BUNDLED_FONT_FAMILY,
     },

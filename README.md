@@ -15,7 +15,7 @@ that compiles floor-plan source to professional SVG.
 
 ### The West Wing — First Floor
 
-[<img src="plans/west-wing/plan.png" alt="The West Wing — First Floor" width="820">](plans/west-wing/README.md)
+[<img src="plans/west-wing/plan-annotated.png" alt="The West Wing — First Floor" width="820">](plans/west-wing/README.md)
 
 [story](plans/west-wing/README.md) · [source](plans/west-wing/plan.arch) · [open in playground](https://playground.archlang.uk/#z=rVv9bhs5kv9fT1GQcYizI2vVLcmyczsDOI7zATjxwHYmtzgcbKqbkrhukTqSLVkzF2Af4p7hHmyf5FBFdostSy05Hv-RqCXyx_piFVlVfQC3Ew7fJsJy-Khyw-Ff__xf-MaNhW9CjlvwXmhj4X2mlG4cNA5o-FQZCyM2VbkBNRqJhIOQYCccFkpnKQgDTIKas6wNn2ksTj-aZUxCxuQ4Z2NuIMExMls2DiDVbAFD9chNC4wipKs5y-DKgSdqyg2o3AIzwEDzxDI5zjgshJ3gUmymMjXmViSQsSHP2o0DONPJ5JLJMUyYAc1ZBonQSZ4xDWOuptzqJS024ZqDsEg0kuH5YEv_3TAXmX0DdqI5bxyAsZqJ8cTCgmUZspkCg6Fa8BSMyu0EuExbOCpPHhy1t9dfL4DpBJQEBteDbqcDCZdW80xIjpR-0HxGq2ouU655Cje_fYCR0nB_Bve0xlLlMOYW-CNLbLYEu1Bv8NdBr99xI_Ah6nfuW4jUOEBpcU2_CCm5hhFLuAFm4Rp--usRTFg28pxmGdiJSB4kN6YNX5gVc04UMJ2YFkj3xbv_eN84gPuz6_N74NIKK7ghW5F87uEtT1u4ApNL-F2paRsOryQSO-EwU8mEw_tPl5dguTE8y5jlpv26tCm7UJDkes6R8alBkgw4i-FMGlDyDY0FkuXhY2v5GjRLRW7gGv4zWfxPkiz-C3-F86_Xv128g29nl5dw8e7DBYy0mjoiNJ8LNNo515Y_tuE-WdwTZv3fLLeGAJzeUJP4dP3pw8dbUCOwms15RtbESKB7YC5Y9sBT4MzYI6uOFrjjhmph4Obq6-1HkiytoQyHD0ynXOLPbULWSk1hprLlWEkvin_98_9W2DhxymwyEXLs9l6bZDxUi1cGkonStEejCKbOQqzZg2ItDIe43YfpvztrJXSVZUg1fmHYlAem7Q1xD0FkkKpg6xPFRBg-obrZWHPcKo0DuJpxKeTYkACdUshqhks4uz6Hy4svH24_tkAqi18Rr29omGNe55JYj3v9AUynuCaa9ULIVC1QsYs79FtoxnH_3-7JcWRL8mjw3znTuKnUqPQRWuUkP5QvI38xUQvPOLkM7xUcvoEhnwjPV8rNA3rDFPic4zbxVuXYIc8mFVgtxko6d9U4KNysUblOvEA-GZPzFGefRUh29CbqdEr7SZSc43ZVkmVo_4ZLy_CR_AuDWT7MREJeLkV9Em8CzcGI3_kb58e5Jh2JKZcGpyYTJmQLGHx4-9dbmCkjEFHI8RF7FAbGWqQFN-QJba55CxXaOEDAa9zSKQrSjVFkK7g6c9AYGlCBU85Mrnm7QX6gSZGqiEzEYRCcmvBHAyCXwhqYThvgqOh3GgAzNuMapYPSNgmb8QaASVjGnbAaAFJpO4F8hj9gKPwDCefc-h--NwDZN8ByqwqBNBoAB3B0dHQEZsKzjD6-6I8Ab2YZRh5pFUg25SmarAHN7IRrsBMKmhzuk0wZfp9CptSMdg664SUotz1gyDO1QDkS5pDDRBnLU3j7dzi_-nJze_31_PbT1Rc4vFcS_oZ78Bc0nr_NlPnl_jVtPozPzrmnWowsRnr0FLRh2w2_cUX68-LOCQmAP1quhdKreAIY7f6Aw06r8xoO-51Ohz59r0xHHwi108uJ_lM36nSewNBOu-M1ML1BMHkdigR1-_EC3l59a8O3lXuGo18A3TNJGSMGhiUMpkFEYBYOe1G_02nFxzHiUWREsRCs9xjkjVogpBEpd06p2Hc4vvB4I5awFH_Lxv7YQ9ZQhANCdCGhDTcLNnNEjYhj9CsjlmcW7hP8tsAk34wxlst0poS0BsYY1hkFE4K06MESNucGhFwwjBHSWM7SqrLJPdZqqyJmitbd4-AbH7XdQWjhJL-uxUWtLRUarMBWjYHi6R4muW4AbjsXTuuNExnGaAJMlNYiVdqUck1UpqREdZkZxrz1_VxSdHYn0RNpS74yICfqe3JO-8SUk557-F5FMDsQorgTQPinCsbbnVTEFYx4I8YuOuJeyIp_KnZYKLRXxp9OHbiBoVYPXOJ2Gio7Wcm7PBu4oOpP8rg-gZoZbUjNWYqHbnSQ6BfLKJoq1Bm67hmXoTnPz1V2J-u4cTzUKYYwprsxol2SJSCzG6gq3qr9fiFXrJkcc0jFXKRcmwrDX06hVnunBbunW7j9Ep3UAkQnBYL7tAki7vfrIOJ-30O4T5sgur1aiG6vgHCfTkMb_CzSNONrUoLDR0Ce2-0IHTlaIxocOfEjd4rLhHwobfJ1Rayf9xFrYQGn2wzgcxTVckWUlTDuaTPOPjoqcU620rOXogoc97QRZy9tFTjuaSNOL6rlqxdVNlq0zYV9vlvscqWDQFX-YQ0iqRexU9UgFE2J4w56ZFM1W_Um6tQv0Qm9QbTtZDS_2csaSpyTrThxvxYn7oc47mkzzmm9VZ32Qxx62ojTPa6lxx0PCpy1w8Iq2suVy3Q3RX8nGmklLd5RfuVSmmU2Z1IwOJtzmfMNZ_2Gv5eL9Gd9lyhT3G_xaEieCP_wUkVe5hG5Apetgub5RPARnhJvLBuNmm5ibniRXqtgZ2o4XK6wC4e9DfsShzfXLt2EjUfXJWaCsgo-3hLNneGJwy_9OeEP-uv4v-JwuOGJ5pZpv9I22vMZXsVK2ktHv4X2rzTcreBygc3t2EONQiyxywhA2FFcEl6h-y1OwgP4tVLTpsOeVC93wWHjJVe8NfvQ-o4VxuGCU2kfFNcf44DWcx9zmhX9VU9Ba-BJYB3eIRI4yYF8xQvAhwXl3rn-eZQXp2m6UA0qpt1FbNq_BTglA86LOc0N4CstTsOY_ydpcT6rbvKolEZg0OgGobTo3zCfjaYnUi5tVSobbFoaVl1hsHOFL8xne254kmthl3CWzoVBFWxbhbkBfpXKIYNWOe4_WeWGS7xVldA7-EhULg3PqisMalc491P8zTeQ2bZF0tLrrvxWyMbg6SLv-Cy3S1j3v9vZmE7N-gqD2hXO1XSaS5GQVsxOQWmlDJ_zzAb-MeSBFO62b7HCdTnF-bAdK5B7Xyj9EHjJJ8quruBc5bnSMwPflH6g61aNlNhQSG69lCpnMrfCUx7O_ZQKB1Uegut5cHD6sxyyQcWXMa88NZQbjch9PA48G5nKetyrC9t8HGzlytmNVjgpFygjNx8Lk7nyy9loxIR29rPV_gWl_irWGa4weLJCualeGXjnZgdx0OGtiSlPl0H4Xl8CP64vIebMcrjBmVtUW1mhEKhbITwKrsxzKxOhOjYbD2b4rn47u4Sr9-8_nV_8qAH5XAZl-IuSIFIRlARdzQWrJK8M8Ayz_M50uZZUgRKYszDClrlyNnXJPV8kFDrJ-KpIJ0xRV1SyhYNnGU9RSift6CjlY0cLnxk4nLJHSDkejXPNqf7lM3wcrM6ppvIGohMqgCgNnTZ9dhVKVz8wE84t5exhIlKsPuVYm1xRw-RywZZ0CcarjGNgojimRoFpzuA-5SbRYoib9B9GSSymzJS2prhak9KxsrlQeZYCS2xOxRas7LQIt8iyOU0bzD5jlQWrccgGJV-VSF25h1mfkdPSFWmMmmLZJ5eUYR2qx3bF0iiR6atoDTTJtQvD9mSLG907jvv4zaBPv_d7-BR33RO51W584p66ffytGzuk2D31-iUSxcNut7_C7vTKMXDYPe0F87snIXZ30A_W7R4PSppCngK6_a4J6uvNLVsFpcskGukLvCxtFcy_odDTuymWd6jM5q5dWLBCvmEhUjsBjBJgFlSJym1lpsZKKM109QKs0FEMcTPR3QUzV1y43B8WL8p0TpnDeQZjBS0Ajhx_1kCCMLXLLPk-KKhZ8UG5e7oRNqAsz4j0Z1Vc5AKIiih6VJmqLDqjCBXOiFHVWxctr3LrQP4eFgB1Q1k-AaLx6yD-whWKYLNCPAiN3wgSI4jPxTIL_QAl3oyyDuOP4o4Ws1sd89kTbQj5cCdDhKgT90PDXF-TpfO1NaNenTb8MXsdxh9bA5h6pabOlCoYeGysEl-vz_KY-cTC6GRYARrstDCcs3XHudPan7DjirsQ0vZ2ny0nDduoZFPB2KXl4uoSTqlVs5_wFMfdHQKcej3ThI2KrjLwg5pO2PBujZ5erw7JH-s34XCH4yshJNQ9gCruvTyAO3pM6Qe2whQzKjDlKTuAiWrZyvi4glCeogOEOOrXIJTn5JAbf04OQQYrQztFxta4ydNlFYMnep2VblxnMeXZOdiMRS_dK-NrZ253_kAQP3DNF-v38VcGynVbrmDuh5TZnJYPu-X3zhe0K-ziceyOWnBcYpc0V7u_ccZTCF5aovlRCFmKHNy2qNM-QazkPc7Y7_jrcwX8VN5hT1J5WAo9nj8hbBwXdQKaj2vGHe83LnRVdeuGzqh23Ml-43pPT0Sbx50EfOC4tYFUvsdxyEbV228aFvVqxVIOO91rWByEUFp0bVzR87Dm8jbQF4wMvVr9yNB77RgZuKjoqbSDkaEj2sQS-QFvD7BdQsWwwX7DovBkuH1YfLzfsNO1YWWDwqbWPd_DE9ybWkUTp-sC9E2G1U7E9mrtsnsmetJnuFHk5fi4Or7f2TG-Wx0_qOI_DQ0lO6NcS2EmPH2W9yLAs-ImzTJ3xdZ8RLdK19fsG7aPsN8b7pnETqh7MPmYaTi8uPv18uz84u7Xq8u_v27BYiIS1zbl8wQTJWkjSbPATmPqWzQTNlt1Sbo7P3V4OGz8hC1VrmvEUEbCZRSGRmW5de2IcC-k9-D3kPIkY9pTPOXTIddmIlxjdtEwXjQmCjniFL5IYpRkEenPozvq6XSdnS732Tmmy3dcpq_wVvR4GmZvuSMI3nHz0ISSoA3gySQCapDUHjxCcPx3lVh9PMbWhVqQuAISd54PYtSIRYD_-lKba2g4XqV4qVZzuhslfopycvwslATvGWDZMPNFo06MKINA5Me7UZieVmTbHZwQSi9MvO8Bsibb3vNBRkJzALxDUP8-cTSgPNSgylFvlYp-LzSnnsTQfqr7PEyw_-DZZIPs2dAJ3v1LaxfJf8zN0bsMK032w6KjH3aLM5sIjScwhOi028fUyxsuFwgV6y0tHwl-AgF_wcz5Jttd3Ve2IPWfj_R9TazV2ssPCfapWPHK9kSuq8JQVbI9dCiUaykLTuicuEz484UbDwahLFA4cX-jSMJr5b5YJ9FurO-NLWiU2IyOB5s1FEJsmt6Nj_ebXlXvhh6B5-r4qXoznlgsART_O9-HIjpd7fCeJ68sBdFYv7-LRBqqVXu19gu1Kg3JmqpDEgxnrrbYxUZl-AkS-Ast14L4hL7Q-EWlWvfYLwRVrOwUtb4bNHVJj4TFTnPsW37hbnCB1G3BsqGmNP_grxJaKxAuvKxB-DNCxkcWfzPcIpcrF41dDdtQVt03G1AGFZTeM1A0VZD2QQl8wgplu1BidA_r_ASCXXX7lCcnTKU6StAuaoQbwKwae14EExSn_1SYobIW6z7PxAkaPDaQE-8LE3RxbCJnb5ygT6OWHNyyJ9thgmaMenJ24AT9Fi8jp2yqeBE5QQn_RUoPCvUvwgkq2fU4O_kqa-718sGYMdjuLYL2gE04nQIHPQ65jLJJxk30p4mVyw9e_AL2-MNlQvc-C75JhiexCFJm8yn2WmNNsvoWGcvota43vnzOMgMyx5saT-kVHbz24e3eVY8nSovflbQ4LOPWH5roUo8vV2HqyNXoiU-Dd0R4d3H9Cd8epXdGjdIYyQo-CRRvlVizdm9GLTS-LdbsNrGM3jxv-ndAp2qOFGGdXHNHobtXLiYq4-7VNAzUS5W3y6TDkF7Y0hpfrJVK4st3_mVAfIMZ32IoBdOiGrh_kUYYeipfz0NEUocL_o8Y7Tst6hxqgesKAddYBK77x7XttUj8HZqzLObQz9S704LY_-fmUEW5OANYYTN8aW6m1T94Yv2retteKm-6F63vhktoFm9pN5E7Ds24Ex8fdU6O4n4Tvje-N_4f)
 
@@ -99,9 +99,111 @@ npm run permalink <slug>   # → a playground.archlang.uk link with the source i
 Each plan lives in `plans/<slug>/`: `plan.arch` is the source, everything beside it is generated.
 A multi-storey plan also writes one `plan.L<n>.svg` / `plan.L<n>.png` per floor.
 
-`npm run overlay <slug>` adds annotations — routes, numbered beats, a caption — from an
-`overlay.json` next to the plan, and writes `plan-annotated.svg` / `.png`. The plan itself is never
-modified; the annotation is a single `<g id="overlay">` appended to the SVG.
+`npm run overlay <slug>` adds annotations — routes, numbered beats, highlighted places, a caption —
+from an `overlay.json` next to the plan, and writes `plan-annotated.svg` / `.png`. The plan itself is
+never modified; the annotation is a single `<g id="overlay">` appended to the SVG. Where a plan has
+one, the gallery above shows the annotated drawing instead of the plain one.
+## Social kit
+
+Every plan can carry a set of images sized for posting. They are all generated, all deterministic,
+and all built from the plan's own source — the drawing on a card is the compiled **vector** output,
+framed in place, and the facts under the headline (`24 rooms · 1,568.98 m² · lint-clean`) come from
+`describe()` and `lint()` rather than from anyone typing a number.
+
+```bash
+npm run social <slug>                 # → plans/<slug>/cover.png  (1600×900)
+npm run social <slug> -- --mode code  # → plans/<slug>/code.png   (1600×900)
+npm run overlay <slug>                # → plans/<slug>/plan-annotated.png
+npm run gallery                       # rebuild the gallery section of this README
+```
+
+| Per-plan file | Produces | What it is |
+|---|---|---|
+| `social.json` | `cover.png` | Headline left, the drawing on a white sheet right, a dark chip of the source tucked into its corner |
+| `social.json` with a `code` block | `code.png` | The source alone, set large — for plans where the source *is* the story |
+| `overlay.json` | `plan-annotated.png` | The guided tour: routes, numbered beats, highlighted rooms, a caption |
+| — | `plan.png` | The plain compiled drawing, from `npm run render` |
+
+Both cards follow the family's light social grammar, the one
+[`archcanvas-og.png`](https://archcanvas.uk) sets: warm paper ground, the lockup small in the
+top-left, a short two-line headline in near-black, a quiet middot line of facts, the url in plum, and
+a white rounded card on the right holding the artifact. The cover adds one thing that reference does
+not have and this repository needs — a small dark chip of the actual source, tucked into the card's
+bottom-right where the reference tucks its 3D render. That chip is the whole claim in one frame: the
+drawing above it was compiled from the text inside it.
+
+### `social.json`
+
+```json
+{
+  "title": "The West Wing",
+  "hook": "The most famous office in the world is an arc, not a polygon.",
+  "headline": ["The Oval Office", "is an arc."],
+  "features": "{rooms} · {area} · one arc clause · {lint}",
+  "url": "archlang.uk/showcase",
+  "codeLines": [201, 203],
+  "planCrop": { "x": 0.62857, "y": 0.5226, "w": 0.19025, "h": 0.26936 },
+  "code": { "full": true }
+}
+```
+
+`title`, `hook` and `url` are required; everything else is optional.
+
+- **`headline`** — one or two lines, breaking where you choose. Without it the `hook` is wrapped to
+  two lines automatically. Keep both **short**: the headline is set at up to 72px in a 734px column,
+  so a line is about **twenty characters**, not eight words. A line that will not fit at the 48px
+  floor is refused with the width it needed.
+- **`features`** — the middot line. It interpolates `{rooms}` `{area}` `{doors}` `{windows}` `{lint}`
+  from `describe()` and `lint()`, so the editorial half can be written by hand while the numbers stay
+  derived and can never go stale. Absent, it defaults to `{rooms} · {area} · {lint}`.
+- **`codeLines`** — a 1-based inclusive range of `plan.arch` for the chip. It is a *teaser*, so keep
+  it to three to nine short lines: the chip fits about sixty characters at 15px and refuses anything
+  that would need to drop below 12px, naming the budget that does fit. A plan whose statements run
+  ninety characters belongs on the code card instead.
+- **`planCrop`** — the region of the drawing to fit on the sheet, as fractions of `plan.svg`'s own
+  `viewBox`. Fractions rather than millimetres, so the framing survives the plan being re-issued at
+  another paper size. `null` (or absent) fits the whole sheet. The region is always *fitted*, never
+  cropped to fill, so the region you write is exactly the region you get.
+- **`code`** — its presence enables `--mode code`. `{ "full": true }` renders the whole source;
+  `{ "lines": [from, to] }` renders a range.
+
+### `overlay.json`
+
+`paths` draw routes, `markers` drop numbered beats, `highlights` box a place, and `note` writes a
+caption in a strip added *below* the drawing so it never covers the title block. Coordinates are the
+SVG's own user units — the millimetres you wrote in the `.arch` source.
+
+```json
+{
+  "paths": [{ "points": [[x, y], [x, y]], "arrow": true, "label": "breach here" }],
+  "markers": [{ "at": [x, y], "n": 1, "text": "01:00 helicopters insert" }],
+  "highlights": [
+    { "rect": [x, y, w, h], "n": 3, "label": "no windows, dead centre", "side": "above",
+      "color": "#8052ff" }
+  ],
+  "note": "drawn in a caption box at the bottom"
+}
+```
+
+Two accents, and they mean different things: **red** (`#c1121f`, the default) is the architect's
+markup red and reads as *what happened here* — a route, a breach, a movement. **Plum** (`#8052ff`)
+is the brand accent and reads as *look at this* — a place the drawing itself is pointing out. A tour
+that uses one colour for both is a tour where the reader cannot tell a path from a place.
+
+### Brand and type
+
+Token values are copied from the compiler repo's shared brand block with the token name they came
+from noted beside each one. `assets/brand/archlang-wordmark-black.svg` is a byte copy of the shipped
+asset; the plum mark is a **fill-swap only**, never edited path data — the lockup carries its mark
+fill and its letter fill separately, so the first becomes the light-surface plum and the second
+becomes `--ink`. The one dark surface on either card is the code, and that is the point: it is the
+only element that is *source* rather than output.
+
+Type is Archivo, Public Sans and IBM Plex Mono, loaded from `@fontsource/*` and rebuilt into
+`assets/fonts/` on first run — `scripts/fonts.mjs` unwraps each WOFF back into the plain SFNT that
+resvg's font database can read. No system font is ever used, so a card rasterizes identically
+everywhere. Those are Latin subsets, so `assertGlyphs()` checks every string against the face's own
+`cmap` before drawing it and refuses rather than shipping a tofu box.
 
 ## Disclaimer
 

@@ -22,12 +22,28 @@
  *     }
  *   ],
  *   "markers": [
- *     { "at": [x, y], "n": 1, "text": "01:00 helicopters insert" }
+ *     { "at": [x, y], "n": 1, "text": "01:00 helicopters insert", "color": "#8052ff" }
+ *   ],
+ *   "highlights": [
+ *     {
+ *       "rect":  [x, y, w, h],           // SVG user units, same as everything else
+ *       "label": "windowless at the centre",  // optional
+ *       "n":     3,                      // optional numbered tag on the corner
+ *       "color": "#8052ff",              // optional; defaults to the accent
+ *       "side":  "right"                 // optional; right | left | above | below
+ *     }
  *   ],
  *   "note": "text drawn in a caption box at the bottom"
  * }
  *
  * Every key is optional — an empty `{}` produces an untouched copy.
+ *
+ * TWO ACCENTS, and they mean different things. Red is the architect's markup
+ * red and reads as *what happened here* — a route, a breach, a movement. Plum is
+ * the brand accent and reads as *look at this* — a point of interest the drawing
+ * itself is making. A tour that uses one colour for both is a tour where the
+ * reader cannot tell a path from a place. Pass `color` per path, marker or
+ * highlight; both are named in ACCENT / ACCENT_ALT below.
  *
  * COORDINATES are the SVG's own user units, which for an ArchLang drawing are
  * millimetres in plan space: the same numbers you wrote in the `.arch` source.
@@ -46,8 +62,10 @@ import { svgToPng } from "./raster.mjs";
 const ROOT = resolvePath(dirname(fileURLToPath(import.meta.url)), "..");
 const PLANS = join(ROOT, "plans");
 
-/** The one accent colour. Everything in the overlay is this, white, or ink. */
+/** Routes and events — the architect's markup red. The default for everything. */
 const ACCENT = "#c1121f";
+/** Points of interest — the ArchLang brand plum (`--plum` in the shared block). */
+const ACCENT_ALT = "#8052ff";
 const INK = "#1b1b1f";
 const HALO = "#ffffff";
 
@@ -149,16 +167,50 @@ function buildOverlay(svg, spec) {
     }
   }
 
+  /** A numbered disc — the tag on a route beat or on a highlighted place. */
+  const numberTag = (x, y, label, color) => [
+    `<circle cx="${n(x)}" cy="${n(y)}" r="${n(radius)}" fill="${color}" stroke="${HALO}" stroke-width="${n(stroke * 0.9)}"/>`,
+    `<text x="${n(x)}" y="${n(y)}" font-size="${n(size * 0.95)}" font-weight="700" fill="${HALO}"` +
+      ` text-anchor="middle" dominant-baseline="central">${xml(label ?? "")}</text>`,
+  ];
+
   for (const marker of spec.markers ?? []) {
     const [x, y] = marker.at ?? [0, 0];
-    out.push(
-      `<circle cx="${n(x)}" cy="${n(y)}" r="${n(radius)}" fill="${ACCENT}" stroke="${HALO}" stroke-width="${n(stroke * 0.9)}"/>`,
-    );
-    out.push(
-      `<text x="${n(x)}" y="${n(y)}" font-size="${n(size * 0.95)}" font-weight="700" fill="${HALO}"` +
-        ` text-anchor="middle" dominant-baseline="central">${xml(marker.n ?? "")}</text>`,
-    );
+    out.push(...numberTag(x, y, marker.n, marker.color ?? ACCENT));
     if (marker.text) out.push(haloText(marker.text, x + radius * 1.5, y, size));
+  }
+
+  // A highlight is a PLACE rather than a movement: a dashed box round something
+  // already drawn, tinted just enough to separate it from the poché without
+  // hiding the walls, fixtures or dimensions inside it. The number tag sits on
+  // the top-left corner so it never lands on top of what is being pointed at.
+  for (const highlight of spec.highlights ?? []) {
+    const rect = highlight.rect ?? [];
+    if (rect.length !== 4) continue;
+    const [rx, ry, rw, rh] = rect;
+    const color = highlight.color ?? ACCENT;
+    const round = Math.min(rw, rh) * 0.06;
+    out.push(
+      `<rect x="${n(rx)}" y="${n(ry)}" width="${n(rw)}" height="${n(rh)}" rx="${n(round)}"` +
+        ` fill="${color}" fill-opacity="0.07" stroke="${color}" stroke-width="${n(stroke)}"` +
+        ` stroke-dasharray="${n(stroke * 4)} ${n(stroke * 3)}" stroke-linejoin="round"/>`,
+    );
+    if (highlight.n != null) out.push(...numberTag(rx, ry, highlight.n, color));
+    if (highlight.label) {
+      const gap = size * 0.85;
+      // A label ABOVE has to clear the number tag, which sits on the top-left
+      // corner: at the plain gap the two overlap every time.
+      const above = gap + (highlight.n != null ? radius : 0);
+      const side = highlight.side ?? "right";
+      const place = {
+        right: [rx + rw + gap, ry + rh / 2, "start"],
+        left: [rx - gap, ry + rh / 2, "end"],
+        above: [rx + rw / 2, ry - above, "middle"],
+        below: [rx + rw / 2, ry + rh + gap, "middle"],
+      }[side];
+      if (!place) throw new Error(`highlight "side" must be right, left, above or below — got "${side}".`);
+      out.push(haloText(highlight.label, place[0], place[1], size, { anchor: place[2], color }));
+    }
   }
 
   // The note gets its own strip BELOW the drawing rather than a box on top of it:
@@ -239,7 +291,13 @@ const annotated = `${withBox.slice(0, at)}${overlay}\n${withBox.slice(at)}`;
 writeFileSync(join(dir, "plan-annotated.svg"), annotated, "utf8");
 writeFileSync(join(dir, "plan-annotated.png"), await svgToPng(annotated));
 
-console.log(
-  `ok ${slug} — plan-annotated.svg + plan-annotated.png` +
-    ` (${(spec.paths ?? []).length} path(s), ${(spec.markers ?? []).length} marker(s)${spec.note ? ", note" : ""})`,
-);
+const counts = [
+  [(spec.paths ?? []).length, "path"],
+  [(spec.markers ?? []).length, "marker"],
+  [(spec.highlights ?? []).length, "highlight"],
+]
+  .filter(([count]) => count > 0)
+  .map(([count, name]) => `${count} ${name}${count === 1 ? "" : "s"}`);
+if (spec.note) counts.push("note");
+
+console.log(`ok ${slug} — plan-annotated.svg + plan-annotated.png (${counts.join(", ") || "nothing to draw"})`);
