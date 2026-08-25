@@ -1,0 +1,254 @@
+# de_dust2, drawn as a building and submitted for inspection.
+#
+# The canonical radar layout, set out at a plausible 106 x 94 m and treated as if it
+# were an ordinary single-storey structure: B site top-left, CT spawn top-centre,
+# A site right, mid running up the middle, T spawn across the bottom, tunnels down
+# the left and long A up the right-hand edge.
+#
+# Three chokepoints are literal double doors, because on the map they literally are:
+# MID DOORS, LONG DOORS and B DOORS. Everything else is a leaf-less `opening` — a
+# cased threshold that still counts as a connection in the access graph, which is what
+# makes `arch lint`'s reachability answers mean anything.
+#
+# Two honest compromises, both of which the linter goes on to notice:
+#   · a plan is a horizontal cut, so a STACK of crates is two crates in one place;
+#   · the exterior shell has no door in it, because the map has none.
+#
+# Fan art. An original drawing of a game map's layout; not affiliated with Valve.
+plan "de_dust2" {
+  units mm
+  grid 100
+  paper A1 landscape
+  scale 1:250
+  north up
+  dims auto overall
+  schedule rooms
+  legend
+
+  # =========================================================================
+  # WALLS
+  # =========================================================================
+
+  # ---- B site: the site, its doors and the tunnel mouth --------------------
+  wall id=w_b_n     exterior  thickness 600 { (6000,4000) (34000,4000) }
+  wall id=w_b_w     exterior  thickness 600 { (6000,4000) (6000,20000) }
+  wall id=w_b_diag  exterior  thickness 600 { (6000,20000) (14000,28000) }
+  wall id=w_b_s     exterior  thickness 600 { (14000,28000) (26000,28000) }
+  wall id=w_b_tun   partition thickness 400 { (26000,28000) (34000,28000) }
+  wall id=w_b_e_n   exterior  thickness 600 { (34000,4000) (34000,12000) }
+  wall id=w_bdoors  partition thickness 400 { (34000,12000) (34000,20000) }
+
+  # One run serves three things: the window room's west side, B site's lower east
+  # side, and the east wall of the tunnel that passes behind both.
+  wall id=w_spine_w exterior  thickness 600 { (34000,20000) (34000,52000) }
+
+  # ---- the tunnels --------------------------------------------------------
+  wall id=w_tun_w   exterior  thickness 600 { (26000,28000) (26000,52000) }
+  wall id=w_tun_s   partition thickness 400 { (26000,52000) (34000,52000) }
+
+  # ---- the CT-to-B corridor -----------------------------------------------
+  wall id=w_bd_n    exterior  thickness 600 { (34000,12000) (60000,12000) }
+  wall id=w_bd_s    partition thickness 400 { (34000,20000) (48000,20000) }
+  wall id=w_bd_s2   partition thickness 400 { (48000,20000) (60000,20000) }
+  wall id=w_bd_e    partition thickness 400 { (60000,12000) (60000,20000) }
+
+  # ---- the window room ----------------------------------------------------
+  # Its east side is split in two on purpose: the upper run is the doorway into
+  # top mid, the lower run carries the only piece of glazing in the building.
+  wall id=w_win_ct  partition thickness 400 { (48000,20000) (48000,30000) }
+  wall id=w_win_mid partition thickness 400 { (48000,30000) (48000,34000) }
+  wall id=w_win_s   exterior  thickness 600 { (34000,34000) (48000,34000) }
+
+  # ---- mid ----------------------------------------------------------------
+  wall id=w_ct_ctmid partition thickness 400 { (60000,20000) (60000,28000) }
+  wall id=w_ctmid_e  exterior  thickness 600 { (60000,28000) (60000,30000) }
+  wall id=w_ctmid_s  partition thickness 400 { (48000,30000) (56000,30000) }
+  wall id=w_ctmid_s2 exterior  thickness 600 { (56000,30000) (60000,30000) }
+  wall id=w_mid_w    exterior  thickness 600 { (48000,34000) (48000,58000) }
+  wall id=w_mid_e_n  exterior  thickness 600 { (56000,30000) (56000,39000) }
+  wall id=w_cat_mid  partition thickness 400 { (56000,39000) (56000,45000) }
+  wall id=w_mid_e_s  exterior  thickness 600 { (56000,45000) (56000,58000) }
+  wall id=w_middoors partition thickness 400 { (48000,58000) (56000,58000) }
+
+  # ---- CT spawn and the ramp down to A ------------------------------------
+  wall id=w_ct_n     exterior  thickness 600 { (60000,6000) (84000,6000) }
+  wall id=w_ct_w_n   exterior  thickness 600 { (60000,6000) (60000,12000) }
+  wall id=w_ct_s     exterior  thickness 600 { (60000,28000) (84000,28000) }
+  wall id=w_ct_a     exterior  thickness 600 { (84000,20000) (84000,28000) }
+  wall id=w_aramp_w  partition thickness 400 { (84000,6000) (84000,20000) }
+  wall id=w_aramp_n  exterior  thickness 600 { (84000,6000) (96000,6000) }
+  wall id=w_aramp_e  exterior  thickness 600 { (96000,6000) (96000,20000) }
+  wall id=w_aramp_s  partition thickness 400 { (84000,20000) (96000,20000) }
+
+  # ---- catwalk: the diagonal from mid up to A short -----------------------
+  wall id=w_cat_nw   exterior  thickness 600 { (56000,39000) (72000,28000) }
+  wall id=w_cat_e    partition thickness 400 { (84000,28000) (84000,34000) }
+  wall id=w_cat_s    exterior  thickness 600 { (84000,34000) (72000,34000) }
+  wall id=w_cat_sw   exterior  thickness 600 { (72000,34000) (56000,45000) }
+
+  # ---- A site -------------------------------------------------------------
+  wall id=w_a_n      exterior  thickness 600 { (96000,20000) (112000,20000) }
+  wall id=w_a_e      exterior  thickness 600 { (112000,20000) (112000,52000) }
+  wall id=w_a_w      exterior  thickness 600 { (84000,34000) (84000,44000) }
+  wall id=w_a_diag   exterior  thickness 600 { (84000,44000) (92000,52000) }
+  wall id=w_a_s      exterior  thickness 600 { (92000,52000) (96000,52000) }
+  wall id=w_pit_n    exterior  thickness 600 { (96000,52000) (106000,52000) }
+  wall id=w_a_long   partition thickness 400 { (106000,52000) (112000,52000) }
+
+  # ---- the pit ------------------------------------------------------------
+  # Its north wall is solid: the way down from A site is a drop, not a doorway.
+  wall id=w_pit_w    exterior  thickness 600 { (96000,52000) (96000,60000) }
+  wall id=w_pit_s    exterior  thickness 600 { (96000,60000) (106000,60000) }
+  wall id=w_pit_e    partition thickness 400 { (106000,52000) (106000,60000) }
+
+  # ---- long A -------------------------------------------------------------
+  wall id=w_long_nw  exterior  thickness 600 { (106000,60000) (100000,72000) }
+  wall id=w_long_w   exterior  thickness 600 { (100000,72000) (100000,76000) }
+  wall id=w_ld_e     partition thickness 400 { (100000,76000) (100000,86000) }
+  wall id=w_long_e   exterior  thickness 600 { (112000,52000) (112000,86000) }
+  wall id=w_long_s   exterior  thickness 600 { (100000,86000) (112000,86000) }
+
+  # ---- long doors ---------------------------------------------------------
+  wall id=w_ld_n      exterior  thickness 600 { (90000,76000) (100000,76000) }
+  wall id=w_ld_s      exterior  thickness 600 { (90000,86000) (100000,86000) }
+  wall id=w_longdoors partition thickness 400 { (90000,76000) (90000,86000) }
+
+  # ---- T spawn ------------------------------------------------------------
+  wall id=w_t_n_w    exterior  thickness 600 { (38000,76000) (48000,76000) }
+  wall id=w_tmid_s   partition thickness 400 { (48000,76000) (56000,76000) }
+  wall id=w_t_n_e    exterior  thickness 600 { (56000,76000) (90000,76000) }
+  wall id=w_t_e      exterior  thickness 600 { (90000,86000) (90000,98000) }
+  wall id=w_t_s      exterior  thickness 600 { (38000,98000) (90000,98000) }
+  wall id=w_t_w      exterior  thickness 600 { (38000,84000) (38000,98000) }
+
+  # ---- T mid and the lower tunnel -----------------------------------------
+  wall id=w_tmid_e   exterior  thickness 600 { (56000,58000) (56000,76000) }
+  wall id=w_tmid_w_n exterior  thickness 600 { (48000,58000) (48000,62000) }
+  wall id=w_low_e    partition thickness 400 { (48000,62000) (48000,70000) }
+  wall id=w_tmid_w_s exterior  thickness 600 { (48000,70000) (48000,76000) }
+  wall id=w_low_n    exterior  thickness 600 { (38000,62000) (48000,62000) }
+  wall id=w_low_s    exterior  thickness 600 { (38000,70000) (48000,70000) }
+  wall id=w_low_w    partition thickness 400 { (38000,62000) (38000,70000) }
+
+  # ---- outside tunnels ----------------------------------------------------
+  wall id=w_ot_n_w   exterior  thickness 600 { (20000,52000) (26000,52000) }
+  wall id=w_ot_n_e   exterior  thickness 600 { (34000,52000) (38000,52000) }
+  wall id=w_ot_w     exterior  thickness 600 { (20000,52000) (20000,84000) }
+  wall id=w_ot_s     exterior  thickness 600 { (20000,84000) (38000,84000) }
+  wall id=w_ot_e_n   exterior  thickness 600 { (38000,52000) (38000,62000) }
+  wall id=w_ot_e_m   exterior  thickness 600 { (38000,70000) (38000,76000) }
+  wall id=w_ot_t     partition thickness 400 { (38000,76000) (38000,84000) }
+
+  # =========================================================================
+  # ROOMS — grouped by the sides of the map players actually name
+  # =========================================================================
+
+  zone b "B Side" {
+    room id=r_b_site  polygon (6000,4000) (34000,4000) (34000,28000) (14000,28000) (6000,20000)
+      label "B Site" at (20000,16000) uses hall
+    room id=r_b_doors at (34000,12000) size 26000x8000  label "B Doors"       uses circulation
+    room id=r_uptun   at (26000,28000) size 8000x24000  label "Upper Tunnels" uses circulation
+  }
+
+  zone mid "Mid" {
+    room id=r_window  at (34000,20000) size 14000x14000 label "Window" uses circulation
+    room id=r_ct_mid  at (48000,20000) size 12000x10000 label "CT Mid" uses circulation
+    room id=r_mid     at (48000,30000) size 8000x28000  label "Mid"    uses circulation
+    room id=r_catwalk polygon (56000,39000) (72000,28000) (84000,28000) (84000,34000) (72000,34000) (56000,45000)
+      label "Catwalk" at (71000,31500) uses circulation
+  }
+
+  zone ct "CT Side" {
+    room id=r_ct     at (60000,6000) size 24000x22000 label "CT Spawn" uses entry
+    room id=r_a_ramp at (84000,6000) size 12000x14000 label "A Ramp"   uses circulation
+  }
+
+  zone a "A Side" {
+    room id=r_a_site polygon (84000,20000) (112000,20000) (112000,52000) (92000,52000) (84000,44000)
+      label "A Site" at (99000,36000) uses hall
+    room id=r_pit    at (96000,52000) size 10000x8000 label "The Pit" uses storage
+    room id=r_long   polygon (100000,86000) (100000,72000) (106000,60000) (106000,52000) (112000,52000) (112000,86000)
+      label "A Long" at (108500,66000) uses circulation
+  }
+
+  zone t "T Side" {
+    room id=r_t_spawn at (38000,76000) size 52000x22000 label "T Spawn"         uses entry
+    room id=r_ld      at (90000,76000) size 10000x10000 label "Long Doors"      uses circulation
+    room id=r_t_mid   at (48000,58000) size 8000x18000  label "T Mid"           uses circulation
+    room id=r_lowtun  at (38000,62000) size 10000x8000  label "Lower Tunnels"   uses circulation
+    room id=r_outtun  at (20000,52000) size 18000x32000 label "Outside Tunnels" uses circulation
+  }
+
+  # =========================================================================
+  # OPENINGS
+  # =========================================================================
+
+  # ---- the three sets of real doors ---------------------------------------
+  # Each is a pair of leaves meeting on the wall's centre — a genuine double door,
+  # not a wide single. `hinge near start` / `near end` hangs each leaf on its own jamb.
+  door id=d_mid_l  on w_middoors  at 3000 width 1600 hinge near start swing into r_mid
+  door id=d_mid_r  on w_middoors  at 5000 width 1600 hinge near end   swing into r_mid
+  door id=d_long_l on w_longdoors at 4000 width 1600 hinge near start swing into r_ld
+  door id=d_long_r on w_longdoors at 6000 width 1600 hinge near end   swing into r_ld
+  door id=d_b_l    on w_bdoors    at 3000 width 1600 hinge near start swing into r_b_site
+  door id=d_b_r    on w_bdoors    at 5000 width 1600 hinge near end   swing into r_b_site
+
+  # There is deliberately no fourth set. The exterior shell of de_dust2 has no door
+  # in it anywhere: both teams begin the round already inside, and the only way the
+  # building is ever entered is by spawning in it. Drawing an entrance where the map
+  # has none is the one liberty this plan refuses to take.
+
+  # ---- everything else is a cased threshold -------------------------------
+  opening id=o_b_tun    on w_b_tun    at 50% width 4000
+  opening id=o_tun_s    on w_tun_s    at 50% width 4000
+  opening id=o_bd_win   on w_bd_s     at 70% width 3500
+  opening id=o_bd_ct    on w_bd_e     at 50% width 4000
+  opening id=o_win_ct   on w_win_ct   at 50% width 4000
+  opening id=o_ctmid_s  on w_ctmid_s  at 50% width 5000
+  opening id=o_ct_ctmid on w_ct_ctmid at 50% width 4000
+  opening id=o_cat_mid  on w_cat_mid  at 50% width 4000
+  opening id=o_a_short  on w_cat_e    at 50% width 4000
+  opening id=o_aramp_w  on w_aramp_w  at 50% width 5000
+  opening id=o_aramp_s  on w_aramp_s  at 50% width 6000
+  opening id=o_a_long   on w_a_long   at 50% width 4000
+  opening id=o_pit      on w_pit_e    at 50% width 4000
+  opening id=o_ld_long  on w_ld_e     at 50% width 5000
+  opening id=o_t_mid    on w_tmid_s   at 50% width 5000
+  opening id=o_low_e    on w_low_e    at 50% width 5000
+  opening id=o_low_w    on w_low_w    at 50% width 5000
+  opening id=o_ot_t     on w_ot_t     at 50% width 5000
+
+  # ---- the window ---------------------------------------------------------
+  # One pane. In the whole building.
+  window id=win_mid on w_win_mid at 50% width 3000
+
+  # =========================================================================
+  # CRATES
+  # =========================================================================
+  # A plan is a horizontal cut, so a STACK of boxes is two boxes in the same place.
+  # Both bomb sites are built out of stacks, and this drawing does not pretend
+  # otherwise — which is why the linter has something to say about them.
+
+  furniture id=c_b1  crate at (10000,8000)   size 4000x4000 label "Crate" in r_b_site
+  furniture id=c_b1b crate at (10800,8800)   size 2400x2400 label "Crate" in r_b_site
+  furniture id=c_b2  crate at (10000,13000)  size 4000x4000 label "Crate" in r_b_site
+  furniture id=c_b3  crate at (18000,12000)  size 3000x3000 label "Crate" in r_b_site
+  furniture id=c_b4  crate at (28000,23500)  size 4000x2500 label "Crate" in r_b_site
+  furniture id=c_b5  crate at (9000,19000)   size 3000x3000 label "Crate" in r_b_site
+
+  furniture id=c_a1  crate at (94000,30000)  size 5000x5000 label "Crate" in r_a_site
+  furniture id=c_a1b crate at (95000,31000)  size 3000x3000 label "Crate" in r_a_site
+  furniture id=c_a2  crate at (100000,26000) size 4000x4000 label "Crate" in r_a_site
+  furniture id=c_a3  crate at (87000,42000)  size 3000x3000 label "Crate" in r_a_site
+  furniture id=c_a4  crate at (106000,47500) size 4000x4000 label "Crate" in r_a_site
+
+  furniture id=c_xbox crate at (51500,42000)  size 2000x2000 label "Xbox" in r_mid
+  furniture id=c_t1   crate at (46000,90000)  size 3000x3000 label "Crate" in r_t_spawn
+  furniture id=c_car  car   at (102000,78000) size 4500x2000 label "Car" in r_long
+
+  title {
+    project "de_dust2 — competitive layout, as built"
+    drawn_by "ArchLang"
+    date "2026-08-25"
+  }
+}

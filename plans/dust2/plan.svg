@@ -1,0 +1,305 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="841mm" height="594mm" viewBox="-47006.25 -5918.75 210250 148500" font-family="Helvetica, Arial, sans-serif">
+<defs><pattern id="poche" patternUnits="userSpaceOnUse" width="300" height="300" patternTransform="rotate(45)"><rect width="300" height="300" fill="#e9e4db"/><line x1="0" y1="0" x2="0" y2="300" stroke="#b9b1a4" stroke-width="31.5"/></pattern></defs>
+<rect x="-47006.25" y="-5918.75" width="210250" height="148500" fill="#ffffff"/>
+<g id="A-FLOR" inkscape:groupmode="layer" inkscape:label="A-FLOR">
+<polygon points="6000,4000 34000,4000 34000,28000 14000,28000 6000,20000" fill="#fbfaf7"/>
+<polygon points="34000,12000 60000,12000 60000,20000 34000,20000" fill="#fbfaf7"/>
+<polygon points="26000,28000 34000,28000 34000,52000 26000,52000" fill="#fbfaf7"/>
+<polygon points="34000,20000 48000,20000 48000,34000 34000,34000" fill="#fbfaf7"/>
+<polygon points="48000,20000 60000,20000 60000,30000 48000,30000" fill="#fbfaf7"/>
+<polygon points="48000,30000 56000,30000 56000,58000 48000,58000" fill="#fbfaf7"/>
+<polygon points="56000,39000 72000,28000 84000,28000 84000,34000 72000,34000 56000,45000" fill="#fbfaf7"/>
+<polygon points="60000,6000 84000,6000 84000,28000 60000,28000" fill="#fbfaf7"/>
+<polygon points="84000,6000 96000,6000 96000,20000 84000,20000" fill="#fbfaf7"/>
+<polygon points="84000,20000 112000,20000 112000,52000 92000,52000 84000,44000" fill="#fbfaf7"/>
+<polygon points="96000,52000 106000,52000 106000,60000 96000,60000" fill="#fbfaf7"/>
+<polygon points="100000,86000 100000,72000 106000,60000 106000,52000 112000,52000 112000,86000" fill="#fbfaf7"/>
+<polygon points="38000,76000 90000,76000 90000,98000 38000,98000" fill="#fbfaf7"/>
+<polygon points="90000,76000 100000,76000 100000,86000 90000,86000" fill="#fbfaf7"/>
+<polygon points="48000,58000 56000,58000 56000,76000 48000,76000" fill="#fbfaf7"/>
+<polygon points="38000,62000 48000,62000 48000,70000 38000,70000" fill="#fbfaf7"/>
+<polygon points="20000,52000 38000,52000 38000,84000 20000,84000" fill="#fbfaf7"/>
+</g>
+<g id="A-FURN" inkscape:groupmode="layer" inkscape:label="A-FURN">
+<polygon points="10000,8000 14000,8000 14000,12000 10000,12000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="12000" y="10000" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
+<polygon points="10800,8800 13200,8800 13200,11200 10800,11200" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="12000" y="10000" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
+<polygon points="10000,13000 14000,13000 14000,17000 10000,17000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="12000" y="15000" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
+<polygon points="18000,12000 21000,12000 21000,15000 18000,15000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="19500" y="13500" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
+<polygon points="28000,23500 32000,23500 32000,26000 28000,26000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="30000" y="24750" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
+<polygon points="9000,19000 12000,19000 12000,22000 9000,22000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="10500" y="20500" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
+<polygon points="94000,30000 99000,30000 99000,35000 94000,35000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="96500" y="32500" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
+<polygon points="95000,31000 98000,31000 98000,34000 95000,34000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="96500" y="32500" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
+<polygon points="100000,26000 104000,26000 104000,30000 100000,30000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="102000" y="28000" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
+<polygon points="87000,42000 90000,42000 90000,45000 87000,45000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="88500" y="43500" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
+<polygon points="106000,47500 110000,47500 110000,51500 106000,51500" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="108000" y="49500" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
+<polygon points="51500,42000 53500,42000 53500,44000 51500,44000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="52500" y="43000" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Xbox</text>
+<polygon points="46000,90000 49000,90000 49000,93000 46000,93000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="47500" y="91500" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
+<polygon points="102000,78000 106500,78000 106500,80000 102000,80000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<text x="104250" y="79000" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Car</text>
+</g>
+<g id="A-WALL" inkscape:groupmode="layer" inkscape:label="A-WALL">
+<path d="M 6300,3700 L 34300,3700 L 34300,11700 L 59700,11700 L 59700,5700 L 60300,5700 L 84300,5700 L 96300,5700 L 96300,19700 L 112300,19700 L 112300,52300 L 112300,86300 L 100300,86300 L 99700,86300 L 90300,86300 L 90300,98300 L 38300,98300 L 37700,98300 L 37700,97700 L 37700,84300 L 20300,84300 L 19700,84300 L 19700,83700 L 19700,51700 L 20300,51700 L 25700,51700 L 25700,28300 L 14124.26,28300 L 14000,28424.26 L 13875.74,28300 L 13700,28300 L 13700,28124.26 L 5875.74,20300 L 5700,20300 L 5700,20124.26 L 5575.74,20000 L 5700,19875.74 L 5700,3700 Z M 6300,19875.74 L 14124.26,27700 L 26300,27700 L 26300,27800 L 28000,27800 L 28000,28200 L 26300,28200 L 26300,51800 L 28000,51800 L 28000,52200 L 26300,52200 L 26300,52300 L 20300,52300 L 20300,83700 L 37800,83700 L 37800,82500 L 38200,82500 L 38200,83700 L 38300,83700 L 38300,97700 L 89700,97700 L 89700,85700 L 89800,85700 L 89800,82800 L 90200,82800 L 90200,85700 L 90300,85700 L 99800,85700 L 99800,83500 L 100200,83500 L 100200,85700 L 100300,85700 L 111700,85700 L 111700,52200 L 111000,52200 L 111000,51800 L 111700,51800 L 111700,51700 L 111700,20300 L 96300,20300 L 95700,20300 L 95700,20200 L 93000,20200 L 93000,19800 L 95700,19800 L 95700,19700 L 95700,6300 L 84300,6300 L 84200,6300 L 84200,10500 L 83800,10500 L 83800,6300 L 83700,6300 L 60300,6300 L 60300,12300 L 60200,12300 L 60200,14000 L 59800,14000 L 59800,12300 L 59700,12300 L 34300,12300 L 34200,12300 L 34200,14200 L 33800,14200 L 33800,12300 L 33700,12300 L 33700,11700 L 33700,4300 L 6300,4300 Z M 90200,81200 L 89800,81200 L 89800,80800 L 90200,80800 Z M 84200,33700 L 84300,33700 L 84300,43875.74 L 92124.26,51700 L 96300,51700 L 106300,51700 L 106300,51800 L 107000,51800 L 107000,52200 L 106300,52200 L 106300,52300 L 106200,52300 L 106200,54000 L 105800,54000 L 105800,52300 L 96300,52300 L 96300,59700 L 105800,59700 L 105800,58000 L 106200,58000 L 106200,59700 L 106300,59700 L 106300,59814.59 L 106402.49,59865.84 L 106300,60070.82 L 106300,60300 L 106185.41,60300 L 100300,72070.82 L 100300,76300 L 100200,76300 L 100200,78500 L 99800,78500 L 99800,76300 L 90300,76300 L 90200,76300 L 90200,79200 L 89800,79200 L 89800,76300 L 89700,76300 L 56300,76300 L 55700,76300 L 55700,76200 L 54500,76200 L 54500,75800 L 55700,75800 L 55700,75700 L 55700,58200 L 53800,58200 L 53800,57800 L 55700,57800 L 55700,57700 L 55700,45093.18 L 55582.83,44922.75 L 55700,44842.19 L 55700,44700 L 55800,44700 L 55800,44000 L 56200,44000 L 56200,44498.44 L 71700,33842.19 L 71700,33700 L 71906.82,33700 L 72077.25,33582.83 L 72157.81,33700 L 83800,33700 L 83800,33000 L 84200,33000 Z M 38200,69700 L 38300,69700 L 47800,69700 L 47800,68500 L 48200,68500 L 48200,69700 L 48300,69700 L 48300,75800 L 49500,75800 L 49500,76200 L 48300,76200 L 48300,76300 L 47700,76300 L 38300,76300 L 38200,76300 L 38200,77500 L 37800,77500 L 37800,76300 L 37700,76300 L 37700,75700 L 37700,69700 L 37800,69700 L 37800,68500 L 38200,68500 Z M 56300,45157.81 L 56300,58300 L 56300,75700 L 90300,75700 L 99700,75700 L 99700,72185.41 L 99597.51,72134.16 L 99700,71929.18 L 99700,71700 L 99814.59,71700 L 105514.59,60300 L 96300,60300 L 95700,60300 L 95700,59700 L 95700,52300 L 92124.26,52300 L 92000,52424.26 L 91875.74,52300 L 91700,52300 L 91700,52124.26 L 83875.74,44300 L 83700,44300 L 83700,44124.26 L 83575.74,44000 L 83700,43875.74 L 83700,34300 L 72093.18,34300 Z M 38300,75700 L 47700,75700 L 47700,70300 L 38300,70300 Z M 34200,19700 L 34300,19700 L 34300,19800 L 42050,19800 L 42050,20200 L 34300,20200 L 34300,33700 L 47800,33700 L 47800,33500 L 48200,33500 L 48200,33700 L 48300,33700 L 48300,57800 L 50200,57800 L 50200,58200 L 48300,58200 L 48300,58300 L 48300,62300 L 48200,62300 L 48200,63500 L 47800,63500 L 47800,62300 L 38300,62300 L 38200,62300 L 38200,63500 L 37800,63500 L 37800,62300 L 37700,62300 L 37700,61700 L 37700,52300 L 34300,52300 L 33700,52300 L 33700,52200 L 32000,52200 L 32000,51800 L 33700,51800 L 33700,51700 L 33700,28200 L 32000,28200 L 32000,27800 L 33700,27800 L 33700,19700 L 33800,19700 L 33800,17800 L 34200,17800 Z M 34300,51700 L 38300,51700 L 38300,61700 L 47700,61700 L 47700,57700 L 47700,34300 L 34300,34300 Z M 52200,57800 L 52200,58200 L 51800,58200 L 51800,57800 Z M 84200,19700 L 84300,19700 L 84300,19800 L 87000,19800 L 87000,20200 L 84300,20200 L 84300,28300 L 84200,28300 L 84200,29000 L 83800,29000 L 83800,28300 L 83700,28300 L 72093.18,28300 L 56300,39157.81 L 56300,39300 L 56200,39300 L 56200,40000 L 55800,40000 L 55800,39300 L 55700,39300 L 55700,39093.18 L 55582.83,38922.75 L 55700,38842.19 L 55700,30200 L 54500,30200 L 54500,29800 L 55700,29800 L 55700,29700 L 56300,29700 L 59700,29700 L 59700,27700 L 59800,27700 L 59800,26000 L 60200,26000 L 60200,27700 L 60300,27700 L 71906.82,27700 L 72077.25,27582.83 L 72157.81,27700 L 83700,27700 L 83700,19700 L 83800,19700 L 83800,15500 L 84200,15500 Z M 60300,30300 L 56300,30300 L 56300,38429.69 L 71034.1,28300 L 60300,28300 Z M 48200,29800 L 49500,29800 L 49500,30200 L 48200,30200 L 48200,30500 L 47800,30500 L 47800,29800 L 47800,27000 L 48200,27000 Z M 60200,20200 L 60200,22000 L 59800,22000 L 59800,20200 L 48200,20200 L 48200,23000 L 47800,23000 L 47800,20200 L 45550,20200 L 45550,19800 L 48200,19800 L 59800,19800 L 59800,18000 L 60200,18000 Z M 34200,16200 L 33800,16200 L 33800,15800 L 34200,15800 Z" fill="url(#poche)" fill-rule="nonzero"/>
+<path d="M 6300,3700 L 34300,3700 L 34300,11700 L 59700,11700 L 59700,5700 L 60300,5700 L 84300,5700 L 96300,5700 L 96300,19700 L 112300,19700 L 112300,52300 L 112300,86300 L 100300,86300 L 99700,86300 L 90300,86300 L 90300,98300 L 38300,98300 L 37700,98300 L 37700,97700 L 37700,84300 L 20300,84300 L 19700,84300 L 19700,83700 L 19700,51700 L 20300,51700 L 25700,51700 L 25700,28300 L 14124.26,28300 L 14000,28424.26 L 13875.74,28300 L 13700,28300 L 13700,28124.26 L 5875.74,20300 L 5700,20300 L 5700,20124.26 L 5575.74,20000 L 5700,19875.74 L 5700,3700 Z M 6300,19875.74 L 14124.26,27700 L 26300,27700 L 26300,27800 L 28000,27800 L 28000,28200 L 26300,28200 L 26300,51800 L 28000,51800 L 28000,52200 L 26300,52200 L 26300,52300 L 20300,52300 L 20300,83700 L 37800,83700 L 37800,82500 L 38200,82500 L 38200,83700 L 38300,83700 L 38300,97700 L 89700,97700 L 89700,85700 L 89800,85700 L 89800,82800 L 90200,82800 L 90200,85700 L 90300,85700 L 99800,85700 L 99800,83500 L 100200,83500 L 100200,85700 L 100300,85700 L 111700,85700 L 111700,52200 L 111000,52200 L 111000,51800 L 111700,51800 L 111700,51700 L 111700,20300 L 96300,20300 L 95700,20300 L 95700,20200 L 93000,20200 L 93000,19800 L 95700,19800 L 95700,19700 L 95700,6300 L 84300,6300 L 84200,6300 L 84200,10500 L 83800,10500 L 83800,6300 L 83700,6300 L 60300,6300 L 60300,12300 L 60200,12300 L 60200,14000 L 59800,14000 L 59800,12300 L 59700,12300 L 34300,12300 L 34200,12300 L 34200,14200 L 33800,14200 L 33800,12300 L 33700,12300 L 33700,11700 L 33700,4300 L 6300,4300 Z M 90200,81200 L 89800,81200 L 89800,80800 L 90200,80800 Z M 84200,33700 L 84300,33700 L 84300,43875.74 L 92124.26,51700 L 96300,51700 L 106300,51700 L 106300,51800 L 107000,51800 L 107000,52200 L 106300,52200 L 106300,52300 L 106200,52300 L 106200,54000 L 105800,54000 L 105800,52300 L 96300,52300 L 96300,59700 L 105800,59700 L 105800,58000 L 106200,58000 L 106200,59700 L 106300,59700 L 106300,59814.59 L 106402.49,59865.84 L 106300,60070.82 L 106300,60300 L 106185.41,60300 L 100300,72070.82 L 100300,76300 L 100200,76300 L 100200,78500 L 99800,78500 L 99800,76300 L 90300,76300 L 90200,76300 L 90200,79200 L 89800,79200 L 89800,76300 L 89700,76300 L 56300,76300 L 55700,76300 L 55700,76200 L 54500,76200 L 54500,75800 L 55700,75800 L 55700,75700 L 55700,58200 L 53800,58200 L 53800,57800 L 55700,57800 L 55700,57700 L 55700,45093.18 L 55582.83,44922.75 L 55700,44842.19 L 55700,44700 L 55800,44700 L 55800,44000 L 56200,44000 L 56200,44498.44 L 71700,33842.19 L 71700,33700 L 71906.82,33700 L 72077.25,33582.83 L 72157.81,33700 L 83800,33700 L 83800,33000 L 84200,33000 Z M 38200,69700 L 38300,69700 L 47800,69700 L 47800,68500 L 48200,68500 L 48200,69700 L 48300,69700 L 48300,75800 L 49500,75800 L 49500,76200 L 48300,76200 L 48300,76300 L 47700,76300 L 38300,76300 L 38200,76300 L 38200,77500 L 37800,77500 L 37800,76300 L 37700,76300 L 37700,75700 L 37700,69700 L 37800,69700 L 37800,68500 L 38200,68500 Z M 56300,45157.81 L 56300,58300 L 56300,75700 L 90300,75700 L 99700,75700 L 99700,72185.41 L 99597.51,72134.16 L 99700,71929.18 L 99700,71700 L 99814.59,71700 L 105514.59,60300 L 96300,60300 L 95700,60300 L 95700,59700 L 95700,52300 L 92124.26,52300 L 92000,52424.26 L 91875.74,52300 L 91700,52300 L 91700,52124.26 L 83875.74,44300 L 83700,44300 L 83700,44124.26 L 83575.74,44000 L 83700,43875.74 L 83700,34300 L 72093.18,34300 Z M 38300,75700 L 47700,75700 L 47700,70300 L 38300,70300 Z M 34200,19700 L 34300,19700 L 34300,19800 L 42050,19800 L 42050,20200 L 34300,20200 L 34300,33700 L 47800,33700 L 47800,33500 L 48200,33500 L 48200,33700 L 48300,33700 L 48300,57800 L 50200,57800 L 50200,58200 L 48300,58200 L 48300,58300 L 48300,62300 L 48200,62300 L 48200,63500 L 47800,63500 L 47800,62300 L 38300,62300 L 38200,62300 L 38200,63500 L 37800,63500 L 37800,62300 L 37700,62300 L 37700,61700 L 37700,52300 L 34300,52300 L 33700,52300 L 33700,52200 L 32000,52200 L 32000,51800 L 33700,51800 L 33700,51700 L 33700,28200 L 32000,28200 L 32000,27800 L 33700,27800 L 33700,19700 L 33800,19700 L 33800,17800 L 34200,17800 Z M 34300,51700 L 38300,51700 L 38300,61700 L 47700,61700 L 47700,57700 L 47700,34300 L 34300,34300 Z M 52200,57800 L 52200,58200 L 51800,58200 L 51800,57800 Z M 84200,19700 L 84300,19700 L 84300,19800 L 87000,19800 L 87000,20200 L 84300,20200 L 84300,28300 L 84200,28300 L 84200,29000 L 83800,29000 L 83800,28300 L 83700,28300 L 72093.18,28300 L 56300,39157.81 L 56300,39300 L 56200,39300 L 56200,40000 L 55800,40000 L 55800,39300 L 55700,39300 L 55700,39093.18 L 55582.83,38922.75 L 55700,38842.19 L 55700,30200 L 54500,30200 L 54500,29800 L 55700,29800 L 55700,29700 L 56300,29700 L 59700,29700 L 59700,27700 L 59800,27700 L 59800,26000 L 60200,26000 L 60200,27700 L 60300,27700 L 71906.82,27700 L 72077.25,27582.83 L 72157.81,27700 L 83700,27700 L 83700,19700 L 83800,19700 L 83800,15500 L 84200,15500 Z M 60300,30300 L 56300,30300 L 56300,38429.69 L 71034.1,28300 L 60300,28300 Z M 48200,29800 L 49500,29800 L 49500,30200 L 48200,30200 L 48200,30500 L 47800,30500 L 47800,29800 L 47800,27000 L 48200,27000 Z M 60200,20200 L 60200,22000 L 59800,22000 L 59800,20200 L 48200,20200 L 48200,23000 L 47800,23000 L 47800,20200 L 45550,20200 L 45550,19800 L 48200,19800 L 59800,19800 L 59800,18000 L 60200,18000 Z M 34200,16200 L 33800,16200 L 33800,15800 L 34200,15800 Z" fill="none" stroke="#1b1b1b" stroke-width="125" stroke-linejoin="miter" stroke-miterlimit="4"/>
+</g>
+<g id="A-DOOR" inkscape:groupmode="layer" inkscape:label="A-DOOR">
+<polygon points="50200,58325 51800,58325 51800,57675 50200,57675" fill="#ffffff"/>
+<line x1="50200" y1="58000" x2="50200" y2="56400" stroke="#555555" stroke-width="58.5"/>
+<path d="M 50200,56400 A 1600 1600 0 0 1 51800,58000" fill="none" stroke="#555555" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="52200,58325 53800,58325 53800,57675 52200,57675" fill="#ffffff"/>
+<line x1="53800" y1="58000" x2="53800" y2="56400" stroke="#555555" stroke-width="58.5"/>
+<path d="M 53800,56400 A 1600 1600 0 0 0 52200,58000" fill="none" stroke="#555555" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="89675,79200 89675,80800 90325,80800 90325,79200" fill="#ffffff"/>
+<line x1="90000" y1="79200" x2="91600" y2="79200" stroke="#555555" stroke-width="58.5"/>
+<path d="M 91600,79200 A 1600 1600 0 0 1 90000,80800" fill="none" stroke="#555555" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="89675,81200 89675,82800 90325,82800 90325,81200" fill="#ffffff"/>
+<line x1="90000" y1="82800" x2="91600" y2="82800" stroke="#555555" stroke-width="58.5"/>
+<path d="M 91600,82800 A 1600 1600 0 0 0 90000,81200" fill="none" stroke="#555555" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="33675,14200 33675,15800 34325,15800 34325,14200" fill="#ffffff"/>
+<line x1="34000" y1="14200" x2="32400" y2="14200" stroke="#555555" stroke-width="58.5"/>
+<path d="M 32400,14200 A 1600 1600 0 0 0 34000,15800" fill="none" stroke="#555555" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="33675,16200 33675,17800 34325,17800 34325,16200" fill="#ffffff"/>
+<line x1="34000" y1="17800" x2="32400" y2="17800" stroke="#555555" stroke-width="58.5"/>
+<path d="M 32400,17800 A 1600 1600 0 0 1 34000,16200" fill="none" stroke="#555555" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="28000,28325 32000,28325 32000,27675 28000,27675" fill="#ffffff"/>
+<line x1="28000" y1="28200" x2="32000" y2="28200" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="28000" y1="27800" x2="32000" y2="27800" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="28000,52325 32000,52325 32000,51675 28000,51675" fill="#ffffff"/>
+<line x1="28000" y1="52200" x2="32000" y2="52200" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="28000" y1="51800" x2="32000" y2="51800" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="42050,20325 45550,20325 45550,19675 42050,19675" fill="#ffffff"/>
+<line x1="42050" y1="20200" x2="45550" y2="20200" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="42050" y1="19800" x2="45550" y2="19800" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="59675,14000 59675,18000 60325,18000 60325,14000" fill="#ffffff"/>
+<line x1="59800" y1="14000" x2="59800" y2="18000" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="60200" y1="14000" x2="60200" y2="18000" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="47675,23000 47675,27000 48325,27000 48325,23000" fill="#ffffff"/>
+<line x1="47800" y1="23000" x2="47800" y2="27000" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="48200" y1="23000" x2="48200" y2="27000" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="49500,30325 54500,30325 54500,29675 49500,29675" fill="#ffffff"/>
+<line x1="49500" y1="30200" x2="54500" y2="30200" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="49500" y1="29800" x2="54500" y2="29800" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="59675,22000 59675,26000 60325,26000 60325,22000" fill="#ffffff"/>
+<line x1="59800" y1="22000" x2="59800" y2="26000" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="60200" y1="22000" x2="60200" y2="26000" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="55675,40000 55675,44000 56325,44000 56325,40000" fill="#ffffff"/>
+<line x1="55800" y1="40000" x2="55800" y2="44000" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="56200" y1="40000" x2="56200" y2="44000" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="83675,29000 83675,33000 84325,33000 84325,29000" fill="#ffffff"/>
+<line x1="83800" y1="29000" x2="83800" y2="33000" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="84200" y1="29000" x2="84200" y2="33000" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="83675,10500 83675,15500 84325,15500 84325,10500" fill="#ffffff"/>
+<line x1="83800" y1="10500" x2="83800" y2="15500" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="84200" y1="10500" x2="84200" y2="15500" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="87000,20325 93000,20325 93000,19675 87000,19675" fill="#ffffff"/>
+<line x1="87000" y1="20200" x2="93000" y2="20200" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="87000" y1="19800" x2="93000" y2="19800" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="107000,52325 111000,52325 111000,51675 107000,51675" fill="#ffffff"/>
+<line x1="107000" y1="52200" x2="111000" y2="52200" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="107000" y1="51800" x2="111000" y2="51800" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="105675,54000 105675,58000 106325,58000 106325,54000" fill="#ffffff"/>
+<line x1="105800" y1="54000" x2="105800" y2="58000" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="106200" y1="54000" x2="106200" y2="58000" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="99675,78500 99675,83500 100325,83500 100325,78500" fill="#ffffff"/>
+<line x1="99800" y1="78500" x2="99800" y2="83500" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="100200" y1="78500" x2="100200" y2="83500" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="49500,76325 54500,76325 54500,75675 49500,75675" fill="#ffffff"/>
+<line x1="49500" y1="76200" x2="54500" y2="76200" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="49500" y1="75800" x2="54500" y2="75800" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="47675,63500 47675,68500 48325,68500 48325,63500" fill="#ffffff"/>
+<line x1="47800" y1="63500" x2="47800" y2="68500" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="48200" y1="63500" x2="48200" y2="68500" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="37675,63500 37675,68500 38325,68500 38325,63500" fill="#ffffff"/>
+<line x1="37800" y1="63500" x2="37800" y2="68500" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="38200" y1="63500" x2="38200" y2="68500" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<polygon points="37675,77500 37675,82500 38325,82500 38325,77500" fill="#ffffff"/>
+<line x1="37800" y1="77500" x2="37800" y2="82500" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+<line x1="38200" y1="77500" x2="38200" y2="82500" stroke="#1b1b1b" stroke-width="45" stroke-dasharray="180 135"/>
+</g>
+<g id="A-GLAZ" inkscape:groupmode="layer" inkscape:label="A-GLAZ">
+<polygon points="47675,30500 47675,33500 48325,33500 48325,30500" fill="#ffffff"/>
+<line x1="47800" y1="30500" x2="47800" y2="33500" stroke="#1b1b1b" stroke-width="45"/>
+<line x1="48200" y1="30500" x2="48200" y2="33500" stroke="#1b1b1b" stroke-width="45"/>
+<line x1="48000" y1="30500" x2="48000" y2="33500" stroke="#3a6ea5" stroke-width="45"/>
+</g>
+<g id="A-ANNO-TEXT" inkscape:groupmode="layer" inkscape:label="A-ANNO-TEXT">
+<text x="20000" y="15825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">B Site</text>
+<text x="20000" y="16787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">640.0 m²</text>
+<text x="47000" y="15825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">B Doors</text>
+<text x="47000" y="16787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">208.0 m²</text>
+<text x="30000" y="39825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Upper Tunnels</text>
+<text x="30000" y="40787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">192.0 m²</text>
+<text x="41000" y="26825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Window</text>
+<text x="41000" y="27787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">196.0 m²</text>
+<text x="54000" y="24825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">CT Mid</text>
+<text x="54000" y="25787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">120.0 m²</text>
+<text x="52000" y="39625" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Mid</text>
+<text x="52000" y="40587.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">224.0 m²</text>
+<text x="71000" y="31325" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Catwalk</text>
+<text x="71000" y="32287.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">168.0 m²</text>
+<text x="72000" y="16825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">CT Spawn</text>
+<text x="72000" y="17787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">528.0 m²</text>
+<text x="90000" y="12825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">A Ramp</text>
+<text x="90000" y="13787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">168.0 m²</text>
+<text x="99000" y="35825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">A Site</text>
+<text x="99000" y="36787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">864.0 m²</text>
+<text x="101000" y="55825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">The Pit</text>
+<text x="101000" y="56787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">80.0 m²</text>
+<text x="108500" y="65825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">A Long</text>
+<text x="108500" y="66787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">324.0 m²</text>
+<text x="64000" y="86825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">T Spawn</text>
+<text x="64000" y="87787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">1144.0 m²</text>
+<text x="95000" y="80825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Long Doors</text>
+<text x="95000" y="81787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">100.0 m²</text>
+<text x="52000" y="66825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">T Mid</text>
+<text x="52000" y="67787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">144.0 m²</text>
+<text x="43000" y="65825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Lower Tunnels</text>
+<text x="43000" y="66787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">80.0 m²</text>
+<text x="29000" y="67825" font-size="875" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Outside Tunnels</text>
+<text x="29000" y="68787.5" font-size="625" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">576.0 m²</text>
+</g>
+<g id="A-ANNO-DIMS" inkscape:groupmode="layer" inkscape:label="A-ANNO-DIMS">
+<line x1="6000" y1="20424.26" x2="6000" y2="101800" stroke="#0E5484" stroke-width="31.5"/>
+<line x1="112300" y1="86300" x2="112300" y2="101800" stroke="#0E5484" stroke-width="31.5"/>
+<line x1="6000" y1="101800" x2="112300" y2="101800" stroke="#0E5484" stroke-width="45"/>
+<line x1="6212.13" y1="102012.13" x2="5787.87" y2="101587.87" stroke="#0E5484" stroke-width="45"/>
+<line x1="112512.13" y1="102012.13" x2="112087.87" y2="101587.87" stroke="#0E5484" stroke-width="45"/>
+<text x="59150" y="102237.5" font-size="625" fill="#0E5484" text-anchor="middle" dominant-baseline="central" transform="rotate(0 59150 102237.5)">106300</text>
+<line x1="5700" y1="4000" x2="2500" y2="4000" stroke="#0E5484" stroke-width="31.5"/>
+<line x1="37700" y1="98300" x2="2500" y2="98300" stroke="#0E5484" stroke-width="31.5"/>
+<line x1="2500" y1="4000" x2="2500" y2="98300" stroke="#0E5484" stroke-width="45"/>
+<line x1="2287.87" y1="4212.13" x2="2712.13" y2="3787.87" stroke="#0E5484" stroke-width="45"/>
+<line x1="2287.87" y1="98512.13" x2="2712.13" y2="98087.87" stroke="#0E5484" stroke-width="45"/>
+<text x="2062.5" y="51150" font-size="625" fill="#0E5484" text-anchor="middle" dominant-baseline="central" transform="rotate(90 2062.5 51150)">94300</text>
+</g>
+<g id="A-ANNO" inkscape:groupmode="layer" inkscape:label="A-ANNO">
+<polygon points="5575.74,109962.5 14575.74,109962.5 14575.74,135462.5 5575.74,135462.5" fill="none" stroke="#333333" stroke-width="45"/>
+<text x="5755.74" y="110387.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">ROOM SCHEDULE</text>
+<line x1="5575.74" y1="110812.5" x2="14575.74" y2="110812.5" stroke="#333333" stroke-width="45"/>
+<text x="6263.24" y="111237.5" font-size="380" fill="#888888" text-anchor="middle" dominant-baseline="central" font-weight="600">NO.</text>
+<text x="7130.74" y="111237.5" font-size="380" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">NAME</text>
+<text x="14395.74" y="111237.5" font-size="380" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">AREA (m²)</text>
+<line x1="5575.74" y1="111662.5" x2="14575.74" y2="111662.5" stroke="#333333" stroke-width="45"/>
+<text x="5755.74" y="112087.5" font-size="475" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">B Side</text>
+<text x="6263.24" y="112937.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">01</text>
+<text x="7130.74" y="112937.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">B Site</text>
+<text x="14395.74" y="112937.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">640.00</text>
+<line x1="5575.74" y1="113362.5" x2="14575.74" y2="113362.5" stroke="#333333" stroke-width="24.75"/>
+<text x="6263.24" y="113787.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">02</text>
+<text x="7130.74" y="113787.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">B Doors</text>
+<text x="14395.74" y="113787.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">208.00</text>
+<line x1="5575.74" y1="114212.5" x2="14575.74" y2="114212.5" stroke="#333333" stroke-width="24.75"/>
+<text x="6263.24" y="114637.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">03</text>
+<text x="7130.74" y="114637.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">Upper Tunnels</text>
+<text x="14395.74" y="114637.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">192.00</text>
+<line x1="6950.74" y1="112512.5" x2="6950.74" y2="115062.5" stroke="#333333" stroke-width="24.75"/>
+<line x1="11950.74" y1="112512.5" x2="11950.74" y2="115062.5" stroke="#333333" stroke-width="24.75"/>
+<line x1="5575.74" y1="115062.5" x2="14575.74" y2="115062.5" stroke="#333333" stroke-width="24.75"/>
+<text x="5755.74" y="115487.5" font-size="475" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">SUBTOTAL</text>
+<text x="14395.74" y="115487.5" font-size="475" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">1040.00</text>
+<line x1="5575.74" y1="115912.5" x2="14575.74" y2="115912.5" stroke="#333333" stroke-width="45"/>
+<text x="5755.74" y="116337.5" font-size="475" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">Mid</text>
+<text x="6263.24" y="117187.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">04</text>
+<text x="7130.74" y="117187.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">Window</text>
+<text x="14395.74" y="117187.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">196.00</text>
+<line x1="5575.74" y1="117612.5" x2="14575.74" y2="117612.5" stroke="#333333" stroke-width="24.75"/>
+<text x="6263.24" y="118037.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">05</text>
+<text x="7130.74" y="118037.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">CT Mid</text>
+<text x="14395.74" y="118037.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">120.00</text>
+<line x1="5575.74" y1="118462.5" x2="14575.74" y2="118462.5" stroke="#333333" stroke-width="24.75"/>
+<text x="6263.24" y="118887.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">06</text>
+<text x="7130.74" y="118887.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">Mid</text>
+<text x="14395.74" y="118887.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">224.00</text>
+<line x1="5575.74" y1="119312.5" x2="14575.74" y2="119312.5" stroke="#333333" stroke-width="24.75"/>
+<text x="6263.24" y="119737.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">07</text>
+<text x="7130.74" y="119737.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">Catwalk</text>
+<text x="14395.74" y="119737.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">168.00</text>
+<line x1="6950.74" y1="116762.5" x2="6950.74" y2="120162.5" stroke="#333333" stroke-width="24.75"/>
+<line x1="11950.74" y1="116762.5" x2="11950.74" y2="120162.5" stroke="#333333" stroke-width="24.75"/>
+<line x1="5575.74" y1="120162.5" x2="14575.74" y2="120162.5" stroke="#333333" stroke-width="24.75"/>
+<text x="5755.74" y="120587.5" font-size="475" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">SUBTOTAL</text>
+<text x="14395.74" y="120587.5" font-size="475" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">708.00</text>
+<line x1="5575.74" y1="121012.5" x2="14575.74" y2="121012.5" stroke="#333333" stroke-width="45"/>
+<text x="5755.74" y="121437.5" font-size="475" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">CT Side</text>
+<text x="6263.24" y="122287.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">08</text>
+<text x="7130.74" y="122287.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">CT Spawn</text>
+<text x="14395.74" y="122287.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">528.00</text>
+<line x1="5575.74" y1="122712.5" x2="14575.74" y2="122712.5" stroke="#333333" stroke-width="24.75"/>
+<text x="6263.24" y="123137.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">09</text>
+<text x="7130.74" y="123137.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">A Ramp</text>
+<text x="14395.74" y="123137.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">168.00</text>
+<line x1="6950.74" y1="121862.5" x2="6950.74" y2="123562.5" stroke="#333333" stroke-width="24.75"/>
+<line x1="11950.74" y1="121862.5" x2="11950.74" y2="123562.5" stroke="#333333" stroke-width="24.75"/>
+<line x1="5575.74" y1="123562.5" x2="14575.74" y2="123562.5" stroke="#333333" stroke-width="24.75"/>
+<text x="5755.74" y="123987.5" font-size="475" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">SUBTOTAL</text>
+<text x="14395.74" y="123987.5" font-size="475" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">696.00</text>
+<line x1="5575.74" y1="124412.5" x2="14575.74" y2="124412.5" stroke="#333333" stroke-width="45"/>
+<text x="5755.74" y="124837.5" font-size="475" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">A Side</text>
+<text x="6263.24" y="125687.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">10</text>
+<text x="7130.74" y="125687.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">A Site</text>
+<text x="14395.74" y="125687.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">864.00</text>
+<line x1="5575.74" y1="126112.5" x2="14575.74" y2="126112.5" stroke="#333333" stroke-width="24.75"/>
+<text x="6263.24" y="126537.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">11</text>
+<text x="7130.74" y="126537.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">The Pit</text>
+<text x="14395.74" y="126537.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">80.00</text>
+<line x1="5575.74" y1="126962.5" x2="14575.74" y2="126962.5" stroke="#333333" stroke-width="24.75"/>
+<text x="6263.24" y="127387.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">12</text>
+<text x="7130.74" y="127387.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">A Long</text>
+<text x="14395.74" y="127387.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">324.00</text>
+<line x1="6950.74" y1="125262.5" x2="6950.74" y2="127812.5" stroke="#333333" stroke-width="24.75"/>
+<line x1="11950.74" y1="125262.5" x2="11950.74" y2="127812.5" stroke="#333333" stroke-width="24.75"/>
+<line x1="5575.74" y1="127812.5" x2="14575.74" y2="127812.5" stroke="#333333" stroke-width="24.75"/>
+<text x="5755.74" y="128237.5" font-size="475" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">SUBTOTAL</text>
+<text x="14395.74" y="128237.5" font-size="475" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">1268.00</text>
+<line x1="5575.74" y1="128662.5" x2="14575.74" y2="128662.5" stroke="#333333" stroke-width="45"/>
+<text x="5755.74" y="129087.5" font-size="475" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">T Side</text>
+<text x="6263.24" y="129937.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">13</text>
+<text x="7130.74" y="129937.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">T Spawn</text>
+<text x="14395.74" y="129937.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">1144.00</text>
+<line x1="5575.74" y1="130362.5" x2="14575.74" y2="130362.5" stroke="#333333" stroke-width="24.75"/>
+<text x="6263.24" y="130787.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">14</text>
+<text x="7130.74" y="130787.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">Long Doors</text>
+<text x="14395.74" y="130787.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">100.00</text>
+<line x1="5575.74" y1="131212.5" x2="14575.74" y2="131212.5" stroke="#333333" stroke-width="24.75"/>
+<text x="6263.24" y="131637.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">15</text>
+<text x="7130.74" y="131637.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">T Mid</text>
+<text x="14395.74" y="131637.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">144.00</text>
+<line x1="5575.74" y1="132062.5" x2="14575.74" y2="132062.5" stroke="#333333" stroke-width="24.75"/>
+<text x="6263.24" y="132487.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">16</text>
+<text x="7130.74" y="132487.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">Lower Tunnels</text>
+<text x="14395.74" y="132487.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">80.00</text>
+<line x1="5575.74" y1="132912.5" x2="14575.74" y2="132912.5" stroke="#333333" stroke-width="24.75"/>
+<text x="6263.24" y="133337.5" font-size="475" fill="#333333" text-anchor="middle" dominant-baseline="central">17</text>
+<text x="7130.74" y="133337.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">Outside Tunnels</text>
+<text x="14395.74" y="133337.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">576.00</text>
+<line x1="6950.74" y1="129512.5" x2="6950.74" y2="133762.5" stroke="#333333" stroke-width="24.75"/>
+<line x1="11950.74" y1="129512.5" x2="11950.74" y2="133762.5" stroke="#333333" stroke-width="24.75"/>
+<line x1="5575.74" y1="133762.5" x2="14575.74" y2="133762.5" stroke="#333333" stroke-width="24.75"/>
+<text x="5755.74" y="134187.5" font-size="475" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">SUBTOTAL</text>
+<text x="14395.74" y="134187.5" font-size="475" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">2044.00</text>
+<line x1="5575.74" y1="134612.5" x2="14575.74" y2="134612.5" stroke="#333333" stroke-width="45"/>
+<text x="5755.74" y="135037.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">TOTAL</text>
+<text x="14395.74" y="135037.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="600">5756.00</text>
+<polygon points="15325.74,109962.5 22075.74,109962.5 22075.74,111662.5 15325.74,111662.5" fill="none" stroke="#333333" stroke-width="45"/>
+<text x="15460.74" y="110387.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">LEGEND</text>
+<line x1="15325.74" y1="110812.5" x2="22075.74" y2="110812.5" stroke="#333333" stroke-width="45"/>
+<path d="M 15460.74,110982.5 L 16440.74,110982.5 L 16440.74,111492.5 L 15460.74,111492.5 Z" fill="url(#poche)" fill-rule="nonzero"/>
+<polygon points="15460.74,110982.5 16440.74,110982.5 16440.74,111492.5 15460.74,111492.5" fill="none" stroke="#333333" stroke-width="45"/>
+<text x="16710.74" y="111237.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">poche</text>
+</g>
+<g><polygon points="111175,512.5 110612.5,2312.5 111175,1918.75 111737.5,2312.5" fill="#333333" transform="rotate(0 111175 1637.5)"/><text x="111175" y="-7.5" font-size="650" fill="#333333" text-anchor="middle" dominant-baseline="central">N</text></g>
+<g><rect x="5575.74" y="104112.5" width="2500" height="350" fill="#333333"/><rect x="8075.74" y="104112.5" width="2500" height="350" fill="none" stroke="#333333" stroke-width="45"/><text x="5575.74" y="104962.5" font-size="500" fill="#333333" text-anchor="start" dominant-baseline="central">0</text><text x="10575.74" y="104962.5" font-size="500" fill="#333333" text-anchor="middle" dominant-baseline="central">5 m</text></g>
+<g><rect x="103800" y="104112.5" width="8500" height="4600" fill="none" stroke="#333333" stroke-width="45"/><text x="104225" y="104687.5" font-size="380" fill="#888888" dominant-baseline="central">PROJECT</text><text x="111875" y="104687.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">de_dust2 — competitive layout, as built</text><text x="104225" y="105837.5" font-size="380" fill="#888888" dominant-baseline="central">DRAWN BY</text><text x="111875" y="105837.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">ArchLang</text><line x1="103800" y1="105262.5" x2="112300" y2="105262.5" stroke="#333333" stroke-width="22.5"/><text x="104225" y="106987.5" font-size="380" fill="#888888" dominant-baseline="central">DATE</text><text x="111875" y="106987.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">2026-08-25</text><line x1="103800" y1="106412.5" x2="112300" y2="106412.5" stroke="#333333" stroke-width="22.5"/><text x="104225" y="108137.5" font-size="380" fill="#888888" dominant-baseline="central">SCALE</text><text x="111875" y="108137.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central">1:250</text><line x1="103800" y1="107562.5" x2="112300" y2="107562.5" stroke="#333333" stroke-width="22.5"/></g>
+</svg>

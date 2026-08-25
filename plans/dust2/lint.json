@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "strict": false,
+  "diagnostics": [
+    {
+      "code": "W_FURNITURE_OVERLAP",
+      "severity": "warning",
+      "message": "Furniture \"Crate\" overlaps \"Crate\".",
+      "line": 233,
+      "col": 3,
+      "span": [
+        13800,
+        13883
+      ],
+      "fix": "Move or resize one so they no longer intersect; leave a walkway between them.",
+      "hints": [
+        "Move or resize one piece so they don't intersect; leave a walkway between them."
+      ]
+    },
+    {
+      "code": "W_FURNITURE_OVERLAP",
+      "severity": "warning",
+      "message": "Furniture \"Crate\" overlaps \"Crate\".",
+      "line": 240,
+      "col": 3,
+      "span": [
+        14317,
+        14400
+      ],
+      "fix": "Move or resize one so they no longer intersect; leave a walkway between them.",
+      "hints": [
+        "Move or resize one piece so they don't intersect; leave a walkway between them."
+      ]
+    },
+    {
+      "code": "W_NO_ENTRANCE",
+      "severity": "warning",
+      "message": "The plan has no exterior door or opening — there is no way into the building.",
+      "fix": "Add a `door` on an `exterior` wall.",
+      "hints": [
+        "Add a `door` (or a cased `opening`) on an `exterior` wall."
+      ]
+    }
+  ]
+}

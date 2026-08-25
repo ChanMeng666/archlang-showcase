@@ -1,0 +1,21 @@
+warning[W_FURNITURE_OVERLAP]: Furniture "Crate" overlaps "Crate".
+    --> 233:3
+    |
+233 |   furniture id=c_b1b crate at (10800,8800)   size 2400x2400 label "Crate" in r_b_site
+    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: Move or resize one piece so they don't intersect; leave a walkway between them.
+  = fix: Move or resize one so they no longer intersect; leave a walkway between them.
+
+warning[W_FURNITURE_OVERLAP]: Furniture "Crate" overlaps "Crate".
+    --> 240:3
+    |
+240 |   furniture id=c_a1b crate at (95000,31000)  size 3000x3000 label "Crate" in r_a_site
+    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: Move or resize one piece so they don't intersect; leave a walkway between them.
+  = fix: Move or resize one so they no longer intersect; leave a walkway between them.
+
+warning[W_NO_ENTRANCE]: The plan has no exterior door or opening — there is no way into the building.
+  = help: Add a `door` (or a cased `opening`) on an `exterior` wall.
+  = fix: Add a `door` on an `exterior` wall.
+
+✓ ok (3 warnings)
