@@ -1,0 +1,6 @@
+# Generated SVGs are byte-for-byte reproducible from their .arch source — a CRLF
+# rewrite on checkout would make every one of them look modified on Windows.
+* text=auto eol=lf
+*.svg text eol=lf
+*.arch text eol=lf
+*.png binary

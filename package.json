@@ -1,0 +1,17 @@
+{
+  "name": "archlang-showcase",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Famous buildings, TV homes and game maps — compiled, not drawn. Fun floor plans written in ArchLang.",
+  "license": "MIT",
+  "scripts": {
+    "render": "node scripts/render.mjs",
+    "permalink": "node scripts/permalink.mjs",
+    "overlay": "node scripts/overlay.mjs"
+  },
+  "devDependencies": {
+    "@chanmeng666/archlang": "^1.26.1",
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}
