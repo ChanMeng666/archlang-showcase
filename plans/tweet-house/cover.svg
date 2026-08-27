@@ -161,7 +161,13 @@ m-687 -344 c0 -33 -4 -60 -10 -60 -6 0 -10 27 -10 60 0 33 4 60 10 60 6 0 10
 <polygon points="4000,0 6000,0 6000,4000 4000,4000" fill="#fbfaf7"/>
 </g>
 <g id="A-FURN" inkscape:groupmode="layer" inkscape:label="A-FURN">
-<polygon points="4400,1000 5800,1000 5800,3000 4400,3000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="9.92"/>
+<polygon points="5800,1000 5800,3000 4400,3000 4400,1000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="9.92"/>
+<polygon points="5800,1000 5800,3000 5716,3000 5716,1000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="9.92"/>
+<polygon points="5674,1871.4 5668.78,1897.65 5653.91,1919.91 5631.65,1934.78 5605.4,1940 5546.6,1940 5520.35,1934.78 5498.09,1919.91 5483.22,1897.65 5478,1871.4 5478,1248.6 5483.22,1222.35 5498.09,1200.09 5520.35,1185.22 5546.6,1180 5605.4,1180 5631.65,1185.22 5653.91,1200.09 5668.78,1222.35 5674,1248.6" fill="#ffffff" stroke="#a8a29a" stroke-width="9.92"/>
+<polygon points="5674,2751.4 5668.78,2777.65 5653.91,2799.91 5631.65,2814.78 5605.4,2820 5546.6,2820 5520.35,2814.78 5498.09,2799.91 5483.22,2777.65 5478,2751.4 5478,2128.6 5483.22,2102.35 5498.09,2080.09 5520.35,2065.22 5546.6,2060 5605.4,2060 5631.65,2065.22 5653.91,2080.09 5668.78,2102.35 5674,2128.6" fill="#ffffff" stroke="#a8a29a" stroke-width="9.92"/>
+<line x1="5352" y1="1000" x2="5352" y2="3000" stroke="#a8a29a" stroke-width="5.46"/>
+<line x1="5296" y1="1000" x2="5296" y2="3000" stroke="#a8a29a" stroke-width="5.46"/>
+<line x1="5352" y1="3000" x2="5296" y2="2560" stroke="#a8a29a" stroke-width="5.46"/>
 </g>
 <g id="A-WALL" inkscape:groupmode="layer" inkscape:label="A-WALL">
 <path d="M -100,-100 L -100,4100 L 1500,4100 L 1500,3900 L 100,3900 L 100,100 L 3900,100 L 3900,1600 L 4100,1600 L 4100,100 L 5900,100 L 5900,1500 L 6100,1500 L 6100,-100 Z M 3900,3900 L 2500,3900 L 2500,4100 L 6100,4100 L 6100,2500 L 5900,2500 L 5900,3900 L 4100,3900 L 4100,2400 L 3900,2400 Z" fill="url(#poche)" fill-rule="nonzero"/>
@@ -190,59 +196,61 @@ m-687 -344 c0 -33 -4 -60 -10 -60 -6 0 -10 27 -10 60 0 33 4 60 10 60 6 0 10
 <g><polygon points="5821,-958.7 5681.5,-512.3 5821,-609.95 5960.5,-512.3" fill="#333333" transform="rotate(0 5821 -679.7)"/><text x="5821" y="-1087.66" font-size="161.2" fill="#333333" text-anchor="middle" dominant-baseline="central">N</text></g>
 <g><rect x="-100" y="4410" width="500" height="86.8" fill="#333333"/><rect x="400" y="4410" width="500" height="86.8" fill="none" stroke="#333333" stroke-width="9.92"/><text x="-100" y="4620.8" font-size="124" fill="#333333" text-anchor="start" dominant-baseline="central">0</text><text x="900" y="4620.8" font-size="124" fill="#333333" text-anchor="middle" dominant-baseline="central">1 m</text></g>
 </svg>
-<rect x="1104" y="598.5" width="378" height="172.5" rx="14" fill="#171b23" filter="url(#chipShadow)"/>
-<text x="1122" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">room</text>
-<text x="1167" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
-<text x="1185" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">(</text>
-<text x="1194" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">0</text>
-<text x="1203" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">,</text>
-<text x="1212" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">0</text>
-<text x="1221" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">)</text>
-<text x="1230" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">size</text>
-<text x="1275" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">4mx4m</text>
-<text x="1329" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">label</text>
-<text x="1374" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#e2b95e" text-anchor="start">&quot;Living&quot;</text>
-<text x="1122" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">room</text>
-<text x="1167" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
-<text x="1185" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">(</text>
-<text x="1194" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">4m</text>
-<text x="1212" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">,</text>
-<text x="1221" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">0</text>
-<text x="1230" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">)</text>
-<text x="1239" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">size</text>
-<text x="1284" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">2mx4m</text>
-<text x="1338" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">label</text>
-<text x="1383" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#e2b95e" text-anchor="start">&quot;Bed&quot;</text>
-<text x="1122" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">door</text>
-<text x="1167" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">on</text>
-<text x="1194" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w</text>
-<text x="1212" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
-<text x="1239" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">10m</text>
-<text x="1275" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">width</text>
-<text x="1329" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">1m</text>
-<text x="1122" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">door</text>
-<text x="1167" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">on</text>
-<text x="1194" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w</text>
-<text x="1212" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
-<text x="1239" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">22m</text>
-<text x="1275" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">width</text>
-<text x="1329" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">800</text>
-<text x="1122" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">window</text>
-<text x="1185" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">on</text>
-<text x="1212" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w</text>
-<text x="1230" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
-<text x="1257" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">16m</text>
-<text x="1293" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">width</text>
-<text x="1347" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">1m</text>
-<text x="1122" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">furniture</text>
-<text x="1212" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">bed</text>
-<text x="1248" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
-<text x="1266" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">(</text>
-<text x="1275" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">4.4m</text>
-<text x="1311" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">,</text>
-<text x="1320" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">1m</text>
-<text x="1338" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">)</text>
-<text x="1347" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">size</text>
-<text x="1392" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">1.4mx2m</text>
+<rect x="1014" y="598.5" width="468" height="172.5" rx="14" fill="#171b23" filter="url(#chipShadow)"/>
+<text x="1032" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">room</text>
+<text x="1077" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
+<text x="1095" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">(</text>
+<text x="1104" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">0</text>
+<text x="1113" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">,</text>
+<text x="1122" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">0</text>
+<text x="1131" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">)</text>
+<text x="1140" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">size</text>
+<text x="1185" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">4mx4m</text>
+<text x="1239" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">label</text>
+<text x="1284" y="628.2" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#e2b95e" text-anchor="start">&quot;Living&quot;</text>
+<text x="1032" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">room</text>
+<text x="1077" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
+<text x="1095" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">(</text>
+<text x="1104" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">4m</text>
+<text x="1122" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">,</text>
+<text x="1131" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">0</text>
+<text x="1140" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">)</text>
+<text x="1149" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">size</text>
+<text x="1194" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">2mx4m</text>
+<text x="1248" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">label</text>
+<text x="1293" y="652.5" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#e2b95e" text-anchor="start">&quot;Bed&quot;</text>
+<text x="1032" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">door</text>
+<text x="1077" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">on</text>
+<text x="1104" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w</text>
+<text x="1122" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
+<text x="1149" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">10m</text>
+<text x="1185" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">width</text>
+<text x="1239" y="676.8" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">1m</text>
+<text x="1032" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">door</text>
+<text x="1077" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">on</text>
+<text x="1104" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w</text>
+<text x="1122" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
+<text x="1149" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">22m</text>
+<text x="1185" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">width</text>
+<text x="1239" y="701.1" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">800</text>
+<text x="1032" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">window</text>
+<text x="1095" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">on</text>
+<text x="1122" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">w</text>
+<text x="1140" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
+<text x="1167" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">16m</text>
+<text x="1203" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">width</text>
+<text x="1257" y="725.4" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">1m</text>
+<text x="1032" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="#f0a45f" text-anchor="start">furniture</text>
+<text x="1122" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#dfe3ea" text-anchor="start">bed</text>
+<text x="1158" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">at</text>
+<text x="1176" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">(</text>
+<text x="1185" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">4.4m</text>
+<text x="1221" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">,</text>
+<text x="1230" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">1m</text>
+<text x="1248" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">)</text>
+<text x="1257" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">size</text>
+<text x="1302" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">1.4mx2m</text>
+<text x="1374" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#72cf90" text-anchor="start">rotate</text>
+<text x="1437" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#5fcbd8" text-anchor="start">90</text>
 <text x="1455" y="749.7" font-family="IBM Plex Mono" font-size="15" font-weight="400" fill="#aab2be" text-anchor="start">}</text>
 </svg>

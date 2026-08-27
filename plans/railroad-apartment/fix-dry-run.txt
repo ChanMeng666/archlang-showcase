@@ -9,5 +9,15 @@
  
    # ----------------------------------------------------------------- windows
    # Two. In an 18-metre-deep apartment.
+@@ -92,7 +92,7 @@
+   # A full-size bed and a wardrobe. The wardrobe goes where the wardrobe fits,
+   # which is behind the door.
+   furniture id=f_bed1  bed  in r_bed1 anchor left flush size 1400x1900 label "Bed"
+-  furniture id=f_robe1 robe at (1650,6450) size 600x900 label "Wardrobe" in r_bed1
++  furniture id=f_robe1 robe at (1650,6450) size 600x900 label "Wardrobe" rotate 90 in r_bed1
+ 
+   # ------------------------------------------------------------- the kitchen
+   # A galley along the party wall, and — the listing photo's proudest moment —
   applied [W_SWING_OBSTRUCTED] hang the leaf on the other jamb (`hinge right`) — the flipped swing is clear
+  applied [W_FIXTURE_BACK_TO_ROOM] turn "Wardrobe" to `rotate 90` so its back is against the wall
   (dry run — nothing written)

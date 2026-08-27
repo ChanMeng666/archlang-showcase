@@ -108,6 +108,22 @@ warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Bedroom 1" squeezes t
    = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
   = fix: Widen the tightest door/opening on the route to at least the minimum, move the furniture pinching it, or add a second way in so the pinch is avoidable. There is no machine-applicable fix: the bottleneck is a nav-grid cell, not a named element, so nothing can be rewritten for you.
 
+warning[W_FIXTURE_BACK_TO_ROOM]: Fixture "Bed" has its back to the room — the wall it stands against is on its left side.
+   --> 94:3
+   |
+94 |   furniture id=f_bed1  bed  in r_bed1 anchor left flush size 1400x1900 label "Bed"
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Give it an explicit `rotate` for the wall you mean it to back onto, or place it with `against wall <id>` / `in <room> anchor <edge>` and let the rotation be derived.
+  = fix: Add the `rotate` that puts the back on the walled edge — the machine-applicable fix inserts it when exactly one edge is walled. Better still, place the piece with `against wall <id>` or `in <room> anchor <edge>` and let the rotation be derived.
+
+warning[W_FIXTURE_BACK_TO_ROOM]: Fixture "Wardrobe" has its back to the room — the wall it stands against is on its bottom/right side.
+   --> 95:3
+   |
+95 |   furniture id=f_robe1 robe at (1650,6450) size 600x900 label "Wardrobe" in r_bed1
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Add `rotate 90` so the symbol's back faces the wall (rotate 0 = back to the north).
+  = fix: Add the `rotate` that puts the back on the walled edge — the machine-applicable fix inserts it when exactly one edge is walled. Better still, place the piece with `against wall <id>` or `in <room> anchor <edge>` and let the rotation be derived.
+
 warning[W_ROOM_NOT_EQUATOR_FACING]: Room "Living" has 1 window(s), none facing S (the equator side in the northern hemisphere) — they face N.
    --> 54:3
    |
@@ -116,4 +132,4 @@ warning[W_ROOM_NOT_EQUATOR_FACING]: Room "Living" has 1 window(s), none facing S
    = help: A drafting heuristic, not a daylight measurement: it reports the aspect, not the light. Move a window onto the S facade, or accept it.
   = fix: Move a window onto the room's equator-facing facade, or accept the aspect — an urban plot often has no equator-facing wall to spare. There is deliberately NO machine fix: the remedy is a geometric decision (which facade, which wall, what else it displaces) and the compiler does not make those (ADR 0005).
 
-✓ ok (12 warnings)
+✓ ok (14 warnings)

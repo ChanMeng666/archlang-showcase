@@ -27,13 +27,13 @@
 </g>
 <g id="A-FURN" inkscape:groupmode="layer" inkscape:label="A-FURN">
 <polygon points="46000,7000 49000,7000 49000,10000 46000,10000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
-<text x="47500" y="8500" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Table</text>
+<polygon points="46240,7240 48760,7240 48760,9760 46240,9760" fill="none" stroke="#a8a29a" stroke-width="19.8"/>
 <polygon points="55000,7000 58000,7000 58000,10000 55000,10000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
-<text x="56500" y="8500" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Table</text>
+<polygon points="55240,7240 57760,7240 57760,9760 55240,9760" fill="none" stroke="#a8a29a" stroke-width="19.8"/>
 <polygon points="46000,15000 49000,15000 49000,18000 46000,18000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
-<text x="47500" y="16500" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Table</text>
+<polygon points="46240,15240 48760,15240 48760,17760 46240,17760" fill="none" stroke="#a8a29a" stroke-width="19.8"/>
 <polygon points="55000,15000 58000,15000 58000,18000 55000,18000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
-<text x="56500" y="16500" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Table</text>
+<polygon points="55240,15240 57760,15240 57760,17760 55240,17760" fill="none" stroke="#a8a29a" stroke-width="19.8"/>
 <polygon points="51000,11000 53000,11000 53000,13000 51000,13000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
 <text x="52000" y="12000" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Emergency Button</text>
 <polygon points="46000,30000 48000,30000 48000,32000 46000,32000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
@@ -59,11 +59,26 @@
 <polygon points="28000,10000 30500,10000 30500,12500 28000,12500" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
 <text x="29250" y="11250" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">MedScan</text>
 <polygon points="32000,10000 33500,10000 33500,12400 32000,12400" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
-<text x="32750" y="11200" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Bed</text>
+<polygon points="32000,10000 33500,10000 33500,10144 32000,10144" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
+<polygon points="32587.4,10216 32632.4,10224.95 32670.56,10250.44 32696.05,10288.6 32705,10333.6 32705,10434.4 32696.05,10479.4 32670.56,10517.56 32632.4,10543.05 32587.4,10552 32252.6,10552 32207.6,10543.05 32169.44,10517.56 32143.95,10479.4 32135,10434.4 32135,10333.6 32143.95,10288.6 32169.44,10250.44 32207.6,10224.95 32252.6,10216" fill="#ffffff" stroke="#a8a29a" stroke-width="36"/>
+<polygon points="33247.4,10216 33292.4,10224.95 33330.56,10250.44 33356.05,10288.6 33365,10333.6 33365,10434.4 33356.05,10479.4 33330.56,10517.56 33292.4,10543.05 33247.4,10552 32912.6,10552 32867.6,10543.05 32829.44,10517.56 32803.95,10479.4 32795,10434.4 32795,10333.6 32803.95,10288.6 32829.44,10250.44 32867.6,10224.95 32912.6,10216" fill="#ffffff" stroke="#a8a29a" stroke-width="36"/>
+<line x1="32000" y1="10768" x2="33500" y2="10768" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="32000" y1="10864" x2="33500" y2="10864" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="33500" y1="10768" x2="33170" y2="10864" stroke="#a8a29a" stroke-width="19.8"/>
 <polygon points="34500,10000 36000,10000 36000,12400 34500,12400" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
-<text x="35250" y="11200" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Bed</text>
+<polygon points="34500,10000 36000,10000 36000,10144 34500,10144" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
+<polygon points="35087.4,10216 35132.4,10224.95 35170.56,10250.44 35196.05,10288.6 35205,10333.6 35205,10434.4 35196.05,10479.4 35170.56,10517.56 35132.4,10543.05 35087.4,10552 34752.6,10552 34707.6,10543.05 34669.44,10517.56 34643.95,10479.4 34635,10434.4 34635,10333.6 34643.95,10288.6 34669.44,10250.44 34707.6,10224.95 34752.6,10216" fill="#ffffff" stroke="#a8a29a" stroke-width="36"/>
+<polygon points="35747.4,10216 35792.4,10224.95 35830.56,10250.44 35856.05,10288.6 35865,10333.6 35865,10434.4 35856.05,10479.4 35830.56,10517.56 35792.4,10543.05 35747.4,10552 35412.6,10552 35367.6,10543.05 35329.44,10517.56 35303.95,10479.4 35295,10434.4 35295,10333.6 35303.95,10288.6 35329.44,10250.44 35367.6,10224.95 35412.6,10216" fill="#ffffff" stroke="#a8a29a" stroke-width="36"/>
+<line x1="34500" y1="10768" x2="36000" y2="10768" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="34500" y1="10864" x2="36000" y2="10864" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="36000" y1="10768" x2="35670" y2="10864" stroke="#a8a29a" stroke-width="19.8"/>
 <polygon points="37000,10000 38500,10000 38500,12400 37000,12400" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
-<text x="37750" y="11200" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Bed</text>
+<polygon points="37000,10000 38500,10000 38500,10144 37000,10144" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
+<polygon points="37587.4,10216 37632.4,10224.95 37670.56,10250.44 37696.05,10288.6 37705,10333.6 37705,10434.4 37696.05,10479.4 37670.56,10517.56 37632.4,10543.05 37587.4,10552 37252.6,10552 37207.6,10543.05 37169.44,10517.56 37143.95,10479.4 37135,10434.4 37135,10333.6 37143.95,10288.6 37169.44,10250.44 37207.6,10224.95 37252.6,10216" fill="#ffffff" stroke="#a8a29a" stroke-width="36"/>
+<polygon points="38247.4,10216 38292.4,10224.95 38330.56,10250.44 38356.05,10288.6 38365,10333.6 38365,10434.4 38356.05,10479.4 38330.56,10517.56 38292.4,10543.05 38247.4,10552 37912.6,10552 37867.6,10543.05 37829.44,10517.56 37803.95,10479.4 37795,10434.4 37795,10333.6 37803.95,10288.6 37829.44,10250.44 37867.6,10224.95 37912.6,10216" fill="#ffffff" stroke="#a8a29a" stroke-width="36"/>
+<line x1="37000" y1="10768" x2="38500" y2="10768" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="37000" y1="10864" x2="38500" y2="10864" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="38500" y1="10768" x2="38170" y2="10864" stroke="#a8a29a" stroke-width="19.8"/>
 <polygon points="31000,35000 32500,35000 32500,35900 31000,35900" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
 <text x="31750" y="35450" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Wiring</text>
 <polygon points="31000,41000 32500,41000 32500,41900 31000,41900" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
@@ -72,10 +87,26 @@
 <text x="38000" y="35600" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Power Distribution</text>
 <polygon points="73000,5000 78000,5000 78000,7000 73000,7000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
 <text x="75500" y="6000" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Gun Console</text>
-<polygon points="67000,16000 70000,16000 70000,19000 67000,19000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
-<text x="68500" y="17500" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">O2 Tree</text>
-<polygon points="72000,16000 75000,16000 75000,19000 72000,19000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
-<text x="73500" y="17500" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">O2 Tree</text>
+<circle cx="68500" cy="17500" r="1440" fill="none" stroke="#a8a29a" stroke-width="36"/>
+<circle cx="68500" cy="17500" r="864" fill="none" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="69364" y1="17500" x2="69940" y2="17500" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="69110.94" y1="18110.94" x2="69518.23" y2="18518.23" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="68500" y1="18364" x2="68500" y2="18940" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="67889.06" y1="18110.94" x2="67481.77" y2="18518.23" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="67636" y1="17500" x2="67060" y2="17500" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="67889.06" y1="16889.06" x2="67481.77" y2="16481.77" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="68500" y1="16636" x2="68500" y2="16060" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="69110.94" y1="16889.06" x2="69518.23" y2="16481.77" stroke="#a8a29a" stroke-width="19.8"/>
+<circle cx="73500" cy="17500" r="1440" fill="none" stroke="#a8a29a" stroke-width="36"/>
+<circle cx="73500" cy="17500" r="864" fill="none" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="74364" y1="17500" x2="74940" y2="17500" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="74110.94" y1="18110.94" x2="74518.23" y2="18518.23" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="73500" y1="18364" x2="73500" y2="18940" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="72889.06" y1="18110.94" x2="72481.77" y2="18518.23" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="72636" y1="17500" x2="72060" y2="17500" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="72889.06" y1="16889.06" x2="72481.77" y2="16481.77" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="73500" y1="16636" x2="73500" y2="16060" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="74110.94" y1="16889.06" x2="74518.23" y2="16481.77" stroke="#a8a29a" stroke-width="19.8"/>
 <polygon points="84000,17000 88000,17000 88000,19000 84000,19000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
 <text x="86000" y="18000" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Nav Console</text>
 <polygon points="63000,36000 68000,36000 68000,37500 63000,37500" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
@@ -83,7 +114,7 @@
 <polygon points="76000,37000 81000,37000 81000,42000 76000,42000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
 <text x="78500" y="39500" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Shield Array</text>
 <polygon points="65000,23000 69000,23000 69000,26000 65000,26000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
-<text x="67000" y="24500" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Admin Table</text>
+<polygon points="65240,23240 68760,23240 68760,25760 65240,25760" fill="none" stroke="#a8a29a" stroke-width="19.8"/>
 <polygon points="13000,18500 14200,18500 14200,19700 13000,19700" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
 <text x="13600" y="19100" font-size="400" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Vent</text>
 <polygon points="13000,25000 14200,25000 14200,26200 13000,26200" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
@@ -647,7 +678,7 @@
 <line x1="1657" y1="72730" x2="8857" y2="72730" stroke="#333333" stroke-width="36"/>
 <text x="1801" y="73070" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">TOTAL</text>
 <text x="8713" y="73070" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="600">2546.00</text>
-<polygon points="9457,52330 14857,52330 14857,54370 9457,54370" fill="none" stroke="#333333" stroke-width="36"/>
+<polygon points="9457,52330 14857,52330 14857,56410 9457,56410" fill="none" stroke="#333333" stroke-width="36"/>
 <text x="9565" y="52670" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">LEGEND</text>
 <line x1="9457" y1="53010" x2="14857" y2="53010" stroke="#333333" stroke-width="36"/>
 <path d="M 9565,53146 L 10349,53146 L 10349,53554 L 9565,53554 Z" fill="url(#hatch-concrete)" fill-rule="nonzero"/>
@@ -657,6 +688,31 @@
 <path d="M 9565,53826 L 10349,53826 L 10349,54234 L 9565,54234 Z" fill="url(#poche)" fill-rule="nonzero"/>
 <polygon points="9565,53826 10349,53826 10349,54234 9565,54234" fill="none" stroke="#333333" stroke-width="36"/>
 <text x="10565" y="54030" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">poche</text>
+<line x1="9457" y1="54370" x2="14857" y2="54370" stroke="#333333" stroke-width="19.8"/>
+<polygon points="9565,54506 10349,54506 10349,54914 9565,54914" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
+<polygon points="9565,54506 10349,54506 10349,54530.48 9565,54530.48" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
+<polygon points="9913.49,54542.72 9921.14,54544.24 9927.63,54548.58 9931.96,54555.06 9933.48,54562.71 9933.48,54579.85 9931.96,54587.5 9927.63,54593.98 9921.14,54598.32 9913.49,54599.84 9655.55,54599.84 9647.9,54598.32 9641.42,54593.98 9637.08,54587.5 9635.56,54579.85 9635.56,54562.71 9637.08,54555.06 9641.42,54548.58 9647.9,54544.24 9655.55,54542.72" fill="#ffffff" stroke="#a8a29a" stroke-width="36"/>
+<polygon points="10258.45,54542.72 10266.1,54544.24 10272.59,54548.58 10276.92,54555.06 10278.44,54562.71 10278.44,54579.85 10276.92,54587.5 10272.59,54593.98 10266.1,54598.32 10258.45,54599.84 10000.51,54599.84 9992.86,54598.32 9986.38,54593.98 9982.04,54587.5 9980.52,54579.85 9980.52,54562.71 9982.04,54555.06 9986.38,54548.58 9992.86,54544.24 10000.51,54542.72" fill="#ffffff" stroke="#a8a29a" stroke-width="36"/>
+<line x1="9565" y1="54636.56" x2="10349" y2="54636.56" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="9565" y1="54652.88" x2="10349" y2="54652.88" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="10349" y1="54636.56" x2="10176.52" y2="54652.88" stroke="#a8a29a" stroke-width="19.8"/>
+<text x="10565" y="54710" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">bed</text>
+<line x1="9457" y1="55050" x2="14857" y2="55050" stroke="#333333" stroke-width="19.8"/>
+<polygon points="9565,55186 10349,55186 10349,55594 9565,55594" fill="#f4f2ee" stroke="#a8a29a" stroke-width="36"/>
+<polygon points="9597.64,55218.64 10316.36,55218.64 10316.36,55561.36 9597.64,55561.36" fill="none" stroke="#a8a29a" stroke-width="19.8"/>
+<text x="10565" y="55390" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">table</text>
+<line x1="9457" y1="55730" x2="14857" y2="55730" stroke="#333333" stroke-width="19.8"/>
+<circle cx="9957" cy="56070" r="195.84" fill="none" stroke="#a8a29a" stroke-width="36"/>
+<circle cx="9957" cy="56070" r="117.5" fill="none" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="10074.51" y1="56070" x2="10152.84" y2="56070" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="10040.09" y1="56153.09" x2="10095.48" y2="56208.48" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="9957" y1="56187.5" x2="9957" y2="56265.84" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="9873.91" y1="56153.09" x2="9818.52" y2="56208.48" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="9839.5" y1="56070" x2="9761.16" y2="56070" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="9873.91" y1="55986.91" x2="9818.52" y2="55931.52" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="9957" y1="55952.5" x2="9957" y2="55874.16" stroke="#a8a29a" stroke-width="19.8"/>
+<line x1="10040.09" y1="55986.91" x2="10095.48" y2="55931.52" stroke="#a8a29a" stroke-width="19.8"/>
+<text x="10565" y="56070" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">planter</text>
 </g>
 <g><polygon points="91453.55,200 91003.55,1640 91453.55,1325 91903.55,1640" fill="#333333" transform="rotate(0 91453.55 1100)"/><text x="91453.55" y="-216" font-size="520" fill="#333333" text-anchor="middle" dominant-baseline="central">N</text></g>
 <g><rect x="1657" y="47650" width="2500" height="280" fill="#333333"/><rect x="4157" y="47650" width="2500" height="280" fill="none" stroke="#333333" stroke-width="36"/><text x="1657" y="48330" font-size="400" fill="#333333" text-anchor="start" dominant-baseline="central">0</text><text x="6657" y="48330" font-size="400" fill="#333333" text-anchor="middle" dominant-baseline="central">5 m</text></g>

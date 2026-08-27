@@ -1,6 +1,6 @@
 # One tweet = one house
 
-**A complete, warning-free, two-room dwelling whose entire source is 280 bytes. The tweet *is* the
+**A complete, warning-free, two-room dwelling whose entire source is 290 bytes. The tweet *is* the
 program. Paste it into the playground and you get this drawing, byte for byte.**
 
 ```arch
@@ -10,27 +10,36 @@ room at(4m,0)size 2mx4m label"Bed"
 door on w at 10m width 1m
 door on w at 22m width 800
 window on w at 16m width 1m
-furniture bed at(4.4m,1m)size 1.4mx2m}
+furniture bed at(4.4m,1m)size 1.4mx2m rotate 90}
 ```
 
-**[▶ Open it in the playground](https://playground.archlang.uk/#z=VY3LCsIwEEX3_YohqxZE0hDEjRtXLvyJ1Iw6mEkkTU1R_HchtT42c2HOudyrM17sAqN4ZOMckN1kwDFhpBAhnelw8dj3oKR81JoXsqnldDQ39YrnkM2b6vJ6VjEEBpOK3dMdQfOoGZzp0Ik93cifxEcq1WKpH2uLVlQ2hAjBQwaToJUMmWw6Q8v_RKmZrKWsMnkb8re2-qkdh-gpDRGhQ1vGl5oXLU_77VLzqPj5Ag)**
+**[▶ Open it in the playground](https://playground.archlang.uk/#z=VY1BagMxDEX3cwrh1QyEoDEmpItusuqil3BqpRGxrODx1END7l5wmibd6IPe-_xz9Mm8qZC5VB8jcHitQEuhzJqhHPnjlGiawCJeeicrHHq8HSdDv5F74PBLXXtdu6wq4EuzJ_4mcLI4gej3FM07f3H6NH9SqzbLPlk7CqYLqhk0QQVfYESByqEcYZT_xNo72SJ2lVPQ-qhtnmqHOScucybYU2jjayerUW7749rJYgWyFl8IXvD6Aw)**
 
-![A 280-byte floor plan: a 4x4 m living room and a 2x4 m bedroom under one hatched shell, with a
+![A 290-byte floor plan: a 4x4 m living room and a 2x4 m bedroom under one hatched shell, with a
 front door, an internal door and a window](plan.png)
 
 ## The counts
 
 | File | Bytes | Verdict |
 | --- | --- | --- |
-| `plan.arch` | **280** | `compile` clean, `lint` clean, `validate --strict` clean |
+| `plan.arch` | **290** | `compile` clean, `lint` clean, `validate --strict` clean |
 | `plan-strict.arch` | **145** | the smallest strict-clean plan I could reach (see below) |
 
 Both numbers are `wc -c` on disk. `plan.arch` ends with `}` and **no trailing newline** — that is
-what makes it exactly 280 rather than 281. Copying it out of the fence above may add one back; the
+what makes it exactly 290 rather than 291. Copying it out of the fence above may add one back; the
 compiled SVG is byte-identical either way, so the drawing does not care, only the counter does.
 
-The stretch goal turned out to be moot in the nicest way: **the 280-byte house is already
-warning-free.** It is not a plan that merely compiles, it is one that passes the ship gate.
+**The 10 bytes above the original 280 are load-bearing, not fat.** Core 1.28.0 taught the compiler
+that a bed has a back — a headboard, drawn on the symbol's top edge — and that a back turned to the
+room instead of to the wall it stands against is a real drawing fault (`W_FIXTURE_BACK_TO_ROOM`),
+the same class of defect as a door hinged into a wall. Re-rendering this file under 1.28.0 for the
+first time surfaced it: the bed sits 200 mm off the room's east wall with its headboard drawn facing
+north, so under the new rule the house was no longer warning-free. `rotate 90` turns the headboard
+to face that wall — the compiler offered no machine-applicable fix here (the room has more than one
+candidate edge once the bed's own footprint is accounted for), so the ten bytes are a drafting
+decision, not a linter's guess. The stretch goal is still moot, just ten bytes more expensive: **the
+290-byte house is warning-free.** It is not a plan that merely compiles, it is one that passes the
+ship gate.
 
 ```
 $ npx arch validate plan.arch --strict --json
@@ -39,7 +48,7 @@ $ npx arch validate plan.arch --strict --json
 
 ## What the compiler says it is
 
-Nothing below is written in the source. It is all derived, and it is how you know 280 bytes bought
+Nothing below is written in the source. It is all derived, and it is how you know 290 bytes bought
 a building rather than a picture of one:
 
 > "Home" — a 2-room floor plan, 24 m² total: Living (16 m²), Bed (8 m²); 2 doors, 1 window,
@@ -75,12 +84,14 @@ Measured, by compiling the same building three more ways:
 
 | The same house, written differently | Bytes | Cost |
 | --- | --- | --- |
-| **This file** | **280** | — |
+| **This file, pre-`rotate` (the syntax baseline)** | **280** | — |
 | Shell and partition as two separate `wall` statements | 312 | **+32** |
 | Raw millimetres instead of the `4m` / `1.4m` suffixes | 320 | **+40** |
 | Fully idiomatic: indented, ids named, settings and `uses` spelled out | 434 | **+154** |
 
-Either of the first two squeezes alone is the difference between fitting in a tweet and not.
+These four numbers isolate syntax choices, so they're measured without the `rotate 90` clause — the
+shipped `plan.arch` carries it and is 290 bytes, ten over this baseline (see above). Either of the
+first two squeezes alone is the difference between fitting in a tweet and not.
 
 ## The warning-free floor: 145 bytes
 

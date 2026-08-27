@@ -77,7 +77,7 @@ that compiles floor-plan source to professional SVG.
 
 [<img src="plans/tweet-house/plan.png" alt="One tweet = one house" width="820">](plans/tweet-house/README.md)
 
-[story](plans/tweet-house/README.md) · [source](plans/tweet-house/plan.arch) · [open in playground](https://playground.archlang.uk/#z=VY3LCsIwEEX3_YohqxZE0hDEjRtXLvyJ1Iw6mEkkTU1R_HchtT42c2HOudyrM17sAqN4ZOMckN1kwDFhpBAhnelw8dj3oKR81JoXsqnldDQ39YrnkM2b6vJ6VjEEBpOK3dMdQfOoGZzp0Ik93cifxEcq1WKpH2uLVlQ2hAjBQwaToJUMmWw6Q8v_RKmZrKWsMnkb8re2-qkdh-gpDRGhQ1vGl5oXLU_77VLzqPj5Ag)
+[story](plans/tweet-house/README.md) · [source](plans/tweet-house/plan.arch) · [open in playground](https://playground.archlang.uk/#z=VY1BagMxDEX3cwrh1QyEoDEmpItusuqil3BqpRGxrODx1END7l5wmibd6IPe-_xz9Mm8qZC5VB8jcHitQEuhzJqhHPnjlGiawCJeeicrHHq8HSdDv5F74PBLXXtdu6wq4EuzJ_4mcLI4gej3FM07f3H6NH9SqzbLPlk7CqYLqhk0QQVfYESByqEcYZT_xNo72SJ2lVPQ-qhtnmqHOScucybYU2jjayerUW7749rJYgWyFl8IXvD6Aw)
 
 ### Kevin's battle plan, but it passes plan check. (Mostly.)
 

@@ -202,8 +202,12 @@ m-687 -344 c0 -33 -4 -60 -10 -60 -6 0 -10 27 -10 60 0 33 4 60 10 60 6 0 10
 <text x="52500" y="43000" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Xbox</text>
 <polygon points="46000,90000 49000,90000 49000,93000 46000,93000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
 <text x="47500" y="91500" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Crate</text>
-<polygon points="102000,78000 106500,78000 106500,80000 102000,80000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
-<text x="104250" y="79000" font-size="500" fill="#9a948c" text-anchor="middle" dominant-baseline="central">Car</text>
+<polygon points="105510,78000 105888.86,78075.36 106210.04,78289.96 106424.64,78611.14 106500,78990 106500,79010 106424.64,79388.86 106210.04,79710.04 105888.86,79924.64 105510,80000 102990,80000 102611.14,79924.64 102289.96,79710.04 102075.36,79388.86 102000,79010 102000,78990 102075.36,78611.14 102289.96,78289.96 102611.14,78075.36 102990,78000" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<polygon points="105711.6,78560 105772.22,78572.06 105823.61,78606.39 105857.94,78657.78 105870,78718.4 105870,79281.6 105857.94,79342.22 105823.61,79393.61 105772.22,79427.94 105711.6,79440 102788.4,79440 102727.78,79427.94 102676.39,79393.61 102642.06,79342.22 102630,79281.6 102630,78718.4 102642.06,78657.78 102676.39,78606.39 102727.78,78572.06 102788.4,78560" fill="#ffffff" stroke="#a8a29a" stroke-width="45"/>
+<line x1="102630" y1="78665.6" x2="105870" y2="78665.6" stroke="#a8a29a" stroke-width="24.75"/>
+<line x1="102630" y1="79334.4" x2="105870" y2="79334.4" stroke="#a8a29a" stroke-width="24.75"/>
+<line x1="102090" y1="78600" x2="102630" y2="78600" stroke="#a8a29a" stroke-width="24.75"/>
+<line x1="105870" y1="78600" x2="106410" y2="78600" stroke="#a8a29a" stroke-width="24.75"/>
 </g>
 <g id="A-WALL" inkscape:groupmode="layer" inkscape:label="A-WALL">
 <path d="M 5700,4300 L 34300,4300 L 34300,3700 L 5700,3700 Z" fill="url(#poche)" fill-rule="nonzero"/>
@@ -673,12 +677,20 @@ m-687 -344 c0 -33 -4 -60 -10 -60 -6 0 -10 27 -10 60 0 33 4 60 10 60 6 0 10
 <line x1="5575.74" y1="134612.5" x2="14575.74" y2="134612.5" stroke="#333333" stroke-width="45"/>
 <text x="5755.74" y="135037.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">TOTAL</text>
 <text x="14395.74" y="135037.5" font-size="475" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="600">5756.00</text>
-<polygon points="15325.74,109962.5 22075.74,109962.5 22075.74,111662.5 15325.74,111662.5" fill="none" stroke="#333333" stroke-width="45"/>
+<polygon points="15325.74,109962.5 22075.74,109962.5 22075.74,112512.5 15325.74,112512.5" fill="none" stroke="#333333" stroke-width="45"/>
 <text x="15460.74" y="110387.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">LEGEND</text>
 <line x1="15325.74" y1="110812.5" x2="22075.74" y2="110812.5" stroke="#333333" stroke-width="45"/>
 <path d="M 15460.74,110982.5 L 16440.74,110982.5 L 16440.74,111492.5 L 15460.74,111492.5 Z" fill="url(#poche)" fill-rule="nonzero"/>
 <polygon points="15460.74,110982.5 16440.74,110982.5 16440.74,111492.5 15460.74,111492.5" fill="none" stroke="#333333" stroke-width="45"/>
 <text x="16710.74" y="111237.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">poche</text>
+<line x1="15325.74" y1="111662.5" x2="22075.74" y2="111662.5" stroke="#333333" stroke-width="24.75"/>
+<polygon points="16225.14,111832.5 16307.64,111848.91 16377.59,111895.65 16424.32,111965.59 16440.74,112048.1 16440.74,112126.9 16424.32,112209.41 16377.59,112279.35 16307.64,112326.09 16225.14,112342.5 15676.34,112342.5 15593.83,112326.09 15523.88,112279.35 15477.15,112209.41 15460.74,112126.9 15460.74,112048.1 15477.15,111965.59 15523.88,111895.65 15593.83,111848.91 15676.34,111832.5" fill="#f4f2ee" stroke="#a8a29a" stroke-width="45"/>
+<polygon points="16263.14,111975.3 16278.6,111978.37 16291.71,111987.13 16300.46,112000.23 16303.54,112015.69 16303.54,112159.31 16300.46,112174.77 16291.71,112187.87 16278.6,112196.63 16263.14,112199.7 15638.33,112199.7 15622.87,112196.63 15609.77,112187.87 15601.01,112174.77 15597.94,112159.31 15597.94,112015.69 15601.01,112000.23 15609.77,111987.13 15622.87,111978.37 15638.33,111975.3" fill="#ffffff" stroke="#a8a29a" stroke-width="45"/>
+<line x1="15597.94" y1="112002.23" x2="16303.54" y2="112002.23" stroke="#a8a29a" stroke-width="24.75"/>
+<line x1="15597.94" y1="112172.77" x2="16303.54" y2="112172.77" stroke="#a8a29a" stroke-width="24.75"/>
+<line x1="15480.34" y1="111985.5" x2="15597.94" y2="111985.5" stroke="#a8a29a" stroke-width="24.75"/>
+<line x1="16303.54" y1="111985.5" x2="16421.14" y2="111985.5" stroke="#a8a29a" stroke-width="24.75"/>
+<text x="16710.74" y="112087.5" font-size="475" fill="#333333" text-anchor="start" dominant-baseline="central">car</text>
 </g>
 <g><polygon points="111175,512.5 110612.5,2312.5 111175,1918.75 111737.5,2312.5" fill="#333333" transform="rotate(0 111175 1637.5)"/><text x="111175" y="-7.5" font-size="650" fill="#333333" text-anchor="middle" dominant-baseline="central">N</text></g>
 <g><rect x="5575.74" y="104112.5" width="2500" height="350" fill="#333333"/><rect x="8075.74" y="104112.5" width="2500" height="350" fill="none" stroke="#333333" stroke-width="45"/><text x="5575.74" y="104962.5" font-size="500" fill="#333333" text-anchor="start" dominant-baseline="central">0</text><text x="10575.74" y="104962.5" font-size="500" fill="#333333" text-anchor="middle" dominant-baseline="central">5 m</text></g>

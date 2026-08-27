@@ -4,4 +4,4 @@ room at(4m,0)size 2mx4m label"Bed"
 door on w at 10m width 1m
 door on w at 22m width 800
 window on w at 16m width 1m
-furniture bed at(4.4m,1m)size 1.4mx2m}
+furniture bed at(4.4m,1m)size 1.4mx2m rotate 90}

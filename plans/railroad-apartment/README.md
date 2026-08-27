@@ -23,7 +23,7 @@ So we ran the checker.
 
 ## The roast
 
-`arch lint` returns **12 warnings across 9 distinct codes**. All of them are below, verbatim, in
+`arch lint` returns **14 warnings across 10 distinct codes**. All of them are below, verbatim, in
 [`lint.txt`](lint.txt). Here are the six that hurt.
 
 **The second bedroom is not a bedroom.**
@@ -90,9 +90,12 @@ The plan declares `site { street north hemisphere north }`, which draws nothing 
 about sunlight — it just names the compass so the checker can read the aspect. The living room's one
 window faces the street, which is north. The south-facing wall belongs to the back room.
 
-The remaining three warnings — a stove with a table 400 mm too close to it, a walk into Bedroom 1
-that squeezes to 300 mm between the bed and the wardrobe, and a twin bed sitting 350 mm inside the
-swing of Bedroom 2's own door — are in `lint.txt` too.
+The remaining five warnings — a stove with a table 400 mm too close to it, a walk into Bedroom 1
+that squeezes to 300 mm between the bed and the wardrobe, a twin bed sitting 350 mm inside the
+swing of Bedroom 2's own door, and Bedroom 1's bed *and* wardrobe, both drawn with their backs
+turned to the room instead of to the walls they stand against (`W_FIXTURE_BACK_TO_ROOM`, new in
+core 1.28.0 — it caught two real furniture-orientation mistakes that predate this piece and had
+been invisible to every prior lint pass) — are in `lint.txt` too.
 
 ## Three numbers the drawing does not tell you
 
@@ -135,26 +138,33 @@ middle of an 18-metre-deep floor plate" means.
 Its third suggestion is genuinely the fix a renovation would make: `door on w_hall at 74.583% width
 900` — cut a bathroom door onto the corridor so the WC stops being a bedroom feature.
 
-## The one thing a machine will fix for you
+## The two things a machine will fix for you
 
 `arch fix --dry-run` prints the unified diff it *would* write, applying only the machine-applicable
-fixes — the ones the compiler can prove correct. Out of twelve warnings, it offers exactly one
+fixes — the ones the compiler can prove correct. Out of fourteen warnings, it offers exactly two
 ([`fix-dry-run.txt`](fix-dry-run.txt)):
 
 ```diff
 -  door id=d_bath on p_bed2_bath at 1150 width 600 swing into r_bath
 +  door id=d_bath on p_bed2_bath at 1150 width 600 hinge right swing into r_bath
+
+-  furniture id=f_robe1 robe at (1650,6450) size 600x900 label "Wardrobe" in r_bed1
++  furniture id=f_robe1 robe at (1650,6450) size 600x900 label "Wardrobe" rotate 90 in r_bed1
 ```
 
 ```
 applied [W_SWING_OBSTRUCTED] hang the leaf on the other jamb (`hinge right`) — the flipped
 swing is clear
+applied [W_FIXTURE_BACK_TO_ROOM] turn "Wardrobe" to `rotate 90` so its back is against the wall
 (dry run — nothing written)
 ```
 
-Rehang the bathroom door on the other jamb so it stops swinging into the toilet. One word. It is the
-only renovation in this apartment that costs nothing, and the compiler will only propose it because
-it re-computed the flipped swing and *proved* it clear.
+Rehang the bathroom door on the other jamb so it stops swinging into the toilet; turn the wardrobe a
+quarter-turn so its doors face the room instead of its back. Neither costs a design decision — the
+compiler proposes both because it re-computed the flipped swing, and the walled edge the wardrobe
+should back onto, and *proved* each one clear. The bed beside it gets no such offer:
+`W_FIXTURE_BACK_TO_ROOM` fires on it too, but with more than one candidate edge in play the fix
+would be a guess, and the compiler declines to guess (ADR 0005) — see the roast above.
 
 Everything else is a design decision, and the compiler deliberately does not make those. It will
 tell you the second bedroom is 3.91 m². It will not make it bigger.
@@ -163,7 +173,7 @@ tell you the second bedroom is 3.91 m². It will not make it bigger.
 
 ```console
 $ npx arch lint plans/railroad-apartment/plan.arch ; echo $?
-✓ ok (12 warnings)
+✓ ok (14 warnings)
 0
 $ npx arch validate plans/railroad-apartment/plan.arch --strict --json ; echo $?
 2
@@ -186,6 +196,11 @@ about the apartment, not a drafting mistake in the drawing — the two classes t
 drafting mistakes (furniture drawn through a wall, furniture drawn through other furniture) appeared
 during authoring and were fixed, because "the drawing is wrong" is not a joke, it is just a wrong
 drawing.
+
+Captured under core 1.29.0, `W_FIXTURE_BACK_TO_ROOM` (bed, wardrobe — new in 1.28.0) is a third
+member of that same drafting-mistake class, caught here for the first time: it is left in, unfixed,
+because the point of this plan is to be roasted, and a real lint pass finding a real mistake is the
+roast, not an embarrassment to quietly clean up before anyone re-renders it.
 
 The building is a **fictional composite**, invented for this piece: a lot width, a depth, and a room
 order borrowed from a genre rather than from any address. No real listing, unit or landlord is
