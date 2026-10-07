@@ -15,24 +15,48 @@
       },
       {
         "roomId": "r_living",
-        "walkDistanceMm": 6900,
+        "walkDistanceMm": 6000,
         "bottleneckClearWidthMm": 740,
-        "detourRatio": 2.76
+        "detourRatio": 2.32
       },
       {
         "roomId": "r_bed1",
-        "walkDistanceMm": 6800,
-        "bottleneckClearWidthMm": 300,
-        "detourRatio": 1.18
+        "walkDistanceMm": 6600,
+        "bottleneckClearWidthMm": 640,
+        "detourRatio": 1.14
+      },
+      {
+        "roomId": "r_kitchen",
+        "walkDistanceMm": 9600,
+        "bottleneckClearWidthMm": 740,
+        "detourRatio": 1.19
       },
       {
         "roomId": "r_office",
-        "walkDistanceMm": 17900,
+        "walkDistanceMm": 17300,
         "bottleneckClearWidthMm": 740,
-        "detourRatio": 1.12
+        "detourRatio": 1.08
       }
     ],
-    "routes": []
+    "routes": [
+      {
+        "fromRoomId": "r_kitchen",
+        "toRoomId": "r_living",
+        "walkDistanceMm": 8600,
+        "bottleneckClearWidthMm": 740,
+        "detourRatio": 1.48
+      }
+    ],
+    "blocked": [
+      {
+        "roomId": "r_bed2",
+        "widestWayInMm": 300
+      },
+      {
+        "roomId": "r_bath",
+        "widestWayInMm": 300
+      }
+    ]
   },
   "totals": {
     "rooms": 7,

@@ -75,12 +75,12 @@ this directory; every number in the four bullets below comes from it, and nothin
   the entire building are the crate stacks.
 - **Nothing pinches.** The tightest point on any walk is 1,540 mm — the clear width between the
   leaves of the three double doors, which is the narrowest thing in the map by design. Eleven rooms
-  are reached through one of them; the other six never narrow below 3,940 mm. The rule fires below
+  are reached through one of them; the other six never narrow below 3,200 mm. The rule fires below
   700 mm.
 - **Nothing wanders.** The worst detour in the building is A site, at 1.7× the straight-line
   distance. `W_CIRCUITOUS_PATH` fires at 3×. For a plan whose entire purpose is to make two groups
   of people take different routes to the same two rooms, that is a startlingly efficient one. The
-  longest single walk is 134 m, to the A ramp.
+  longest single walk is 131 m, to the A ramp.
 - **The accessibility profile changes nothing.** `--profile accessibility-advisory` raises the
   minimum door width, the landing depths, the swing clearances and the passage width; run against
   the real drawing it returns the same three warnings and not one more.
@@ -151,7 +151,7 @@ door id=d_front on w_t_s at 50% width 4000
 ```
 
 — and run `npx arch describe <copy>.arch --json --select circulation` and
-`npx arch lint <copy>.arch`. That is where the 1,540 mm, the 1.7× and the 134 m come from.
+`npx arch lint <copy>.arch`. That is where the 1,540 mm, the 1.7× and the 131 m come from.
 
 ## Open it
 

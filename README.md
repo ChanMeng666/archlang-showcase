@@ -108,7 +108,7 @@ one, the gallery above shows the annotated drawing instead of the plain one.
 
 Every plan can carry a set of images sized for posting. They are all generated, all deterministic,
 and all built from the plan's own source — the drawing on a card is the compiled **vector** output,
-framed in place, and the facts under the headline (`24 rooms · 1,568.98 m² · lint-clean`) come from
+framed in place, and the facts under the headline (`24 rooms · 1,568.98 m² · 1 warning`) come from
 `describe()` and `lint()` rather than from anyone typing a number.
 
 ```bash

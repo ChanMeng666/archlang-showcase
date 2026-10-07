@@ -64,13 +64,20 @@ node scripts/render.mjs west-wing     # → plan.svg + plan.png
 To check it rather than look at it:
 
 ```bash
-npx arch validate plans/west-wing/plan.arch --strict --json   # ok: true, zero diagnostics
+npx arch validate plans/west-wing/plan.arch --strict --json   # ok: false, one warning
 npx arch describe plans/west-wing/plan.arch --json --room r_oval
 ```
 
-`validate --strict` is the ship gate — it fails on warnings as well as errors. This plan passes
-it clean: no lint warnings to justify, no doors swinging into walls, no fixture stranded off its
-room, every room reachable from a front door.
+`validate --strict` is the ship gate — it fails on warnings as well as errors. Under core 1.41.0
+this plan no longer passes it clean. There is one lint warning, and it is left as found:
+
+```
+warning[W_CIRCUITOUS_PATH]: The walk from entrance "d_rose" to "Cabinet Room" is 3.04× the
+straight-line distance from that entrance (over 3×).
+```
+
+Otherwise: no doors swinging into walls, no fixture stranded off its room, every room reachable
+from a front door.
 
 ## Open it in the playground
 

@@ -95,7 +95,7 @@
         "Hang the leaf on the other jamb — `hinge right`.",
         "Open it to the other side of the wall — `swing out`.",
         "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `arch repair` computes the smallest clearing shift.",
-        "Narrowing the door is not a fix here — the leaf would have to drop to 602 mm, under the 700 mm minimum passable width.",
+        "Narrowing the door is not a fix here — the leaf would have to drop to 400 mm, under the 760 mm minimum passable width.",
         "Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps nothing, so this warning cannot apply to it (`door pocket on <wall> at <pos> width <mm>`).",
         "If no leaf is wanted here, make it a leafless `opening` instead."
       ]
@@ -115,7 +115,7 @@
         "Hang the leaf on the other jamb — `hinge right`.",
         "Open it to the other side of the wall — `swing out`.",
         "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `arch repair` computes the smallest clearing shift.",
-        "Narrowing the door is not a fix here — the leaf would have to drop to 350 mm, under the 700 mm minimum passable width.",
+        "Narrowing the door is not a fix here — the leaf would have to drop to 300 mm, under the 760 mm minimum passable width.",
         "Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps nothing, so this warning cannot apply to it (`door pocket on <wall> at <pos> width <mm>`).",
         "If no leaf is wanted here, make it a leafless `opening` instead."
       ]
@@ -135,7 +135,7 @@
         "Hang the leaf on the other jamb — `hinge right` (this clears it).",
         "Open it to the other side of the wall — `swing out`.",
         "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `arch repair` computes the smallest clearing shift.",
-        "Narrowing the door is not a fix here — the leaf would have to drop to 400 mm, under the 700 mm minimum passable width.",
+        "Narrowing the door is not a fix here — the leaf would have to drop to 550 mm, under the 760 mm minimum passable width.",
         "Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps nothing, so this warning cannot apply to it (`door pocket on <wall> at <pos> width <mm>`).",
         "If no leaf is wanted here, make it a leafless `opening` instead."
       ],
@@ -191,7 +191,7 @@
     {
       "code": "W_PATH_TOO_NARROW",
       "severity": "warning",
-      "message": "The walk from the entrance to \"Bedroom 1\" squeezes to 300 mm (400 mm below the 700 mm minimum).",
+      "message": "The walk from the entrance to \"Bedroom 1\" squeezes to 640 mm (60 mm below the 700 mm minimum).",
       "line": 55,
       "col": 3,
       "span": [
@@ -203,6 +203,71 @@
         "Widen the tightest door/opening on the way to at least 700 mm.",
         "Or move the furniture pinching the route so 700 mm of clear width survives.",
         "Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable."
+      ]
+    },
+    {
+      "code": "W_PATH_TOO_NARROW",
+      "severity": "warning",
+      "message": "The walk from the entrance to \"Bedroom 2*\" squeezes to 300 mm and stops there — no way in is wider, so no route reaches the room (400 mm below the 700 mm minimum).",
+      "line": 57,
+      "col": 3,
+      "span": [
+        3280,
+        3362
+      ],
+      "fix": "Widen the tightest door/opening on the route to at least the minimum, move the furniture pinching it, or add a second way in so the pinch is avoidable. There is no machine-applicable fix: the bottleneck is a nav-grid cell, not a named element, so nothing can be rewritten for you.",
+      "hints": [
+        "Widen the tightest door/opening on the way to at least 700 mm.",
+        "Or move the furniture pinching the route so 700 mm of clear width survives.",
+        "Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable."
+      ]
+    },
+    {
+      "code": "W_PATH_TOO_NARROW",
+      "severity": "warning",
+      "message": "The walk from the entrance to \"Bath\" squeezes to 300 mm and stops there — no way in is wider, so no route reaches the room (400 mm below the 700 mm minimum).",
+      "line": 58,
+      "col": 3,
+      "span": [
+        3365,
+        3444
+      ],
+      "fix": "Widen the tightest door/opening on the route to at least the minimum, move the furniture pinching it, or add a second way in so the pinch is avoidable. There is no machine-applicable fix: the bottleneck is a nav-grid cell, not a named element, so nothing can be rewritten for you.",
+      "hints": [
+        "Widen the tightest door/opening on the way to at least 700 mm.",
+        "Or move the furniture pinching the route so 700 mm of clear width survives.",
+        "Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable."
+      ]
+    },
+    {
+      "code": "W_FIXTURE_BACK_TO_ROOM",
+      "severity": "warning",
+      "message": "Fixture \"TV\" has its back to the room — the wall it stands against is on its right side.",
+      "line": 89,
+      "col": 3,
+      "span": [
+        5174,
+        5249
+      ],
+      "fix": "Add the `rotate` that puts the back on the walled edge — the machine-applicable fix inserts it when exactly one edge is walled. Better still, place the piece with `against wall <id>` or `in <room> anchor <edge>` and let the rotation be derived.",
+      "hints": [
+        "Add `rotate 90` so the symbol's back faces the wall (rotate 0 = back to the north)."
+      ],
+      "fixes": [
+        {
+          "title": "turn \"TV\" to `rotate 90` so its back is against the wall",
+          "applicability": "machine-applicable",
+          "edits": [
+            {
+              "span": [
+                5237,
+                5237
+              ],
+              "newText": " rotate 90"
+            }
+          ],
+          "fixId": "fixture-back-to-room"
+        }
       ]
     },
     {
@@ -264,6 +329,23 @@
       "fix": "Move a window onto the room's equator-facing facade, or accept the aspect — an urban plot often has no equator-facing wall to spare. There is deliberately NO machine fix: the remedy is a geometric decision (which facade, which wall, what else it displaces) and the compiler does not make those (ADR 0005).",
       "hints": [
         "A drafting heuristic, not a daylight measurement: it reports the aspect, not the light. Move a window onto the S facade, or accept it."
+      ]
+    },
+    {
+      "code": "W_DOOR_NEAR_CORNER",
+      "severity": "warning",
+      "message": "Door leaves too little wall at a corner — the nib between its jamb and the corner of wall \"w_street\" at (3400, 0) should be at least 300 mm, the wall's own thickness, but measures 100 mm (200 mm short).",
+      "line": 63,
+      "col": 3,
+      "span": [
+        3677,
+        3740
+      ],
+      "fix": "Move the door further from the corner by the shortfall the warning quotes (`on <wall> at <pos>` measures along the run, so the position is the one number to change), or lengthen the wall past the door so the corner moves away from the jamb instead. There is no machine-applicable fix: every remedy rewrites a number the author chose. Narrowing the leaf would also close the gap and is deliberately NOT offered — rewriting the width you asked for to satisfy a checker is the constraint-laundering pattern this project rules out, and it heads toward `W_DOOR_CLEARANCE`.",
+      "hints": [
+        "Move the door 200 mm further from that corner — `on w_street at <pos>` measures along the run, so the position is the one number to change.",
+        "Or lengthen wall \"w_street\" past the door, so the corner moves away from the jamb instead.",
+        "Narrowing the leaf would also close the gap and is deliberately NOT offered as a fix: rewriting the width you asked for to satisfy a checker is constraint laundering, and it heads toward `W_DOOR_CLEARANCE`."
       ]
     }
   ]

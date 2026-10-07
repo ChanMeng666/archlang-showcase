@@ -9,7 +9,14 @@
  
    # ----------------------------------------------------------------- windows
    # Two. In an 18-metre-deep apartment.
-@@ -92,7 +92,7 @@
+@@ -86,13 +86,13 @@
+ 
+   # -------------------------------------------------------------- the living
+   furniture id=f_sofa sofa in r_living anchor left flush size 850x2000 label "Sofa"
+-  furniture id=f_tv   tv   at (1950,600) size 300x1100 label "TV" in r_living
++  furniture id=f_tv   tv   at (1950,600) size 300x1100 label "TV" rotate 90 in r_living
+ 
+   # ------------------------------------------------------------- bedroom one
    # A full-size bed and a wardrobe. The wardrobe goes where the wardrobe fits,
    # which is behind the door.
    furniture id=f_bed1  bed  in r_bed1 anchor left flush size 1400x1900 label "Bed"
@@ -19,5 +26,6 @@
    # ------------------------------------------------------------- the kitchen
    # A galley along the party wall, and — the listing photo's proudest moment —
   applied [W_SWING_OBSTRUCTED] hang the leaf on the other jamb (`hinge right`) — the flipped swing is clear
+  applied [W_FIXTURE_BACK_TO_ROOM] turn "TV" to `rotate 90` so its back is against the wall
   applied [W_FIXTURE_BACK_TO_ROOM] turn "Wardrobe" to `rotate 90` so its back is against the wall
   (dry run — nothing written)
