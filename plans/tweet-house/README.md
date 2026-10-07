@@ -1,6 +1,6 @@
 # One tweet = one house
 
-**A complete, warning-free, two-room dwelling whose entire source is 290 bytes. The tweet *is* the
+**A complete, warning-free, two-room dwelling whose entire source is 277 bytes. The tweet *is* the
 program. Paste it into the playground and you get this drawing, byte for byte.**
 
 ```arch
@@ -8,38 +8,56 @@ plan"Home"{wall id=w exterior thickness 200{(4m,0)(0,0)(0,4m)(6m,4m)(6m,0)(4m,0)
 room at(0,0)size 4mx4m label"Living"
 room at(4m,0)size 2mx4m label"Bed"
 door on w at 10m width 1m
-door on w at 22m width 800
+door on w at 22m width 1m
 window on w at 16m width 1m
-furniture bed at(4.4m,1m)size 1.4mx2m rotate 90}
+furniture bed at(5m,100)size 900x2m}
 ```
 
-**[▶ Open it in the playground](https://playground.archlang.uk/#z=VY1BagMxDEX3cwrh1QyEoDEmpItusuqil3BqpRGxrODx1END7l5wmibd6IPe-_xz9Mm8qZC5VB8jcHitQEuhzJqhHPnjlGiawCJeeicrHHq8HSdDv5F74PBLXXtdu6wq4EuzJ_4mcLI4gej3FM07f3H6NH9SqzbLPlk7CqYLqhk0QQVfYESByqEcYZT_xNo72SJ2lVPQ-qhtnmqHOScucybYU2jjayerUW7749rJYgWyFl8IXvD6Aw)**
+**[▶ Open it in the playground](https://playground.archlang.uk/#z=VY27DsIwDEV3vsLK1EoMbhSQGFiYGPiJQAxYxAlKU1KB-HdEeZXFV_I5V_fsbVDrKKRuxXoP7JYFqM-UOCbIR96dArUtaMRbZWSKdYWvY6Su5vIJrN_UDK_7JMUoYPNgt3wlMNIbAW-35NWGLxwO6isN1cHSI2tFTk1cjAligAI2Q4MChV0-QiP_ROsRKRxcLL_WfMT2XQqcu0SwJffcnsm0wff6ArHXcn8A)**
 
-![A 290-byte floor plan: a 4x4 m living room and a 2x4 m bedroom under one hatched shell, with a
+![A 277-byte floor plan: a 4x4 m living room and a 2x4 m bedroom under one hatched shell, with a
 front door, an internal door and a window](plan.png)
 
 ## The counts
 
 | File | Bytes | Verdict |
 | --- | --- | --- |
-| `plan.arch` | **290** | `compile` clean, `lint` clean, `validate --strict` clean |
+| `plan.arch` | **277** | `compile` clean, `lint` clean, `validate --strict` clean |
 | `plan-strict.arch` | **145** | the smallest strict-clean plan I could reach (see below) |
 
 Both numbers are `wc -c` on disk. `plan.arch` ends with `}` and **no trailing newline** — that is
-what makes it exactly 290 rather than 291. Copying it out of the fence above may add one back; the
+what makes it exactly 277 rather than 278. Copying it out of the fence above may add one back; the
 compiled SVG is byte-identical either way, so the drawing does not care, only the counter does.
 
-**The 10 bytes above the original 280 are load-bearing, not fat.** Core 1.28.0 taught the compiler
+**The original was 280 bytes, and the compiler has moved the count twice since.** Core 1.28.0 taught the compiler
 that a bed has a back — a headboard, drawn on the symbol's top edge — and that a back turned to the
 room instead of to the wall it stands against is a real drawing fault (`W_FIXTURE_BACK_TO_ROOM`),
 the same class of defect as a door hinged into a wall. Re-rendering this file under 1.28.0 for the
-first time surfaced it: the bed sits 200 mm off the room's east wall with its headboard drawn facing
-north, so under the new rule the house was no longer warning-free. `rotate 90` turns the headboard
+first time surfaced it: the bed sat 200 mm off the room's east wall with its headboard drawn facing
+north, so under the new rule the house was no longer warning-free. `rotate 90` turned the headboard
 to face that wall — the compiler offered no machine-applicable fix here (the room has more than one
-candidate edge once the bed's own footprint is accounted for), so the ten bytes are a drafting
-decision, not a linter's guess. The stretch goal is still moot, just ten bytes more expensive: **the
-290-byte house is warning-free.** It is not a plan that merely compiles, it is one that passes the
-ship gate.
+candidate edge once the bed's own footprint is accounted for), so the ten bytes were a drafting
+decision, not a linter's guess — and the house was warning-free again at 290 bytes.
+
+Core 1.41.0 found the next one. The same 290 bytes came back with:
+
+```
+warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Bed" squeezes to 400 mm and stops
+there — no way in is wider, so no route reaches the room (300 mm below the 700 mm minimum).
+```
+
+The bed stood 400 mm off the partition, directly in front of the internal door. The compiler says
+why it offers nothing here — "There is no machine-applicable fix: the bottleneck is a nav-grid
+cell, not a named element" — so the fix was a search: a script that varied the bed's position, size
+and rotation and the internal door's position and width, kept every variant that comes back
+with no diagnostics, and sorted by byte count. It bottomed out at 277. The bed is now a 900 × 2000 mm single in
+the north-east corner with its headboard on the north wall, so `rotate 90` is gone, and the
+internal door is `1m` wide where it was `800`. That is thirteen bytes fewer than the 290-byte file
+and three fewer than the original: twelve from the bed clause and one from the door. The door's
+byte is golf, not part of the fix — the same bed behind the 800 mm door is clean at 278. `describe`
+now reports 940 mm of clear width on the way into both rooms. The stretch goal is still moot:
+**the 277-byte house is warning-free.** It is not a plan that merely compiles, it is one that
+passes the ship gate.
 
 ```
 $ npx arch validate plan.arch --strict --json
@@ -48,7 +66,7 @@ $ npx arch validate plan.arch --strict --json
 
 ## What the compiler says it is
 
-Nothing below is written in the source. It is all derived, and it is how you know 290 bytes bought
+Nothing below is written in the source. It is all derived, and it is how you know 277 bytes bought
 a building rather than a picture of one:
 
 > "Home" — a 2-room floor plan, 24 m² total: Living (16 m²), Bed (8 m²); 2 doors, 1 window,
@@ -59,7 +77,7 @@ a building rather than a picture of one:
 | `Bed` is a **bedroom** (`uses: ["bedroom"]`) | Nobody wrote `uses`. The label is classified by the vocabulary matcher — which is also why the plan then *owes* that room a window, and why deleting the window turns the file red. |
 | `door_1` is the **entrance** (`hasEntrance: true`) | Derived from the wall it sits on being `exterior`, not declared. |
 | `door_2` connects `Living` ↔ `Bed` | Derived from which rooms the hosting wall segment separates. |
-| Both rooms reachable, at depth 1 and 2 | Flood-fill through the door graph; clear widths 940 mm and 740 mm. |
+| Both rooms reachable, at depth 1 and 2 | Flood-fill through the door graph; clear widths 940 mm and 940 mm. |
 
 ## What did the squeezing
 
@@ -84,14 +102,14 @@ Measured, by compiling the same building three more ways:
 
 | The same house, written differently | Bytes | Cost |
 | --- | --- | --- |
-| **This file, pre-`rotate` (the syntax baseline)** | **280** | — |
+| **The original 280-byte file (the syntax baseline)** | **280** | — |
 | Shell and partition as two separate `wall` statements | 312 | **+32** |
 | Raw millimetres instead of the `4m` / `1.4m` suffixes | 320 | **+40** |
 | Fully idiomatic: indented, ids named, settings and `uses` spelled out | 434 | **+154** |
 
-These four numbers isolate syntax choices, so they're measured without the `rotate 90` clause — the
-shipped `plan.arch` carries it and is 290 bytes, ten over this baseline (see above). Either of the
-first two squeezes alone is the difference between fitting in a tweet and not.
+These four numbers isolate syntax choices, so they're measured on the original 280-byte source,
+before either fix — the shipped `plan.arch` is now 277 bytes, three under this baseline (see
+above). Either of the first two squeezes alone is the difference between fitting in a tweet and not.
 
 ## The warning-free floor: 145 bytes
 
