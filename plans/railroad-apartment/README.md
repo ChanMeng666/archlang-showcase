@@ -23,7 +23,7 @@ So we ran the checker.
 
 ## The roast
 
-`arch lint` returns **14 warnings across 10 distinct codes**. All of them are below, verbatim, in
+`arch lint` returns **18 warnings across 11 distinct codes**. All of them are below, verbatim, in
 [`lint.txt`](lint.txt). Here are the six that hurt.
 
 **The second bedroom is not a bedroom.**
@@ -90,12 +90,15 @@ The plan declares `site { street north hemisphere north }`, which draws nothing 
 about sunlight — it just names the compass so the checker can read the aspect. The living room's one
 window faces the street, which is north. The south-facing wall belongs to the back room.
 
-The remaining five warnings — a stove with a table 400 mm too close to it, a walk into Bedroom 1
-that squeezes to 300 mm between the bed and the wardrobe, a twin bed sitting 350 mm inside the
-swing of Bedroom 2's own door, and Bedroom 1's bed *and* wardrobe, both drawn with their backs
-turned to the room instead of to the walls they stand against (`W_FIXTURE_BACK_TO_ROOM`, new in
-core 1.28.0 — it caught two real furniture-orientation mistakes that predate this piece and had
-been invisible to every prior lint pass) — are in `lint.txt` too.
+The remaining nine warnings — a stove with a table 400 mm too close to it, a walk into Bedroom 1
+that squeezes to 640 mm, walks to Bedroom 2 and to the Bath that each squeeze to 300 mm "and stop
+there — no way in is wider, so no route reaches the room", a twin bed sitting 350 mm inside the
+swing of Bedroom 2's own door, a front door that leaves a 100 mm nib at the corner of the street
+wall where the rule wants 300 mm (`W_DOOR_NEAR_CORNER`), and the living room's TV and Bedroom 1's
+bed *and* wardrobe, all three drawn with their backs turned to the room instead of to the walls
+they stand against (`W_FIXTURE_BACK_TO_ROOM`, new in core 1.28.0 — real furniture-orientation
+mistakes that predate this piece; the bed and wardrobe were caught under 1.29.0, the TV only under
+1.41.0) — are in `lint.txt` too.
 
 ## Three numbers the drawing does not tell you
 
@@ -105,17 +108,15 @@ been invisible to every prior lint pass) — are in `lint.txt` too.
 largest room in the apartment — larger than the living room, and 32% of the floor area. At
 $2,950/mo that is $954 of rent for the space whose entire function is getting to the other spaces.
 
-**The living room is 2.5 m from the front door and a 6.9 m walk.** Its `detourRatio` is **2.76**:
-you pass the room, keep going down the corridor, and come back into it through a door at the far
-end. `W_CIRCUITOUS_PATH` fires above 3.0, so this misses the warning by a quarter of a turn.
+**The living room is about 2.6 m from the front door and a 6.0 m walk.** Its `detourRatio` is
+**2.32**: you pass the room, keep going down the corridor, and come back into it through a door at
+the far end. `W_CIRCUITOUS_PATH` fires above 3.0, so this stays under the warning.
 
-**Three of the seven rooms are not in the walking model at all.** `circulation.rooms` lists the
-Hall, Living, Bedroom 1 and the back room. The Kitchen, Bedroom 2 and the Bath are simply absent:
-before it looks for a route, the model inflates every piece of furniture by a 300 mm body radius,
-and once the fridge, the twin bed and the bathroom fixtures are inflated, nothing walkable in those
-three rooms connects back to the front door. That is testable, and we tested it — delete the fridge
-line and the Kitchen reappears with a 10.7 m walk; delete the twin bed and Bedroom 2 reappears at
-13.5 m.
+**Two of the seven rooms cannot be walked to at all.** `circulation.rooms` lists the Hall, Living,
+Bedroom 1, the Kitchen and the back room. Bedroom 2 and the Bath are under `circulation.blocked`
+instead, each with a `widestWayInMm` of 300 — the same two rooms, and the same 300 mm, that
+`W_PATH_TOO_NARROW` reports as "no route reaches the room". That is testable, and we tested it —
+delete the twin bed and Bedroom 2 reappears at 13.5 m, with the Bath behind it at 15.0 m.
 
 ## What the tools offer to do about it
 
@@ -138,15 +139,18 @@ middle of an 18-metre-deep floor plate" means.
 Its third suggestion is genuinely the fix a renovation would make: `door on w_hall at 74.583% width
 900` — cut a bathroom door onto the corridor so the WC stops being a bedroom feature.
 
-## The two things a machine will fix for you
+## The three things a machine will fix for you
 
 `arch fix --dry-run` prints the unified diff it *would* write, applying only the machine-applicable
-fixes — the ones the compiler can prove correct. Out of fourteen warnings, it offers exactly two
+fixes — the ones the compiler can prove correct. Out of eighteen warnings, it offers exactly three
 ([`fix-dry-run.txt`](fix-dry-run.txt)):
 
 ```diff
 -  door id=d_bath on p_bed2_bath at 1150 width 600 swing into r_bath
 +  door id=d_bath on p_bed2_bath at 1150 width 600 hinge right swing into r_bath
+
+-  furniture id=f_tv   tv   at (1950,600) size 300x1100 label "TV" in r_living
++  furniture id=f_tv   tv   at (1950,600) size 300x1100 label "TV" rotate 90 in r_living
 
 -  furniture id=f_robe1 robe at (1650,6450) size 600x900 label "Wardrobe" in r_bed1
 +  furniture id=f_robe1 robe at (1650,6450) size 600x900 label "Wardrobe" rotate 90 in r_bed1
@@ -156,13 +160,15 @@ fixes — the ones the compiler can prove correct. Out of fourteen warnings, it 
 applied [W_SWING_OBSTRUCTED] hang the leaf on the other jamb (`hinge right`) — the flipped
 swing is clear
 applied [W_FIXTURE_BACK_TO_ROOM] turn "Wardrobe" to `rotate 90` so its back is against the wall
+applied [W_FIXTURE_BACK_TO_ROOM] turn "TV" to `rotate 90` so its back is against the wall
 (dry run — nothing written)
 ```
 
 Rehang the bathroom door on the other jamb so it stops swinging into the toilet; turn the wardrobe a
-quarter-turn so its doors face the room instead of its back. Neither costs a design decision — the
-compiler proposes both because it re-computed the flipped swing, and the walled edge the wardrobe
-should back onto, and *proved* each one clear. The bed beside it gets no such offer:
+quarter-turn so its doors face the room instead of its back; turn the TV the same quarter-turn so
+its back is on the wall. None of them costs a design decision — the compiler proposes all three
+because it re-computed the flipped swing, and the walled edge each piece should back onto, and
+*proved* each one clear. The bed beside it gets no such offer:
 `W_FIXTURE_BACK_TO_ROOM` fires on it too, but with more than one candidate edge in play the fix
 would be a guess, and the compiler declines to guess (ADR 0005) — see the roast above.
 
@@ -173,7 +179,7 @@ tell you the second bedroom is 3.91 m². It will not make it bigger.
 
 ```console
 $ npx arch lint plans/railroad-apartment/plan.arch ; echo $?
-✓ ok (14 warnings)
+✓ ok (18 warnings)
 0
 $ npx arch validate plans/railroad-apartment/plan.arch --strict --json ; echo $?
 2
@@ -197,10 +203,12 @@ drafting mistakes (furniture drawn through a wall, furniture drawn through other
 during authoring and were fixed, because "the drawing is wrong" is not a joke, it is just a wrong
 drawing.
 
-Captured under core 1.29.0, `W_FIXTURE_BACK_TO_ROOM` (bed, wardrobe — new in 1.28.0) is a third
-member of that same drafting-mistake class, caught here for the first time: it is left in, unfixed,
-because the point of this plan is to be roasted, and a real lint pass finding a real mistake is the
-roast, not an embarrassment to quietly clean up before anyone re-renders it.
+Captured under core 1.41.0. `W_FIXTURE_BACK_TO_ROOM` (bed, wardrobe and, since 1.41.0, the TV —
+the rule is new in 1.28.0) is a third member of that same drafting-mistake class, first caught here
+under 1.29.0: it is left in, unfixed, because the point of this plan is to be roasted, and a real
+lint pass finding a real mistake is the roast, not an embarrassment to quietly clean up before
+anyone re-renders it. The other warnings that are new under 1.41.0 — two more `W_PATH_TOO_NARROW`
+and one `W_DOOR_NEAR_CORNER` — are left in for the same reason.
 
 The building is a **fictional composite**, invented for this piece: a lot width, a depth, and a room
 order borrowed from a genre rather than from any address. No real listing, unit or landlord is
@@ -217,10 +225,10 @@ From the repo root:
 npm install
 
 npx arch compile  plans/railroad-apartment/plan.arch --json          # exit 0, zero errors
-npx arch lint     plans/railroad-apartment/plan.arch                 # the 12 warnings above
+npx arch lint     plans/railroad-apartment/plan.arch                 # the 18 warnings above
 npx arch lint     plans/railroad-apartment/plan.arch --json          # …as data, with fixes
 npx arch suggest  plans/railroad-apartment/plan.arch                 # the window into next door
-npx arch fix      plans/railroad-apartment/plan.arch --dry-run       # the one free renovation
+npx arch fix      plans/railroad-apartment/plan.arch --dry-run       # the free renovations  
 npx arch validate plans/railroad-apartment/plan.arch --strict --json # exit 2, on purpose
 npx arch describe plans/railroad-apartment/plan.arch --json --select circulation,totals
 

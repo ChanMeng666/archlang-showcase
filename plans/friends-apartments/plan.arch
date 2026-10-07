@@ -164,7 +164,7 @@ plan "Apartments 19 & 20" {
     furniture kitchen_sink against wall w19_north offset 2300 in r19_living
     furniture counter      against wall w19_north offset 3100 in r19_living
 
-    furniture tv    at (11800,5000) size 400x1200  label "TV"       in r19_living
+    furniture tv    at (11800,5000) size 400x1200  label "TV" rotate 270       in r19_living
     furniture chair at (13000,4400) size 900x900   label "Recliner" in r19_living
     furniture chair at (13000,5400) size 900x900   label "Recliner" in r19_living
     furniture table at (15200,3800) size 1400x800  label "Foosball" in r19_living

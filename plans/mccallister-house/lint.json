@@ -17,9 +17,24 @@
         "Hang the leaf on the other jamb — `hinge right`.",
         "Open it to the other side of the wall — `swing in`.",
         "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `arch repair` computes the smallest clearing shift.",
-        "Narrowing the door is not a fix here — the leaf would have to drop to 400 mm, under the 700 mm minimum passable width.",
+        "Narrowing the door is not a fix here — the leaf would have to drop to 350 mm, under the 760 mm minimum passable width.",
         "Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps nothing, so this warning cannot apply to it (`door pocket on <wall> at <pos> width <mm>`).",
         "If no leaf is wanted here, make it a leafless `opening` instead."
+      ]
+    },
+    {
+      "code": "W_CIRCUITOUS_PATH",
+      "severity": "warning",
+      "message": "The walk from entrance \"d_back\" to \"Sun Room\" is 5.81× the straight-line distance from that entrance (over 3×).",
+      "line": 70,
+      "col": 3,
+      "span": [
+        4448,
+        4532
+      ],
+      "fix": "Add a more direct connection — a door or a hall — so the room is not reached the long way round.",
+      "hints": [
+        "Add a more direct connection — a door or a hall — so the room isn't reached the long way round."
       ]
     },
     {

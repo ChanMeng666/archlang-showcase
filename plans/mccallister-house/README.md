@@ -63,7 +63,7 @@ matters, and it is the punchline.
 ## Then we ran the linter on it
 
 `arch lint` checks a plan for architectural soundness: rooms you cannot reach, doorways you cannot
-approach, doors that swing into things. The McCallister house comes back with two complaints. The
+approach, doors that swing into things. The McCallister house comes back with three complaints. The
 first is verbatim from `lint.txt`, and it is not staged:
 
 ```
@@ -88,8 +88,8 @@ Then it offers six ways out, and this is the part worth reading twice:
    = help: Open it to the other side of the wall — `swing in`.
    = help: Move the door along its wall (`on <wall> at <pos>`), or the obstruction —
            `arch repair` computes the smallest clearing shift.
-   = help: Narrowing the door is not a fix here — the leaf would have to drop to 400 mm,
-           under the 700 mm minimum passable width.
+   = help: Narrowing the door is not a fix here — the leaf would have to drop to 350 mm,
+           under the 760 mm minimum passable width.
    = help: Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps
            nothing, so this warning cannot apply to it
            (`door pocket on <wall> at <pos> width <mm>`).
@@ -124,6 +124,16 @@ its own help text says so — it reports an **aspect**, not a daylight measureme
 sun model, no latitude and no date. It knows which way the glass points and nothing about how much
 light comes through it.
 
+The third arrived with core 1.41.0, and it is about the same room:
+
+```
+warning[W_CIRCUITOUS_PATH]: The walk from entrance "d_back" to "Sun Room" is 5.81× the
+straight-line distance from that entrance (over 3×).
+```
+
+It is left as found: the layout is a reconstruction of a known house, and the warning is a finding
+about it, not a fault to draw away.
+
 So the sheet does not pass the ship gate, on purpose:
 
 ```console
@@ -150,7 +160,7 @@ Everything else about the house checks out, and these are derived facts, not cla
 
 ## Honesty notes
 
-Both warnings quoted above are real output, captured verbatim in `lint.txt` and `lint.json`; the
+All three warnings quoted above are real output, captured verbatim in `lint.txt` and `lint.json`; the
 empty `arch suggest` and `arch fix --dry-run` results are in `suggest.txt` and `fix-dry-run.txt`.
 Nothing was invented, edited, or engineered by planting a fault after the fact. The plan compiles
 with **zero errors**, and every other class of lint warning — unreachable rooms, blocked doorways,
@@ -185,7 +195,7 @@ From the repo root:
 npm install
 
 npx arch compile  plans/mccallister-house/plan.arch --json           # exit 0, zero errors
-npx arch lint     plans/mccallister-house/plan.arch                  # the two warnings above
+npx arch lint     plans/mccallister-house/plan.arch                  # the three warnings above
 npx arch lint     plans/mccallister-house/plan.arch --json           # …as data, with their fixes
 npx arch fix      plans/mccallister-house/plan.arch --dry-run        # "(no fixes applied)"
 npx arch suggest  plans/mccallister-house/plan.arch                  # "no topology suggestions"

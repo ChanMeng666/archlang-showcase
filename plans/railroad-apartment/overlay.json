@@ -36,5 +36,5 @@
       "color": "#c1121f"
     }
   ],
-  "note": "A fictional composite of a familiar genre — not a real listing and not a real address. Every dimension is drawn honestly; the joke is the lint output. W_BATH_VIA_BEDROOM: \"Bathroom 'Bath' is reachable only through a bedroom.\" W_PATH_TOO_NARROW: \"The walk from the entrance to 'Bedroom 1' squeezes to 300 mm (400 mm below the 700 mm minimum).\" Twelve warnings, nine codes, and 19.8 of the unit's 61.2 m² is corridor."
+  "note": "A fictional composite of a familiar genre — not a real listing and not a real address. Every dimension is drawn honestly; the joke is the lint output. W_BATH_VIA_BEDROOM: \"Bathroom 'Bath' is reachable only through a bedroom.\" W_PATH_TOO_NARROW: \"The walk from the entrance to 'Bedroom 1' squeezes to 640 mm (60 mm below the 700 mm minimum).\" Eighteen warnings, eleven codes, and 19.8 of the unit's 61.2 m² is corridor."
 }

@@ -88,14 +88,22 @@ laid on top of the drawing — it is not derived, checked, or validated by the c
 
 ## Verification
 
-`plan.arch` has nothing architectural to justify — `arch lint` reports not one warning:
+Under core 1.41.0 `arch lint` reports two warnings on `plan.arch`, both the same rule, and both
+are left as found:
+
+```
+warning[W_CIRCUITOUS_PATH]: The walk from entrance "d_service" to "Aides' Office" is 3.17× the
+straight-line distance from that entrance (over 3×).
+warning[W_CIRCUITOUS_PATH]: The walk from entrance "d_service" to "Safe Room" is 4.22× the
+straight-line distance from that entrance (over 3×).
+```
 
 ```console
 $ npx arch validate plans/miraflores-raid/plan.arch --strict
-✓ ok
+✗ 2 warnings (--strict)
 ```
 
-It reached that state by turning the sheet. This plan used to declare A2 **landscape**, and core
+The sheet fits because it was turned. This plan used to declare A2 **landscape**, and core
 1.27.0's fit rule raised `W_SCALE_OVERFLOW`: at 1:200 the palace is 70600 × 55600 mm on its outer
 faces, against 105500 × 41580 mm of drawing area once the margins, dimension bands, title block and
 four-group schedule are taken out — 14 m too tall for its own sheet. Nothing was clipped, because
