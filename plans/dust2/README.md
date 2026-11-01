@@ -73,17 +73,17 @@ this directory; every number in the four bullets below comes from it, and nothin
 - **Everything is reachable.** All seventeen spaces come back measured, and the linter reports no
   `W_ROOM_UNREACHABLE` and no `W_ROOM_DISCONNECTED`. Once a door exists, the two warnings left in
   the entire building are the crate stacks.
-- **Nothing pinches.** The tightest point on any walk is 1,540 mm — the clear width between the
-  leaves of the three double doors, which is the narrowest thing in the map by design. Eleven rooms
+- **Nothing pinches.** The tightest point on any walk is 1,140 mm — the clear width past one
+  leaf of the three double doors, which is the narrowest thing in the map by design. Eleven rooms
   are reached through one of them; the other six never narrow below 3,200 mm. The rule fires below
   700 mm.
 - **Nothing wanders.** The worst detour in the building is A site, at 1.7× the straight-line
   distance. `W_CIRCUITOUS_PATH` fires at 3×. For a plan whose entire purpose is to make two groups
   of people take different routes to the same two rooms, that is a startlingly efficient one. The
-  longest single walk is 131 m, to the A ramp.
+  longest single walk is 133 m, to the A ramp.
 - **The accessibility profile changes nothing.** `--profile accessibility-advisory` raises the
   minimum door width, the landing depths, the swing clearances and the passage width; run against
-  the real drawing it returns the same three warnings and not one more.
+  the real drawing it adds one warning to the three: a crate stands in the approach to A site.
 
 `arch validate --strict` on the drawing in this directory still exits 2, because under `--strict` a
 warning is a failure. So it does not ship. But it fails on *"there is no door"*, not on anything a
@@ -98,7 +98,7 @@ From `arch describe --json`, which reports semantics rather than pixels:
 | Sheet | A1 landscape at 1:250, 106 × 94 m on the room grid |
 | Rooms | 17, in 5 zones (T side, mid, A side, B side, CT side) |
 | Floor area | 5,756 m² — T side 2,044 · A side 1,268 · B side 1,040 · mid 708 · CT side 696 |
-| Doors | 6 — three pairs of double doors: mid, long and B |
+| Doors | 3 — double doors, 2.4 m wide: mid, long and B |
 | Cased openings | 18 |
 | Windows | **1** |
 | Exterior entrances | 0 |
@@ -151,7 +151,7 @@ door id=d_front on w_t_s at 50% width 4000
 ```
 
 — and run `npx arch describe <copy>.arch --json --select circulation` and
-`npx arch lint <copy>.arch`. That is where the 1,540 mm, the 1.7× and the 131 m come from.
+`npx arch lint <copy>.arch`. That is where the 1,140 mm, the 1.7× and the 133 m come from.
 
 ## Open it
 

@@ -1,4 +1,5 @@
 {
+  "summary": "3 warnings in 2 codes: W_FURNITURE_OVERLAP ×2, W_NO_ENTRANCE ×1",
   "ok": true,
   "strict": false,
   "diagnostics": [
@@ -6,11 +7,11 @@
       "code": "W_FURNITURE_OVERLAP",
       "severity": "warning",
       "message": "Furniture \"Crate\" overlaps \"Crate\".",
-      "line": 233,
+      "line": 230,
       "col": 3,
       "span": [
-        13800,
-        13883
+        13501,
+        13584
       ],
       "fix": "Move or resize one so they no longer intersect; leave a walkway between them.",
       "hints": [
@@ -21,11 +22,11 @@
       "code": "W_FURNITURE_OVERLAP",
       "severity": "warning",
       "message": "Furniture \"Crate\" overlaps \"Crate\".",
-      "line": 240,
+      "line": 237,
       "col": 3,
       "span": [
-        14317,
-        14400
+        14018,
+        14101
       ],
       "fix": "Move or resize one so they no longer intersect; leave a walkway between them.",
       "hints": [
@@ -41,5 +42,98 @@
         "Add a `door` (or a cased `opening`) on an `exterior` wall."
       ]
     }
-  ]
+  ],
+  "coverage": {
+    "families": [
+      {
+        "family": "rooms",
+        "status": "ran"
+      },
+      {
+        "family": "furniture",
+        "status": "ran"
+      },
+      {
+        "family": "reachability",
+        "status": "partial",
+        "skipped": [
+          {
+            "reason": "no-entrance",
+            "why": "the storey has no way in"
+          }
+        ]
+      },
+      {
+        "family": "doors",
+        "status": "partial",
+        "skipped": [
+          {
+            "reason": "no-entrance",
+            "why": "the storey has no way in"
+          }
+        ]
+      },
+      {
+        "family": "circulation",
+        "status": "partial",
+        "skipped": [
+          {
+            "reason": "no-entrance",
+            "why": "the storey has no way in"
+          }
+        ]
+      },
+      {
+        "family": "classification",
+        "status": "ran"
+      },
+      {
+        "family": "annotation",
+        "status": "ran"
+      },
+      {
+        "family": "vertical",
+        "status": "ran"
+      },
+      {
+        "family": "orientation",
+        "status": "ran"
+      },
+      {
+        "family": "outdoor",
+        "status": "ran"
+      },
+      {
+        "family": "privacy",
+        "status": "partial",
+        "skipped": [
+          {
+            "reason": "no-entrance",
+            "why": "the storey has no way in"
+          }
+        ]
+      },
+      {
+        "family": "openings",
+        "status": "ran"
+      },
+      {
+        "family": "daylight",
+        "status": "ran"
+      },
+      {
+        "family": "contents",
+        "status": "ran"
+      },
+      {
+        "family": "enclosure",
+        "status": "ran"
+      },
+      {
+        "family": "stairs",
+        "status": "ran"
+      }
+    ],
+    "unclassifiedRooms": []
+  }
 }
