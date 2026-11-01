@@ -186,12 +186,9 @@ plan "de_dust2" {
   # ---- the three sets of real doors ---------------------------------------
   # Each is a pair of leaves meeting on the wall's centre — a genuine double door,
   # not a wide single. `hinge near start` / `near end` hangs each leaf on its own jamb.
-  door id=d_mid_l  on w_middoors  at 3000 width 1600 hinge near start swing into r_mid
-  door id=d_mid_r  on w_middoors  at 5000 width 1600 hinge near end   swing into r_mid
-  door id=d_long_l on w_longdoors at 4000 width 1600 hinge near start swing into r_ld
-  door id=d_long_r on w_longdoors at 6000 width 1600 hinge near end   swing into r_ld
-  door id=d_b_l    on w_bdoors    at 3000 width 1600 hinge near start swing into r_b_site
-  door id=d_b_r    on w_bdoors    at 5000 width 1600 hinge near end   swing into r_b_site
+  door id=d_mid  double on w_middoors  at 4000 width 2400 swing into r_mid
+  door id=d_long double on w_longdoors at 5000 width 2400 swing into r_ld
+  door id=d_b    double on w_bdoors    at 4000 width 2400 swing into r_b_site
 
   # There is deliberately no fourth set. The exterior shell of de_dust2 has no door
   # in it anywhere: both teams begin the round already inside, and the only way the
@@ -247,7 +244,7 @@ plan "de_dust2" {
   furniture id=c_car  car   at (102000,78000) size 4500x2000 label "Car" in r_long
 
   title {
-    project "de_dust2 — competitive layout, as built"
+    project "de_dust2, as built"
     drawn_by "ArchLang"
     date "2026-08-25"
   }
