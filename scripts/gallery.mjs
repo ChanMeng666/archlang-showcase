@@ -1,40 +1,64 @@
-// Regenerates the Gallery section of README.md from plans/*/.
-// Each row: thumbnail (plan-annotated.png if present, else plan.png),
-// the plan README's first heading as the title, links to story/source,
-// and the playground permalink extracted from the plan README.
+// Regenerates the generated regions of README.md from plans/*/:
+//   <!-- grid:start -->…<!-- grid:end -->        the 2x3 cover grid
+//   <!-- gallery:start -->…<!-- gallery:end -->  the full gallery, in three sections
+// Each gallery entry: thumbnail (plan-annotated.png if present, else plan.png), the plan README's
+// first heading as the title, links to story/source, and the playground link taken from the plan
+// README (keep those fresh with `npm run links`).
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const ROOT = join(import.meta.dirname, "..");
-const ORDER = [
-  "west-wing",
-  "villa-rotonda",
-  "miraflores-raid",
-  "dust2",
-  "skeld",
-  "bag-end",
-  "friends-apartments",
-  "evergreen-terrace",
-  "dunder-mifflin",
-  "railroad-apartment",
-  "tweet-house",
-  "mccallister-house",
+
+const NOTICE =
+  "These are original fan-art and illustrative drawings based on publicly available information, " +
+  "made for demonstration and educational purposes. They are approximations, not measured surveys. " +
+  "This project is not affiliated with, endorsed by, or sponsored by any rights holder, and uses no " +
+  "official logos or trademarks.";
+
+// Public-domain and real public buildings first, then original plans, then fan studies.
+const SECTIONS = [
+  { title: "Real buildings", slugs: ["villa-rotonda", "west-wing"] },
+  { title: "Original plans", slugs: ["railroad-apartment", "tweet-house"] },
+  {
+    title: "Fan studies",
+    notice: NOTICE,
+    slugs: [
+      "dust2",
+      "skeld",
+      "bag-end",
+      "friends-apartments",
+      "evergreen-terrace",
+      "dunder-mifflin",
+      "mccallister-house",
+    ],
+  },
 ];
+// The 2x3 grid: public-domain / original first, then two fan studies.
+const GRID = ["villa-rotonda", "west-wing", "railroad-apartment", "tweet-house", "skeld", "bag-end"];
 
-const slugs = readdirSync(join(ROOT, "plans"), { withFileTypes: true })
-  .filter((d) => d.isDirectory())
-  .map((d) => d.name)
-  .sort((a, b) => {
-    const ia = ORDER.indexOf(a);
-    const ib = ORDER.indexOf(b);
-    return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
-  });
+const onDisk = new Set(
+  readdirSync(join(ROOT, "plans"), { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => d.name),
+);
+const listed = SECTIONS.flatMap((s) => s.slugs);
+for (const slug of listed) if (!onDisk.has(slug)) throw new Error(`gallery lists ${slug}, which is not in plans/`);
+for (const slug of onDisk) if (!listed.includes(slug)) throw new Error(`plans/${slug} is on disk but in no gallery section`);
 
-const rows = [];
-for (const slug of slugs) {
-  const dir = join(ROOT, "plans", slug);
+const planDir = (slug) => join(ROOT, "plans", slug);
+const title = (slug) => {
+  const readme = readFileSync(join(planDir(slug), "README.md"), "utf8");
+  return (readme.match(/^#\s+(.+)$/m) ?? [, slug])[1].trim();
+};
+const shortName = (slug) => {
+  const social = join(planDir(slug), "social.json");
+  return existsSync(social) ? JSON.parse(readFileSync(social, "utf8")).title : title(slug);
+};
+
+function entry(slug) {
+  const dir = planDir(slug);
   const readme = readFileSync(join(dir, "README.md"), "utf8");
-  const title = (readme.match(/^#\s+(.+)$/m) ?? [, slug])[1].trim();
+  const t = title(slug);
   const img = existsSync(join(dir, "plan-annotated.png"))
     ? `plans/${slug}/plan-annotated.png`
     : `plans/${slug}/plan.png`;
@@ -46,25 +70,32 @@ for (const slug of slugs) {
   ]
     .filter(Boolean)
     .join(" · ");
-  rows.push(
-    `### ${title}\n\n` +
-      `[<img src="${img}" alt="${title}" width="820">](plans/${slug}/README.md)\n\n` +
-      `${links}\n`,
-  );
+  return `#### ${t}\n\n[<img src="${img}" alt="${t}" width="820">](plans/${slug}/README.md)\n\n${links}\n`;
+}
+
+const gallery = SECTIONS.map(
+  (s) => `### ${s.title}\n\n${s.notice ? `> ${s.notice}\n\n` : ""}${s.slugs.map(entry).join("\n")}`,
+).join("\n");
+
+const cell = (slug) =>
+  `<td align="center" width="33%"><a href="plans/${slug}/README.md"><img src="plans/${slug}/cover.png" alt="${shortName(slug)}" width="100%"></a><br><sub>${shortName(slug)}</sub></td>`;
+const grid =
+  "<table>\n" +
+  [GRID.slice(0, 3), GRID.slice(3, 6)].map((row) => `<tr>${row.map(cell).join("")}</tr>`).join("\n") +
+  "\n</table>";
+
+function replaceRegion(md, name, body) {
+  const start = `<!-- ${name}:start -->`;
+  const end = `<!-- ${name}:end -->`;
+  const s = md.indexOf(start);
+  const e = md.indexOf(end);
+  if (s < 0 || e < s) throw new Error(`README.md is missing the ${name} markers`);
+  return md.slice(0, s + start.length) + "\n\n" + body + "\n" + md.slice(e);
 }
 
 const readmePath = join(ROOT, "README.md");
-const md = readFileSync(readmePath, "utf8");
-const START = "<!-- gallery:start -->";
-const END = "<!-- gallery:end -->";
-if (!md.includes(START)) {
-  throw new Error("README.md is missing the gallery markers");
-}
-const next =
-  md.slice(0, md.indexOf(START) + START.length) +
-  "\n\n" +
-  rows.join("\n") +
-  "\n" +
-  md.slice(md.indexOf(END));
-writeFileSync(readmePath, next);
-console.log(`gallery: ${rows.length} plans`);
+let md = readFileSync(readmePath, "utf8");
+md = replaceRegion(md, "grid", grid);
+md = replaceRegion(md, "gallery", gallery);
+writeFileSync(readmePath, md);
+console.log(`gallery: ${listed.length} plans in ${SECTIONS.length} sections, ${GRID.length} in the grid`);
