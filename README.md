@@ -38,8 +38,8 @@ Or add the server once: `claude mcp add --transport http archlang https://mcp.ar
 <!-- grid:start -->
 
 <table>
-<tr><td align="center" width="33%"><a href="plans/villa-rotonda/README.md"><img src="plans/villa-rotonda/cover.png" alt="Villa La Rotonda" width="100%"></a><br><sub>Villa La Rotonda</sub></td><td align="center" width="33%"><a href="plans/west-wing/README.md"><img src="plans/west-wing/cover.png" alt="The West Wing" width="100%"></a><br><sub>The West Wing</sub></td><td align="center" width="33%"><a href="plans/railroad-apartment/README.md"><img src="plans/railroad-apartment/cover.png" alt="Railroad Walk-Up, Unit 3R" width="100%"></a><br><sub>Railroad Walk-Up, Unit 3R</sub></td></tr>
-<tr><td align="center" width="33%"><a href="plans/tweet-house/README.md"><img src="plans/tweet-house/cover.png" alt="The Tweet House" width="100%"></a><br><sub>The Tweet House</sub></td><td align="center" width="33%"><a href="plans/skeld/README.md"><img src="plans/skeld/cover.png" alt="The Skeld" width="100%"></a><br><sub>The Skeld</sub></td><td align="center" width="33%"><a href="plans/bag-end/README.md"><img src="plans/bag-end/cover.png" alt="Bag End" width="100%"></a><br><sub>Bag End</sub></td></tr>
+<tr><td align="center" width="50%"><a href="plans/villa-rotonda/README.md"><img src="plans/villa-rotonda/cover.png" alt="Villa La Rotonda" width="100%"></a><br><sub>Villa La Rotonda</sub></td><td align="center" width="50%"><a href="plans/west-wing/README.md"><img src="plans/west-wing/cover.png" alt="The West Wing" width="100%"></a><br><sub>The West Wing</sub></td></tr>
+<tr><td align="center" width="50%"><a href="plans/railroad-apartment/README.md"><img src="plans/railroad-apartment/cover.png" alt="Railroad Walk-Up, Unit 3R" width="100%"></a><br><sub>Railroad Walk-Up, Unit 3R</sub></td><td align="center" width="50%"><a href="plans/tweet-house/README.md"><img src="plans/tweet-house/cover.png" alt="The Tweet House" width="100%"></a><br><sub>The Tweet House</sub></td></tr>
 </table>
 <!-- grid:end -->
 

@@ -1,5 +1,5 @@
 // Regenerates the generated regions of README.md from plans/*/:
-//   <!-- grid:start -->…<!-- grid:end -->        the 2x3 cover grid
+//   <!-- grid:start -->…<!-- grid:end -->        the 2x2 cover grid
 //   <!-- gallery:start -->…<!-- gallery:end -->  the full gallery, in three sections
 // Each gallery entry: thumbnail (plan-annotated.png if present, else plan.png), the plan README's
 // first heading as the title, links to story/source, and the playground link taken from the plan
@@ -33,8 +33,8 @@ const SECTIONS = [
     ],
   },
 ];
-// The 2x3 grid: public-domain / original first, then two fan studies.
-const GRID = ["villa-rotonda", "west-wing", "railroad-apartment", "tweet-house", "skeld", "bag-end"];
+// The 2x2 grid: real buildings and original plans only; fan studies are never the front door.
+const GRID = ["villa-rotonda", "west-wing", "railroad-apartment", "tweet-house"];
 
 const onDisk = new Set(
   readdirSync(join(ROOT, "plans"), { withFileTypes: true })
@@ -78,10 +78,10 @@ const gallery = SECTIONS.map(
 ).join("\n");
 
 const cell = (slug) =>
-  `<td align="center" width="33%"><a href="plans/${slug}/README.md"><img src="plans/${slug}/cover.png" alt="${shortName(slug)}" width="100%"></a><br><sub>${shortName(slug)}</sub></td>`;
+  `<td align="center" width="50%"><a href="plans/${slug}/README.md"><img src="plans/${slug}/cover.png" alt="${shortName(slug)}" width="100%"></a><br><sub>${shortName(slug)}</sub></td>`;
 const grid =
   "<table>\n" +
-  [GRID.slice(0, 3), GRID.slice(3, 6)].map((row) => `<tr>${row.map(cell).join("")}</tr>`).join("\n") +
+  [GRID.slice(0, 2), GRID.slice(2, 4)].map((row) => `<tr>${row.map(cell).join("")}</tr>`).join("\n") +
   "\n</table>";
 
 function replaceRegion(md, name, body) {
