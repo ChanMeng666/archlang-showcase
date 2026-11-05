@@ -354,127 +354,155 @@
 <text x="24500" y="24675" font-size="250" fill="#0E5484" text-anchor="middle" dominant-baseline="central" transform="rotate(0 24500 24675)">φ11000</text>
 </g>
 <g id="A-ANNO" inkscape:groupmode="layer" inkscape:label="A-ANNO">
-<polygon points="-25,55565 3575,55565 3575,65085 -25,65085" fill="none" stroke="#333333" stroke-width="18"/>
+<polygon points="-25,55565 6125,55565 6125,65085 -25,65085" fill="none" stroke="#333333" stroke-width="18"/>
 <text x="47" y="55735" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">ROOM SCHEDULE</text>
-<line x1="-25" y1="55905" x2="3575" y2="55905" stroke="#333333" stroke-width="18"/>
+<line x1="-25" y1="55905" x2="6125" y2="55905" stroke="#333333" stroke-width="18"/>
 <text x="250" y="56075" font-size="152" fill="#888888" text-anchor="middle" dominant-baseline="central" font-weight="600">NO.</text>
 <text x="597" y="56075" font-size="152" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">NAME</text>
 <line x1="525" y1="55905" x2="525" y2="64745" stroke="#333333" stroke-width="13"/>
-<text x="3503" y="56075" font-size="152" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">AREA (m²)</text>
+<text x="4653" y="56075" font-size="152" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">AREA (CENTRELINE, m²)</text>
 <line x1="2525" y1="55905" x2="2525" y2="65085" stroke="#333333" stroke-width="13"/>
-<line x1="-25" y1="56245" x2="3575" y2="56245" stroke="#333333" stroke-width="18"/>
+<text x="6053" y="56075" font-size="152" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">NET AREA (m²)</text>
+<line x1="4725" y1="55905" x2="4725" y2="65085" stroke="#333333" stroke-width="13"/>
+<line x1="-25" y1="56245" x2="6125" y2="56245" stroke="#333333" stroke-width="18"/>
 <text x="250" y="56415" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">01</text>
 <text x="597" y="56415" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Loggia</text>
-<text x="3503" y="56415" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">55.00</text>
+<text x="4653" y="56415" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">55.00</text>
+<text x="6053" y="56415" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">48.12</text>
 <text x="250" y="56755" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">02</text>
 <text x="597" y="56755" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Corridoio</text>
-<text x="3503" y="56755" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">28.00</text>
-<line x1="-25" y1="56585" x2="3575" y2="56585" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="56755" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">28.00</text>
+<text x="6053" y="56755" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.16</text>
+<line x1="-25" y1="56585" x2="6125" y2="56585" stroke="#333333" stroke-width="13"/>
 <text x="250" y="57095" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">03</text>
 <text x="597" y="57095" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Sala</text>
-<text x="3503" y="57095" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">35.00</text>
-<line x1="-25" y1="56925" x2="3575" y2="56925" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="57095" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">35.00</text>
+<text x="6053" y="57095" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">30.69</text>
+<line x1="-25" y1="56925" x2="6125" y2="56925" stroke="#333333" stroke-width="13"/>
 <text x="250" y="57435" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">04</text>
 <text x="597" y="57435" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Camerino</text>
-<text x="3503" y="57435" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">14.00</text>
-<line x1="-25" y1="57265" x2="3575" y2="57265" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="57435" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">14.00</text>
+<text x="6053" y="57435" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">11.55</text>
+<line x1="-25" y1="57265" x2="6125" y2="57265" stroke="#333333" stroke-width="13"/>
 <text x="250" y="57775" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">05</text>
 <text x="597" y="57775" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Scaletta</text>
-<text x="3503" y="57775" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
-<line x1="-25" y1="57605" x2="3575" y2="57605" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="57775" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
+<text x="6053" y="57775" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">19.61</text>
+<line x1="-25" y1="57605" x2="6125" y2="57605" stroke="#333333" stroke-width="13"/>
 <text x="250" y="58115" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">06</text>
 <text x="597" y="58115" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Camera</text>
-<text x="3503" y="58115" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
-<line x1="-25" y1="57945" x2="3575" y2="57945" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="58115" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
+<text x="6053" y="58115" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">21.12</text>
+<line x1="-25" y1="57945" x2="6125" y2="57945" stroke="#333333" stroke-width="13"/>
 <text x="250" y="58455" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">07</text>
 <text x="597" y="58455" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Loggia</text>
-<text x="3503" y="58455" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">55.00</text>
-<line x1="-25" y1="58285" x2="3575" y2="58285" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="58455" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">55.00</text>
+<text x="6053" y="58455" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">48.12</text>
+<line x1="-25" y1="58285" x2="6125" y2="58285" stroke="#333333" stroke-width="13"/>
 <text x="250" y="58795" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">08</text>
 <text x="597" y="58795" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Corridoio</text>
-<text x="3503" y="58795" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">28.00</text>
-<line x1="-25" y1="58625" x2="3575" y2="58625" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="58795" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">28.00</text>
+<text x="6053" y="58795" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.16</text>
+<line x1="-25" y1="58625" x2="6125" y2="58625" stroke="#333333" stroke-width="13"/>
 <text x="250" y="59135" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">09</text>
 <text x="597" y="59135" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Sala</text>
-<text x="3503" y="59135" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">35.00</text>
-<line x1="-25" y1="58965" x2="3575" y2="58965" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="59135" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">35.00</text>
+<text x="6053" y="59135" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">30.69</text>
+<line x1="-25" y1="58965" x2="6125" y2="58965" stroke="#333333" stroke-width="13"/>
 <text x="250" y="59475" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">10</text>
 <text x="597" y="59475" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Camerino</text>
-<text x="3503" y="59475" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">14.00</text>
-<line x1="-25" y1="59305" x2="3575" y2="59305" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="59475" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">14.00</text>
+<text x="6053" y="59475" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">11.55</text>
+<line x1="-25" y1="59305" x2="6125" y2="59305" stroke="#333333" stroke-width="13"/>
 <text x="250" y="59815" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">11</text>
 <text x="597" y="59815" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Scaletta</text>
-<text x="3503" y="59815" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
-<line x1="-25" y1="59645" x2="3575" y2="59645" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="59815" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
+<text x="6053" y="59815" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">19.61</text>
+<line x1="-25" y1="59645" x2="6125" y2="59645" stroke="#333333" stroke-width="13"/>
 <text x="250" y="60155" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">12</text>
 <text x="597" y="60155" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Camera</text>
-<text x="3503" y="60155" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
-<line x1="-25" y1="59985" x2="3575" y2="59985" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="60155" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
+<text x="6053" y="60155" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">21.12</text>
+<line x1="-25" y1="59985" x2="6125" y2="59985" stroke="#333333" stroke-width="13"/>
 <text x="250" y="60495" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">13</text>
 <text x="597" y="60495" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Loggia</text>
-<text x="3503" y="60495" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">55.00</text>
-<line x1="-25" y1="60325" x2="3575" y2="60325" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="60495" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">55.00</text>
+<text x="6053" y="60495" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">48.12</text>
+<line x1="-25" y1="60325" x2="6125" y2="60325" stroke="#333333" stroke-width="13"/>
 <text x="250" y="60835" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">14</text>
 <text x="597" y="60835" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Corridoio</text>
-<text x="3503" y="60835" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">28.00</text>
-<line x1="-25" y1="60665" x2="3575" y2="60665" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="60835" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">28.00</text>
+<text x="6053" y="60835" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.16</text>
+<line x1="-25" y1="60665" x2="6125" y2="60665" stroke="#333333" stroke-width="13"/>
 <text x="250" y="61175" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">15</text>
 <text x="597" y="61175" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Sala</text>
-<text x="3503" y="61175" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">35.00</text>
-<line x1="-25" y1="61005" x2="3575" y2="61005" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="61175" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">35.00</text>
+<text x="6053" y="61175" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">30.69</text>
+<line x1="-25" y1="61005" x2="6125" y2="61005" stroke="#333333" stroke-width="13"/>
 <text x="250" y="61515" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">16</text>
 <text x="597" y="61515" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Camerino</text>
-<text x="3503" y="61515" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">14.00</text>
-<line x1="-25" y1="61345" x2="3575" y2="61345" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="61515" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">14.00</text>
+<text x="6053" y="61515" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">11.55</text>
+<line x1="-25" y1="61345" x2="6125" y2="61345" stroke="#333333" stroke-width="13"/>
 <text x="250" y="61855" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">17</text>
 <text x="597" y="61855" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Scaletta</text>
-<text x="3503" y="61855" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
-<line x1="-25" y1="61685" x2="3575" y2="61685" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="61855" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
+<text x="6053" y="61855" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">19.61</text>
+<line x1="-25" y1="61685" x2="6125" y2="61685" stroke="#333333" stroke-width="13"/>
 <text x="250" y="62195" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">18</text>
 <text x="597" y="62195" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Camera</text>
-<text x="3503" y="62195" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
-<line x1="-25" y1="62025" x2="3575" y2="62025" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="62195" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
+<text x="6053" y="62195" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">21.12</text>
+<line x1="-25" y1="62025" x2="6125" y2="62025" stroke="#333333" stroke-width="13"/>
 <text x="250" y="62535" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">19</text>
 <text x="597" y="62535" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Loggia</text>
-<text x="3503" y="62535" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">55.00</text>
-<line x1="-25" y1="62365" x2="3575" y2="62365" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="62535" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">55.00</text>
+<text x="6053" y="62535" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">48.12</text>
+<line x1="-25" y1="62365" x2="6125" y2="62365" stroke="#333333" stroke-width="13"/>
 <text x="250" y="62875" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">20</text>
 <text x="597" y="62875" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Corridoio</text>
-<text x="3503" y="62875" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">28.00</text>
-<line x1="-25" y1="62705" x2="3575" y2="62705" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="62875" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">28.00</text>
+<text x="6053" y="62875" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.16</text>
+<line x1="-25" y1="62705" x2="6125" y2="62705" stroke="#333333" stroke-width="13"/>
 <text x="250" y="63215" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">21</text>
 <text x="597" y="63215" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Sala</text>
-<text x="3503" y="63215" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">35.00</text>
-<line x1="-25" y1="63045" x2="3575" y2="63045" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="63215" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">35.00</text>
+<text x="6053" y="63215" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">30.69</text>
+<line x1="-25" y1="63045" x2="6125" y2="63045" stroke="#333333" stroke-width="13"/>
 <text x="250" y="63555" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">22</text>
 <text x="597" y="63555" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Camerino</text>
-<text x="3503" y="63555" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">14.00</text>
-<line x1="-25" y1="63385" x2="3575" y2="63385" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="63555" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">14.00</text>
+<text x="6053" y="63555" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">11.55</text>
+<line x1="-25" y1="63385" x2="6125" y2="63385" stroke="#333333" stroke-width="13"/>
 <text x="250" y="63895" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">23</text>
 <text x="597" y="63895" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Scaletta</text>
-<text x="3503" y="63895" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
-<line x1="-25" y1="63725" x2="3575" y2="63725" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="63895" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
+<text x="6053" y="63895" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">19.61</text>
+<line x1="-25" y1="63725" x2="6125" y2="63725" stroke="#333333" stroke-width="13"/>
 <text x="250" y="64235" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">24</text>
 <text x="597" y="64235" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Camera</text>
-<text x="3503" y="64235" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
-<line x1="-25" y1="64065" x2="3575" y2="64065" stroke="#333333" stroke-width="13"/>
+<text x="4653" y="64235" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">24.50</text>
+<text x="6053" y="64235" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">21.12</text>
+<line x1="-25" y1="64065" x2="6125" y2="64065" stroke="#333333" stroke-width="13"/>
 <text x="250" y="64575" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">25</text>
 <text x="597" y="64575" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Sala Centrale</text>
-<text x="3503" y="64575" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">95.03</text>
-<line x1="-25" y1="64405" x2="3575" y2="64405" stroke="#333333" stroke-width="13"/>
-<line x1="-25" y1="64745" x2="3575" y2="64745" stroke="#333333" stroke-width="18"/>
+<text x="4653" y="64575" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">95.03</text>
+<text x="6053" y="64575" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">84.95</text>
+<line x1="-25" y1="64405" x2="6125" y2="64405" stroke="#333333" stroke-width="13"/>
+<line x1="-25" y1="64745" x2="6125" y2="64745" stroke="#333333" stroke-width="18"/>
 <text x="47" y="64915" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">TOTAL</text>
-<text x="3503" y="64915" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="600">819.03</text>
-<polygon points="3875,55565 6575,55565 6575,56585 3875,56585" fill="none" stroke="#333333" stroke-width="18"/>
-<text x="3929" y="55735" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">LEGEND</text>
-<line x1="3875" y1="55905" x2="6575" y2="55905" stroke="#333333" stroke-width="18"/>
-<path d="M 3929,55973 L 4321,55973 L 4321,56177 L 3929,56177 Z" fill="url(#hatch-brick)" fill-rule="nonzero"/>
-<polygon points="3929,55973 4321,55973 4321,56177 3929,56177" fill="none" stroke="#333333" stroke-width="18"/>
-<text x="4429" y="56075" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">brick</text>
-<line x1="3875" y1="56245" x2="6575" y2="56245" stroke="#333333" stroke-width="13"/>
-<path d="M 3929,56313 L 4321,56313 L 4321,56517 L 3929,56517 Z" fill="url(#poche)" fill-rule="nonzero"/>
-<polygon points="3929,56313 4321,56313 4321,56517 3929,56517" fill="none" stroke="#333333" stroke-width="18"/>
-<text x="4429" y="56415" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">poche</text>
+<text x="4653" y="64915" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="600">819.03</text>
+<text x="6053" y="64915" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="600">705.95</text>
+<polygon points="6425,55565 9125,55565 9125,56585 6425,56585" fill="none" stroke="#333333" stroke-width="18"/>
+<text x="6479" y="55735" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">LEGEND</text>
+<line x1="6425" y1="55905" x2="9125" y2="55905" stroke="#333333" stroke-width="18"/>
+<path d="M 6479,55973 L 6871,55973 L 6871,56177 L 6479,56177 Z" fill="url(#hatch-brick)" fill-rule="nonzero"/>
+<polygon points="6479,55973 6871,55973 6871,56177 6479,56177" fill="none" stroke="#333333" stroke-width="18"/>
+<text x="6979" y="56075" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">brick</text>
+<line x1="6425" y1="56245" x2="9125" y2="56245" stroke="#333333" stroke-width="13"/>
+<path d="M 6479,56313 L 6871,56313 L 6871,56517 L 6479,56517 Z" fill="url(#poche)" fill-rule="nonzero"/>
+<polygon points="6479,56313 6871,56313 6871,56517 6479,56517" fill="none" stroke="#333333" stroke-width="18"/>
+<text x="6979" y="56415" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">poche</text>
 </g>
 <g><polygon points="48575,-1300 48350,-580 48575,-737.5 48800,-580" fill="#333333" transform="rotate(0 48575 -850)"/><text x="48575" y="-1508" font-size="260" fill="#333333" text-anchor="middle" dominant-baseline="central">N</text></g>
 <g><rect x="-25" y="53225" width="1000" height="140" fill="#333333"/><rect x="975" y="53225" width="1000" height="140" fill="none" stroke="#333333" stroke-width="18"/><text x="-25" y="53565" font-size="200" fill="#333333" text-anchor="start" dominant-baseline="central">0</text><text x="1975" y="53565" font-size="200" fill="#333333" text-anchor="middle" dominant-baseline="central">2 m</text></g>

@@ -61,9 +61,9 @@ shopping in from the car without passing the front hall.
 
 ```bash
 npm install
-npx arch compile  plans/evergreen-terrace/plan.arch --json   # renders; errors come back as data
-npx arch lint     plans/evergreen-terrace/plan.arch --json   # 1 warning, discussed below
-npx arch describe plans/evergreen-terrace/plan.arch --json --select schedule,access,site
+npx -y @chanmeng666/archlang compile  plans/evergreen-terrace/plan.arch --json   # renders; errors come back as data
+npx -y @chanmeng666/archlang lint     plans/evergreen-terrace/plan.arch --json   # 5 warnings; the one discussed below is W_ROOM_NOT_EQUATOR_FACING
+npx -y @chanmeng666/archlang describe plans/evergreen-terrace/plan.arch --json --select schedule,access,site
 
 node scripts/render.mjs    evergreen-terrace   # plan.svg + plan.png
 node scripts/permalink.mjs evergreen-terrace   # the playground link below
@@ -86,8 +86,9 @@ node scripts/permalink.mjs evergreen-terrace   # the playground link below
   and each bay window is attributed to the room it lights. The cost is that a polygon room
   refuses `anchor`/`centered` placement rather than approximating it on a bounding box it
   does not fill, so the sofa, coffee table and dining table are placed at coordinates.
-- **The one remaining warning is true and unfixable, so it stays.** `W_ROOM_NOT_EQUATOR_FACING`
-  on the rumpus room: it has two windows, north and east, and none facing the equator side.
+- **One warning is true and unfixable, so it stays.** (Core 1.55.0 reports four more:
+  `W_HOB_UNDER_WINDOW`, `W_ROOM_MISSING_DEFINING`, `W_TITLE_OVERFLOW`, `W_WC_SIDE_CLEARANCE`.)
+  `W_ROOM_NOT_EQUATOR_FACING` on the rumpus room: it has two windows, north and east, and none facing the equator side.
   That is a fact about the house, not a fault in the drawing — the room is landlocked behind
   the garage, with the kitchen to its west, so it has no south-facing exterior wall to put a
   window in. Silencing it would mean either moving the rumpus room out from behind the garage

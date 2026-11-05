@@ -15,10 +15,12 @@ you know the shape of because you watched people cross it a thousand times, not 
 ever saw a plan of it. So the interesting part of putting it in ArchLang was that the
 *language* asks the questions the camera never did — how deep is the corridor, which way does
 the front door swing, is there room to walk past the foosball table? Every one of those has a
-number here, and the compiler checks it. `arch lint` reports zero warnings, which means the
-bathrooms are enclosed, every bedroom has a window on an outside wall, no fixture stands in a
-doorway, and you can walk from the stairs to any of the twelve rooms without squeezing below
-700 mm. The two apartments share no wall and no door: the only way between them is out one
+number here, and the compiler checks it. `arch lint` returned zero warnings when this was drawn, which meant the
+bathrooms were enclosed, every bedroom had a window on an outside wall, no fixture stood in a
+doorway, and you could walk from the stairs to any of the twelve rooms without squeezing below
+700 mm. Under core 1.55.0 newer rules add nine advisories (jamb clearances, a stove 200 mm from
+the fridge, a stair landing, a title that overflows its row; see `npx -y @chanmeng666/archlang lint`);
+those checks still hold. The two apartments share no wall and no door: the only way between them is out one
 front door, across 2.6 m of hallway, and in the other — which `arch describe --json` confirms
 in the access graph rather than leaving it to the eye.
 
@@ -55,10 +57,10 @@ does not fill. Sheet is A2 landscape at 1:50.
 
 ```bash
 npm install
-npx arch compile  plans/friends-apartments/plan.arch --json   # renders; errors come back as data
-npx arch lint     plans/friends-apartments/plan.arch --json   # 0 warnings
-npx arch validate plans/friends-apartments/plan.arch --strict --json
-npx arch describe plans/friends-apartments/plan.arch --json --select zones,access
+npx -y @chanmeng666/archlang compile  plans/friends-apartments/plan.arch --json   # renders; errors come back as data
+npx -y @chanmeng666/archlang lint     plans/friends-apartments/plan.arch --json   # 0 warnings when drawn; 9 under 1.55.0, all newer rules
+npx -y @chanmeng666/archlang validate plans/friends-apartments/plan.arch --strict --json
+npx -y @chanmeng666/archlang describe plans/friends-apartments/plan.arch --json --select zones,access
 
 node scripts/render.mjs   friends-apartments   # plan.svg + plan.png
 node scripts/permalink.mjs friends-apartments  # the playground link below
@@ -70,7 +72,7 @@ node scripts/permalink.mjs friends-apartments  # the playground link below
 
 ## Notes on the drawing
 
-- **`arch lint` is clean, and it took three passes to get there.** The first run flagged seven
+- **`arch lint` was clean, and it took three passes to get there.** The first run flagged seven
   warnings, all real: `offset` on `furniture … against wall` positions a piece's *centre*, not
   its near edge, so three appliance runs started half inside the corner wall; a wardrobe stood
   150 mm from a door hinge; and two bedrooms had their walking route pinched to 500 mm. The

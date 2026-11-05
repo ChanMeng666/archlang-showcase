@@ -63,8 +63,9 @@ matters, and it is the punchline.
 ## Then we ran the linter on it
 
 `arch lint` checks a plan for architectural soundness: rooms you cannot reach, doorways you cannot
-approach, doors that swing into things. The McCallister house comes back with three complaints. The
-first is verbatim from `lint.txt`, and it is not staged:
+approach, doors that swing into things. Under core 1.55.0 the McCallister house comes back with 21 warnings in 10 codes (twelve of
+them `W_PATH_TOO_NARROW`; the full list is in `lint.txt`). Three are the story. The first is
+verbatim from `lint.txt`, and it is not staged:
 
 ```
 warning[W_SWING_OBSTRUCTED]: Door swing is obstructed — the swing needs 1200 mm of clear
@@ -101,7 +102,7 @@ jamb, and `arch fix` will rewrite the source for you — but only when the flipp
 clear. Ask for it here and you get:
 
 ```console
-$ npx arch fix plans/mccallister-house/plan.arch --dry-run
+$ npx -y @chanmeng666/archlang fix plans/mccallister-house/plan.arch --dry-run
   (no fixes applied)
 ```
 
@@ -137,7 +138,7 @@ about it, not a fault to draw away.
 So the sheet does not pass the ship gate, on purpose:
 
 ```console
-$ npx arch validate plans/mccallister-house/plan.arch --strict --json
+$ npx -y @chanmeng666/archlang validate plans/mccallister-house/plan.arch --strict --json
 { "ok": false, "strict": true, ... }
 $ echo $?
 2
@@ -160,12 +161,13 @@ Everything else about the house checks out, and these are derived facts, not cla
 
 ## Honesty notes
 
-All three warnings quoted above are real output, captured verbatim in `lint.txt` and `lint.json`; the
+All the warnings quoted above are real output, captured verbatim in `lint.txt` and `lint.json`; the
 empty `arch suggest` and `arch fix --dry-run` results are in `suggest.txt` and `fix-dry-run.txt`.
 Nothing was invented, edited, or engineered by planting a fault after the fact. The plan compiles
-with **zero errors**, and every other class of lint warning — unreachable rooms, blocked doorways,
-fixtures through walls, floating plumbing, dimensions colliding in the same chain tier — was chased
-down and fixed. What is left is what the story requires.
+with **zero errors**. When it was drawn, every other class of lint warning — unreachable rooms,
+blocked doorways, fixtures through walls, floating plumbing, dimensions colliding in the same chain
+tier — was chased down and fixed. What is left is what the story requires, plus what rules added
+in later cores report (21 warnings in all under 1.55.0, listed in `lint.txt`), left as found.
 
 The layout is a reconstruction, not a survey. The real house at 671 Lincoln Avenue is a private
 residence; its ground-floor arrangement is fan-documented from the film and from listing
@@ -194,13 +196,13 @@ From the repo root:
 ```bash
 npm install
 
-npx arch compile  plans/mccallister-house/plan.arch --json           # exit 0, zero errors
-npx arch lint     plans/mccallister-house/plan.arch                  # the three warnings above
-npx arch lint     plans/mccallister-house/plan.arch --json           # …as data, with their fixes
-npx arch fix      plans/mccallister-house/plan.arch --dry-run        # "(no fixes applied)"
-npx arch suggest  plans/mccallister-house/plan.arch                  # "no topology suggestions"
-npx arch validate plans/mccallister-house/plan.arch --strict --json  # exit 2, on purpose
-npx arch describe plans/mccallister-house/plan.arch --json --select site,totals,doors
+npx -y @chanmeng666/archlang compile  plans/mccallister-house/plan.arch --json           # exit 0, zero errors
+npx -y @chanmeng666/archlang lint     plans/mccallister-house/plan.arch                  # 21 warnings; the three above are among them
+npx -y @chanmeng666/archlang lint     plans/mccallister-house/plan.arch --json           # …as data, with their fixes
+npx -y @chanmeng666/archlang fix      plans/mccallister-house/plan.arch --dry-run        # "(no fixes applied)"
+npx -y @chanmeng666/archlang suggest  plans/mccallister-house/plan.arch                  # "no topology suggestions"
+npx -y @chanmeng666/archlang validate plans/mccallister-house/plan.arch --strict --json  # exit 2, on purpose
+npx -y @chanmeng666/archlang describe plans/mccallister-house/plan.arch --json --select site,totals,doors
 
 node scripts/render.mjs    mccallister-house                         # → plan.svg + plan.png
 node scripts/permalink.mjs mccallister-house                         # → the playground link below
@@ -212,7 +214,7 @@ output of those commands.
 To check the swing claim without taking our word for it, narrow the read to the one rule:
 
 ```bash
-npx arch lint plans/mccallister-house/plan.arch --json --code W_SWING_OBSTRUCTED
+npx -y @chanmeng666/archlang lint plans/mccallister-house/plan.arch --json --code W_SWING_OBSTRUCTED
 ```
 
 That is a **display** filter — `ok`, `total_diagnostics` and the exit code still come from the

@@ -30,6 +30,7 @@
       ],
       "room_type": "Storage",
       "area_m2": 139,
+      "net_area_m2": 129.52,
       "bbox": {
         "x": 2000,
         "y": 17000,
@@ -75,6 +76,7 @@
       ],
       "room_type": "Storage",
       "area_m2": 143,
+      "net_area_m2": 132.35,
       "bbox": {
         "x": 9000,
         "y": 3000,
@@ -112,6 +114,7 @@
       ],
       "room_type": "Storage",
       "area_m2": 182,
+      "net_area_m2": 170.55,
       "bbox": {
         "x": 9000,
         "y": 28000,
@@ -150,6 +153,7 @@
       ],
       "room_type": "Entrance",
       "area_m2": 84,
+      "net_area_m2": 77.06,
       "bbox": {
         "x": 16000,
         "y": 14000,
@@ -189,6 +193,7 @@
       ],
       "room_type": "StudyRoom",
       "area_m2": 56,
+      "net_area_m2": 49.4,
       "bbox": {
         "x": 22000,
         "y": 18000,
@@ -225,6 +230,7 @@
       ],
       "room_type": "Entrance",
       "area_m2": 120,
+      "net_area_m2": 109.6,
       "bbox": {
         "x": 22000,
         "y": 3000,
@@ -261,6 +267,7 @@
       "uses": [],
       "room_type": "Room",
       "area_m2": 91,
+      "net_area_m2": 82.5,
       "bbox": {
         "x": 27000,
         "y": 9000,
@@ -297,6 +304,7 @@
       ],
       "room_type": "DiningRoom",
       "area_m2": 360,
+      "net_area_m2": 343.45,
       "bbox": {
         "x": 42000,
         "y": 3000,
@@ -336,6 +344,7 @@
       ],
       "room_type": "Entrance",
       "area_m2": 42,
+      "net_area_m2": 36.85,
       "bbox": {
         "x": 48000,
         "y": 21000,
@@ -373,6 +382,7 @@
       ],
       "room_type": "Entrance",
       "area_m2": 36,
+      "net_area_m2": 31.35,
       "bbox": {
         "x": 56000,
         "y": 21000,
@@ -410,6 +420,7 @@
       ],
       "room_type": "StudyRoom",
       "area_m2": 80,
+      "net_area_m2": 73.3,
       "bbox": {
         "x": 62000,
         "y": 21000,
@@ -448,6 +459,7 @@
       ],
       "room_type": "Entrance",
       "area_m2": 132,
+      "net_area_m2": 120.71,
       "bbox": {
         "x": 22000,
         "y": 28000,
@@ -486,6 +498,7 @@
       ],
       "room_type": "Storage",
       "area_m2": 126,
+      "net_area_m2": 116.86,
       "bbox": {
         "x": 30000,
         "y": 34000,
@@ -523,6 +536,7 @@
       ],
       "room_type": "Storage",
       "area_m2": 224,
+      "net_area_m2": 211.7,
       "bbox": {
         "x": 44000,
         "y": 28000,
@@ -562,6 +576,7 @@
       ],
       "room_type": "Entrance",
       "area_m2": 48,
+      "net_area_m2": 42.35,
       "bbox": {
         "x": 62000,
         "y": 5000,
@@ -597,6 +612,7 @@
       "uses": [],
       "room_type": "Room",
       "area_m2": 120,
+      "net_area_m2": 110.35,
       "bbox": {
         "x": 70000,
         "y": 3000,
@@ -632,6 +648,7 @@
       "uses": [],
       "room_type": "Room",
       "area_m2": 60,
+      "net_area_m2": 53.35,
       "bbox": {
         "x": 66000,
         "y": 15000,
@@ -669,6 +686,7 @@
       ],
       "room_type": "Entrance",
       "area_m2": 132,
+      "net_area_m2": 121.81,
       "bbox": {
         "x": 76000,
         "y": 13000,
@@ -707,6 +725,7 @@
       "uses": [],
       "room_type": "Room",
       "area_m2": 115,
+      "net_area_m2": 106.04,
       "bbox": {
         "x": 82000,
         "y": 15000,
@@ -751,6 +770,7 @@
       ],
       "room_type": "Entrance",
       "area_m2": 96,
+      "net_area_m2": 88.41,
       "bbox": {
         "x": 60000,
         "y": 29000,
@@ -789,6 +809,7 @@
       "uses": [],
       "room_type": "Room",
       "area_m2": 80,
+      "net_area_m2": 72.2,
       "bbox": {
         "x": 62000,
         "y": 35000,
@@ -823,6 +844,7 @@
       "uses": [],
       "room_type": "Room",
       "area_m2": 80,
+      "net_area_m2": 72,
       "bbox": {
         "x": 74000,
         "y": 35000,
@@ -1907,7 +1929,10 @@
     "rooms": 22,
     "doors": 21,
     "windows": 3,
-    "floor_area_m2": 2546
+    "floor_area_m2": 2546,
+    "gross_internal_area_m2": 2409.26,
+    "gross_internal_area_all_levels_m2": 2409.26,
+    "net_floor_area_m2": 2351.71
   },
   "input_graph": {
     "r_reactor": [
@@ -2502,6 +2527,7 @@
       "id": "r_reactor",
       "name": "Reactor",
       "area_m2": 139,
+      "net_area_m2": 129.52,
       "zone": "bow"
     },
     {
@@ -2509,6 +2535,7 @@
       "id": "r_upper_eng",
       "name": "Upper Engine",
       "area_m2": 143,
+      "net_area_m2": 132.35,
       "zone": "bow"
     },
     {
@@ -2516,6 +2543,7 @@
       "id": "r_lower_eng",
       "name": "Lower Engine",
       "area_m2": 182,
+      "net_area_m2": 170.55,
       "zone": "bow"
     },
     {
@@ -2523,6 +2551,7 @@
       "id": "r_reactor_hall",
       "name": "Reactor Hall",
       "area_m2": 84,
+      "net_area_m2": 77.06,
       "zone": "bow"
     },
     {
@@ -2530,6 +2559,7 @@
       "id": "r_security",
       "name": "Security",
       "area_m2": 56,
+      "net_area_m2": 49.4,
       "zone": "bow"
     },
     {
@@ -2537,6 +2567,7 @@
       "id": "r_upper_hall",
       "name": "Upper Hall",
       "area_m2": 120,
+      "net_area_m2": 109.6,
       "zone": "midship"
     },
     {
@@ -2544,6 +2575,7 @@
       "id": "r_medbay",
       "name": "MedBay",
       "area_m2": 91,
+      "net_area_m2": 82.5,
       "zone": "midship"
     },
     {
@@ -2551,6 +2583,7 @@
       "id": "r_cafeteria",
       "name": "Cafeteria",
       "area_m2": 360,
+      "net_area_m2": 343.45,
       "zone": "midship"
     },
     {
@@ -2558,6 +2591,7 @@
       "id": "r_caf_hall",
       "name": "Cafeteria Hall",
       "area_m2": 42,
+      "net_area_m2": 36.85,
       "zone": "midship"
     },
     {
@@ -2565,6 +2599,7 @@
       "id": "r_admin_hall",
       "name": "Admin Hall",
       "area_m2": 36,
+      "net_area_m2": 31.35,
       "zone": "midship"
     },
     {
@@ -2572,6 +2607,7 @@
       "id": "r_admin",
       "name": "Admin",
       "area_m2": 80,
+      "net_area_m2": 73.3,
       "zone": "midship"
     },
     {
@@ -2579,6 +2615,7 @@
       "id": "r_lower_hall",
       "name": "Lower Hall",
       "area_m2": 132,
+      "net_area_m2": 120.71,
       "zone": "midship"
     },
     {
@@ -2586,6 +2623,7 @@
       "id": "r_electrical",
       "name": "Electrical",
       "area_m2": 126,
+      "net_area_m2": 116.86,
       "zone": "midship"
     },
     {
@@ -2593,6 +2631,7 @@
       "id": "r_storage",
       "name": "Storage",
       "area_m2": 224,
+      "net_area_m2": 211.7,
       "zone": "midship"
     },
     {
@@ -2600,6 +2639,7 @@
       "id": "r_weap_hall",
       "name": "Weapons Hall",
       "area_m2": 48,
+      "net_area_m2": 42.35,
       "zone": "stern"
     },
     {
@@ -2607,6 +2647,7 @@
       "id": "r_weapons",
       "name": "Weapons",
       "area_m2": 120,
+      "net_area_m2": 110.35,
       "zone": "stern"
     },
     {
@@ -2614,6 +2655,7 @@
       "id": "r_o2",
       "name": "O2",
       "area_m2": 60,
+      "net_area_m2": 53.35,
       "zone": "stern"
     },
     {
@@ -2621,6 +2663,7 @@
       "id": "r_east_hall",
       "name": "East Hall",
       "area_m2": 132,
+      "net_area_m2": 121.81,
       "zone": "stern"
     },
     {
@@ -2628,6 +2671,7 @@
       "id": "r_nav",
       "name": "Navigation",
       "area_m2": 115,
+      "net_area_m2": 106.04,
       "zone": "stern"
     },
     {
@@ -2635,6 +2679,7 @@
       "id": "r_south_hall",
       "name": "South Hall",
       "area_m2": 96,
+      "net_area_m2": 88.41,
       "zone": "stern"
     },
     {
@@ -2642,6 +2687,7 @@
       "id": "r_comms",
       "name": "Communications",
       "area_m2": 80,
+      "net_area_m2": 72.2,
       "zone": "stern"
     },
     {
@@ -2649,6 +2695,7 @@
       "id": "r_shields",
       "name": "Shields",
       "area_m2": 80,
+      "net_area_m2": 72,
       "zone": "stern"
     }
   ],

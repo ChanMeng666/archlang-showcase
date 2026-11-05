@@ -64,12 +64,14 @@ node scripts/render.mjs west-wing     # → plan.svg + plan.png
 To check it rather than look at it:
 
 ```bash
-npx arch validate plans/west-wing/plan.arch --strict --json   # ok: false, one warning
-npx arch describe plans/west-wing/plan.arch --json --room r_oval
+npx -y @chanmeng666/archlang validate plans/west-wing/plan.arch --strict --json   # ok: false, 30 warnings
+npx -y @chanmeng666/archlang describe plans/west-wing/plan.arch --json --room r_oval
 ```
 
-`validate --strict` is the ship gate — it fails on warnings as well as errors. Under core 1.41.0
-this plan no longer passes it clean. There is one lint warning, and it is left as found:
+`validate --strict` is the ship gate — it fails on warnings as well as errors. Under core 1.55.0
+this plan does not pass it clean: `lint` returns 30 warnings in 6 codes (22 `W_SEAT_FACING_AWAY`,
+3 `W_LEAF_TOO_WIDE`, 2 `W_BOUNDARY_NO_WALL`, `W_ANNOTATION_OVERLAP`, `W_CIRCUITOUS_PATH`,
+`W_TITLE_OVERFLOW`), all left as found. The one this page is about is:
 
 ```
 warning[W_CIRCUITOUS_PATH]: The walk from entrance "d_rose" to "Cabinet Room" is 3.04× the

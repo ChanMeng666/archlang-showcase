@@ -391,22 +391,22 @@
 <g id="A-ANNO-TEXT" inkscape:groupmode="layer" inkscape:label="A-ANNO-TEXT">
 <text x="6000" y="3680" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">The Tunnel</text>
 <text x="6000" y="4065" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">34.2 m²</text>
-<text x="22991.77" y="7430" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Entrance Hall</text>
-<text x="22991.77" y="7815" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">20.8 m²</text>
+<text x="22991.77" y="7430" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600"><tspan x="22991.77" y="7220">Entrance</tspan><tspan x="22991.77" y="7640">Hall</tspan></text>
+<text x="22991.77" y="8025" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">20.8 m²</text>
 <text x="1350" y="1430" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600"><tspan x="1350" y="1220">Coal</tspan><tspan x="1350" y="1640">Cellar</tspan></text>
 <text x="1350" y="2025" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">8.1 m²</text>
 <text x="4050" y="1430" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Wine Cellar</text>
 <text x="4050" y="1815" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">8.1 m²</text>
 <text x="6750" y="1430" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Lumber Room</text>
 <text x="6750" y="1815" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">8.1 m²</text>
-<text x="9855" y="1880" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600"><tspan x="9855" y="1670">Spare</tspan><tspan x="9855" y="2090">Bedroom</tspan></text>
-<text x="9855" y="2475" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">8.1 m²</text>
+<text x="9855" y="2360" font-size="200" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600"><tspan x="9855" y="2240">Spare</tspan><tspan x="9855" y="2480">Bedroom</tspan></text>
+<text x="9855" y="2700" font-size="200" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">8.1 m²</text>
 <text x="12555" y="1880" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Bathroom</text>
 <text x="12555" y="2265" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">8.1 m²</text>
-<text x="14735" y="3050" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Wardrobes</text>
-<text x="14735" y="3435" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">9.1 m²</text>
-<text x="16635" y="2330" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600"><tspan x="16635" y="2120">Pantry</tspan><tspan x="16635" y="2540">III</tspan></text>
-<text x="16635" y="2925" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">9.1 m²</text>
+<text x="14450" y="3060" font-size="300" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Wardrobes</text>
+<text x="14450" y="3390" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">9.1 m²</text>
+<text x="16350" y="3050" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600"><tspan x="16350" y="2840">Pantry</tspan><tspan x="16350" y="3260">III</tspan></text>
+<text x="16350" y="3645" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">9.1 m²</text>
 <text x="18250" y="3050" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600"><tspan x="18250" y="2840">Pantry</tspan><tspan x="18250" y="3260">II</tspan></text>
 <text x="18250" y="3645" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">9.1 m²</text>
 <text x="20100" y="3050" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600"><tspan x="20100" y="2840">Pantry</tspan><tspan x="20100" y="3260">I</tspan></text>
@@ -421,8 +421,8 @@
 <text x="7950" y="8520" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">17.1 m²</text>
 <text x="10500" y="8135" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Study</text>
 <text x="10500" y="8520" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">17.1 m²</text>
-<text x="14250" y="7010" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Dining Room</text>
-<text x="14250" y="7395" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">17.6 m²</text>
+<text x="12900" y="7010" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600"><tspan x="12900" y="6800">Dining</tspan><tspan x="12900" y="7220">Room</tspan></text>
+<text x="12900" y="7605" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">17.6 m²</text>
 <text x="20100" y="8180" font-size="350" fill="#222222" text-anchor="middle" dominant-baseline="central" font-weight="600">Parlour</text>
 <text x="20100" y="8565" font-size="250" fill="#7a7a7a" text-anchor="middle" dominant-baseline="central">17.6 m²</text>
 </g>
@@ -445,223 +445,244 @@
 <text x="24900" y="7675" font-size="250" fill="#0E5484" text-anchor="middle" dominant-baseline="central" transform="rotate(0 24900 7675)">R1800</text>
 </g>
 <g id="A-ANNO" inkscape:groupmode="layer" inkscape:label="A-ANNO">
-<polygon points="-300,15165 3300,15165 3300,22305 -300,22305" fill="none" stroke="#333333" stroke-width="18"/>
+<polygon points="-300,15165 5850,15165 5850,22305 -300,22305" fill="none" stroke="#333333" stroke-width="18"/>
 <text x="-228" y="15335" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">ROOM SCHEDULE</text>
-<line x1="-300" y1="15505" x2="3300" y2="15505" stroke="#333333" stroke-width="18"/>
+<line x1="-300" y1="15505" x2="5850" y2="15505" stroke="#333333" stroke-width="18"/>
 <text x="-25" y="15675" font-size="152" fill="#888888" text-anchor="middle" dominant-baseline="central" font-weight="600">NO.</text>
 <text x="322" y="15675" font-size="152" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">NAME</text>
 <line x1="250" y1="15505" x2="250" y2="21965" stroke="#333333" stroke-width="13"/>
-<text x="3228" y="15675" font-size="152" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">AREA (m²)</text>
+<text x="4378" y="15675" font-size="152" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">AREA (CENTRELINE, m²)</text>
 <line x1="2250" y1="15505" x2="2250" y2="22305" stroke="#333333" stroke-width="13"/>
-<line x1="-300" y1="15845" x2="3300" y2="15845" stroke="#333333" stroke-width="18"/>
+<text x="5778" y="15675" font-size="152" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">NET AREA (m²)</text>
+<line x1="4450" y1="15505" x2="4450" y2="22305" stroke="#333333" stroke-width="13"/>
+<line x1="-300" y1="15845" x2="5850" y2="15845" stroke="#333333" stroke-width="18"/>
 <text x="-25" y="16015" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">01</text>
 <text x="322" y="16015" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">The Tunnel</text>
-<text x="3228" y="16015" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">34.20</text>
+<text x="4378" y="16015" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">34.20</text>
+<text x="5778" y="16015" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">29.12</text>
 <text x="-25" y="16355" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">02</text>
 <text x="322" y="16355" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Entrance Hall</text>
-<text x="3228" y="16355" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">20.79</text>
-<line x1="-300" y1="16185" x2="3300" y2="16185" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="16355" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">20.79</text>
+<text x="5778" y="16355" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">17.43</text>
+<line x1="-300" y1="16185" x2="5850" y2="16185" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="16695" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">03</text>
 <text x="322" y="16695" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Coal Cellar</text>
-<text x="3228" y="16695" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">8.10</text>
-<line x1="-300" y1="16525" x2="3300" y2="16525" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="16695" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">8.10</text>
+<text x="5778" y="16695" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">5.98</text>
+<line x1="-300" y1="16525" x2="5850" y2="16525" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="17035" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">04</text>
 <text x="322" y="17035" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Wine Cellar</text>
-<text x="3228" y="17035" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">8.10</text>
-<line x1="-300" y1="16865" x2="3300" y2="16865" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="17035" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">8.10</text>
+<text x="5778" y="17035" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">6.50</text>
+<line x1="-300" y1="16865" x2="5850" y2="16865" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="17375" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">05</text>
 <text x="322" y="17375" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Lumber Room</text>
-<text x="3228" y="17375" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">8.10</text>
-<line x1="-300" y1="17205" x2="3300" y2="17205" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="17375" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">8.10</text>
+<text x="5778" y="17375" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">6.50</text>
+<line x1="-300" y1="17205" x2="5850" y2="17205" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="17715" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">06</text>
 <text x="322" y="17715" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Spare Bedroom</text>
-<text x="3228" y="17715" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">8.10</text>
-<line x1="-300" y1="17545" x2="3300" y2="17545" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="17715" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">8.10</text>
+<text x="5778" y="17715" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">6.50</text>
+<line x1="-300" y1="17545" x2="5850" y2="17545" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="18055" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">07</text>
 <text x="322" y="18055" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Bathroom</text>
-<text x="3228" y="18055" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">8.10</text>
-<line x1="-300" y1="17885" x2="3300" y2="17885" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="18055" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">8.10</text>
+<text x="5778" y="18055" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">6.50</text>
+<line x1="-300" y1="17885" x2="5850" y2="17885" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="18395" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">08</text>
 <text x="322" y="18395" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Wardrobes</text>
-<text x="3228" y="18395" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">9.12</text>
-<line x1="-300" y1="18225" x2="3300" y2="18225" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="18395" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">9.12</text>
+<text x="5778" y="18395" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">7.48</text>
+<line x1="-300" y1="18225" x2="5850" y2="18225" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="18735" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">09</text>
 <text x="322" y="18735" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Pantry III</text>
-<text x="3228" y="18735" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">9.12</text>
-<line x1="-300" y1="18565" x2="3300" y2="18565" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="18735" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">9.12</text>
+<text x="5778" y="18735" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">7.48</text>
+<line x1="-300" y1="18565" x2="5850" y2="18565" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="19075" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">10</text>
 <text x="322" y="19075" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Pantry II</text>
-<text x="3228" y="19075" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">9.12</text>
-<line x1="-300" y1="18905" x2="3300" y2="18905" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="19075" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">9.12</text>
+<text x="5778" y="19075" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">7.48</text>
+<line x1="-300" y1="18905" x2="5850" y2="18905" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="19415" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">11</text>
 <text x="322" y="19415" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Pantry I</text>
-<text x="3228" y="19415" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">8.64</text>
-<line x1="-300" y1="19245" x2="3300" y2="19245" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="19415" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">8.64</text>
+<text x="5778" y="19415" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">7.04</text>
+<line x1="-300" y1="19245" x2="5850" y2="19245" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="19755" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">12</text>
 <text x="322" y="19755" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Cellar</text>
-<text x="3228" y="19755" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">14.40</text>
-<line x1="-300" y1="19585" x2="3300" y2="19585" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="19755" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">14.40</text>
+<text x="5778" y="19755" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">11.44</text>
+<line x1="-300" y1="19585" x2="5850" y2="19585" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="20095" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">13</text>
 <text x="322" y="20095" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Bath</text>
-<text x="3228" y="20095" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">15.39</text>
-<line x1="-300" y1="19925" x2="3300" y2="19925" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="20095" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">15.39</text>
+<text x="5778" y="20095" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">12.19</text>
+<line x1="-300" y1="19925" x2="5850" y2="19925" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="20435" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">14</text>
 <text x="322" y="20435" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Best Bedroom</text>
-<text x="3228" y="20435" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">18.81</text>
-<line x1="-300" y1="20265" x2="3300" y2="20265" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="20435" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">18.81</text>
+<text x="5778" y="20435" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">16.43</text>
+<line x1="-300" y1="20265" x2="5850" y2="20265" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="20775" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">15</text>
 <text x="322" y="20775" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Kitchen</text>
-<text x="3228" y="20775" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">17.10</text>
-<line x1="-300" y1="20605" x2="3300" y2="20605" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="20775" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">17.10</text>
+<text x="5778" y="20775" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">14.84</text>
+<line x1="-300" y1="20605" x2="5850" y2="20605" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="21115" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">16</text>
 <text x="322" y="21115" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Study</text>
-<text x="3228" y="21115" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">17.10</text>
-<line x1="-300" y1="20945" x2="3300" y2="20945" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="21115" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">17.10</text>
+<text x="5778" y="21115" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">14.84</text>
+<line x1="-300" y1="20945" x2="5850" y2="20945" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="21455" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">17</text>
 <text x="322" y="21455" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Dining Room</text>
-<text x="3228" y="21455" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">17.55</text>
-<line x1="-300" y1="21285" x2="3300" y2="21285" stroke="#333333" stroke-width="13"/>
+<text x="4378" y="21455" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">17.55</text>
+<text x="5778" y="21455" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">15.05</text>
+<line x1="-300" y1="21285" x2="5850" y2="21285" stroke="#333333" stroke-width="13"/>
 <text x="-25" y="21795" font-size="190" fill="#333333" text-anchor="middle" dominant-baseline="central">18</text>
 <text x="322" y="21795" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">Parlour</text>
-<text x="3228" y="21795" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">17.55</text>
-<line x1="-300" y1="21625" x2="3300" y2="21625" stroke="#333333" stroke-width="13"/>
-<line x1="-300" y1="21965" x2="3300" y2="21965" stroke="#333333" stroke-width="18"/>
+<text x="4378" y="21795" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">17.55</text>
+<text x="5778" y="21795" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central">15.05</text>
+<line x1="-300" y1="21625" x2="5850" y2="21625" stroke="#333333" stroke-width="13"/>
+<line x1="-300" y1="21965" x2="5850" y2="21965" stroke="#333333" stroke-width="18"/>
 <text x="-228" y="22135" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">TOTAL</text>
-<text x="3228" y="22135" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="600">249.39</text>
-<polygon points="3600,15165 6300,15165 6300,20605 3600,20605" fill="none" stroke="#333333" stroke-width="18"/>
-<text x="3654" y="15335" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">LEGEND</text>
-<line x1="3600" y1="15505" x2="6300" y2="15505" stroke="#333333" stroke-width="18"/>
-<path d="M 3654,15573 L 4046,15573 L 4046,15777 L 3654,15777 Z" fill="url(#poche)" fill-rule="nonzero"/>
-<polygon points="3654,15573 4046,15573 4046,15777 3654,15777" fill="none" stroke="#333333" stroke-width="18"/>
-<text x="4154" y="15675" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">poche</text>
-<line x1="3600" y1="15845" x2="6300" y2="15845" stroke="#333333" stroke-width="13"/>
-<path d="M 3690.25,15913 L 4009.75,15913 A 6.85 6.85 0 0 1 4016.6,15919.85 L 4016.6,15955.11 A 6.85 6.85 0 0 1 4009.75,15961.96 L 3690.25,15961.96 A 6.85 6.85 0 0 1 3683.4,15955.11 L 3683.4,15919.85 A 6.85 6.85 0 0 1 3690.25,15913 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<path d="M 4006.8,16031.32 A 50.5 50.5 0 0 1 3977.96,16076.94 A 298.3 298.3 0 0 1 3722.04,16076.94 A 50.5 50.5 0 0 1 3693.2,16031.32 A 50.5 50.5 0 0 1 3722.04,15985.7 A 298.3 298.3 0 0 1 3977.96,15985.7 A 50.5 50.5 0 0 1 4006.8,16031.32 Z" fill="#ffffff" stroke="#6c6864" stroke-width="18"/>
-<path d="M 3984.46,16042.49 A 24.59 24.59 0 0 1 3967.03,16066.01 A 401.69 401.69 0 0 1 3732.97,16066.01 A 24.59 24.59 0 0 1 3715.54,16042.49 A 24.59 24.59 0 0 1 3732.97,16018.96 A 401.69 401.69 0 0 1 3967.03,16018.96 A 24.59 24.59 0 0 1 3984.46,16042.49 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3783.36" y1="15971.85" x2="3783.36" y2="15991.64" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3916.64" y1="15971.85" x2="3916.64" y2="15991.64" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3850" cy="15937.48" r="8.16" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="16015" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">wc</text>
-<line x1="3600" y1="16185" x2="6300" y2="16185" stroke="#333333" stroke-width="13"/>
-<path d="M 3666.24,16253 L 4033.76,16253 A 12.24 12.24 0 0 1 4046,16265.24 L 4046,16444.76 A 12.24 12.24 0 0 1 4033.76,16457 L 3666.24,16457 A 12.24 12.24 0 0 1 3654,16444.76 L 3654,16265.24 A 12.24 12.24 0 0 1 3666.24,16253 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<path d="M 3998.96,16371.32 A 46.72 46.72 0 0 1 3971.96,16413.68 A 288.92 288.92 0 0 1 3728.04,16413.68 A 46.72 46.72 0 0 1 3701.04,16371.32 A 46.72 46.72 0 0 1 3728.04,16328.96 A 288.92 288.92 0 0 1 3971.96,16328.96 A 46.72 46.72 0 0 1 3998.96,16371.32 Z" fill="#ffffff" stroke="#6c6864" stroke-width="18"/>
-<path d="M 3985.09,16371.32 A 35.91 35.91 0 0 1 3962.82,16404.54 A 296.93 296.93 0 0 1 3737.18,16404.54 A 35.91 35.91 0 0 1 3714.91,16371.32 A 35.91 35.91 0 0 1 3737.18,16338.1 A 296.93 296.93 0 0 1 3962.82,16338.1 A 35.91 35.91 0 0 1 3985.09,16371.32 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3850" cy="16276.46" r="7.14" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3850" y1="16276.46" x2="3850" y2="16316.24" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3850" cy="16378.26" r="6.12" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="16355" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">basin</text>
-<line x1="3600" y1="16525" x2="6300" y2="16525" stroke="#333333" stroke-width="13"/>
-<path d="M 3670.32,16593 L 4029.68,16593 A 16.32 16.32 0 0 1 4046,16609.32 L 4046,16780.68 A 16.32 16.32 0 0 1 4029.68,16797 L 3670.32,16797 A 16.32 16.32 0 0 1 3654,16780.68 L 3654,16609.32 A 16.32 16.32 0 0 1 3670.32,16593 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<path d="M 3718.22,16611.36 L 3957.38,16611.36 A 70.26 70.26 0 0 1 4027.64,16681.62 L 4027.64,16708.38 A 70.26 70.26 0 0 1 3957.38,16778.64 L 3718.22,16778.64 A 23.42 23.42 0 0 1 3694.8,16755.22 L 3694.8,16634.78 A 23.42 23.42 0 0 1 3718.22,16611.36 Z" fill="#ffffff" stroke="#6c6864" stroke-width="18"/>
-<circle cx="3674.4" cy="16670.52" r="7.14" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3674.4" cy="16719.48" r="7.14" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3725.4" cy="16695" r="9.18" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3725.4" cy="16695" r="3.06" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="16695" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">bathtub</text>
-<line x1="3600" y1="16865" x2="6300" y2="16865" stroke="#333333" stroke-width="13"/>
-<polygon points="3654,16933 4046,16933 4046,17137 3654,17137" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<path d="M 3771.82,16973.8 L 3928.18,16973.8 A 14.89 14.89 0 0 1 3943.08,16988.69 L 3943.08,17107.83 A 14.89 14.89 0 0 1 3928.18,17122.72 L 3771.82,17122.72 A 14.89 14.89 0 0 1 3756.92,17107.83 L 3756.92,16988.69 A 14.89 14.89 0 0 1 3771.82,16973.8 Z" fill="#ffffff" stroke="#6c6864" stroke-width="18"/>
-<circle cx="3850" cy="17048.26" r="9.68" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
-<path d="M 3674.39,16973.8 L 3738.57,16973.8 A 6.11 6.11 0 0 1 3744.68,16979.91 L 3744.68,17116.61 A 6.11 6.11 0 0 1 3738.57,17122.72 L 3674.39,17122.72 A 6.11 6.11 0 0 1 3668.28,17116.61 L 3668.28,16979.91 A 6.11 6.11 0 0 1 3674.39,16973.8 Z" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3677.45" y1="17003.58" x2="3735.52" y2="17003.58" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3677.45" y1="17033.37" x2="3735.52" y2="17033.37" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3677.45" y1="17063.15" x2="3735.52" y2="17063.15" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3677.45" y1="17092.94" x2="3735.52" y2="17092.94" stroke="#a8a29a" stroke-width="13"/>
-<path d="M 3961.43,16973.8 L 4025.61,16973.8 A 6.11 6.11 0 0 1 4031.72,16979.91 L 4031.72,17116.61 A 6.11 6.11 0 0 1 4025.61,17122.72 L 3961.43,17122.72 A 6.11 6.11 0 0 1 3955.32,17116.61 L 3955.32,16979.91 A 6.11 6.11 0 0 1 3961.43,16973.8 Z" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3964.48" y1="17003.58" x2="4022.55" y2="17003.58" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3964.48" y1="17033.37" x2="4022.55" y2="17033.37" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3964.48" y1="17063.15" x2="4022.55" y2="17063.15" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3964.48" y1="17092.94" x2="4022.55" y2="17092.94" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3850" cy="16954.42" r="7.14" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3850" y1="16961.56" x2="3850" y2="17003.58" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="17035" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">kitchen_sink</text>
-<line x1="3600" y1="17205" x2="6300" y2="17205" stroke="#333333" stroke-width="13"/>
-<polygon points="3654,17273 4046,17273 4046,17477 3654,17477" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<line x1="3654" y1="17282.18" x2="4046" y2="17282.18" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3654" y1="17464.76" x2="4046" y2="17464.76" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="17375" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">counter</text>
-<line x1="3600" y1="17545" x2="6300" y2="17545" stroke="#333333" stroke-width="13"/>
-<polygon points="3654,17613 4046,17613 4046,17817 3654,17817" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<path d="M 3671.34,17625.24 L 4028.66,17625.24 A 5.1 5.1 0 0 1 4033.76,17630.34 L 4033.76,17758.86 A 5.1 5.1 0 0 1 4028.66,17763.96 L 3671.34,17763.96 A 5.1 5.1 0 0 1 3666.24,17758.86 L 3666.24,17630.34 A 5.1 5.1 0 0 1 3671.34,17625.24 Z" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3760.2" cy="17662" r="26.08" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3760.2" cy="17662" r="14.34" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3939.8" cy="17662" r="26.08" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3939.8" cy="17662" r="14.34" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3760.2" cy="17727.2" r="18.91" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3760.2" cy="17727.2" r="10.4" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3939.8" cy="17727.2" r="18.91" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3939.8" cy="17727.2" r="10.4" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3732.4" cy="17795.58" r="6.12" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3810.8" cy="17795.58" r="6.12" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3889.2" cy="17795.58" r="6.12" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
-<circle cx="3967.6" cy="17795.58" r="6.12" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="17715" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">stove</text>
-<line x1="3600" y1="17885" x2="6300" y2="17885" stroke="#333333" stroke-width="13"/>
-<path d="M 3657.06,17953 L 4042.94,17953 A 3.06 3.06 0 0 1 4046,17956.06 L 4046,18153.94 A 3.06 3.06 0 0 1 4042.94,18157 L 3657.06,18157 A 3.06 3.06 0 0 1 3654,18153.94 L 3654,17956.06 A 3.06 3.06 0 0 1 3657.06,17953 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<path d="M 3657.06,17953 L 4042.94,17953 A 3.06 3.06 0 0 1 4046,17956.06 L 4046,17962.18 L 3654,17962.18 L 3654,17956.06 A 3.06 3.06 0 0 1 3657.06,17953 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<path d="M 3685.92,17968.3 L 3828.53,17968.3 A 11.02 11.02 0 0 1 3839.55,17979.32 L 3839.55,17994 A 11.02 11.02 0 0 1 3828.53,18005.02 L 3685.92,18005.02 A 11.02 11.02 0 0 1 3674.91,17994 L 3674.91,17979.32 A 11.02 11.02 0 0 1 3685.92,17968.3 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
-<path d="M 3871.47,17968.3 L 4014.08,17968.3 A 11.02 11.02 0 0 1 4025.09,17979.32 L 4025.09,17994 A 11.02 11.02 0 0 1 4014.08,18005.02 L 3871.47,18005.02 A 11.02 11.02 0 0 1 3860.45,17994 L 3860.45,17979.32 A 11.02 11.02 0 0 1 3871.47,17968.3 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
-<polygon points="3660.12,18014.2 4039.88,18014.2 4039.88,18118.24 4007.24,18150.88 3660.12,18150.88" fill="#f4f2ee" stroke="#a8a29a" stroke-width="13"/>
-<polygon points="3660.12,18014.2 4039.88,18014.2 4039.88,18034.6 3660.12,18034.6" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
-<polygon points="4039.88,18118.24 4007.24,18150.88 4007.24,18118.24" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="18055" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">bed</text>
-<line x1="3600" y1="18225" x2="6300" y2="18225" stroke="#333333" stroke-width="13"/>
-<path d="M 3656.04,18293 L 4043.96,18293 A 2.04 2.04 0 0 1 4046,18295.04 L 4046,18494.96 A 2.04 2.04 0 0 1 4043.96,18497 L 3656.04,18497 A 2.04 2.04 0 0 1 3654,18494.96 L 3654,18295.04 A 2.04 2.04 0 0 1 3656.04,18293 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<line x1="3654" y1="18488.84" x2="4046" y2="18488.84" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3850" y1="18293" x2="3850" y2="18497" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3665.76" y1="18395" x2="3838.24" y2="18395" stroke="#a8a29a" stroke-width="13" stroke-dasharray="108 72"/>
-<line x1="3687.32" y1="18323.6" x2="3687.32" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3730.44" y1="18323.6" x2="3730.44" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3773.56" y1="18323.6" x2="3773.56" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3816.68" y1="18323.6" x2="3816.68" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3861.76" y1="18395" x2="4034.24" y2="18395" stroke="#a8a29a" stroke-width="13" stroke-dasharray="108 72"/>
-<line x1="3883.32" y1="18323.6" x2="3883.32" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3926.44" y1="18323.6" x2="3926.44" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3969.56" y1="18323.6" x2="3969.56" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
-<line x1="4012.68" y1="18323.6" x2="4012.68" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="18395" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">robe</text>
-<line x1="3600" y1="18565" x2="6300" y2="18565" stroke="#333333" stroke-width="13"/>
-<path d="M 3656.45,18633 L 4043.55,18633 A 2.45 2.45 0 0 1 4046,18635.45 L 4046,18834.55 A 2.45 2.45 0 0 1 4043.55,18837 L 3656.45,18837 A 2.45 2.45 0 0 1 3654,18834.55 L 3654,18635.45 A 2.45 2.45 0 0 1 3656.45,18633 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<path d="M 3661.75,18639.12 L 4038.25,18639.12 A 1.63 1.63 0 0 1 4039.88,18640.75 L 4039.88,18829.25 A 1.63 1.63 0 0 1 4038.25,18830.88 L 3661.75,18830.88 A 1.63 1.63 0 0 1 3660.12,18829.25 L 3660.12,18640.75 A 1.63 1.63 0 0 1 3661.75,18639.12 Z" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="18735" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">table</text>
-<line x1="3600" y1="18905" x2="6300" y2="18905" stroke="#333333" stroke-width="13"/>
-<path d="M 3702,18989.32 L 3998,18989.32 A 24.48 24.48 0 0 1 4022.48,19013.8 L 4022.48,19152.52 A 24.48 24.48 0 0 1 3998,19177 L 3702,19177 A 24.48 24.48 0 0 1 3677.52,19152.52 L 3677.52,19013.8 A 24.48 24.48 0 0 1 3702,18989.32 Z" fill="#ffffff" stroke="#6c6864" stroke-width="18"/>
-<path d="M 3666.24,18973 L 4033.76,18973 A 12.24 12.24 0 0 1 4046,18985.24 A 12.24 12.24 0 0 1 4033.76,18997.48 L 3666.24,18997.48 A 12.24 12.24 0 0 1 3654,18985.24 A 12.24 12.24 0 0 1 3666.24,18973 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<text x="4154" y="19075" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">chair</text>
-<line x1="3600" y1="19245" x2="6300" y2="19245" stroke="#333333" stroke-width="13"/>
-<path d="M 3658.08,19313 L 4041.92,19313 A 4.08 4.08 0 0 1 4046,19317.08 L 4046,19512.92 A 4.08 4.08 0 0 1 4041.92,19517 L 3658.08,19517 A 4.08 4.08 0 0 1 3654,19512.92 L 3654,19317.08 A 4.08 4.08 0 0 1 3658.08,19313 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<line x1="3654" y1="19347" x2="4046" y2="19347" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3654" y1="19381" x2="4046" y2="19381" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3654" y1="19415" x2="4046" y2="19415" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3654" y1="19449" x2="4046" y2="19449" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3654" y1="19483" x2="4046" y2="19483" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="19415" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">bench</text>
-<line x1="3600" y1="19585" x2="6300" y2="19585" stroke="#333333" stroke-width="13"/>
-<path d="M 3656.04,19653 L 4043.96,19653 A 2.04 2.04 0 0 1 4046,19655.04 L 4046,19854.96 A 2.04 2.04 0 0 1 4043.96,19857 L 3656.04,19857 A 2.04 2.04 0 0 1 3654,19854.96 L 3654,19655.04 A 2.04 2.04 0 0 1 3656.04,19653 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<path d="M 3662.77,19660.14 L 4037.23,19660.14 A 1.63 1.63 0 0 1 4038.86,19661.77 L 4038.86,19848.23 A 1.63 1.63 0 0 1 4037.23,19849.86 L 3662.77,19849.86 A 1.63 1.63 0 0 1 3661.14,19848.23 L 3661.14,19661.77 A 1.63 1.63 0 0 1 3662.77,19660.14 Z" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3661.14" y1="19677.48" x2="4038.86" y2="19677.48" stroke="#a8a29a" stroke-width="13"/>
-<polygon points="3928.4,19693.8 4026.4,19693.8 4026.4,19840.68 3928.4,19840.68" fill="none" stroke="#a8a29a" stroke-width="13" stroke-dasharray="108 72"/>
-<line x1="3928.4" y1="19742.76" x2="4026.4" y2="19742.76" stroke="#a8a29a" stroke-width="13" stroke-dasharray="108 72"/>
-<line x1="3928.4" y1="19791.72" x2="4026.4" y2="19791.72" stroke="#a8a29a" stroke-width="13" stroke-dasharray="108 72"/>
-<path d="M 3741.32,19691.76 L 3841.08,19691.76 A 5 5 0 0 1 3846.08,19696.76 L 3846.08,19701.04 A 5 5 0 0 1 3841.08,19706.04 L 3741.32,19706.04 A 5 5 0 0 1 3736.32,19701.04 L 3736.32,19696.76 A 5 5 0 0 1 3741.32,19691.76 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="19755" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">desk</text>
-<line x1="3600" y1="19925" x2="6300" y2="19925" stroke="#333333" stroke-width="13"/>
-<path d="M 3656.04,19993 L 4043.96,19993 A 2.04 2.04 0 0 1 4046,19995.04 L 4046,20194.96 A 2.04 2.04 0 0 1 4043.96,20197 L 3656.04,20197 A 2.04 2.04 0 0 1 3654,20194.96 L 3654,19995.04 A 2.04 2.04 0 0 1 3656.04,19993 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<line x1="3654" y1="20021.56" x2="4046" y2="20021.56" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3850" y1="19993" x2="3850" y2="20197" stroke="#a8a29a" stroke-width="13"/>
-<path d="M 3671.34,20035.84 L 3832.66,20035.84 A 3.06 3.06 0 0 1 3835.72,20038.9 L 3835.72,20120.5 A 3.06 3.06 0 0 1 3832.66,20123.56 L 3671.34,20123.56 A 3.06 3.06 0 0 1 3668.28,20120.5 L 3668.28,20038.9 A 3.06 3.06 0 0 1 3671.34,20035.84 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3724.09" y1="20035.84" x2="3724.09" y2="20123.56" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3779.91" y1="20035.84" x2="3779.91" y2="20123.56" stroke="#a8a29a" stroke-width="13"/>
-<path d="M 3867.34,20035.84 L 4028.66,20035.84 A 3.06 3.06 0 0 1 4031.72,20038.9 L 4031.72,20120.5 A 3.06 3.06 0 0 1 4028.66,20123.56 L 3867.34,20123.56 A 3.06 3.06 0 0 1 3864.28,20120.5 L 3864.28,20038.9 A 3.06 3.06 0 0 1 3867.34,20035.84 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3920.09" y1="20035.84" x2="3920.09" y2="20123.56" stroke="#a8a29a" stroke-width="13"/>
-<line x1="3975.91" y1="20035.84" x2="3975.91" y2="20123.56" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="20095" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">shelf</text>
-<line x1="3600" y1="20265" x2="6300" y2="20265" stroke="#333333" stroke-width="13"/>
-<path d="M 3670.32,20333 L 4029.68,20333 A 16.32 16.32 0 0 1 4046,20349.32 L 4046,20520.68 A 16.32 16.32 0 0 1 4029.68,20537 L 3670.32,20537 A 16.32 16.32 0 0 1 3654,20520.68 L 3654,20349.32 A 16.32 16.32 0 0 1 3670.32,20333 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<path d="M 3695.56,20373.8 L 4004.44,20373.8 A 10.2 10.2 0 0 1 4014.64,20384 L 4014.64,20512.52 A 10.2 10.2 0 0 1 4004.44,20522.72 L 3695.56,20522.72 A 10.2 10.2 0 0 1 3685.36,20512.52 L 3685.36,20384 A 10.2 10.2 0 0 1 3695.56,20373.8 Z" fill="none" stroke="#a8a29a" stroke-width="13"/>
-<path d="M 3712.26,20339.12 L 3987.74,20339.12 A 11.22 11.22 0 0 1 3998.96,20350.34 A 11.22 11.22 0 0 1 3987.74,20361.56 L 3712.26,20361.56 A 11.22 11.22 0 0 1 3701.04,20350.34 A 11.22 11.22 0 0 1 3712.26,20339.12 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
-<line x1="3791.2" y1="20508.44" x2="3908.8" y2="20508.44" stroke="#a8a29a" stroke-width="13"/>
-<text x="4154" y="20435" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">bin</text>
+<text x="4378" y="22135" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="600">249.39</text>
+<text x="5778" y="22135" font-size="190" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="600">207.85</text>
+<polygon points="6150,15165 8850,15165 8850,20605 6150,20605" fill="none" stroke="#333333" stroke-width="18"/>
+<text x="6204" y="15335" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">LEGEND</text>
+<line x1="6150" y1="15505" x2="8850" y2="15505" stroke="#333333" stroke-width="18"/>
+<path d="M 6204,15573 L 6596,15573 L 6596,15777 L 6204,15777 Z" fill="url(#poche)" fill-rule="nonzero"/>
+<polygon points="6204,15573 6596,15573 6596,15777 6204,15777" fill="none" stroke="#333333" stroke-width="18"/>
+<text x="6704" y="15675" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">poche</text>
+<line x1="6150" y1="15845" x2="8850" y2="15845" stroke="#333333" stroke-width="13"/>
+<path d="M 6240.25,15913 L 6559.75,15913 A 6.85 6.85 0 0 1 6566.6,15919.85 L 6566.6,15955.11 A 6.85 6.85 0 0 1 6559.75,15961.96 L 6240.25,15961.96 A 6.85 6.85 0 0 1 6233.4,15955.11 L 6233.4,15919.85 A 6.85 6.85 0 0 1 6240.25,15913 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6556.8,16031.32 A 50.5 50.5 0 0 1 6527.96,16076.94 A 298.3 298.3 0 0 1 6272.04,16076.94 A 50.5 50.5 0 0 1 6243.2,16031.32 A 50.5 50.5 0 0 1 6272.04,15985.7 A 298.3 298.3 0 0 1 6527.96,15985.7 A 50.5 50.5 0 0 1 6556.8,16031.32 Z" fill="#ffffff" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6534.46,16042.49 A 24.59 24.59 0 0 1 6517.03,16066.01 A 401.69 401.69 0 0 1 6282.97,16066.01 A 24.59 24.59 0 0 1 6265.54,16042.49 A 24.59 24.59 0 0 1 6282.97,16018.96 A 401.69 401.69 0 0 1 6517.03,16018.96 A 24.59 24.59 0 0 1 6534.46,16042.49 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6333.36" y1="15971.85" x2="6333.36" y2="15991.64" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6466.64" y1="15971.85" x2="6466.64" y2="15991.64" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6400" cy="15937.48" r="8.16" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="16015" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">wc</text>
+<line x1="6150" y1="16185" x2="8850" y2="16185" stroke="#333333" stroke-width="13"/>
+<path d="M 6216.24,16253 L 6583.76,16253 A 12.24 12.24 0 0 1 6596,16265.24 L 6596,16444.76 A 12.24 12.24 0 0 1 6583.76,16457 L 6216.24,16457 A 12.24 12.24 0 0 1 6204,16444.76 L 6204,16265.24 A 12.24 12.24 0 0 1 6216.24,16253 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6548.96,16371.32 A 46.72 46.72 0 0 1 6521.96,16413.68 A 288.92 288.92 0 0 1 6278.04,16413.68 A 46.72 46.72 0 0 1 6251.04,16371.32 A 46.72 46.72 0 0 1 6278.04,16328.96 A 288.92 288.92 0 0 1 6521.96,16328.96 A 46.72 46.72 0 0 1 6548.96,16371.32 Z" fill="#ffffff" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6535.09,16371.32 A 35.91 35.91 0 0 1 6512.82,16404.54 A 296.93 296.93 0 0 1 6287.18,16404.54 A 35.91 35.91 0 0 1 6264.91,16371.32 A 35.91 35.91 0 0 1 6287.18,16338.1 A 296.93 296.93 0 0 1 6512.82,16338.1 A 35.91 35.91 0 0 1 6535.09,16371.32 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6400" cy="16276.46" r="7.14" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6400" y1="16276.46" x2="6400" y2="16316.24" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6400" cy="16378.26" r="6.12" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="16355" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">basin</text>
+<line x1="6150" y1="16525" x2="8850" y2="16525" stroke="#333333" stroke-width="13"/>
+<path d="M 6220.32,16593 L 6579.68,16593 A 16.32 16.32 0 0 1 6596,16609.32 L 6596,16780.68 A 16.32 16.32 0 0 1 6579.68,16797 L 6220.32,16797 A 16.32 16.32 0 0 1 6204,16780.68 L 6204,16609.32 A 16.32 16.32 0 0 1 6220.32,16593 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6268.22,16611.36 L 6507.38,16611.36 A 70.26 70.26 0 0 1 6577.64,16681.62 L 6577.64,16708.38 A 70.26 70.26 0 0 1 6507.38,16778.64 L 6268.22,16778.64 A 23.42 23.42 0 0 1 6244.8,16755.22 L 6244.8,16634.78 A 23.42 23.42 0 0 1 6268.22,16611.36 Z" fill="#ffffff" stroke="#6c6864" stroke-width="18"/>
+<circle cx="6224.4" cy="16670.52" r="7.14" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6224.4" cy="16719.48" r="7.14" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6275.4" cy="16695" r="9.18" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6275.4" cy="16695" r="3.06" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="16695" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">bathtub</text>
+<line x1="6150" y1="16865" x2="8850" y2="16865" stroke="#333333" stroke-width="13"/>
+<polygon points="6204,16933 6596,16933 6596,17137 6204,17137" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6321.82,16973.8 L 6478.18,16973.8 A 14.89 14.89 0 0 1 6493.08,16988.69 L 6493.08,17107.83 A 14.89 14.89 0 0 1 6478.18,17122.72 L 6321.82,17122.72 A 14.89 14.89 0 0 1 6306.92,17107.83 L 6306.92,16988.69 A 14.89 14.89 0 0 1 6321.82,16973.8 Z" fill="#ffffff" stroke="#6c6864" stroke-width="18"/>
+<circle cx="6400" cy="17048.26" r="9.68" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
+<path d="M 6224.39,16973.8 L 6288.57,16973.8 A 6.11 6.11 0 0 1 6294.68,16979.91 L 6294.68,17116.61 A 6.11 6.11 0 0 1 6288.57,17122.72 L 6224.39,17122.72 A 6.11 6.11 0 0 1 6218.28,17116.61 L 6218.28,16979.91 A 6.11 6.11 0 0 1 6224.39,16973.8 Z" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6227.45" y1="17003.58" x2="6285.52" y2="17003.58" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6227.45" y1="17033.37" x2="6285.52" y2="17033.37" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6227.45" y1="17063.15" x2="6285.52" y2="17063.15" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6227.45" y1="17092.94" x2="6285.52" y2="17092.94" stroke="#a8a29a" stroke-width="13"/>
+<path d="M 6511.43,16973.8 L 6575.61,16973.8 A 6.11 6.11 0 0 1 6581.72,16979.91 L 6581.72,17116.61 A 6.11 6.11 0 0 1 6575.61,17122.72 L 6511.43,17122.72 A 6.11 6.11 0 0 1 6505.32,17116.61 L 6505.32,16979.91 A 6.11 6.11 0 0 1 6511.43,16973.8 Z" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6514.48" y1="17003.58" x2="6572.55" y2="17003.58" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6514.48" y1="17033.37" x2="6572.55" y2="17033.37" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6514.48" y1="17063.15" x2="6572.55" y2="17063.15" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6514.48" y1="17092.94" x2="6572.55" y2="17092.94" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6400" cy="16954.42" r="7.14" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6400" y1="16961.56" x2="6400" y2="17003.58" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="17035" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">kitchen_sink</text>
+<line x1="6150" y1="17205" x2="8850" y2="17205" stroke="#333333" stroke-width="13"/>
+<polygon points="6204,17273 6596,17273 6596,17477 6204,17477" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<line x1="6204" y1="17282.18" x2="6596" y2="17282.18" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6204" y1="17464.76" x2="6596" y2="17464.76" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="17375" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">counter</text>
+<line x1="6150" y1="17545" x2="8850" y2="17545" stroke="#333333" stroke-width="13"/>
+<polygon points="6204,17613 6596,17613 6596,17817 6204,17817" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6221.34,17625.24 L 6578.66,17625.24 A 5.1 5.1 0 0 1 6583.76,17630.34 L 6583.76,17758.86 A 5.1 5.1 0 0 1 6578.66,17763.96 L 6221.34,17763.96 A 5.1 5.1 0 0 1 6216.24,17758.86 L 6216.24,17630.34 A 5.1 5.1 0 0 1 6221.34,17625.24 Z" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6310.2" cy="17662" r="26.08" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6310.2" cy="17662" r="14.34" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6489.8" cy="17662" r="26.08" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6489.8" cy="17662" r="14.34" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6310.2" cy="17727.2" r="18.91" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6310.2" cy="17727.2" r="10.4" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6489.8" cy="17727.2" r="18.91" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6489.8" cy="17727.2" r="10.4" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6282.4" cy="17795.58" r="6.12" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6360.8" cy="17795.58" r="6.12" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6439.2" cy="17795.58" r="6.12" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
+<circle cx="6517.6" cy="17795.58" r="6.12" fill="#a8a29a" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="17715" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">stove</text>
+<line x1="6150" y1="17885" x2="8850" y2="17885" stroke="#333333" stroke-width="13"/>
+<path d="M 6207.06,17953 L 6592.94,17953 A 3.06 3.06 0 0 1 6596,17956.06 L 6596,18153.94 A 3.06 3.06 0 0 1 6592.94,18157 L 6207.06,18157 A 3.06 3.06 0 0 1 6204,18153.94 L 6204,17956.06 A 3.06 3.06 0 0 1 6207.06,17953 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6207.06,17953 L 6592.94,17953 A 3.06 3.06 0 0 1 6596,17956.06 L 6596,17962.18 L 6204,17962.18 L 6204,17956.06 A 3.06 3.06 0 0 1 6207.06,17953 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6235.92,17968.3 L 6378.53,17968.3 A 11.02 11.02 0 0 1 6389.55,17979.32 L 6389.55,17994 A 11.02 11.02 0 0 1 6378.53,18005.02 L 6235.92,18005.02 A 11.02 11.02 0 0 1 6224.91,17994 L 6224.91,17979.32 A 11.02 11.02 0 0 1 6235.92,17968.3 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
+<path d="M 6421.47,17968.3 L 6564.08,17968.3 A 11.02 11.02 0 0 1 6575.09,17979.32 L 6575.09,17994 A 11.02 11.02 0 0 1 6564.08,18005.02 L 6421.47,18005.02 A 11.02 11.02 0 0 1 6410.45,17994 L 6410.45,17979.32 A 11.02 11.02 0 0 1 6421.47,17968.3 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
+<polygon points="6210.12,18014.2 6589.88,18014.2 6589.88,18118.24 6557.24,18150.88 6210.12,18150.88" fill="#f4f2ee" stroke="#a8a29a" stroke-width="13"/>
+<polygon points="6210.12,18014.2 6589.88,18014.2 6589.88,18034.6 6210.12,18034.6" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
+<polygon points="6589.88,18118.24 6557.24,18150.88 6557.24,18118.24" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="18055" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">bed</text>
+<line x1="6150" y1="18225" x2="8850" y2="18225" stroke="#333333" stroke-width="13"/>
+<path d="M 6206.04,18293 L 6593.96,18293 A 2.04 2.04 0 0 1 6596,18295.04 L 6596,18494.96 A 2.04 2.04 0 0 1 6593.96,18497 L 6206.04,18497 A 2.04 2.04 0 0 1 6204,18494.96 L 6204,18295.04 A 2.04 2.04 0 0 1 6206.04,18293 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<line x1="6204" y1="18488.84" x2="6596" y2="18488.84" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6400" y1="18293" x2="6400" y2="18497" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6215.76" y1="18395" x2="6388.24" y2="18395" stroke="#a8a29a" stroke-width="13" stroke-dasharray="108 72"/>
+<line x1="6237.32" y1="18323.6" x2="6237.32" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6280.44" y1="18323.6" x2="6280.44" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6323.56" y1="18323.6" x2="6323.56" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6366.68" y1="18323.6" x2="6366.68" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6411.76" y1="18395" x2="6584.24" y2="18395" stroke="#a8a29a" stroke-width="13" stroke-dasharray="108 72"/>
+<line x1="6433.32" y1="18323.6" x2="6433.32" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6476.44" y1="18323.6" x2="6476.44" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6519.56" y1="18323.6" x2="6519.56" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6562.68" y1="18323.6" x2="6562.68" y2="18466.4" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="18395" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">robe</text>
+<line x1="6150" y1="18565" x2="8850" y2="18565" stroke="#333333" stroke-width="13"/>
+<path d="M 6206.45,18633 L 6593.55,18633 A 2.45 2.45 0 0 1 6596,18635.45 L 6596,18834.55 A 2.45 2.45 0 0 1 6593.55,18837 L 6206.45,18837 A 2.45 2.45 0 0 1 6204,18834.55 L 6204,18635.45 A 2.45 2.45 0 0 1 6206.45,18633 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6211.75,18639.12 L 6588.25,18639.12 A 1.63 1.63 0 0 1 6589.88,18640.75 L 6589.88,18829.25 A 1.63 1.63 0 0 1 6588.25,18830.88 L 6211.75,18830.88 A 1.63 1.63 0 0 1 6210.12,18829.25 L 6210.12,18640.75 A 1.63 1.63 0 0 1 6211.75,18639.12 Z" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="18735" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">table</text>
+<line x1="6150" y1="18905" x2="8850" y2="18905" stroke="#333333" stroke-width="13"/>
+<path d="M 6252,18989.32 L 6548,18989.32 A 24.48 24.48 0 0 1 6572.48,19013.8 L 6572.48,19152.52 A 24.48 24.48 0 0 1 6548,19177 L 6252,19177 A 24.48 24.48 0 0 1 6227.52,19152.52 L 6227.52,19013.8 A 24.48 24.48 0 0 1 6252,18989.32 Z" fill="#ffffff" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6216.24,18973 L 6583.76,18973 A 12.24 12.24 0 0 1 6596,18985.24 A 12.24 12.24 0 0 1 6583.76,18997.48 L 6216.24,18997.48 A 12.24 12.24 0 0 1 6204,18985.24 A 12.24 12.24 0 0 1 6216.24,18973 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<text x="6704" y="19075" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">chair</text>
+<line x1="6150" y1="19245" x2="8850" y2="19245" stroke="#333333" stroke-width="13"/>
+<path d="M 6208.08,19313 L 6591.92,19313 A 4.08 4.08 0 0 1 6596,19317.08 L 6596,19512.92 A 4.08 4.08 0 0 1 6591.92,19517 L 6208.08,19517 A 4.08 4.08 0 0 1 6204,19512.92 L 6204,19317.08 A 4.08 4.08 0 0 1 6208.08,19313 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<line x1="6204" y1="19347" x2="6596" y2="19347" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6204" y1="19381" x2="6596" y2="19381" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6204" y1="19415" x2="6596" y2="19415" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6204" y1="19449" x2="6596" y2="19449" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6204" y1="19483" x2="6596" y2="19483" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="19415" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">bench</text>
+<line x1="6150" y1="19585" x2="8850" y2="19585" stroke="#333333" stroke-width="13"/>
+<path d="M 6206.04,19653 L 6593.96,19653 A 2.04 2.04 0 0 1 6596,19655.04 L 6596,19854.96 A 2.04 2.04 0 0 1 6593.96,19857 L 6206.04,19857 A 2.04 2.04 0 0 1 6204,19854.96 L 6204,19655.04 A 2.04 2.04 0 0 1 6206.04,19653 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6212.77,19660.14 L 6587.23,19660.14 A 1.63 1.63 0 0 1 6588.86,19661.77 L 6588.86,19848.23 A 1.63 1.63 0 0 1 6587.23,19849.86 L 6212.77,19849.86 A 1.63 1.63 0 0 1 6211.14,19848.23 L 6211.14,19661.77 A 1.63 1.63 0 0 1 6212.77,19660.14 Z" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6211.14" y1="19677.48" x2="6588.86" y2="19677.48" stroke="#a8a29a" stroke-width="13"/>
+<polygon points="6478.4,19693.8 6576.4,19693.8 6576.4,19840.68 6478.4,19840.68" fill="none" stroke="#a8a29a" stroke-width="13" stroke-dasharray="108 72"/>
+<line x1="6478.4" y1="19742.76" x2="6576.4" y2="19742.76" stroke="#a8a29a" stroke-width="13" stroke-dasharray="108 72"/>
+<line x1="6478.4" y1="19791.72" x2="6576.4" y2="19791.72" stroke="#a8a29a" stroke-width="13" stroke-dasharray="108 72"/>
+<path d="M 6291.32,19691.76 L 6391.08,19691.76 A 5 5 0 0 1 6396.08,19696.76 L 6396.08,19701.04 A 5 5 0 0 1 6391.08,19706.04 L 6291.32,19706.04 A 5 5 0 0 1 6286.32,19701.04 L 6286.32,19696.76 A 5 5 0 0 1 6291.32,19691.76 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="19755" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">desk</text>
+<line x1="6150" y1="19925" x2="8850" y2="19925" stroke="#333333" stroke-width="13"/>
+<path d="M 6206.04,19993 L 6593.96,19993 A 2.04 2.04 0 0 1 6596,19995.04 L 6596,20194.96 A 2.04 2.04 0 0 1 6593.96,20197 L 6206.04,20197 A 2.04 2.04 0 0 1 6204,20194.96 L 6204,19995.04 A 2.04 2.04 0 0 1 6206.04,19993 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<line x1="6204" y1="20021.56" x2="6596" y2="20021.56" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6400" y1="19993" x2="6400" y2="20197" stroke="#a8a29a" stroke-width="13"/>
+<path d="M 6221.34,20035.84 L 6382.66,20035.84 A 3.06 3.06 0 0 1 6385.72,20038.9 L 6385.72,20120.5 A 3.06 3.06 0 0 1 6382.66,20123.56 L 6221.34,20123.56 A 3.06 3.06 0 0 1 6218.28,20120.5 L 6218.28,20038.9 A 3.06 3.06 0 0 1 6221.34,20035.84 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6274.09" y1="20035.84" x2="6274.09" y2="20123.56" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6329.91" y1="20035.84" x2="6329.91" y2="20123.56" stroke="#a8a29a" stroke-width="13"/>
+<path d="M 6417.34,20035.84 L 6578.66,20035.84 A 3.06 3.06 0 0 1 6581.72,20038.9 L 6581.72,20120.5 A 3.06 3.06 0 0 1 6578.66,20123.56 L 6417.34,20123.56 A 3.06 3.06 0 0 1 6414.28,20120.5 L 6414.28,20038.9 A 3.06 3.06 0 0 1 6417.34,20035.84 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6470.09" y1="20035.84" x2="6470.09" y2="20123.56" stroke="#a8a29a" stroke-width="13"/>
+<line x1="6525.91" y1="20035.84" x2="6525.91" y2="20123.56" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="20095" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">shelf</text>
+<line x1="6150" y1="20265" x2="8850" y2="20265" stroke="#333333" stroke-width="13"/>
+<path d="M 6220.32,20333 L 6579.68,20333 A 16.32 16.32 0 0 1 6596,20349.32 L 6596,20520.68 A 16.32 16.32 0 0 1 6579.68,20537 L 6220.32,20537 A 16.32 16.32 0 0 1 6204,20520.68 L 6204,20349.32 A 16.32 16.32 0 0 1 6220.32,20333 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<path d="M 6245.56,20373.8 L 6554.44,20373.8 A 10.2 10.2 0 0 1 6564.64,20384 L 6564.64,20512.52 A 10.2 10.2 0 0 1 6554.44,20522.72 L 6245.56,20522.72 A 10.2 10.2 0 0 1 6235.36,20512.52 L 6235.36,20384 A 10.2 10.2 0 0 1 6245.56,20373.8 Z" fill="none" stroke="#a8a29a" stroke-width="13"/>
+<path d="M 6262.26,20339.12 L 6537.74,20339.12 A 11.22 11.22 0 0 1 6548.96,20350.34 A 11.22 11.22 0 0 1 6537.74,20361.56 L 6262.26,20361.56 A 11.22 11.22 0 0 1 6251.04,20350.34 A 11.22 11.22 0 0 1 6262.26,20339.12 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="18"/>
+<line x1="6341.2" y1="20508.44" x2="6458.8" y2="20508.44" stroke="#a8a29a" stroke-width="13"/>
+<text x="6704" y="20435" font-size="190" fill="#333333" text-anchor="start" dominant-baseline="central">bin</text>
 </g>
 <g><polygon points="25650,-1575 25425,-855 25650,-1012.5 25875,-855" fill="#333333" transform="rotate(0 25650 -1125)"/><text x="25650" y="-1783" font-size="260" fill="#333333" text-anchor="middle" dominant-baseline="central">N</text></g>
 <g><rect x="-300" y="12825" width="1000" height="140" fill="#333333"/><rect x="700" y="12825" width="1000" height="140" fill="none" stroke="#333333" stroke-width="18"/><text x="-300" y="13165" font-size="200" fill="#333333" text-anchor="start" dominant-baseline="central">0</text><text x="1700" y="13165" font-size="200" fill="#333333" text-anchor="middle" dominant-baseline="central">2 m</text></g>

@@ -62,7 +62,10 @@
     "rooms": 7,
     "doors": 7,
     "windows": 2,
-    "floor_area_m2": 61.2
+    "floor_area_m2": 61.2,
+    "gross_internal_area_m2": 54.87,
+    "gross_internal_area_all_levels_m2": 54.87,
+    "net_floor_area_m2": 52.05
   },
   "diagnostics": []
 }

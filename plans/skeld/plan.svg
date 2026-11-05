@@ -342,157 +342,187 @@
 <text x="-1400" y="23000" font-size="500" fill="#0E5484" text-anchor="middle" dominant-baseline="central" transform="rotate(90 -1400 23000)">40500</text>
 </g>
 <g id="A-ANNO" inkscape:groupmode="layer" inkscape:label="A-ANNO">
-<polygon points="1750,52580 8950,52580 8950,73660 1750,73660" fill="none" stroke="#333333" stroke-width="36"/>
+<polygon points="1750,52580 14050,52580 14050,73660 1750,73660" fill="none" stroke="#333333" stroke-width="36"/>
 <text x="1894" y="52920" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">ROOM SCHEDULE</text>
-<line x1="1750" y1="53260" x2="8950" y2="53260" stroke="#333333" stroke-width="36"/>
+<line x1="1750" y1="53260" x2="14050" y2="53260" stroke="#333333" stroke-width="36"/>
 <text x="2300" y="53600" font-size="304" fill="#888888" text-anchor="middle" dominant-baseline="central" font-weight="600">NO.</text>
 <text x="2994" y="53600" font-size="304" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">NAME</text>
-<text x="8806" y="53600" font-size="304" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">AREA (m²)</text>
-<line x1="1750" y1="53940" x2="8950" y2="53940" stroke="#333333" stroke-width="36"/>
+<text x="11106" y="53600" font-size="304" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">AREA (CENTRELINE, m²)</text>
+<text x="13906" y="53600" font-size="304" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">NET AREA (m²)</text>
+<line x1="1750" y1="53940" x2="14050" y2="53940" stroke="#333333" stroke-width="36"/>
 <text x="1894" y="54280" font-size="380" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">Bow — Engineering</text>
 <text x="2300" y="54960" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">01</text>
 <text x="2994" y="54960" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Reactor</text>
-<text x="8806" y="54960" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">139.00</text>
-<line x1="1750" y1="55300" x2="8950" y2="55300" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="54960" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">139.00</text>
+<text x="13906" y="54960" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">129.52</text>
+<line x1="1750" y1="55300" x2="14050" y2="55300" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="55640" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">02</text>
 <text x="2994" y="55640" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Upper Engine</text>
-<text x="8806" y="55640" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">143.00</text>
-<line x1="1750" y1="55980" x2="8950" y2="55980" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="55640" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">143.00</text>
+<text x="13906" y="55640" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">132.35</text>
+<line x1="1750" y1="55980" x2="14050" y2="55980" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="56320" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">03</text>
 <text x="2994" y="56320" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Lower Engine</text>
-<text x="8806" y="56320" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">182.00</text>
-<line x1="1750" y1="56660" x2="8950" y2="56660" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="56320" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">182.00</text>
+<text x="13906" y="56320" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">170.55</text>
+<line x1="1750" y1="56660" x2="14050" y2="56660" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="57000" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">04</text>
 <text x="2994" y="57000" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Reactor Hall</text>
-<text x="8806" y="57000" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">84.00</text>
-<line x1="1750" y1="57340" x2="8950" y2="57340" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="57000" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">84.00</text>
+<text x="13906" y="57000" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">77.06</text>
+<line x1="1750" y1="57340" x2="14050" y2="57340" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="57680" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">05</text>
 <text x="2994" y="57680" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Security</text>
-<text x="8806" y="57680" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">56.00</text>
+<text x="11106" y="57680" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">56.00</text>
+<text x="13906" y="57680" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">49.40</text>
 <line x1="2850" y1="54620" x2="2850" y2="58020" stroke="#333333" stroke-width="26"/>
 <line x1="6850" y1="54620" x2="6850" y2="58020" stroke="#333333" stroke-width="26"/>
-<line x1="1750" y1="58020" x2="8950" y2="58020" stroke="#333333" stroke-width="26"/>
+<line x1="11250" y1="54620" x2="11250" y2="58020" stroke="#333333" stroke-width="26"/>
+<line x1="1750" y1="58020" x2="14050" y2="58020" stroke="#333333" stroke-width="26"/>
 <text x="1894" y="58360" font-size="380" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">SUBTOTAL</text>
-<text x="8806" y="58360" font-size="380" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">604.00</text>
-<line x1="1750" y1="58700" x2="8950" y2="58700" stroke="#333333" stroke-width="36"/>
+<text x="11106" y="58360" font-size="380" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">604.00</text>
+<text x="13906" y="58360" font-size="380" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">558.88</text>
+<line x1="1750" y1="58700" x2="14050" y2="58700" stroke="#333333" stroke-width="36"/>
 <text x="1894" y="59040" font-size="380" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">Midship</text>
 <text x="2300" y="59720" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">06</text>
 <text x="2994" y="59720" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Upper Hall</text>
-<text x="8806" y="59720" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">120.00</text>
-<line x1="1750" y1="60060" x2="8950" y2="60060" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="59720" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">120.00</text>
+<text x="13906" y="59720" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">109.60</text>
+<line x1="1750" y1="60060" x2="14050" y2="60060" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="60400" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">07</text>
 <text x="2994" y="60400" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">MedBay</text>
-<text x="8806" y="60400" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">91.00</text>
-<line x1="1750" y1="60740" x2="8950" y2="60740" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="60400" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">91.00</text>
+<text x="13906" y="60400" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">82.50</text>
+<line x1="1750" y1="60740" x2="14050" y2="60740" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="61080" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">08</text>
 <text x="2994" y="61080" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Cafeteria</text>
-<text x="8806" y="61080" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">360.00</text>
-<line x1="1750" y1="61420" x2="8950" y2="61420" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="61080" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">360.00</text>
+<text x="13906" y="61080" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">343.45</text>
+<line x1="1750" y1="61420" x2="14050" y2="61420" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="61760" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">09</text>
 <text x="2994" y="61760" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Cafeteria Hall</text>
-<text x="8806" y="61760" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">42.00</text>
-<line x1="1750" y1="62100" x2="8950" y2="62100" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="61760" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">42.00</text>
+<text x="13906" y="61760" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">36.85</text>
+<line x1="1750" y1="62100" x2="14050" y2="62100" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="62440" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">10</text>
 <text x="2994" y="62440" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Admin Hall</text>
-<text x="8806" y="62440" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">36.00</text>
-<line x1="1750" y1="62780" x2="8950" y2="62780" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="62440" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">36.00</text>
+<text x="13906" y="62440" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">31.35</text>
+<line x1="1750" y1="62780" x2="14050" y2="62780" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="63120" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">11</text>
 <text x="2994" y="63120" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Admin</text>
-<text x="8806" y="63120" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">80.00</text>
-<line x1="1750" y1="63460" x2="8950" y2="63460" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="63120" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">80.00</text>
+<text x="13906" y="63120" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">73.30</text>
+<line x1="1750" y1="63460" x2="14050" y2="63460" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="63800" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">12</text>
 <text x="2994" y="63800" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Lower Hall</text>
-<text x="8806" y="63800" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">132.00</text>
-<line x1="1750" y1="64140" x2="8950" y2="64140" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="63800" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">132.00</text>
+<text x="13906" y="63800" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">120.71</text>
+<line x1="1750" y1="64140" x2="14050" y2="64140" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="64480" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">13</text>
 <text x="2994" y="64480" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Electrical</text>
-<text x="8806" y="64480" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">126.00</text>
-<line x1="1750" y1="64820" x2="8950" y2="64820" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="64480" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">126.00</text>
+<text x="13906" y="64480" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">116.86</text>
+<line x1="1750" y1="64820" x2="14050" y2="64820" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="65160" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">14</text>
 <text x="2994" y="65160" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Storage</text>
-<text x="8806" y="65160" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">224.00</text>
+<text x="11106" y="65160" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">224.00</text>
+<text x="13906" y="65160" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">211.70</text>
 <line x1="2850" y1="59380" x2="2850" y2="65500" stroke="#333333" stroke-width="26"/>
 <line x1="6850" y1="59380" x2="6850" y2="65500" stroke="#333333" stroke-width="26"/>
-<line x1="1750" y1="65500" x2="8950" y2="65500" stroke="#333333" stroke-width="26"/>
+<line x1="11250" y1="59380" x2="11250" y2="65500" stroke="#333333" stroke-width="26"/>
+<line x1="1750" y1="65500" x2="14050" y2="65500" stroke="#333333" stroke-width="26"/>
 <text x="1894" y="65840" font-size="380" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">SUBTOTAL</text>
-<text x="8806" y="65840" font-size="380" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">1211.00</text>
-<line x1="1750" y1="66180" x2="8950" y2="66180" stroke="#333333" stroke-width="36"/>
+<text x="11106" y="65840" font-size="380" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">1211.00</text>
+<text x="13906" y="65840" font-size="380" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">1126.32</text>
+<line x1="1750" y1="66180" x2="14050" y2="66180" stroke="#333333" stroke-width="36"/>
 <text x="1894" y="66520" font-size="380" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">Stern</text>
 <text x="2300" y="67200" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">15</text>
 <text x="2994" y="67200" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Weapons Hall</text>
-<text x="8806" y="67200" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">48.00</text>
-<line x1="1750" y1="67540" x2="8950" y2="67540" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="67200" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">48.00</text>
+<text x="13906" y="67200" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">42.35</text>
+<line x1="1750" y1="67540" x2="14050" y2="67540" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="67880" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">16</text>
 <text x="2994" y="67880" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Weapons</text>
-<text x="8806" y="67880" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">120.00</text>
-<line x1="1750" y1="68220" x2="8950" y2="68220" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="67880" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">120.00</text>
+<text x="13906" y="67880" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">110.35</text>
+<line x1="1750" y1="68220" x2="14050" y2="68220" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="68560" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">17</text>
 <text x="2994" y="68560" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">O2</text>
-<text x="8806" y="68560" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">60.00</text>
-<line x1="1750" y1="68900" x2="8950" y2="68900" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="68560" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">60.00</text>
+<text x="13906" y="68560" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">53.35</text>
+<line x1="1750" y1="68900" x2="14050" y2="68900" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="69240" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">18</text>
 <text x="2994" y="69240" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">East Hall</text>
-<text x="8806" y="69240" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">132.00</text>
-<line x1="1750" y1="69580" x2="8950" y2="69580" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="69240" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">132.00</text>
+<text x="13906" y="69240" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">121.81</text>
+<line x1="1750" y1="69580" x2="14050" y2="69580" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="69920" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">19</text>
 <text x="2994" y="69920" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Navigation</text>
-<text x="8806" y="69920" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">115.00</text>
-<line x1="1750" y1="70260" x2="8950" y2="70260" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="69920" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">115.00</text>
+<text x="13906" y="69920" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">106.04</text>
+<line x1="1750" y1="70260" x2="14050" y2="70260" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="70600" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">20</text>
 <text x="2994" y="70600" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">South Hall</text>
-<text x="8806" y="70600" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">96.00</text>
-<line x1="1750" y1="70940" x2="8950" y2="70940" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="70600" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">96.00</text>
+<text x="13906" y="70600" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">88.41</text>
+<line x1="1750" y1="70940" x2="14050" y2="70940" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="71280" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">21</text>
 <text x="2994" y="71280" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Communications</text>
-<text x="8806" y="71280" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">80.00</text>
-<line x1="1750" y1="71620" x2="8950" y2="71620" stroke="#333333" stroke-width="26"/>
+<text x="11106" y="71280" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">80.00</text>
+<text x="13906" y="71280" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">72.20</text>
+<line x1="1750" y1="71620" x2="14050" y2="71620" stroke="#333333" stroke-width="26"/>
 <text x="2300" y="71960" font-size="380" fill="#333333" text-anchor="middle" dominant-baseline="central">22</text>
 <text x="2994" y="71960" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">Shields</text>
-<text x="8806" y="71960" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">80.00</text>
+<text x="11106" y="71960" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">80.00</text>
+<text x="13906" y="71960" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central">72.00</text>
 <line x1="2850" y1="66860" x2="2850" y2="72300" stroke="#333333" stroke-width="26"/>
 <line x1="6850" y1="66860" x2="6850" y2="72300" stroke="#333333" stroke-width="26"/>
-<line x1="1750" y1="72300" x2="8950" y2="72300" stroke="#333333" stroke-width="26"/>
+<line x1="11250" y1="66860" x2="11250" y2="72300" stroke="#333333" stroke-width="26"/>
+<line x1="1750" y1="72300" x2="14050" y2="72300" stroke="#333333" stroke-width="26"/>
 <text x="1894" y="72640" font-size="380" fill="#888888" text-anchor="start" dominant-baseline="central" font-weight="600">SUBTOTAL</text>
-<text x="8806" y="72640" font-size="380" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">731.00</text>
-<line x1="1750" y1="72980" x2="8950" y2="72980" stroke="#333333" stroke-width="36"/>
+<text x="11106" y="72640" font-size="380" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">731.00</text>
+<text x="13906" y="72640" font-size="380" fill="#888888" text-anchor="end" dominant-baseline="central" font-weight="600">666.51</text>
+<line x1="1750" y1="72980" x2="14050" y2="72980" stroke="#333333" stroke-width="36"/>
 <text x="1894" y="73320" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">TOTAL</text>
-<text x="8806" y="73320" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="600">2546.00</text>
-<polygon points="9550,52580 14950,52580 14950,56660 9550,56660" fill="none" stroke="#333333" stroke-width="36"/>
-<text x="9658" y="52920" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">LEGEND</text>
-<line x1="9550" y1="53260" x2="14950" y2="53260" stroke="#333333" stroke-width="36"/>
-<path d="M 9658,53396 L 10442,53396 L 10442,53804 L 9658,53804 Z" fill="url(#hatch-concrete)" fill-rule="nonzero"/>
-<polygon points="9658,53396 10442,53396 10442,53804 9658,53804" fill="none" stroke="#333333" stroke-width="36"/>
-<text x="10658" y="53600" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">concrete</text>
-<line x1="9550" y1="53940" x2="14950" y2="53940" stroke="#333333" stroke-width="26"/>
-<path d="M 9658,54076 L 10442,54076 L 10442,54484 L 9658,54484 Z" fill="url(#poche)" fill-rule="nonzero"/>
-<polygon points="9658,54076 10442,54076 10442,54484 9658,54484" fill="none" stroke="#333333" stroke-width="36"/>
-<text x="10658" y="54280" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">poche</text>
-<line x1="9550" y1="54620" x2="14950" y2="54620" stroke="#333333" stroke-width="26"/>
-<path d="M 9664.12,54756 L 10435.88,54756 A 6.12 6.12 0 0 1 10442,54762.12 L 10442,55157.88 A 6.12 6.12 0 0 1 10435.88,55164 L 9664.12,55164 A 6.12 6.12 0 0 1 9658,55157.88 L 9658,54762.12 A 6.12 6.12 0 0 1 9664.12,54756 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="36"/>
-<path d="M 9664.12,54756 L 10435.88,54756 A 6.12 6.12 0 0 1 10442,54762.12 L 10442,54774.36 L 9658,54774.36 L 9658,54762.12 A 6.12 6.12 0 0 1 9664.12,54756 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="36"/>
-<path d="M 9721.85,54786.6 L 10007.06,54786.6 A 22.03 22.03 0 0 1 10029.09,54808.63 L 10029.09,54838.01 A 22.03 22.03 0 0 1 10007.06,54860.04 L 9721.85,54860.04 A 22.03 22.03 0 0 1 9699.81,54838.01 L 9699.81,54808.63 A 22.03 22.03 0 0 1 9721.85,54786.6 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="26"/>
-<path d="M 10092.94,54786.6 L 10378.15,54786.6 A 22.03 22.03 0 0 1 10400.19,54808.63 L 10400.19,54838.01 A 22.03 22.03 0 0 1 10378.15,54860.04 L 10092.94,54860.04 A 22.03 22.03 0 0 1 10070.91,54838.01 L 10070.91,54808.63 A 22.03 22.03 0 0 1 10092.94,54786.6 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="26"/>
-<polygon points="9670.24,54878.4 10429.76,54878.4 10429.76,55086.48 10364.48,55151.76 9670.24,55151.76" fill="#f4f2ee" stroke="#a8a29a" stroke-width="26"/>
-<polygon points="9670.24,54878.4 10429.76,54878.4 10429.76,54919.2 9670.24,54919.2" fill="#ffffff" stroke="#a8a29a" stroke-width="26"/>
-<polygon points="10429.76,55086.48 10364.48,55151.76 10364.48,55086.48" fill="#ffffff" stroke="#a8a29a" stroke-width="26"/>
-<text x="10658" y="54960" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">bed</text>
-<line x1="9550" y1="55300" x2="14950" y2="55300" stroke="#333333" stroke-width="26"/>
-<path d="M 9662.9,55436 L 10437.1,55436 A 4.9 4.9 0 0 1 10442,55440.9 L 10442,55839.1 A 4.9 4.9 0 0 1 10437.1,55844 L 9662.9,55844 A 4.9 4.9 0 0 1 9658,55839.1 L 9658,55440.9 A 4.9 4.9 0 0 1 9662.9,55436 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="36"/>
-<path d="M 9673.5,55448.24 L 10426.5,55448.24 A 3.26 3.26 0 0 1 10429.76,55451.5 L 10429.76,55828.5 A 3.26 3.26 0 0 1 10426.5,55831.76 L 9673.5,55831.76 A 3.26 3.26 0 0 1 9670.24,55828.5 L 9670.24,55451.5 A 3.26 3.26 0 0 1 9673.5,55448.24 Z" fill="none" stroke="#a8a29a" stroke-width="26"/>
-<text x="10658" y="55640" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">table</text>
-<line x1="9550" y1="55980" x2="14950" y2="55980" stroke="#333333" stroke-width="26"/>
-<path d="M 10191.13,56261.54 A 58.59 58.59 0 0 1 10245.84,56320 A 58.59 58.59 0 0 1 10191.13,56378.46 A 70.35 70.35 0 0 1 10108.46,56461.13 A 58.59 58.59 0 0 1 10050,56515.84 A 58.59 58.59 0 0 1 9991.54,56461.13 A 70.35 70.35 0 0 1 9908.87,56378.46 A 58.59 58.59 0 0 1 9854.16,56320 A 58.59 58.59 0 0 1 9908.87,56261.54 A 70.35 70.35 0 0 1 9991.54,56178.87 A 58.59 58.59 0 0 1 10050,56124.16 A 58.59 58.59 0 0 1 10108.46,56178.87 A 70.35 70.35 0 0 1 10191.13,56261.54 Z" fill="#eef3e7" stroke="#6c6864" stroke-width="36"/>
-<circle cx="10050" cy="56320" r="82.25" fill="none" stroke="#a8a29a" stroke-width="26"/>
-<line x1="10132.25" y1="56320" x2="10187.09" y2="56320" stroke="#a8a29a" stroke-width="26"/>
-<line x1="10108.16" y1="56378.16" x2="10146.94" y2="56416.94" stroke="#a8a29a" stroke-width="26"/>
-<line x1="10050" y1="56402.25" x2="10050" y2="56457.09" stroke="#a8a29a" stroke-width="26"/>
-<line x1="9991.84" y1="56378.16" x2="9953.06" y2="56416.94" stroke="#a8a29a" stroke-width="26"/>
-<line x1="9967.75" y1="56320" x2="9912.91" y2="56320" stroke="#a8a29a" stroke-width="26"/>
-<line x1="9991.84" y1="56261.84" x2="9953.06" y2="56223.06" stroke="#a8a29a" stroke-width="26"/>
-<line x1="10050" y1="56237.75" x2="10050" y2="56182.91" stroke="#a8a29a" stroke-width="26"/>
-<line x1="10108.16" y1="56261.84" x2="10146.94" y2="56223.06" stroke="#a8a29a" stroke-width="26"/>
-<circle cx="10050" cy="56320" r="11.75" fill="#6c6864" stroke="#6c6864" stroke-width="36"/>
-<text x="10658" y="56320" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">planter</text>
+<text x="11106" y="73320" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="600">2546.00</text>
+<text x="13906" y="73320" font-size="380" fill="#333333" text-anchor="end" dominant-baseline="central" font-weight="600">2351.71</text>
+<polygon points="14650,52580 20050,52580 20050,56660 14650,56660" fill="none" stroke="#333333" stroke-width="36"/>
+<text x="14758" y="52920" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central" font-weight="600">LEGEND</text>
+<line x1="14650" y1="53260" x2="20050" y2="53260" stroke="#333333" stroke-width="36"/>
+<path d="M 14758,53396 L 15542,53396 L 15542,53804 L 14758,53804 Z" fill="url(#hatch-concrete)" fill-rule="nonzero"/>
+<polygon points="14758,53396 15542,53396 15542,53804 14758,53804" fill="none" stroke="#333333" stroke-width="36"/>
+<text x="15758" y="53600" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">concrete</text>
+<line x1="14650" y1="53940" x2="20050" y2="53940" stroke="#333333" stroke-width="26"/>
+<path d="M 14758,54076 L 15542,54076 L 15542,54484 L 14758,54484 Z" fill="url(#poche)" fill-rule="nonzero"/>
+<polygon points="14758,54076 15542,54076 15542,54484 14758,54484" fill="none" stroke="#333333" stroke-width="36"/>
+<text x="15758" y="54280" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">poche</text>
+<line x1="14650" y1="54620" x2="20050" y2="54620" stroke="#333333" stroke-width="26"/>
+<path d="M 14764.12,54756 L 15535.88,54756 A 6.12 6.12 0 0 1 15542,54762.12 L 15542,55157.88 A 6.12 6.12 0 0 1 15535.88,55164 L 14764.12,55164 A 6.12 6.12 0 0 1 14758,55157.88 L 14758,54762.12 A 6.12 6.12 0 0 1 14764.12,54756 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="36"/>
+<path d="M 14764.12,54756 L 15535.88,54756 A 6.12 6.12 0 0 1 15542,54762.12 L 15542,54774.36 L 14758,54774.36 L 14758,54762.12 A 6.12 6.12 0 0 1 14764.12,54756 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="36"/>
+<path d="M 14821.85,54786.6 L 15107.06,54786.6 A 22.03 22.03 0 0 1 15129.09,54808.63 L 15129.09,54838.01 A 22.03 22.03 0 0 1 15107.06,54860.04 L 14821.85,54860.04 A 22.03 22.03 0 0 1 14799.81,54838.01 L 14799.81,54808.63 A 22.03 22.03 0 0 1 14821.85,54786.6 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="26"/>
+<path d="M 15192.94,54786.6 L 15478.15,54786.6 A 22.03 22.03 0 0 1 15500.19,54808.63 L 15500.19,54838.01 A 22.03 22.03 0 0 1 15478.15,54860.04 L 15192.94,54860.04 A 22.03 22.03 0 0 1 15170.91,54838.01 L 15170.91,54808.63 A 22.03 22.03 0 0 1 15192.94,54786.6 Z" fill="#ffffff" stroke="#a8a29a" stroke-width="26"/>
+<polygon points="14770.24,54878.4 15529.76,54878.4 15529.76,55086.48 15464.48,55151.76 14770.24,55151.76" fill="#f4f2ee" stroke="#a8a29a" stroke-width="26"/>
+<polygon points="14770.24,54878.4 15529.76,54878.4 15529.76,54919.2 14770.24,54919.2" fill="#ffffff" stroke="#a8a29a" stroke-width="26"/>
+<polygon points="15529.76,55086.48 15464.48,55151.76 15464.48,55086.48" fill="#ffffff" stroke="#a8a29a" stroke-width="26"/>
+<text x="15758" y="54960" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">bed</text>
+<line x1="14650" y1="55300" x2="20050" y2="55300" stroke="#333333" stroke-width="26"/>
+<path d="M 14762.9,55436 L 15537.1,55436 A 4.9 4.9 0 0 1 15542,55440.9 L 15542,55839.1 A 4.9 4.9 0 0 1 15537.1,55844 L 14762.9,55844 A 4.9 4.9 0 0 1 14758,55839.1 L 14758,55440.9 A 4.9 4.9 0 0 1 14762.9,55436 Z" fill="#f4f2ee" stroke="#6c6864" stroke-width="36"/>
+<path d="M 14773.5,55448.24 L 15526.5,55448.24 A 3.26 3.26 0 0 1 15529.76,55451.5 L 15529.76,55828.5 A 3.26 3.26 0 0 1 15526.5,55831.76 L 14773.5,55831.76 A 3.26 3.26 0 0 1 14770.24,55828.5 L 14770.24,55451.5 A 3.26 3.26 0 0 1 14773.5,55448.24 Z" fill="none" stroke="#a8a29a" stroke-width="26"/>
+<text x="15758" y="55640" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">table</text>
+<line x1="14650" y1="55980" x2="20050" y2="55980" stroke="#333333" stroke-width="26"/>
+<path d="M 15291.13,56261.54 A 58.59 58.59 0 0 1 15345.84,56320 A 58.59 58.59 0 0 1 15291.13,56378.46 A 70.35 70.35 0 0 1 15208.46,56461.13 A 58.59 58.59 0 0 1 15150,56515.84 A 58.59 58.59 0 0 1 15091.54,56461.13 A 70.35 70.35 0 0 1 15008.87,56378.46 A 58.59 58.59 0 0 1 14954.16,56320 A 58.59 58.59 0 0 1 15008.87,56261.54 A 70.35 70.35 0 0 1 15091.54,56178.87 A 58.59 58.59 0 0 1 15150,56124.16 A 58.59 58.59 0 0 1 15208.46,56178.87 A 70.35 70.35 0 0 1 15291.13,56261.54 Z" fill="#eef3e7" stroke="#6c6864" stroke-width="36"/>
+<circle cx="15150" cy="56320" r="82.25" fill="none" stroke="#a8a29a" stroke-width="26"/>
+<line x1="15232.25" y1="56320" x2="15287.09" y2="56320" stroke="#a8a29a" stroke-width="26"/>
+<line x1="15208.16" y1="56378.16" x2="15246.94" y2="56416.94" stroke="#a8a29a" stroke-width="26"/>
+<line x1="15150" y1="56402.25" x2="15150" y2="56457.09" stroke="#a8a29a" stroke-width="26"/>
+<line x1="15091.84" y1="56378.16" x2="15053.06" y2="56416.94" stroke="#a8a29a" stroke-width="26"/>
+<line x1="15067.75" y1="56320" x2="15012.91" y2="56320" stroke="#a8a29a" stroke-width="26"/>
+<line x1="15091.84" y1="56261.84" x2="15053.06" y2="56223.06" stroke="#a8a29a" stroke-width="26"/>
+<line x1="15150" y1="56237.75" x2="15150" y2="56182.91" stroke="#a8a29a" stroke-width="26"/>
+<line x1="15208.16" y1="56261.84" x2="15246.94" y2="56223.06" stroke="#a8a29a" stroke-width="26"/>
+<circle cx="15150" cy="56320" r="11.75" fill="#6c6864" stroke="#6c6864" stroke-width="36"/>
+<text x="15758" y="56320" font-size="380" fill="#333333" text-anchor="start" dominant-baseline="central">planter</text>
 </g>
 <g><polygon points="91350,200 90900,1640 91350,1325 91800,1640" fill="#333333" transform="rotate(0 91350 1100)"/><text x="91350" y="-216" font-size="520" fill="#333333" text-anchor="middle" dominant-baseline="central">N</text></g>
 <g><rect x="1750" y="47900" width="2500" height="280" fill="#333333"/><rect x="4250" y="47900" width="2500" height="280" fill="none" stroke="#333333" stroke-width="36"/><text x="1750" y="48580" font-size="400" fill="#333333" text-anchor="start" dominant-baseline="central">0</text><text x="6750" y="48580" font-size="400" fill="#333333" text-anchor="middle" dominant-baseline="central">5 m</text></g>

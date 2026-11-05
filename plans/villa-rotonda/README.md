@@ -146,13 +146,14 @@ node scripts/render.mjs villa-rotonda     # → plan.svg + plan.png
 To check it rather than look at it:
 
 ```bash
-npx arch validate plans/villa-rotonda/plan.arch --strict --json   # exit 0
-npx arch describe plans/villa-rotonda/plan.arch --json --room rotonda
-npx arch describe plans/villa-rotonda/plan.arch --json --select instances,schedule
+npx -y @chanmeng666/archlang validate plans/villa-rotonda/plan.arch --strict --json   # exit 2 under 1.55.0: five warnings, see above
+npx -y @chanmeng666/archlang describe plans/villa-rotonda/plan.arch --json --room rotonda
+npx -y @chanmeng666/archlang describe plans/villa-rotonda/plan.arch --json --select instances,schedule
 ```
 
-`validate --strict` is the ship gate — it fails on warnings as well as errors, and this drawing
-passes it clean: every room reachable, every door swinging into space it has, every opening on the
+`validate --strict` is the ship gate — it fails on warnings as well as errors, and under core 1.55.0 this drawing
+returns five warnings (four `W_LEAF_TOO_WIDE`, one `W_TITLE_OVERFLOW`), so `--strict` exits 2. What the
+drawing does clear: every room reachable, every door swinging into space it has, every opening on the
 wall it names, a way in from the outdoors, and all four quarters congruent to the millimetre.
 
 ### The compiler asked where the outdoors starts. The answer is: between the columns
@@ -194,7 +195,7 @@ Both lines live inside `component quarter()`, so all four porticos get the ident
 through the same exact isometry: `describe().access.entrances` now reads `north.o_portico`,
 `east.o_portico`, `south.o_portico`, `west.o_portico`, the loggias keep their rooms and their
 schedule rows, the four quadrant subtotals are still 181.00 m² each, and `arch lint` reports
-nothing.
+nothing about the entrance.
 
 ## Open it in the playground
 

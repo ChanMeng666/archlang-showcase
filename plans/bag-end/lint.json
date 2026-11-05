@@ -1,4 +1,5 @@
 {
+  "summary": "5 warnings in 3 codes: W_SEAT_FACING_AWAY ×3, W_BEDROOM_NO_WINDOW ×1, W_OPENING_AT_JUNCTION ×1",
   "ok": true,
   "strict": false,
   "diagnostics": [
@@ -16,6 +17,137 @@
       "hints": [
         "Add a `window` on an exterior wall of this room."
       ]
+    },
+    {
+      "code": "W_OPENING_AT_JUNCTION",
+      "severity": "warning",
+      "message": "The opening between \"The Tunnel\" and \"Entrance Hall\" meets a wall junction — its jamb at y 4950 is 50 mm from the face of the partition wall at y 4800 (at y 4900); its jamb at y 6150 is 50 mm from the face of the partition wall at y 6300 (at y 6200). A jamb needs at least 100 mm of wall beside it (the larger of 100 mm and half this wall's 200 mm thickness) to carry its frame or lining.",
+      "line": 132,
+      "col": 3,
+      "span": [
+        7785,
+        7833
+      ],
+      "fix": "Move the opening along its run. The hints quote each direction that has a clear position: the span it lands on, the nib it leaves and the `on <wall> at <pos>` or `at (x,y)` clause. Every quoted position was checked: on the run, the nib kept to every meeting wall, a mullion kept to every other opening, `W_DOOR_NEAR_CORNER`'s nib kept at a corner, and the same rooms served, which the hint names. The two leaves of a double door move together, with a clause for each. When no direction has one, the hint gives the longest clear stretch of wall and says to use another wall the same rooms share, or to move the meeting wall. Accept it where the plan means it: glazing running past a junction onto a mullion, a screen stopping short of a cased opening's head, a frame fixed into the meeting wall. There is no machine-applicable fix: every remedy moves something the author placed, and there are always at least two.",
+      "hints": [
+        "No position along this run clears it and still serves the same rooms. The longest clear stretch of wall it overlaps, after the nibs and mullions, is 1100 mm, against its 1200 mm span. Move it to another wall the same rooms share, or move the wall that meets it.",
+        "Accept it if the frame is meant to be fixed into the meeting wall itself (a flush corner detail).",
+        "The opening is \"o_arch\" on wall \"w_arch\"."
+      ]
+    },
+    {
+      "code": "W_SEAT_FACING_AWAY",
+      "severity": "warning",
+      "message": "A chair in Dining Room faces away from the Table beside it.",
+      "line": 181,
+      "col": 5,
+      "span": [
+        10776,
+        10843
+      ],
+      "fix": "Add `facing <table id>` to the chair (the hint names the nearest table and the turn it derives), or give it the `rotate` that turns its front to the table.",
+      "hints": [
+        "On \"chair_8\", add `facing f_dtable` (it turns to `rotate 180`)."
+      ]
+    },
+    {
+      "code": "W_SEAT_FACING_AWAY",
+      "severity": "warning",
+      "message": "A chair in Dining Room faces away from the Table beside it.",
+      "line": 181,
+      "col": 5,
+      "span": [
+        10776,
+        10843
+      ],
+      "fix": "Add `facing <table id>` to the chair (the hint names the nearest table and the turn it derives), or give it the `rotate` that turns its front to the table.",
+      "hints": [
+        "On \"chair_10\", add `facing f_dtable` (it turns to `rotate 180`)."
+      ]
+    },
+    {
+      "code": "W_SEAT_FACING_AWAY",
+      "severity": "warning",
+      "message": "A chair in Dining Room faces away from the Table beside it.",
+      "line": 181,
+      "col": 5,
+      "span": [
+        10776,
+        10843
+      ],
+      "fix": "Add `facing <table id>` to the chair (the hint names the nearest table and the turn it derives), or give it the `rotate` that turns its front to the table.",
+      "hints": [
+        "On \"chair_12\", add `facing f_dtable` (it turns to `rotate 180`)."
+      ]
     }
-  ]
+  ],
+  "coverage": {
+    "families": [
+      {
+        "family": "rooms",
+        "status": "ran"
+      },
+      {
+        "family": "furniture",
+        "status": "ran"
+      },
+      {
+        "family": "reachability",
+        "status": "ran"
+      },
+      {
+        "family": "doors",
+        "status": "ran"
+      },
+      {
+        "family": "circulation",
+        "status": "ran"
+      },
+      {
+        "family": "classification",
+        "status": "ran"
+      },
+      {
+        "family": "annotation",
+        "status": "ran"
+      },
+      {
+        "family": "vertical",
+        "status": "ran"
+      },
+      {
+        "family": "orientation",
+        "status": "ran"
+      },
+      {
+        "family": "outdoor",
+        "status": "ran"
+      },
+      {
+        "family": "privacy",
+        "status": "ran"
+      },
+      {
+        "family": "openings",
+        "status": "ran"
+      },
+      {
+        "family": "daylight",
+        "status": "ran"
+      },
+      {
+        "family": "contents",
+        "status": "ran"
+      },
+      {
+        "family": "enclosure",
+        "status": "ran"
+      },
+      {
+        "family": "stairs",
+        "status": "ran"
+      }
+    ],
+    "unclassifiedRooms": []
+  }
 }

@@ -149,7 +149,7 @@ m-687 -344 c0 -33 -4 -60 -10 -60 -6 0 -10 27 -10 60 0 33 4 60 10 60 6 0 10
 <text x="96" y="445.76" font-family="Archivo" font-size="72" font-weight="700" fill="#1c2430" text-anchor="start">The Oval Office</text>
 <text x="96" y="540.8" font-family="Archivo" font-size="72" font-weight="700" fill="#1c2430" text-anchor="start">is an arc.</text>
 <rect x="96" y="592" width="96" height="1.5" fill="#cfc9bb"/>
-<text x="96" y="660" font-family="Public Sans" font-size="26" font-weight="400" fill="#5b6470" text-anchor="start">24 rooms · 1,568.98 m² · one arc clause · 1 warning</text>
+<text x="96" y="660" font-family="Public Sans" font-size="26" font-weight="400" fill="#5b6470" text-anchor="start">24 rooms · 1,568.98 m² · one arc clause · 30 warnings</text>
 <text x="96" y="771" font-family="Public Sans" font-size="26" font-weight="400" fill="#6b3ae0" text-anchor="start">archlang.uk/showcase</text>
 <rect x="872" y="101" width="636" height="696" rx="26" fill="#ffffff" filter="url(#cardShadow)"/>
 <rect x="872" y="101" width="636" height="696" rx="26" fill="none" stroke="#cfc9bb" stroke-width="1" stroke-opacity="0.6"/>

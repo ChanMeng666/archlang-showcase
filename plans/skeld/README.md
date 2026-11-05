@@ -8,7 +8,7 @@ doors, a room schedule, a title block — and then asked the compiler the questi
 exists to answer:
 
 ```bash
-npx arch describe plans/skeld/plan.arch --json
+npx -y @chanmeng666/archlang describe plans/skeld/plan.arch --json
 ```
 
 `describe` reports rooms, areas, what borders what, and what the doors actually connect. Which
@@ -108,7 +108,7 @@ All three come back. Verbatim from `graph-check.txt`:
   graph: missing connection r_cafeteria — r_electrical
   graph: missing connection r_electrical — r_storage
   graph: unexpected connection r_east_hall — r_shields
-✗ 1 warning, graph mismatch
+✗ 3 warnings, graph mismatch
 
 exit code: 2
 ```
@@ -152,7 +152,8 @@ only, and that is what makes the difference measurable.
 
 ## What the linter said
 
-One warning, verbatim from `lint.txt`:
+Under core 1.55.0 `lint` returns three warnings (`W_NO_ENTRANCE`, `W_OPENING_AT_JUNCTION`,
+`W_HABITABLE_NO_WINDOW`; all in `lint.txt`). This page is about the first, verbatim:
 
 > `warning[W_NO_ENTRANCE]: The plan has no exterior door or opening — there is no way into the building.`
 
@@ -226,16 +227,16 @@ From the repo root:
 ```bash
 npm install
 
-npx arch compile  plans/skeld/plan.arch --json     # exit 0, zero errors
-npx arch lint     plans/skeld/plan.arch            # the one warning above
-npx arch suggest  plans/skeld/plan.arch            # where it thinks the front door goes
-npx arch describe plans/skeld/plan.arch --json     # rooms, areas, adjacency, doors, zones
+npx -y @chanmeng666/archlang compile  plans/skeld/plan.arch --json     # exit 0, zero errors
+npx -y @chanmeng666/archlang lint     plans/skeld/plan.arch            # three warnings; the first is the one above
+npx -y @chanmeng666/archlang suggest  plans/skeld/plan.arch            # where it thinks the front door goes
+npx -y @chanmeng666/archlang describe plans/skeld/plan.arch --json     # rooms, areas, adjacency, doors, zones
 
 # the room-to-room graph on its own, without the floor polygons
-npx arch describe plans/skeld/plan.arch --json --select input_graph
+npx -y @chanmeng666/archlang describe plans/skeld/plan.arch --json --select input_graph
 
 # the gate: a claimed graph, checked against the doors that exist. exits 2.
-npx arch validate plans/skeld/plan.arch --graph plans/skeld/intended-graph.json
+npx -y @chanmeng666/archlang validate plans/skeld/plan.arch --graph plans/skeld/intended-graph.json
 
 node scripts/render.mjs    skeld                   # → plan.svg + plan.png
 node scripts/permalink.mjs skeld                   # → the playground link below

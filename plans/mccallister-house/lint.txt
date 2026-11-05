@@ -1,3 +1,5 @@
+21 warnings in 10 codes: W_PATH_TOO_NARROW ×12, W_CIRCUITOUS_PATH ×1, W_DOORWAY_BLOCKED ×1, W_FURNITURE_ON_STAIR ×1, W_FURNITURE_OVER_WINDOW ×1, W_OPENING_AT_JUNCTION ×1, W_ROOM_NOT_EQUATOR_FACING ×1, W_SWING_OBSTRUCTED ×1, W_SWING_OVER_STAIR ×1, W_WC_SIDE_CLEARANCE ×1
+
 warning[W_SWING_OBSTRUCTED]: Door swing is obstructed — the swing needs 1200 mm of clear radius but "Micro Machines, loose fill" is 400 mm from the hinge (800 mm short).
    --> 85:3
    |
@@ -5,18 +7,161 @@ warning[W_SWING_OBSTRUCTED]: Door swing is obstructed — the swing needs 1200 m
    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    = help: Hang the leaf on the other jamb — `hinge right`.
    = help: Open it to the other side of the wall — `swing in`.
-   = help: Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `arch repair` computes the smallest clearing shift.
+   = help: Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `archlang repair` computes the smallest clearing shift.
    = help: Narrowing the door is not a fix here — the leaf would have to drop to 350 mm, under the 760 mm minimum passable width.
    = help: Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps nothing, so this warning cannot apply to it (`door pocket on <wall> at <pos> width <mm>`).
    = help: If no leaf is wanted here, make it a leafless `opening` instead.
-  = fix: Hang the leaf on the other jamb (`hinge left|right`) — a machine-applicable fix when the flipped swing is proved clear; or open it the other way (`swing in|out`), move the door along its wall, move the obstruction (`arch repair`), narrow the leaf to the width the warning quotes (never below the minimum passable width — that relocates the problem into `W_DOOR_CLEARANCE`), hang no swinging leaf at all (a `sliding`, `pocket` or `barn` door sweeps nothing, so this rule cannot apply to it), or make it a leafless `opening`.
+  = fix: Hang the leaf on the other jamb (`hinge left|right`) — a machine-applicable fix when the flipped swing is proved clear; or open it the other way (`swing in|out`), move the door along its wall, move the obstruction (`archlang repair`), narrow the leaf to the width the warning quotes (never below the minimum passable width — that relocates the problem into `W_DOOR_CLEARANCE`), hang no swinging leaf at all (a `sliding`, `pocket` or `barn` door sweeps nothing, so this rule cannot apply to it), or make it a leafless `opening`.
 
-warning[W_CIRCUITOUS_PATH]: The walk from entrance "d_back" to "Sun Room" is 5.81× the straight-line distance from that entrance (over 3×).
+warning[W_DOORWAY_BLOCKED]: Doorway is blocked — the approach needs 300 mm clear on each side but "Micro Machines, loose fill" leaves 250 mm (50 mm short).
+   --> 85:3
+   |
+85 |   door id=d_front on w_front at 9000 width 1200 hinge near start swing into r_hall
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Move "Micro Machines, loose fill" 50 mm clear of the opening — `archlang repair` computes the smallest clearing shift.
+   = help: Or shrink it by 50 mm on the axis facing the door, so it stops 300 mm short of the opening.
+   = help: Or move the door along its wall (`on <wall> at <pos>`) so its landing misses "Micro Machines, loose fill".
+  = fix: Move the obstruction clear of the opening by the shortfall the warning quotes (`archlang repair` computes the smallest clearing shift), shrink it by that much on the axis facing the doorway, or move the door or opening along its wall so its landing misses it (an opening `open between` derives has the rooms' shared edge as its span, so there the piece moves).
+
+warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Living Room" squeezes to 400 mm and stops there — no way in is wider, so no route reaches the room (300 mm below the 700 mm minimum).
+   --> 66:3
+   |
+66 |   room id=r_living  at (0,8000)     size 6800x5000 label "Living Room"     uses living
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Widen the tightest door/opening on the way to at least 700 mm.
+   = help: Or move the furniture pinching the route so 700 mm of clear width survives.
+   = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
+   = help: Measured from the main entrance `d_front` (the hinged door on the `site` street side). `d_back` opens into a room the walk from the main entrance does not reach: its own way in, not the way the plan is entered.
+  = fix: When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.
+
+warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Entrance Hall" squeezes to 400 mm and stops there — no way in is wider, so no route reaches the room (300 mm below the 700 mm minimum).
+   --> 67:3
+   |
+67 |   room id=r_hall    at (6800,8000)  size 4400x5000 label "Entrance Hall"   uses hall entry circulation
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Widen the tightest door/opening on the way to at least 700 mm.
+   = help: Or move the furniture pinching the route so 700 mm of clear width survives.
+   = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
+   = help: Measured from the main entrance `d_front` (the hinged door on the `site` street side). `d_back` opens into a room the walk from the main entrance does not reach: its own way in, not the way the plan is entered.
+  = fix: When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.
+
+warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Dining Room" squeezes to 400 mm and stops there — no way in is wider, so no route reaches the room (300 mm below the 700 mm minimum).
+   --> 68:3
+   |
+68 |   room id=r_dining  at (11200,8000) size 6800x5000 label "Dining Room"     uses dining
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Widen the tightest door/opening on the way to at least 700 mm.
+   = help: Or move the furniture pinching the route so 700 mm of clear width survives.
+   = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
+   = help: Measured from the main entrance `d_front` (the hinged door on the `site` street side). `d_back` opens into a room the walk from the main entrance does not reach: its own way in, not the way the plan is entered.
+  = fix: When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.
+
+warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Sun Room" squeezes to 400 mm and stops there — no way in is wider, so no route reaches the room (300 mm below the 700 mm minimum).
+   --> 70:3
+   |
+70 |   room id=r_sun     at (0,0)        size 4200x4000 label "Sun Room"        uses living
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Widen the tightest door/opening on the way to at least 700 mm.
+   = help: Or move the furniture pinching the route so 700 mm of clear width survives.
+   = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
+   = help: Measured from the main entrance `d_front` (the hinged door on the `site` street side). `d_back` opens into a room the walk from the main entrance does not reach: its own way in, not the way the plan is entered.
+  = fix: When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.
+
+warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Study" squeezes to 400 mm and stops there — no way in is wider, so no route reaches the room (300 mm below the 700 mm minimum).
+   --> 71:3
+   |
+71 |   room id=r_study   at (0,4000)     size 4200x4000 label "Study"           uses office
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Widen the tightest door/opening on the way to at least 700 mm.
+   = help: Or move the furniture pinching the route so 700 mm of clear width survives.
+   = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
+   = help: Measured from the main entrance `d_front` (the hinged door on the `site` street side). `d_back` opens into a room the walk from the main entrance does not reach: its own way in, not the way the plan is entered.
+  = fix: When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.
+
+warning[W_PATH_TOO_NARROW]: From the main entrance the walk to "Mudroom" squeezes to 400 mm and stops there (300 mm below the 700 mm minimum); the room is reached only through its own door from outside.
+   --> 72:3
+   |
+72 |   room id=r_mud     at (4200,0)     size 3800x2600 label "Mudroom"         uses entry
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Widen the tightest door/opening on the way to at least 700 mm.
+   = help: Or move the furniture pinching the route so 700 mm of clear width survives.
+   = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
+   = help: Measured from the main entrance `d_front`. The room's own door from outside, `d_back`, is a way into it, but not the way the plan is entered.
+  = fix: When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.
+
+warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Rear Hall" squeezes to 400 mm and stops there — no way in is wider, so no route reaches the room (300 mm below the 700 mm minimum).
+   --> 73:3
+   |
+73 |   room id=r_rear    at (4200,2600)  size 3800x5400 label "Rear Hall"       uses hall circulation
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Widen the tightest door/opening on the way to at least 700 mm.
+   = help: Or move the furniture pinching the route so 700 mm of clear width survives.
+   = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
+   = help: Measured from the main entrance `d_front` (the hinged door on the `site` street side). `d_back` opens into a room the walk from the main entrance does not reach: its own way in, not the way the plan is entered.
+  = fix: When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.
+
+warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Kitchen" squeezes to 400 mm and stops there — no way in is wider, so no route reaches the room (300 mm below the 700 mm minimum).
+   --> 74:3
+   |
+74 |   room id=r_kitchen at (8000,0)     size 5000x8000 label "Kitchen"         uses kitchen
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Widen the tightest door/opening on the way to at least 700 mm.
+   = help: Or move the furniture pinching the route so 700 mm of clear width survives.
+   = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
+   = help: Measured from the main entrance `d_front` (the hinged door on the `site` street side). `d_back` opens into a room the walk from the main entrance does not reach: its own way in, not the way the plan is entered.
+  = fix: When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.
+
+warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Laundry" squeezes to 400 mm and stops there — no way in is wider, so no route reaches the room (300 mm below the 700 mm minimum).
+   --> 75:3
+   |
+75 |   room id=r_laundry at (13000,0)    size 5000x2600 label "Laundry"         uses utility
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Widen the tightest door/opening on the way to at least 700 mm.
+   = help: Or move the furniture pinching the route so 700 mm of clear width survives.
+   = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
+   = help: Measured from the main entrance `d_front` (the hinged door on the `site` street side). `d_back` opens into a room the walk from the main entrance does not reach: its own way in, not the way the plan is entered.
+  = fix: When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.
+
+warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Store" squeezes to 400 mm and stops there — no way in is wider, so no route reaches the room (300 mm below the 700 mm minimum).
+   --> 76:3
+   |
+76 |   room id=r_store   at (13000,2600) size 2400x2800 label "Store"           uses storage
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Widen the tightest door/opening on the way to at least 700 mm.
+   = help: Or move the furniture pinching the route so 700 mm of clear width survives.
+   = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
+   = help: Measured from the main entrance `d_front` (the hinged door on the `site` street side). `d_back` opens into a room the walk from the main entrance does not reach: its own way in, not the way the plan is entered.
+  = fix: When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.
+
+warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Powder Room" squeezes to 400 mm and stops there — no way in is wider, so no route reaches the room (300 mm below the 700 mm minimum).
+   --> 77:3
+   |
+77 |   room id=r_powder  at (15400,2600) size 2600x2800 label "Powder Room"     uses wc
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Widen the tightest door/opening on the way to at least 700 mm.
+   = help: Or move the furniture pinching the route so 700 mm of clear width survives.
+   = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
+   = help: Measured from the main entrance `d_front` (the hinged door on the `site` street side). `d_back` opens into a room the walk from the main entrance does not reach: its own way in, not the way the plan is entered.
+  = fix: When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.
+
+warning[W_PATH_TOO_NARROW]: The walk from the entrance to "Butler's Pantry" squeezes to 400 mm and stops there — no way in is wider, so no route reaches the room (300 mm below the 700 mm minimum).
+   --> 78:3
+   |
+78 |   room id=r_pantry  at (13000,5400) size 5000x2600 label "Butler's Pantry" uses storage
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Widen the tightest door/opening on the way to at least 700 mm.
+   = help: Or move the furniture pinching the route so 700 mm of clear width survives.
+   = help: Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable.
+   = help: Measured from the main entrance `d_front` (the hinged door on the `site` street side). `d_back` opens into a room the walk from the main entrance does not reach: its own way in, not the way the plan is entered.
+  = fix: When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.
+
+warning[W_CIRCUITOUS_PATH]: The walk from the entrance (the exterior door into "Mudroom") to "Sun Room" is 5.81× the straight-line distance from that entrance (over 3×).
    --> 70:3
    |
 70 |   room id=r_sun     at (0,0)        size 4200x4000 label "Sun Room"        uses living
    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    = help: Add a more direct connection — a door or a hall — so the room isn't reached the long way round.
+   = help: The entrance it is measured from is `d_back`.
   = fix: Add a more direct connection — a door or a hall — so the room is not reached the long way round.
 
 warning[W_ROOM_NOT_EQUATOR_FACING]: Room "Sun Room" has 2 window(s), none facing S (the equator side in the northern hemisphere) — they face W, N.
@@ -27,4 +172,48 @@ warning[W_ROOM_NOT_EQUATOR_FACING]: Room "Sun Room" has 2 window(s), none facing
    = help: A drafting heuristic, not a daylight measurement: it reports the aspect, not the light. Move a window onto the S facade, or accept it.
   = fix: Move a window onto the room's equator-facing facade, or accept the aspect — an urban plot often has no equator-facing wall to spare. There is deliberately NO machine fix: the remedy is a geometric decision (which facade, which wall, what else it displaces) and the compiler does not make those (ADR 0005).
 
-✓ ok (3 warnings)
+warning[W_OPENING_AT_JUNCTION]: The opening between "Entrance Hall" and "Rear Hall" meets a wall junction — its jamb at x 6900 is 50 mm from the face of the partition wall at x 6800 (at x 6850); its jamb at x 7900 is 50 mm from the face of the partition wall at x 8000 (at x 7950). A jamb needs at least 100 mm of wall beside it (the larger of 100 mm and half this wall's 100 mm thickness) to carry its frame or lining.
+    --> 112:3
+    |
+112 |   opening id=o_hall_rear on p_spine at 7400  width 1000
+    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: No position along this run clears it and still serves the same rooms. The longest clear stretch of wall it overlaps, after the nibs and mullions, is 900 mm, against its 1000 mm span. Move it to another wall the same rooms share, or move the wall that meets it.
+    = help: Accept it if the frame is meant to be fixed into the meeting wall itself (a flush corner detail).
+    = help: The opening is "o_hall_rear" on wall "p_spine".
+  = fix: Move the opening along its run. The hints quote each direction that has a clear position: the span it lands on, the nib it leaves and the `on <wall> at <pos>` or `at (x,y)` clause. Every quoted position was checked: on the run, the nib kept to every meeting wall, a mullion kept to every other opening, `W_DOOR_NEAR_CORNER`'s nib kept at a corner, and the same rooms served, which the hint names. The two leaves of a double door move together, with a clause for each. When no direction has one, the hint gives the longest clear stretch of wall and says to use another wall the same rooms share, or to move the meeting wall. Accept it where the plan means it: glazing running past a junction onto a mullion, a screen stopping short of a cased opening's head, a frame fixed into the meeting wall. There is no machine-applicable fix: every remedy moves something the author placed, and there are always at least two.
+
+warning[W_WC_SIDE_CLEARANCE]: The WC in Powder Room has its centreline 200 mm from a partition wall beside it; a WC needs 400 mm to each side (200 mm short).
+    --> 192:3
+    |
+192 |   furniture id=f_wc    wc    in r_powder anchor bottom-left flush size 400x700
+    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: "f_wc"'s centreline is 200 mm from wall "p_powder" (the ruleset's `wcSideClearanceMm` is 400 mm, centreline to a side wall or fixture): slide it 200 mm along its back wall, away from wall "p_powder", and its other side still keeps 400 mm.
+  = fix: Slide the pan along its back wall away from the obstacle by the shortfall (the hint says whether its other side then still keeps the figure), move the obstacle, or move the pan to a run wide enough for twice the figure. There is no machine fix: the edit depends on how the pan was placed.
+
+warning[W_FURNITURE_OVER_WINDOW]: The fridge in Kitchen stands in front of 300 mm of a 1400 mm window: a tall unit against the glass blocks its light and view.
+    --> 176:3
+    |
+176 |   furniture id=f_fridge fridge       against wall w_rear offset 12400 in r_kitchen
+    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: "f_fridge" covers 300 mm of window "win_kit_n2" on wall "w_rear": slide it 300 mm along the wall past the window's end (its end nearer the wall's last point), or move the window, or stand a unit no higher than the sill (900 mm) there instead.
+  = fix: Slide the unit along the wall clear of the window's span (the hint gives the shorter slide), move the window, or stand a unit no higher than the sill there instead: a worktop, a chest of drawers or a washer goes under a window, a fridge or a wardrobe beside it.
+
+warning[W_SWING_OVER_STAIR]: The exterior door into "Entrance Hall" swings over the stair in "Entrance Hall": its open leaf comes within 400 mm of the bottom step, the clear space a door at the foot of a flight must leave across its width.
+   --> 85:3
+   |
+85 |   door id=d_front on w_front at 9000 width 1200 hinge near start swing into r_hall
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = help: Open `d_front` to the other side of its wall — `swing in` (this clears the stair) — or hang it on the other jamb (the other `hinge`).
+   = help: Or move `d_front` along its wall, or the stair `s_main`, so the swing stays off the flight and its landings; a `sliding` or `pocket` door sweeps nothing.
+  = fix: Open the door to the other side of its wall (flip its `swing`) or hang it on the other jamb (flip its `hinge`); the hint says when either clears the stair. Otherwise move the door or the stair, or use a `sliding` or `pocket` door, which sweeps nothing. There is no machine-applicable fix: which way a door opens is a design decision.
+
+warning[W_FURNITURE_ON_STAIR]: Furniture "Micro Machines, loose fill" stands on the landing at the foot of the stair in "Entrance Hall": a landing as long as the flight is wide, 1200 mm, stays clear of furniture.
+    --> 213:3
+    |
+213 |   furniture id=f_micro loose_fill at (8300,11900) size 1400x700 label "Micro Machines, loose fill" in r_hall
+    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: Move or resize it so it clears the floor beyond the foot of `s_main` (x 8400–9600, y 11600–12800), or move the stair.
+  = fix: Move or resize the piece so it clears the span the hint quotes, or move the stair. There is no machine-applicable fix: where the piece goes instead is a design decision.
+
+  lint coverage: skipped storey matching (the plan has one storey); stair checks (the plan states no storey height).
+✓ ok (21 warnings)
