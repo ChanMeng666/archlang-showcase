@@ -257,6 +257,6 @@ m-687 -344 c0 -33 -4 -60 -10 -60 -6 0 -10 27 -10 60 0 33 4 60 10 60 6 0 10
 <text x="527.96" y="688.39" font-family="IBM Plex Mono" font-size="24.38" font-weight="400" fill="#72cf90" text-anchor="start">size</text>
 <text x="601.09" y="688.39" font-family="IBM Plex Mono" font-size="24.38" font-weight="400" fill="#5fcbd8" text-anchor="start">900x2m</text>
 <text x="688.85" y="688.39" font-family="IBM Plex Mono" font-size="24.38" font-weight="400" fill="#aab2be" text-anchor="start">}</text>
-<text x="96" y="838" font-family="Public Sans" font-size="26" font-weight="400" fill="#5b6470" text-anchor="start">2 rooms · 24.00 m² · 277 bytes · lint-clean</text>
+<text x="96" y="838" font-family="Public Sans" font-size="26" font-weight="400" fill="#5b6470" text-anchor="start">2 rooms · 24.00 m² · 277 bytes · 1 warning</text>
 <text x="1504" y="838" font-family="IBM Plex Mono" font-size="22" font-weight="400" fill="#5b6470" text-anchor="end">plans/tweet-house/plan.arch</text>
 </svg>

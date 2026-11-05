@@ -1,6 +1,6 @@
 {
   "title": "The Tweet House",
-  "hook": "This tweet is a house. 277 bytes, zero warnings.",
+  "hook": "This tweet is a house. 277 bytes of source.",
   "headline": ["This tweet", "is a house."],
   "features": "{rooms} · {area} · 277 bytes · {lint}",
   "url": "archlang.uk/showcase",

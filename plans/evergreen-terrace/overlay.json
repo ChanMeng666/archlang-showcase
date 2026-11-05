@@ -28,7 +28,7 @@
     {
       "rect": [11900, -100, 4200, 4200],
       "n": 4,
-      "label": "2 windows, N and E: the one warning",
+      "label": "2 windows, N and E: no S window",
       "side": "right",
       "color": "#8052ff"
     }

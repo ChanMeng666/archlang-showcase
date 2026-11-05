@@ -3,17 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Famous buildings, TV homes and game maps — compiled, not drawn. Fun floor plans written in ArchLang.",
+  "description": "Famous and original buildings, written as text and compiled. Floor plans written in ArchLang.",
   "license": "MIT",
   "scripts": {
     "render": "node scripts/render.mjs",
     "permalink": "node scripts/permalink.mjs",
     "overlay": "node scripts/overlay.mjs",
     "social": "node scripts/social.mjs",
-    "gallery": "node scripts/gallery.mjs"
+    "gallery": "node scripts/gallery.mjs",
+    "links": "node scripts/links.mjs",
+    "links:check": "node scripts/links.mjs --check",
+    "doors": "node scripts/doors.mjs",
+    "doors:check": "node scripts/doors.mjs --check"
   },
   "devDependencies": {
-    "@chanmeng666/archlang": "^1.50.0",
+    "@chanmeng666/archlang": "^1.55.0",
     "@fontsource/archivo": "^5.3.0",
     "@fontsource/ibm-plex-mono": "^5.3.0",
     "@fontsource/public-sans": "^5.3.0",

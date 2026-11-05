@@ -23,8 +23,8 @@ So we ran the checker.
 
 ## The roast
 
-`arch lint` returns **18 warnings across 11 distinct codes**. All of them are below, verbatim, in
-[`lint.txt`](lint.txt). Here are the six that hurt.
+Under core 1.55.0 `arch lint` returns **24 warnings across 17 distinct codes**. All of them are in
+[`lint.txt`](lint.txt), verbatim. Here are the six that hurt.
 
 **The second bedroom is not a bedroom.**
 
@@ -97,8 +97,11 @@ swing of Bedroom 2's own door, a front door that leaves a 100 mm nib at the corn
 wall where the rule wants 300 mm (`W_DOOR_NEAR_CORNER`), and the living room's TV and Bedroom 1's
 bed *and* wardrobe, all three drawn with their backs turned to the room instead of to the walls
 they stand against (`W_FIXTURE_BACK_TO_ROOM`, new in core 1.28.0 — real furniture-orientation
-mistakes that predate this piece; the bed and wardrobe were caught under 1.29.0, the TV only under
-1.41.0) — are in `lint.txt` too.
+mistakes that predate this piece; under 1.55.0 it names the TV and the wardrobe, and the bed is
+now reported by `W_FOOTPRINT_TRANSPOSED` as drawn a quarter-turn off) — are in `lint.txt` too,
+along with the warnings that later cores added: `W_BED_UNDERSIZED`, `W_HABITABLE_NO_WINDOW`,
+`W_OPENING_AT_JUNCTION`, `W_SEAT_FACING_AWAY`, `W_WC_SIDE_CLEARANCE` and a second
+`W_FOOTPRINT_TRANSPOSED` (the TV).
 
 ## Three numbers the drawing does not tell you
 
@@ -142,7 +145,7 @@ Its third suggestion is genuinely the fix a renovation would make: `door on w_ha
 ## The three things a machine will fix for you
 
 `arch fix --dry-run` prints the unified diff it *would* write, applying only the machine-applicable
-fixes — the ones the compiler can prove correct. Out of eighteen warnings, it offers exactly three
+fixes — the ones the compiler can prove correct. Out of twenty-four warnings, it offers exactly three
 ([`fix-dry-run.txt`](fix-dry-run.txt)):
 
 ```diff
@@ -178,10 +181,10 @@ tell you the second bedroom is 3.91 m². It will not make it bigger.
 ## The ship gate
 
 ```console
-$ npx arch lint plans/railroad-apartment/plan.arch ; echo $?
-✓ ok (18 warnings)
+$ npx -y @chanmeng666/archlang lint plans/railroad-apartment/plan.arch ; echo $?
+✓ ok (24 warnings)
 0
-$ npx arch validate plans/railroad-apartment/plan.arch --strict --json ; echo $?
+$ npx -y @chanmeng666/archlang validate plans/railroad-apartment/plan.arch --strict --json ; echo $?
 2
 ```
 
@@ -203,12 +206,11 @@ drafting mistakes (furniture drawn through a wall, furniture drawn through other
 during authoring and were fixed, because "the drawing is wrong" is not a joke, it is just a wrong
 drawing.
 
-Captured under core 1.41.0. `W_FIXTURE_BACK_TO_ROOM` (bed, wardrobe and, since 1.41.0, the TV —
+Captured under core 1.55.0. `W_FIXTURE_BACK_TO_ROOM` (wardrobe and TV —
 the rule is new in 1.28.0) is a third member of that same drafting-mistake class, first caught here
 under 1.29.0: it is left in, unfixed, because the point of this plan is to be roasted, and a real
 lint pass finding a real mistake is the roast, not an embarrassment to quietly clean up before
-anyone re-renders it. The other warnings that are new under 1.41.0 — two more `W_PATH_TOO_NARROW`
-and one `W_DOOR_NEAR_CORNER` — are left in for the same reason.
+anyone re-renders it. The warnings that later cores added (listed above) are left in for the same reason.
 
 The building is a **fictional composite**, invented for this piece: a lot width, a depth, and a room
 order borrowed from a genre rather than from any address. No real listing, unit or landlord is
@@ -224,13 +226,13 @@ From the repo root:
 ```bash
 npm install
 
-npx arch compile  plans/railroad-apartment/plan.arch --json          # exit 0, zero errors
-npx arch lint     plans/railroad-apartment/plan.arch                 # the 18 warnings above
-npx arch lint     plans/railroad-apartment/plan.arch --json          # …as data, with fixes
-npx arch suggest  plans/railroad-apartment/plan.arch                 # the window into next door
-npx arch fix      plans/railroad-apartment/plan.arch --dry-run       # the free renovations  
-npx arch validate plans/railroad-apartment/plan.arch --strict --json # exit 2, on purpose
-npx arch describe plans/railroad-apartment/plan.arch --json --select circulation,totals
+npx -y @chanmeng666/archlang compile  plans/railroad-apartment/plan.arch --json          # exit 0, zero errors
+npx -y @chanmeng666/archlang lint     plans/railroad-apartment/plan.arch                 # the 24 warnings above
+npx -y @chanmeng666/archlang lint     plans/railroad-apartment/plan.arch --json          # …as data, with fixes
+npx -y @chanmeng666/archlang suggest  plans/railroad-apartment/plan.arch                 # the window into next door
+npx -y @chanmeng666/archlang fix      plans/railroad-apartment/plan.arch --dry-run       # the free renovations  
+npx -y @chanmeng666/archlang validate plans/railroad-apartment/plan.arch --strict --json # exit 2, on purpose
+npx -y @chanmeng666/archlang describe plans/railroad-apartment/plan.arch --json --select circulation,totals
 
 node scripts/render.mjs    railroad-apartment                        # → plan.svg + plan.png
 node scripts/permalink.mjs railroad-apartment                        # → the playground link below
@@ -241,7 +243,7 @@ The `.txt` and `.json` files in this directory are the captured output of exactl
 To check the hallway arithmetic yourself:
 
 ```bash
-npx arch describe plans/railroad-apartment/plan.arch --json --select rooms,totals
+npx -y @chanmeng666/archlang describe plans/railroad-apartment/plan.arch --json --select rooms,totals
 ```
 
 `r_hall` is 19.8 m² of the 61.2 m² total.

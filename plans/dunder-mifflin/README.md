@@ -57,14 +57,16 @@ catalogue rather than by a coordinate, the two restrooms and the supply closet o
 corridor, and then the annex — one door, three desks, and the back stair down toward the
 warehouse, drawn with its DN arrow.
 
-Every architectural check passes:
+Every architectural check that existed when this was drawn passed. Under core 1.55.0 `lint`
+returns 14 warnings from newer rules (11 `W_SEAT_FACING_AWAY`, `W_BOUNDARY_NO_WALL`,
+`W_LEAF_TOO_WIDE`, `W_ROOM_MISSING_DEFINING`), so `--strict` now exits 2:
 
 ```bash
-npx arch lint     plans/dunder-mifflin/plan.arch --json          # zero warnings
-npx arch validate plans/dunder-mifflin/plan.arch --strict --json # exit 0
+npx -y @chanmeng666/archlang lint     plans/dunder-mifflin/plan.arch --json          # 14 warnings under 1.55.0
+npx -y @chanmeng666/archlang validate plans/dunder-mifflin/plan.arch --strict --json # exit 2 under 1.55.0
 ```
 
-`arch lint` reports nothing, so there is nothing here to justify: no door swinging into a wall, no
+When drawn, `arch lint` reported nothing, so there was nothing here to justify: no door swinging into a wall, no
 fixture stranded off its room, no room you cannot walk to from the front door, and no route too
 narrow to walk. Getting there needed one honest architectural admission — the reception screen and
 the accounting divider had to become *real* short partitions with cased
@@ -105,11 +107,11 @@ node scripts/render.mjs dunder-mifflin     # → plan.svg + plan.png
 To check it rather than look at it:
 
 ```bash
-npx arch compile  plans/dunder-mifflin/plan.arch --json          # renders; W_SCALE_OVERFLOW as data
-npx arch lint     plans/dunder-mifflin/plan.arch --json          # zero warnings
-npx arch validate plans/dunder-mifflin/plan.arch --strict --json # exit 2 on W_SCALE_OVERFLOW
-npx arch describe plans/dunder-mifflin/plan.arch --json --select zones
-npx arch describe plans/dunder-mifflin/plan.arch --json --room r_annex
+npx -y @chanmeng666/archlang compile  plans/dunder-mifflin/plan.arch --json          # renders; W_SCALE_OVERFLOW as data
+npx -y @chanmeng666/archlang lint     plans/dunder-mifflin/plan.arch --json          # 14 warnings under 1.55.0
+npx -y @chanmeng666/archlang validate plans/dunder-mifflin/plan.arch --strict --json # exit 2 on W_SCALE_OVERFLOW
+npx -y @chanmeng666/archlang describe plans/dunder-mifflin/plan.arch --json --select zones
+npx -y @chanmeng666/archlang describe plans/dunder-mifflin/plan.arch --json --room r_annex
 node scripts/permalink.mjs dunder-mifflin
 ```
 

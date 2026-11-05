@@ -1,3 +1,5 @@
+5 warnings in 3 codes: W_SEAT_FACING_AWAY ×3, W_BEDROOM_NO_WINDOW ×1, W_OPENING_AT_JUNCTION ×1
+
 warning[W_BEDROOM_NO_WINDOW]: Bedroom "Spare Bedroom" has no window.
     --> 105:3
     |
@@ -6,4 +8,38 @@ warning[W_BEDROOM_NO_WINDOW]: Bedroom "Spare Bedroom" has no window.
     = help: Add a `window` on an exterior wall of this room.
   = fix: Add a `window` on an exterior wall of the room.
 
-✓ ok (1 warning)
+warning[W_OPENING_AT_JUNCTION]: The opening between "The Tunnel" and "Entrance Hall" meets a wall junction — its jamb at y 4950 is 50 mm from the face of the partition wall at y 4800 (at y 4900); its jamb at y 6150 is 50 mm from the face of the partition wall at y 6300 (at y 6200). A jamb needs at least 100 mm of wall beside it (the larger of 100 mm and half this wall's 200 mm thickness) to carry its frame or lining.
+    --> 132:3
+    |
+132 |   opening id=o_arch on w_arch at center width 1200
+    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: No position along this run clears it and still serves the same rooms. The longest clear stretch of wall it overlaps, after the nibs and mullions, is 1100 mm, against its 1200 mm span. Move it to another wall the same rooms share, or move the wall that meets it.
+    = help: Accept it if the frame is meant to be fixed into the meeting wall itself (a flush corner detail).
+    = help: The opening is "o_arch" on wall "w_arch".
+  = fix: Move the opening along its run. The hints quote each direction that has a clear position: the span it lands on, the nib it leaves and the `on <wall> at <pos>` or `at (x,y)` clause. Every quoted position was checked: on the run, the nib kept to every meeting wall, a mullion kept to every other opening, `W_DOOR_NEAR_CORNER`'s nib kept at a corner, and the same rooms served, which the hint names. The two leaves of a double door move together, with a clause for each. When no direction has one, the hint gives the longest clear stretch of wall and says to use another wall the same rooms share, or to move the meeting wall. Accept it where the plan means it: glazing running past a junction onto a mullion, a screen stopping short of a cased opening's head, a frame fixed into the meeting wall. There is no machine-applicable fix: every remedy moves something the author placed, and there are always at least two.
+
+warning[W_SEAT_FACING_AWAY]: A chair in Dining Room faces away from the Table beside it.
+    --> 181:5
+    |
+181 |     furniture chair at (13500 + i * 550, 9300) size 450x450 in r_dining
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: On "chair_8", add `facing f_dtable` (it turns to `rotate 180`).
+  = fix: Add `facing <table id>` to the chair (the hint names the nearest table and the turn it derives), or give it the `rotate` that turns its front to the table.
+
+warning[W_SEAT_FACING_AWAY]: A chair in Dining Room faces away from the Table beside it.
+    --> 181:5
+    |
+181 |     furniture chair at (13500 + i * 550, 9300) size 450x450 in r_dining
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: On "chair_10", add `facing f_dtable` (it turns to `rotate 180`).
+  = fix: Add `facing <table id>` to the chair (the hint names the nearest table and the turn it derives), or give it the `rotate` that turns its front to the table.
+
+warning[W_SEAT_FACING_AWAY]: A chair in Dining Room faces away from the Table beside it.
+    --> 181:5
+    |
+181 |     furniture chair at (13500 + i * 550, 9300) size 450x450 in r_dining
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: On "chair_12", add `facing f_dtable` (it turns to `rotate 180`).
+  = fix: Add `facing <table id>` to the chair (the hint names the nearest table and the turn it derives), or give it the `rotate` that turns its front to the table.
+
+✓ ok (5 warnings)

@@ -61,7 +61,9 @@ floor plan can show is the opening and the leaf. The circle is what a section wo
 
 This is the punchline, and it is not staged. `arch lint` checks a plan for architectural
 soundness — unreachable rooms, blocked doorways, doors swinging into furniture, bedrooms without
-daylight. Bag End comes back with **exactly one** complaint, verbatim from `lint.txt`:
+daylight. Under core 1.55.0 Bag End comes back with five warnings (three `W_SEAT_FACING_AWAY`, one
+`W_OPENING_AT_JUNCTION`, all in `lint.txt`) and one complaint that is the point, verbatim from
+`lint.txt`:
 
 ```
 warning[W_BEDROOM_NO_WINDOW]: Bedroom "Spare Bedroom" has no window.
@@ -99,14 +101,14 @@ which is the whole point of the building.
 So this plan does not pass the ship gate, on purpose:
 
 ```console
-$ npx arch validate plans/bag-end/plan.arch --strict --json
+$ npx -y @chanmeng666/archlang validate plans/bag-end/plan.arch --strict --json
 { "ok": false, "strict": true, ... }
 $ echo $?
 2
 ```
 
-`--strict` fails on warnings as well as errors. Bag End exits 2 and always will, because the one
-thing it is warned about is the one thing the author of the brief specified.
+`--strict` fails on warnings as well as errors. Bag End exits 2 and always will, because the
+warning this page is about is the one thing the author of the brief specified.
 
 ## Honesty notes
 
@@ -138,12 +140,12 @@ From the repo root:
 ```bash
 npm install
 
-npx arch compile  plans/bag-end/plan.arch --json          # exit 0, zero errors
-npx arch lint     plans/bag-end/plan.arch                 # the one warning above
-npx arch lint     plans/bag-end/plan.arch --json          # …as data, with its fix
-npx arch suggest  plans/bag-end/plan.arch                 # the window into the hill
-npx arch validate plans/bag-end/plan.arch --strict --json # exit 2, on purpose
-npx arch describe plans/bag-end/plan.arch --json --select site,totals
+npx -y @chanmeng666/archlang compile  plans/bag-end/plan.arch --json          # exit 0, zero errors
+npx -y @chanmeng666/archlang lint     plans/bag-end/plan.arch                 # the one warning above
+npx -y @chanmeng666/archlang lint     plans/bag-end/plan.arch --json          # …as data, with its fix
+npx -y @chanmeng666/archlang suggest  plans/bag-end/plan.arch                 # the window into the hill
+npx -y @chanmeng666/archlang validate plans/bag-end/plan.arch --strict --json # exit 2, on purpose
+npx -y @chanmeng666/archlang describe plans/bag-end/plan.arch --json --select site,totals
 
 node scripts/render.mjs    bag-end                        # → plan.svg + plan.png
 node scripts/permalink.mjs bag-end                        # → the playground link below
@@ -155,7 +157,7 @@ commands.
 To check the claim that every window faces the garden without taking our word for it:
 
 ```bash
-npx arch describe plans/bag-end/plan.arch --json --select windows
+npx -y @chanmeng666/archlang describe plans/bag-end/plan.arch --json --select windows
 ```
 
 Seven windows, seven `"facing": "S"`. The `site { street east hemisphere north }` block names the

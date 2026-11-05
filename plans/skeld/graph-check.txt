@@ -1,19 +1,43 @@
 $ arch validate plans/skeld/plan.arch --graph plans/skeld/intended-graph.json
 
+3 warnings in 3 codes: W_HABITABLE_NO_WINDOW ×1, W_NO_ENTRANCE ×1, W_OPENING_AT_JUNCTION ×1
+
 warning[W_NO_ENTRANCE]: The plan has no exterior door or opening — there is no way into the building.
   = help: Add a `door` (or a cased `opening`) on an `exterior` wall.
   = fix: Add a `door` on an `exterior` wall.
 
+warning[W_OPENING_AT_JUNCTION]: The opening between "South Hall" and "Shields" meets a wall junction — the exterior wall at x 74000 stands inside its span (x 74100–75900; that wall occupies x 73750–74250, 150 mm of the opening); the partition wall at x 76000 stands inside its span (x 74100–75900; that wall occupies x 75850–76150, 50 mm of the opening). A wall standing inside an opening is a pier in it, and the opening's frame has no jamb to close on.
+    --> 210:3
+    |
+210 |   opening id=o_shield_w  on p_shall_shield at 50% width 1800
+    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: No position along this run clears it and still serves the same rooms. The longest clear stretch of wall it overlaps, after the nibs and mullions, is 1300 mm, against its 1800 mm span. Move it to another wall the same rooms share, or move the wall that meets it.
+    = help: Accept it if the meeting wall is a screen that stops short of the opening's head.
+    = help: The opening is "o_shield_w" on wall "p_shall_shield".
+  = fix: Move the opening along its run. The hints quote each direction that has a clear position: the span it lands on, the nib it leaves and the `on <wall> at <pos>` or `at (x,y)` clause. Every quoted position was checked: on the run, the nib kept to every meeting wall, a mullion kept to every other opening, `W_DOOR_NEAR_CORNER`'s nib kept at a corner, and the same rooms served, which the hint names. The two leaves of a double door move together, with a clause for each. When no direction has one, the hint gives the longest clear stretch of wall and says to use another wall the same rooms share, or to move the meeting wall. Accept it where the plan means it: glazing running past a junction onto a mullion, a screen stopping short of a cased opening's head, a frame fixed into the meeting wall. There is no machine-applicable fix: every remedy moves something the author placed, and there are always at least two.
+
+warning[W_HABITABLE_NO_WINDOW]: Dining room "Cafeteria" (360 m²) has no window on any of its walls; a room people live in needs daylight.
+    --> 154:5
+    |
+154 |     room id=r_cafeteria  at (42000,3000)  size 20000x18000 label "Cafeteria" uses dining
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = help: Add a `window` on one of walls `w_hull_n`, `w_void_weap`, `w_void_mid`, which run along this room's (`r_cafeteria`) outside edge.
+    = help: Accept it if the room is lit in a way the plan cannot draw (a roof light, a light well).
+  = fix: Add a `window` on an exterior wall of the room; the hint names those walls. Accept the warning if the room is lit in a way the plan cannot draw, such as a roof light or a light well. There is no machine fix: where a window goes on a facade is a design decision.
+
   graph: missing connection r_cafeteria — r_electrical
   graph: missing connection r_electrical — r_storage
   graph: unexpected connection r_east_hall — r_shields
-✗ 1 warning, graph mismatch
+next (validity): W_NO_ENTRANCE: The plan has no exterior door or opening — there is no way into the building.
+  = help: Add a `door` (or a cased `opening`) on an `exterior` wall.
+✗ 3 warnings, graph mismatch
 
 exit code: 2
 
 $ arch validate plans/skeld/plan.arch --graph plans/skeld/intended-graph.json --json
 
 {
+  "summary": "3 warnings in 3 codes: W_HABITABLE_NO_WINDOW ×1, W_NO_ENTRANCE ×1, W_OPENING_AT_JUNCTION ×1",
   "ok": false,
   "strict": false,
   "diagnostics": [
@@ -24,7 +48,43 @@ $ arch validate plans/skeld/plan.arch --graph plans/skeld/intended-graph.json --
       "fix": "Add a `door` on an `exterior` wall.",
       "hints": [
         "Add a `door` (or a cased `opening`) on an `exterior` wall."
-      ]
+      ],
+      "stage": "openings"
+    },
+    {
+      "code": "W_OPENING_AT_JUNCTION",
+      "severity": "warning",
+      "message": "The opening between \"South Hall\" and \"Shields\" meets a wall junction — the exterior wall at x 74000 stands inside its span (x 74100–75900; that wall occupies x 73750–74250, 150 mm of the opening); the partition wall at x 76000 stands inside its span (x 74100–75900; that wall occupies x 75850–76150, 50 mm of the opening). A wall standing inside an opening is a pier in it, and the opening's frame has no jamb to close on.",
+      "line": 210,
+      "col": 3,
+      "span": [
+        11942,
+        12000
+      ],
+      "fix": "Move the opening along its run. The hints quote each direction that has a clear position: the span it lands on, the nib it leaves and the `on <wall> at <pos>` or `at (x,y)` clause. Every quoted position was checked: on the run, the nib kept to every meeting wall, a mullion kept to every other opening, `W_DOOR_NEAR_CORNER`'s nib kept at a corner, and the same rooms served, which the hint names. The two leaves of a double door move together, with a clause for each. When no direction has one, the hint gives the longest clear stretch of wall and says to use another wall the same rooms share, or to move the meeting wall. Accept it where the plan means it: glazing running past a junction onto a mullion, a screen stopping short of a cased opening's head, a frame fixed into the meeting wall. There is no machine-applicable fix: every remedy moves something the author placed, and there are always at least two.",
+      "hints": [
+        "No position along this run clears it and still serves the same rooms. The longest clear stretch of wall it overlaps, after the nibs and mullions, is 1300 mm, against its 1800 mm span. Move it to another wall the same rooms share, or move the wall that meets it.",
+        "Accept it if the meeting wall is a screen that stops short of the opening's head.",
+        "The opening is \"o_shield_w\" on wall \"p_shall_shield\"."
+      ],
+      "stage": "openings"
+    },
+    {
+      "code": "W_HABITABLE_NO_WINDOW",
+      "severity": "warning",
+      "message": "Dining room \"Cafeteria\" (360 m²) has no window on any of its walls; a room people live in needs daylight.",
+      "line": 154,
+      "col": 5,
+      "span": [
+        8631,
+        8715
+      ],
+      "fix": "Add a `window` on an exterior wall of the room; the hint names those walls. Accept the warning if the room is lit in a way the plan cannot draw, such as a roof light or a light well. There is no machine fix: where a window goes on a facade is a design decision.",
+      "hints": [
+        "Add a `window` on one of walls `w_hull_n`, `w_void_weap`, `w_void_mid`, which run along this room's (`r_cafeteria`) outside edge.",
+        "Accept it if the room is lit in a way the plan cannot draw (a roof light, a light well)."
+      ],
+      "stage": "openings"
     }
   ],
   "graph": {
@@ -46,5 +106,11 @@ $ arch validate plans/skeld/plan.arch --graph plans/skeld/intended-graph.json --
         "r_shields"
       ]
     ]
+  },
+  "next": {
+    "tier": "validity",
+    "code": "W_NO_ENTRANCE",
+    "message": "The plan has no exterior door or opening — there is no way into the building.",
+    "hint": "Add a `door` (or a cased `opening`) on an `exterior` wall."
   }
 }

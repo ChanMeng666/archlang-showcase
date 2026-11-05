@@ -1,6 +1,6 @@
 # One tweet = one house
 
-**A complete, warning-free, two-room dwelling whose entire source is 277 bytes. The tweet *is* the
+**A complete two-room dwelling whose entire source is 277 bytes. The tweet *is* the
 program. Paste it into the playground and you get this drawing, byte for byte.**
 
 ```arch
@@ -22,7 +22,7 @@ front door, an internal door and a window](plan.png)
 
 | File | Bytes | Verdict |
 | --- | --- | --- |
-| `plan.arch` | **277** | `compile` clean, `lint` clean, `validate --strict` clean |
+| `plan.arch` | **277** | `compile` clean; under core 1.55.0 `lint` has one advisory (`W_HABITABLE_NO_WINDOW`, the Living room has no window), so `validate --strict` exits 2 |
 | `plan-strict.arch` | **145** | the smallest strict-clean plan I could reach (see below) |
 
 Both numbers are `wc -c` on disk. `plan.arch` ends with `}` and **no trailing newline** — that is
@@ -56,11 +56,13 @@ internal door is `1m` wide where it was `800`. That is thirteen bytes fewer than
 and three fewer than the original: twelve from the bed clause and one from the door. The door's
 byte is golf, not part of the fix — the same bed behind the 800 mm door is clean at 278. `describe`
 now reports 940 mm of clear width on the way into both rooms. The stretch goal is still moot:
-**the 277-byte house is warning-free.** It is not a plan that merely compiles, it is one that
-passes the ship gate.
+**the 277-byte house was warning-free** under the core of the day: not a plan that merely compiles,
+one that passed the ship gate. Core 1.55.0 adds `W_HABITABLE_NO_WINDOW` (the window is in the Bed;
+the 16 m² Living room has none). It is left as found, because a second window would change the byte
+count this page is about.
 
 ```
-$ npx arch validate plan.arch --strict --json
+$ npx -y @chanmeng666/archlang validate plan.arch --strict --json   # under the core of the day
 { "ok": true, "strict": true, "diagnostics": [] }
 ```
 
@@ -169,11 +171,11 @@ one — so the shipped plans both spell `exterior` out.
 # from the repo root
 wc -c plans/tweet-house/plan.arch plans/tweet-house/plan-strict.arch
 
-npx arch compile  plans/tweet-house/plan.arch --json
-npx arch lint     plans/tweet-house/plan.arch --json
-npx arch describe plans/tweet-house/plan.arch --json
-npx arch validate plans/tweet-house/plan.arch        --strict --json
-npx arch validate plans/tweet-house/plan-strict.arch --strict --json
+npx -y @chanmeng666/archlang compile  plans/tweet-house/plan.arch --json
+npx -y @chanmeng666/archlang lint     plans/tweet-house/plan.arch --json
+npx -y @chanmeng666/archlang describe plans/tweet-house/plan.arch --json
+npx -y @chanmeng666/archlang validate plans/tweet-house/plan.arch        --strict --json
+npx -y @chanmeng666/archlang validate plans/tweet-house/plan-strict.arch --strict --json
 
 node scripts/render.mjs tweet-house      # plan.svg + plan.png
 node scripts/permalink.mjs tweet-house   # the playground link above

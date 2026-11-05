@@ -1,4 +1,5 @@
 {
+  "summary": "24 warnings in 17 codes: W_PATH_TOO_NARROW ×3, W_SWING_OBSTRUCTED ×3, W_BEDROOM_NO_WINDOW ×2, W_FIXTURE_BACK_TO_ROOM ×2, W_FOOTPRINT_TRANSPOSED ×2, W_BATH_VIA_BEDROOM ×1, W_BED_UNDERSIZED ×1, W_DOORWAY_BLOCKED ×1, W_DOOR_CLEARANCE ×1, W_DOOR_NEAR_CORNER ×1, W_FURN_CLEARANCE ×1, W_HABITABLE_NO_WINDOW ×1, W_OPENING_AT_JUNCTION ×1, W_ROOM_NOT_EQUATOR_FACING ×1, W_ROOM_TOO_SMALL ×1, W_SEAT_FACING_AWAY ×1, W_WC_SIDE_CLEARANCE ×1",
   "ok": true,
   "strict": false,
   "diagnostics": [
@@ -75,9 +76,9 @@
         3365,
         3444
       ],
-      "fix": "Add a door connecting the bathroom to a hall/living space, or route circulation so it is not reached only via a bedroom.",
+      "fix": "Connect it to a hall or living space — or, if it is an en-suite, add a second bathroom or WC on the same storey that is reached without passing through a bedroom.",
       "hints": [
-        "Connect it to a hall or living space — or, if it is an en-suite, add a second bathroom off circulation."
+        "Connect it to a hall or living space — or, if it is an en-suite, add a second bathroom or WC on the same storey that is reached without passing through a bedroom."
       ]
     },
     {
@@ -90,11 +91,11 @@
         3897,
         3964
       ],
-      "fix": "Hang the leaf on the other jamb (`hinge left|right`) — a machine-applicable fix when the flipped swing is proved clear; or open it the other way (`swing in|out`), move the door along its wall, move the obstruction (`arch repair`), narrow the leaf to the width the warning quotes (never below the minimum passable width — that relocates the problem into `W_DOOR_CLEARANCE`), hang no swinging leaf at all (a `sliding`, `pocket` or `barn` door sweeps nothing, so this rule cannot apply to it), or make it a leafless `opening`.",
+      "fix": "Hang the leaf on the other jamb (`hinge left|right`) — a machine-applicable fix when the flipped swing is proved clear; or open it the other way (`swing in|out`), move the door along its wall, move the obstruction (`archlang repair`), narrow the leaf to the width the warning quotes (never below the minimum passable width — that relocates the problem into `W_DOOR_CLEARANCE`), hang no swinging leaf at all (a `sliding`, `pocket` or `barn` door sweeps nothing, so this rule cannot apply to it), or make it a leafless `opening`.",
       "hints": [
         "Hang the leaf on the other jamb — `hinge right`.",
         "Open it to the other side of the wall — `swing out`.",
-        "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `arch repair` computes the smallest clearing shift.",
+        "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `archlang repair` computes the smallest clearing shift.",
         "Narrowing the door is not a fix here — the leaf would have to drop to 400 mm, under the 760 mm minimum passable width.",
         "Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps nothing, so this warning cannot apply to it (`door pocket on <wall> at <pos> width <mm>`).",
         "If no leaf is wanted here, make it a leafless `opening` instead."
@@ -110,11 +111,11 @@
         3967,
         4031
       ],
-      "fix": "Hang the leaf on the other jamb (`hinge left|right`) — a machine-applicable fix when the flipped swing is proved clear; or open it the other way (`swing in|out`), move the door along its wall, move the obstruction (`arch repair`), narrow the leaf to the width the warning quotes (never below the minimum passable width — that relocates the problem into `W_DOOR_CLEARANCE`), hang no swinging leaf at all (a `sliding`, `pocket` or `barn` door sweeps nothing, so this rule cannot apply to it), or make it a leafless `opening`.",
+      "fix": "Hang the leaf on the other jamb (`hinge left|right`) — a machine-applicable fix when the flipped swing is proved clear; or open it the other way (`swing in|out`), move the door along its wall, move the obstruction (`archlang repair`), narrow the leaf to the width the warning quotes (never below the minimum passable width — that relocates the problem into `W_DOOR_CLEARANCE`), hang no swinging leaf at all (a `sliding`, `pocket` or `barn` door sweeps nothing, so this rule cannot apply to it), or make it a leafless `opening`.",
       "hints": [
         "Hang the leaf on the other jamb — `hinge right`.",
         "Open it to the other side of the wall — `swing out`.",
-        "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `arch repair` computes the smallest clearing shift.",
+        "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `archlang repair` computes the smallest clearing shift.",
         "Narrowing the door is not a fix here — the leaf would have to drop to 300 mm, under the 760 mm minimum passable width.",
         "Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps nothing, so this warning cannot apply to it (`door pocket on <wall> at <pos> width <mm>`).",
         "If no leaf is wanted here, make it a leafless `opening` instead."
@@ -130,11 +131,11 @@
         4315,
         4380
       ],
-      "fix": "Hang the leaf on the other jamb (`hinge left|right`) — a machine-applicable fix when the flipped swing is proved clear; or open it the other way (`swing in|out`), move the door along its wall, move the obstruction (`arch repair`), narrow the leaf to the width the warning quotes (never below the minimum passable width — that relocates the problem into `W_DOOR_CLEARANCE`), hang no swinging leaf at all (a `sliding`, `pocket` or `barn` door sweeps nothing, so this rule cannot apply to it), or make it a leafless `opening`.",
+      "fix": "Hang the leaf on the other jamb (`hinge left|right`) — a machine-applicable fix when the flipped swing is proved clear; or open it the other way (`swing in|out`), move the door along its wall, move the obstruction (`archlang repair`), narrow the leaf to the width the warning quotes (never below the minimum passable width — that relocates the problem into `W_DOOR_CLEARANCE`), hang no swinging leaf at all (a `sliding`, `pocket` or `barn` door sweeps nothing, so this rule cannot apply to it), or make it a leafless `opening`.",
       "hints": [
         "Hang the leaf on the other jamb — `hinge right` (this clears it).",
         "Open it to the other side of the wall — `swing out`.",
-        "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `arch repair` computes the smallest clearing shift.",
+        "Move the door along its wall (`on <wall> at <pos>`), or the obstruction — `archlang repair` computes the smallest clearing shift.",
         "Narrowing the door is not a fix here — the leaf would have to drop to 550 mm, under the 760 mm minimum passable width.",
         "Or hang no swinging leaf at all — a `sliding`, `pocket` or `barn` door sweeps nothing, so this warning cannot apply to it (`door pocket on <wall> at <pos> width <mm>`).",
         "If no leaf is wanted here, make it a leafless `opening` instead."
@@ -159,17 +160,17 @@
     {
       "code": "W_DOORWAY_BLOCKED",
       "severity": "warning",
-      "message": "Doorway is blocked — the approach needs 300 mm clear on each side but \"fridge\" leaves 50 mm (250 mm short).",
+      "message": "Doorway is blocked — the approach needs 300 mm clear on each side but \"fridge\" leaves 0 mm (300 mm short).",
       "line": 67,
       "col": 3,
       "span": [
         3897,
         3964
       ],
-      "fix": "Move the obstruction clear of the opening by the shortfall the warning quotes (`arch repair` computes the smallest clearing shift), shrink it by that much on the axis facing the door, or move the door along its wall so its landing misses it.",
+      "fix": "Move the obstruction clear of the opening by the shortfall the warning quotes (`archlang repair` computes the smallest clearing shift), shrink it by that much on the axis facing the doorway, or move the door or opening along its wall so its landing misses it (an opening `open between` derives has the rooms' shared edge as its span, so there the piece moves).",
       "hints": [
-        "Move \"fridge\" 250 mm clear of the opening — `arch repair` computes the smallest clearing shift.",
-        "Or shrink it by 250 mm on the axis facing the door, so it stops 300 mm short of the opening.",
+        "Move \"fridge\" 300 mm clear of the opening — `archlang repair` computes the smallest clearing shift.",
+        "Or shrink it by 300 mm on the axis facing the door, so it stops 300 mm short of the opening.",
         "Or move the door along its wall (`on <wall> at <pos>`) so its landing misses \"fridge\"."
       ]
     },
@@ -191,17 +192,16 @@
     {
       "code": "W_PATH_TOO_NARROW",
       "severity": "warning",
-      "message": "The walk from the entrance to \"Bedroom 1\" squeezes to 640 mm (60 mm below the 700 mm minimum).",
+      "message": "The walk from the entrance to \"Bedroom 1\" squeezes to 640 mm (60 mm below the 700 mm minimum) — the bottleneck is the door between \"Hall\" and \"Bedroom 1\", 640 mm clear.",
       "line": 55,
       "col": 3,
       "span": [
         3110,
         3192
       ],
-      "fix": "Widen the tightest door/opening on the route to at least the minimum, move the furniture pinching it, or add a second way in so the pinch is avoidable. There is no machine-applicable fix: the bottleneck is a nav-grid cell, not a named element, so nothing can be rewritten for you.",
+      "fix": "When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.",
       "hints": [
-        "Widen the tightest door/opening on the way to at least 700 mm.",
-        "Or move the furniture pinching the route so 700 mm of clear width survives.",
+        "Widen door \"d_bed1\" to `width 800` (now 700), which lets the walk clear the 700 mm minimum.",
         "Or add a second way in (another door or a leafless `opening`) so the pinch is avoidable."
       ]
     },
@@ -215,7 +215,7 @@
         3280,
         3362
       ],
-      "fix": "Widen the tightest door/opening on the route to at least the minimum, move the furniture pinching it, or add a second way in so the pinch is avoidable. There is no machine-applicable fix: the bottleneck is a nav-grid cell, not a named element, so nothing can be rewritten for you.",
+      "fix": "When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.",
       "hints": [
         "Widen the tightest door/opening on the way to at least 700 mm.",
         "Or move the furniture pinching the route so 700 mm of clear width survives.",
@@ -232,7 +232,7 @@
         3365,
         3444
       ],
-      "fix": "Widen the tightest door/opening on the route to at least the minimum, move the furniture pinching it, or add a second way in so the pinch is avoidable. There is no machine-applicable fix: the bottleneck is a nav-grid cell, not a named element, so nothing can be rewritten for you.",
+      "fix": "When doors set the limit, the message names the door or opening the walk squeezes through at that width by the rooms it joins (doors in series, or two tied ways in, are all named) and the hints name each by id with a `width` for it; widening every named one was re-measured to clear the minimum before it is quoted (a door loses a leaf-and-stop allowance from its nominal width, from one leaf of a `double` door, half its width; a leafless `opening` keeps all of it). When no door is named, widening doors alone was not enough or the pinch is furniture or a shaft: move the furniture pinching the route, or add a second way in so the pinch is avoidable. One bottleneck is reported once: a room or route whose pinch is a door already named is not reported again. There is no machine-applicable fix: widening a door rewrites a number you chose.",
       "hints": [
         "Widen the tightest door/opening on the way to at least 700 mm.",
         "Or move the furniture pinching the route so 700 mm of clear width survives.",
@@ -249,7 +249,7 @@
         5174,
         5249
       ],
-      "fix": "Add the `rotate` that puts the back on the walled edge — the machine-applicable fix inserts it when exactly one edge is walled. Better still, place the piece with `against wall <id>` or `in <room> anchor <edge>` and let the rotation be derived.",
+      "fix": "Get the plan `size` right first, then the `rotate`. `size` is W×H in plan axes, and a fixture's catalogued depth runs AWAY from the wall it backs onto, so the size decides which walls it can back onto: a WC (400 along × 700 deep) is `size 400x700` against a north or south wall and `size 700x400` against an east or west one. With the size right, add the `rotate` that puts the back on the walled edge (0 = back to the north, 90 = east, 180 = south, 270 = west); the machine-applicable fix inserts it when exactly one walled edge fits the size. Or let it be derived: `in <room> anchor <edge>` derives the rotation once the size fits that edge, and `against wall <id>` takes `size` as along×depth and derives both. A `rotate` on a size the wrong way round silences this warning but draws the symbol squashed. A square size, or a family whose catalogued footprint is square (`counter`, `stove`), can back onto any edge.",
       "hints": [
         "Add `rotate 90` so the symbol's back faces the wall (rotate 0 = back to the north)."
       ],
@@ -273,21 +273,6 @@
     {
       "code": "W_FIXTURE_BACK_TO_ROOM",
       "severity": "warning",
-      "message": "Fixture \"Bed\" has its back to the room — the wall it stands against is on its left side.",
-      "line": 94,
-      "col": 3,
-      "span": [
-        5440,
-        5520
-      ],
-      "fix": "Add the `rotate` that puts the back on the walled edge — the machine-applicable fix inserts it when exactly one edge is walled. Better still, place the piece with `against wall <id>` or `in <room> anchor <edge>` and let the rotation be derived.",
-      "hints": [
-        "Give it an explicit `rotate` for the wall you mean it to back onto, or place it with `against wall <id>` / `in <room> anchor <edge>` and let the rotation be derived."
-      ]
-    },
-    {
-      "code": "W_FIXTURE_BACK_TO_ROOM",
-      "severity": "warning",
       "message": "Fixture \"Wardrobe\" has its back to the room — the wall it stands against is on its bottom/right side.",
       "line": 95,
       "col": 3,
@@ -295,7 +280,7 @@
         5523,
         5603
       ],
-      "fix": "Add the `rotate` that puts the back on the walled edge — the machine-applicable fix inserts it when exactly one edge is walled. Better still, place the piece with `against wall <id>` or `in <room> anchor <edge>` and let the rotation be derived.",
+      "fix": "Get the plan `size` right first, then the `rotate`. `size` is W×H in plan axes, and a fixture's catalogued depth runs AWAY from the wall it backs onto, so the size decides which walls it can back onto: a WC (400 along × 700 deep) is `size 400x700` against a north or south wall and `size 700x400` against an east or west one. With the size right, add the `rotate` that puts the back on the walled edge (0 = back to the north, 90 = east, 180 = south, 270 = west); the machine-applicable fix inserts it when exactly one walled edge fits the size. Or let it be derived: `in <room> anchor <edge>` derives the rotation once the size fits that edge, and `against wall <id>` takes `size` as along×depth and derives both. A `rotate` on a size the wrong way round silences this warning but draws the symbol squashed. A square size, or a family whose catalogued footprint is square (`counter`, `stove`), can back onto any edge.",
       "hints": [
         "Add `rotate 90` so the symbol's back faces the wall (rotate 0 = back to the north)."
       ],
@@ -334,7 +319,7 @@
     {
       "code": "W_DOOR_NEAR_CORNER",
       "severity": "warning",
-      "message": "Door leaves too little wall at a corner — the nib between its jamb and the corner of wall \"w_street\" at (3400, 0) should be at least 300 mm, the wall's own thickness, but measures 100 mm (200 mm short).",
+      "message": "Door leaves too little wall at a corner — the nib between its jamb and the corner at (3400, 0) of the exterior wall at y 0 should be at least 300 mm, the wall's own thickness, but measures 100 mm (200 mm short).",
       "line": 63,
       "col": 3,
       "span": [
@@ -347,6 +332,183 @@
         "Or lengthen wall \"w_street\" past the door, so the corner moves away from the jamb instead.",
         "Narrowing the leaf would also close the gap and is deliberately NOT offered as a fix: rewriting the width you asked for to satisfy a checker is constraint laundering, and it heads toward `W_DOOR_CLEARANCE`."
       ]
+    },
+    {
+      "code": "W_OPENING_AT_JUNCTION",
+      "severity": "warning",
+      "message": "The exterior door into \"Hall\" meets a wall junction — its jamb at x 2400 is 50 mm from the face of the partition wall at x 2300 (at x 2350). A jamb needs at least 150 mm of wall beside it (the larger of 100 mm and half this wall's 300 mm thickness) to carry its frame or lining.",
+      "line": 63,
+      "col": 3,
+      "span": [
+        3677,
+        3740
+      ],
+      "fix": "Move the opening along its run. The hints quote each direction that has a clear position: the span it lands on, the nib it leaves and the `on <wall> at <pos>` or `at (x,y)` clause. Every quoted position was checked: on the run, the nib kept to every meeting wall, a mullion kept to every other opening, `W_DOOR_NEAR_CORNER`'s nib kept at a corner, and the same rooms served, which the hint names. The two leaves of a double door move together, with a clause for each. When no direction has one, the hint gives the longest clear stretch of wall and says to use another wall the same rooms share, or to move the meeting wall. Accept it where the plan means it: glazing running past a junction onto a mullion, a screen stopping short of a cased opening's head, a frame fixed into the meeting wall. There is no machine-applicable fix: every remedy moves something the author placed, and there are always at least two.",
+      "hints": [
+        "No position along this run clears it and still serves the same rooms. The longest clear stretch of wall it overlaps, after the nibs and mullions, is 600 mm, against its 900 mm span. Move it to another wall the same rooms share, or move the wall that meets it.",
+        "Accept it if the frame is meant to be fixed into the meeting wall itself (a flush corner detail).",
+        "The door is \"d_front\" on wall \"w_street\"."
+      ]
+    },
+    {
+      "code": "W_HABITABLE_NO_WINDOW",
+      "severity": "warning",
+      "message": "Kitchen \"Kitchen\" (8.74 m²) has no window on any of its walls; a room people live in needs daylight.",
+      "line": 56,
+      "col": 3,
+      "span": [
+        3195,
+        3277
+      ],
+      "fix": "Add a `window` on an exterior wall of the room; the hint names those walls. Accept the warning if the room is lit in a way the plan cannot draw, such as a roof light or a light well. There is no machine fix: where a window goes on a facade is a design decision.",
+      "hints": [
+        "Add a `window` on wall `w_west`, which runs along this room's (`r_kitchen`) outside edge.",
+        "Accept it if the room is lit in a way the plan cannot draw (a roof light, a light well)."
+      ]
+    },
+    {
+      "code": "W_SEAT_FACING_AWAY",
+      "severity": "warning",
+      "message": "A chair in Bonus Room* faces away from the Desk beside it.",
+      "line": 120,
+      "col": 3,
+      "span": [
+        7179,
+        7245
+      ],
+      "fix": "Add `facing <table id>` to the chair (the hint names the nearest table and the turn it derives), or give it the `rotate` that turns its front to the table.",
+      "hints": [
+        "On \"f_chair\", add `facing f_desk` (it turns to `rotate 90`)."
+      ]
+    },
+    {
+      "code": "W_WC_SIDE_CLEARANCE",
+      "severity": "warning",
+      "message": "The WC in Bath has its centreline 300 mm from the basin beside it; a WC needs 400 mm to each side (100 mm short).",
+      "line": 112,
+      "col": 3,
+      "span": [
+        6622,
+        6693
+      ],
+      "fix": "Slide the pan along its back wall away from the obstacle by the shortfall (the hint says whether its other side then still keeps the figure), move the obstacle, or move the pan to a run wide enough for twice the figure. There is no machine fix: the edit depends on how the pan was placed.",
+      "hints": [
+        "\"f_wc\"'s centreline is 300 mm from \"f_basin\" (the ruleset's `wcSideClearanceMm` is 400 mm, centreline to a side wall or fixture): slide it 100 mm along its back wall, away from \"f_basin\", and its other side still keeps 400 mm; or move \"f_basin\"."
+      ]
+    },
+    {
+      "code": "W_FOOTPRINT_TRANSPOSED",
+      "severity": "warning",
+      "message": "The TV in Living is drawn turned a quarter: its symbol is 300 mm along its back and 1100 mm deep, but a tv is wider than it is deep (1200 × 80 mm), so its long side is drawn as its depth.",
+      "line": 89,
+      "col": 3,
+      "span": [
+        5174,
+        5249
+      ],
+      "fix": "Swap the two sides of `size`, or keep it and turn the symbol a quarter (add 90 to `rotate` or take 90 from it, whichever puts its back where it belongs; an `against` piece takes its turn from the wall, so only the swap applies there, and a piece meant side-on to a wall, a crib or a treadmill with its long side along it, is placed `at (x,y)` or `in <room> anchor <edge> flush` with a `rotate` instead; the hint gives the numbers). When `size` is one literal (`900x2400`) and the swapped size, as drawn on the plan's grid, is exactly the catalogue footprint, a fix swaps it; it is `maybe-incorrect` (`archlang fix --unsafe`), because the swap changes which floor the piece covers.",
+      "hints": [
+        "Swap the two sides of `size` on \"f_tv\", or keep the size and turn the symbol a quarter: add 90 to its `rotate` or take 90 from it, whichever puts its back where it belongs."
+      ]
+    },
+    {
+      "code": "W_FOOTPRINT_TRANSPOSED",
+      "severity": "warning",
+      "message": "The Bed (twin) in Bedroom 2* is drawn turned a quarter: its symbol is 1800 mm along its back and 1000 mm deep, but a bed is deeper than it is wide (1500 × 2000 mm), so its long side is drawn along its back.",
+      "line": 109,
+      "col": 3,
+      "span": [
+        6459,
+        6541
+      ],
+      "fix": "Swap the two sides of `size`, or keep it and turn the symbol a quarter (add 90 to `rotate` or take 90 from it, whichever puts its back where it belongs; an `against` piece takes its turn from the wall, so only the swap applies there, and a piece meant side-on to a wall, a crib or a treadmill with its long side along it, is placed `at (x,y)` or `in <room> anchor <edge> flush` with a `rotate` instead; the hint gives the numbers). When `size` is one literal (`900x2400`) and the swapped size, as drawn on the plan's grid, is exactly the catalogue footprint, a fix swaps it; it is `maybe-incorrect` (`archlang fix --unsafe`), because the swap changes which floor the piece covers.",
+      "hints": [
+        "Swap the two sides of `size` on \"f_bed2\", or keep the size and turn the symbol a quarter: add 90 to its `rotate` or take 90 from it, whichever puts its back where it belongs."
+      ]
+    },
+    {
+      "code": "W_BED_UNDERSIZED",
+      "severity": "warning",
+      "message": "The Bed (twin) in Bedroom 2* is 1800 mm long, under the 1900 mm of the shortest standard bed (a UK single, 90 × 190 cm; Which? UK bed sizes): 100 mm short.",
+      "line": 109,
+      "col": 3,
+      "span": [
+        6459,
+        6541
+      ],
+      "fix": "Draw the bed at least the length and width the warning quotes, and move whatever it was cut short to clear. There is no machine-applicable fix: lengthening a bed moves it into its neighbours. A piece that is not a bed has no catalogue family yet; the warning stands until it does.",
+      "hints": [
+        "Draw the Bed (twin) in Bedroom 2* at least 1900 mm long and 750 mm wide, moving what it was cut to clear. A piece that is not a bed (an examination couch) has no catalogue family yet; the warning stands until it does."
+      ]
     }
-  ]
+  ],
+  "coverage": {
+    "families": [
+      {
+        "family": "rooms",
+        "status": "ran"
+      },
+      {
+        "family": "furniture",
+        "status": "ran"
+      },
+      {
+        "family": "reachability",
+        "status": "ran"
+      },
+      {
+        "family": "doors",
+        "status": "ran"
+      },
+      {
+        "family": "circulation",
+        "status": "ran"
+      },
+      {
+        "family": "classification",
+        "status": "ran"
+      },
+      {
+        "family": "annotation",
+        "status": "ran"
+      },
+      {
+        "family": "vertical",
+        "status": "ran"
+      },
+      {
+        "family": "orientation",
+        "status": "ran"
+      },
+      {
+        "family": "outdoor",
+        "status": "ran"
+      },
+      {
+        "family": "privacy",
+        "status": "ran"
+      },
+      {
+        "family": "openings",
+        "status": "ran"
+      },
+      {
+        "family": "daylight",
+        "status": "ran"
+      },
+      {
+        "family": "contents",
+        "status": "ran"
+      },
+      {
+        "family": "enclosure",
+        "status": "ran"
+      },
+      {
+        "family": "stairs",
+        "status": "ran"
+      }
+    ],
+    "unclassifiedRooms": []
+  }
 }
