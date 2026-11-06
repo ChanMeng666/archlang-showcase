@@ -11,6 +11,8 @@
     "overlay": "node scripts/overlay.mjs",
     "social": "node scripts/social.mjs",
     "gallery": "node scripts/gallery.mjs",
+    "preview3d": "node scripts/preview3d.mjs",
+    "preview3d:check": "node scripts/preview3d.mjs --check",
     "links": "node scripts/links.mjs",
     "links:check": "node scripts/links.mjs --check",
     "doors": "node scripts/doors.mjs",
