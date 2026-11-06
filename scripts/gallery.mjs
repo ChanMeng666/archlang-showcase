@@ -1,5 +1,6 @@
 // Regenerates the generated regions of README.md from plans/*/:
 //   <!-- grid:start -->…<!-- grid:end -->        the 2x2 cover grid
+//   <!-- three-d:start -->…<!-- three-d:end -->  the 3D line and its limits line (PS-D12), after the grid
 //   <!-- gallery:start -->…<!-- gallery:end -->  the full gallery, in three sections
 // Each gallery entry: thumbnail (plan-annotated.png if present, else plan.png), the plan README's
 // first heading as the title, links to story/source, and the playground link taken from the plan
@@ -36,6 +37,16 @@ const SECTIONS = [
 // The 2x2 grid: real buildings and original plans only; fan studies are never the front door.
 const GRID = ["villa-rotonda", "west-wing", "railroad-apartment", "tweet-house"];
 
+// The 3D preview is always shown beside its plan, from the same source (archlang public-surfaces
+// PS-D12): the line and the limits line below are that ruling's wording. Pictures come from
+// `npm run preview3d`; never hand-edit them.
+const THREE_D =
+  "**Same source, plan and 3D preview.** The 3D preview is extruded from the same `.arch` file by the " +
+  "separate archlang-3d package, and checked against the plan. You can also download it as a validated GLB. " +
+  "[More at archlang.uk/3d](https://archlang.uk/3d)\n\n" +
+  "<sub>3D preview: walls, openings, floors, stairs and furniture in flat colours; no pitched roofs yet, " +
+  "and no sections, elevations or BIM.</sub>";
+
 const onDisk = new Set(
   readdirSync(join(ROOT, "plans"), { withFileTypes: true })
     .filter((d) => d.isDirectory())
@@ -63,14 +74,28 @@ function entry(slug) {
     ? `plans/${slug}/plan-annotated.png`
     : `plans/${slug}/plan.png`;
   const url = (readme.match(/https:\/\/playground\.archlang\.uk\/#z=[A-Za-z0-9_-]+/) ?? [])[0];
+  const has3d = existsSync(join(dir, "plan-3d.poster.webp"));
+  const pics = has3d
+    ? `<table>
+<tr><td align="center" width="50%"><a href="plans/${slug}/README.md"><img src="${img}" alt="${t}, plan" width="100%"></a><br><sub>Plan</sub></td>` +
+      `<td align="center" width="50%"><a href="plans/${slug}/README.md"><img src="plans/${slug}/plan-3d.poster.webp" alt="${t}, 3D preview of the same source" width="100%"></a><br><sub>3D preview, same source</sub></td></tr>
+</table>`
+    : `[<img src="${img}" alt="${t}" width="820">](plans/${slug}/README.md)`;
   const links = [
     `[story](plans/${slug}/README.md)`,
     `[source](plans/${slug}/plan.arch)`,
     url ? `[open in playground](${url})` : null,
+    has3d && existsSync(join(dir, "plan-3d.replay.mp4")) ? `[3D replay](plans/${slug}/plan-3d.replay.mp4)` : null,
+    has3d ? `[GLB](plans/${slug}/plan.glb)` : null,
   ]
     .filter(Boolean)
     .join(" · ");
-  return `#### ${t}\n\n[<img src="${img}" alt="${t}" width="820">](plans/${slug}/README.md)\n\n${links}\n`;
+  return `#### ${t}
+
+${pics}
+
+${links}
+`;
 }
 
 const gallery = SECTIONS.map(
@@ -96,6 +121,7 @@ function replaceRegion(md, name, body) {
 const readmePath = join(ROOT, "README.md");
 let md = readFileSync(readmePath, "utf8");
 md = replaceRegion(md, "grid", grid);
+md = replaceRegion(md, "three-d", THREE_D);
 md = replaceRegion(md, "gallery", gallery);
 writeFileSync(readmePath, md);
 console.log(`gallery: ${listed.length} plans in ${SECTIONS.length} sections, ${GRID.length} in the grid`);
