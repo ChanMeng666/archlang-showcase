@@ -10,6 +10,8 @@ Famous and original buildings, written as text and compiled — not drawn. Every
 repo is a few dozen lines of [ArchLang](https://github.com/ChanMeng666/archlang) source; change a
 line, recompile, get a new building.
 
+▶ **Watch the film:** [ArchLang, from plan to 3D](https://youtu.be/oCg3tBTlVvI) (3:16): one text file becomes a dimensioned floor plan that checks itself, then a 3D preview.
+
 <!-- doors:start -->
 ## Try it
 
